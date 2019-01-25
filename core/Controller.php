@@ -1,17 +1,17 @@
-<<?php
+<?php
 
 class Controller extends Application
 {
-  protected s_controller , s_action;
+  protected $_controller , $_action;
   public $view;
 
- public fuction __construct($controller,$action)
+ public function __construct($controller,$action)
    {
      parent::__construct();
-     this->controller = $controller;
-     this->action = $action;
-     this->view = new view();
+     $this->_controller = $controller;
+     $this->_action = $action;
+     $this->view = new View();
    }
 
-   
+
 }

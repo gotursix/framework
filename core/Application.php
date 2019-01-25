@@ -4,10 +4,11 @@ class Application
 {
 public function __construct()
     {
-      $this->set_reporting();
-      $this->unregister_globals();
+      $this->_set_reporting();
+      $this->_unregister_globals();
     }
-private fuction _set_reporting()
+
+private function _set_reporting()
    {
      if(DEBUG)
      {

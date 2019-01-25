@@ -2,7 +2,7 @@
 
 class View
 {
-  protected s_head,s_body,$_siteTitle=SITE_TITLE,$_outputBuffer,s_layout=DEFAULT_LAYOUT;
+  protected $_head,$_body,$_siteTitle=SITE_TITLE,$_outputBuffer,$_layout=DEFAULT_LAYOUT;
 
   public function __construct()
   {
@@ -41,6 +41,18 @@ public function start($type)
 
 public function end()
     {
+      if($this->_outputBuffer == 'head')
+        {
+           $this->head=ob_get_clean();
+        }
+      elseif ($this->_outputBuffer = 'body')
+       {
+         $this->body = ob_get_clean();
+       }
+       else
+       {
+         die('You must first start method.');
+       }
 
     }
 
@@ -52,12 +64,12 @@ public function siteTitle()
 
 public function setSiteTitle($title)
    {
-     this-siteTitle=$title;
+     $this->_siteTitle=$title;
    }
 
-public function set Layout($path)
+public function setLayout($path)
   {
-    this->layout=$path;
+    $this->layout=$path;
   }
 
 

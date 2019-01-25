@@ -1,6 +1,6 @@
 <?php
 
-clase Home extends Controller
+class Home extends Controller
 {
 
 }
