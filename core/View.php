@@ -35,7 +35,8 @@ public function content($type)
 
 public function start($type)
    {
-
+    $this->$_outputBuffer = $type;
+    ob_start();
    }
 
 public function end()
