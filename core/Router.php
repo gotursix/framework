@@ -27,7 +27,5 @@ class Router
        {
         die('That method does exists in the controller\"'. $controller_name . '\"');
       }
-
-      $dispatch->registerAction($queryParams);
     }
 }
