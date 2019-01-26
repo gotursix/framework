@@ -1,4 +1,4 @@
-<?php $this-setSiteTitle('Home'); ?>
+<?php $this->setSiteTitle('Home'); ?>
 
 <?php $this->start('head'); ?>
 <script>//here java script,next row css</script>
