@@ -16,7 +16,7 @@ class View
     if(file_exists(ROOT . DS . 'app' . DS . 'views'. DS . $viewString . '.php'))
     {
       include(ROOT . DS . 'app' . DS . 'views'. DS . $viewString . '.php');
-      //include(ROOT . DS . 'app' . DS . 'views'. DS .'layouts' . DS . $this->layout . '.php');
+      include(ROOT . DS . 'app' . DS . 'views'. DS .'layouts' . DS . $this->_layout . '.php');
     }else
     die('The view\"'.$viewName.'\" does not exist.');
   }
@@ -25,7 +25,7 @@ public function content($type)
    {
      if($type == 'head')
      {
-       return $this->head;
+       return $this->_head;
      }elseif($type == 'body')
      {
        return $this->body;
