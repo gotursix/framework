@@ -8,9 +8,10 @@ public function __construct($controller,$action)
       parent::__construct($controller,$action);
   }
 
-public function indexAction()
+public function indexAction($name)
   {
-    die('Welcome to the home controller , this is the index action.');
+    echo $name;
+    $this->view->render('home/index');
   }
 
 
