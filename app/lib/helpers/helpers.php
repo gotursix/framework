@@ -1,6 +1,6 @@
 <?php
 
-function dnd($data)
+function dnd($data) //debug function
 {
  echo '<pre>';
  var_dump($data);
