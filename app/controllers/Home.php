@@ -11,8 +11,11 @@ public function __construct($controller,$action)
 public function indexAction()
   {
    $db = DB::getInstance();
-   $columns = $db->get_columns('contacts');
-   dnd($columns);
+   $contacts = $db->findFirst('contacts',[
+     'conditions'=>'lname = ?',
+     'bind' => ['Parham']
+   ]);
+   dnd($contacts);
    $this->view->render('home/index');
   }
 
