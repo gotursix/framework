@@ -11,9 +11,8 @@ public function __construct($controller,$action)
 public function indexAction()
   {
    $db = DB::getInstance();
-   $contactsQ = $db->query("SELECT * FROM contacts ORDER BY lname,fname");
-   $contacts = $contactsQ->results();
-   dnd($contacts);
+   $columns = $db->get_columns('contacts');
+   dnd($columns);
    $this->view->render('home/index');
   }
 
