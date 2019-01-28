@@ -51,6 +51,7 @@ class DB
           return $this;
       }
 
+
      protected function _read($table, $params=[])
         {
           $conditionString ='';
@@ -107,6 +108,7 @@ class DB
           return false;
         }
 
+
      public function find($table, $params=[])
         {
            if($this->_read($table,$params))
@@ -115,6 +117,7 @@ class DB
           }
            return false;
         }
+
 
     public function findFirst($table, $params=[])
        {
@@ -132,7 +135,6 @@ class DB
           $valueString='';
           $values= [];
 
-
          foreach($fields as $field => $value)
          {
            $fieldString.='`'. $field .'`,';
@@ -149,6 +151,7 @@ class DB
             }
           return false;
           }
+
 
        public function update($table,$id,$fields = [])
            {
@@ -168,6 +171,7 @@ class DB
              }
              return false;
            }
+
 
      public function delete($table , $id)
          {
@@ -191,15 +195,18 @@ class DB
          return (!empty($this->_result))? $this->_result[0] : [];
        }
 
+
      public function count()
      {
        return $this_count;
      }
 
+
      public function lastID()
      {
        return $this->_lastInsertID;
      }
+
 
     public function get_columns($table)
     {
@@ -211,7 +218,5 @@ class DB
     {
       return    $this->_error;
     }
-
-
 
 }
