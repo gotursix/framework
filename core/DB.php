@@ -3,7 +3,7 @@
 class DB
 {
   private static $_instance = null;
-  private $_pdo,$_query,$_error = false , $_result , $_count =0,$_lastInsertID =null;
+  private $_pdo,$_query,$_error = false , $_results , $_count =0,$_lastInsertID =null;
 
   private function __construct()
     {
@@ -51,7 +51,7 @@ class DB
           return $this;
       }
 
-      public function insert ($table, $fields= [])
+    public function insert ($table, $fields= [])
         {
           $fieldString='';
           $valueString='';
@@ -68,13 +68,53 @@ class DB
          $fieldString = rtrim($fieldString , ',');
          $valueString = rtrim($valueString , ',');
          $sql= "INSERT INTO  {$table}({$fieldString}) VALUES ({$valueString})";
+            if(!$this->query($sql,$values)->error())
+            {
+              return true;
+            }
+          return false;
+          }
+
+       public function update($table,$id,$fields = [])
+           {
+             $fieldString = '';
+             $values = [];
+             foreach ($fields as $field => $value)
+             {
+               $fieldString .= ' ' . $field . ' = ?,';
+               $values[]=$value;
+             }
+             $fieldString=trim($fieldString);
+             $fieldString=rtrim($fieldString,',');
+             $sql = "UPDATE {$table} SET  {$fieldString} where id = {$id}";
+             if(!$this->query($sql,$values)->error())
+             {
+               return true;
+             }
+             return false;
+           }
+
+     public function delete($table , $id)
+         {
+           $sql="DELETE FROM {$table} WHERE id = {$id}";
+           if(!$this->query($sql)->error())
+           {
+             return true;
+           }
+           return false;
+         }
+
+     public function results()
+         {
+           return $this->_result;
+         }
+
+
+        public function error()
+          {
+            return    $this->_error;
+          }
 
 
 
-         dnd($sql);
         }
-
-
-
-
-  }

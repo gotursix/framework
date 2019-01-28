@@ -11,16 +11,9 @@ public function __construct($controller,$action)
 public function indexAction()
   {
    $db = DB::getInstance();
-   $fields=[
-     'fname' => 'Toni',
-     'lname' => 'Parham',
-     'email' => 'tonishajlasters@.com'
-   ];
-
-
-   
-
-   $contactsQ = $db->insert('contacts', $fields);
+   $contactsQ = $db->query("SELECT * FROM contacts ORDER BY lname,fname");
+   $contacts = $contactsQ->results();
+   dnd($contacts);
    $this->view->render('home/index');
   }
 
