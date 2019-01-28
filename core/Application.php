@@ -8,6 +8,7 @@ public function __construct()
       $this->_unregister_globals();
     }
 
+
 private function _set_reporting()
    {
      if(DEBUG)
@@ -23,6 +24,7 @@ private function _set_reporting()
        ini_set('error_log',ROOT . DS . 'tmp' . DS . 'logs'. DS . 'errors.log');
      }
    }
+
 
 private function _unregister_globals()
   {
@@ -41,7 +43,5 @@ private function _unregister_globals()
     }
    }
   }
-
-
 
 }

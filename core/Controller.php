@@ -13,5 +13,4 @@ class Controller extends Application
      $this->view = new View();
    }
 
-
 }

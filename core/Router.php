@@ -16,9 +16,8 @@ class Router
 
       //params
       $queryParams=$url;
-
       $dispatch = new $controller($controller_name,$action);
-
+      
       if(method_exists($controller,$action))
       {
         call_user_func_array([$dispatch,$action],$queryParams);

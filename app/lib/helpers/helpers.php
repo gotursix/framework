@@ -6,4 +6,5 @@ function dnd($data) //debug function
  var_dump($data);
  echo '</pre>';
   die;
+  
 }
