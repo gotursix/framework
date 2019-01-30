@@ -1,7 +1,6 @@
 <?php
 
-
-define('DEBUG', true );
+define('DEBUG', true ); // show or not errors
 
 define('DB_NAME', 'hell'); //database name
 define('DB_USER', 'root'); //database user

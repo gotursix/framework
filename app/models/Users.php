@@ -19,7 +19,7 @@ class Users extends Model
        }
        else
        {
-         $u = $this->_db->findFirst('users',['conditions'=>'username = ?','bind'=>[$user]]);
+         $u =$this->_db->findFirst('users',['conditions'=>'username = ?','bind'=>[$user]]);
        }
        if($u)
        {
@@ -34,6 +34,7 @@ class Users extends Model
 
    public function findByUsername($username)
    {
+     echo $username;
      return $this->findFirst(['conditions'=>'username = ?','bind'=>[$username]]);
    }
 

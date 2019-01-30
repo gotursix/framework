@@ -49,7 +49,10 @@ public $id;
 
     public function findFirst($params = [])
     {
+
       $resultsQuery = $this->_db->query($this->_table, $params);
+      echo"<br><br>";
+      var_dump($resultsQuery);
       $result = new $this->_modelName($this->_table);
       $result->populateObjData($resultsQuery);
       return $result;
@@ -142,6 +145,7 @@ public $id;
 
     protected function populateObjData($result)
      {
+
        foreach ($result as $key => $val)
        {
          $this->$key = $val;

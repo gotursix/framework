@@ -19,7 +19,6 @@ class Register extends Controller
       {
         $user = $this->UsersModel->findByUsername($_POST['username']);
         dnd($user);
-
       }
     }
     $this->view->render('register/login');
