@@ -127,7 +127,7 @@ public $id;
      {
        if(!empty($params))
        {
-        foreach ($params as $key => $vaL)
+        foreach ($params as $key => $val)
         {
           if(in_array($key, $this->_columnNames))
           {

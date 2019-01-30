@@ -11,7 +11,7 @@
       </div>
     <div class="form-group">
        <label for="password">Password</label>
-       <input type="text" name="password" id="password" class="form-control" value="">
+       <input type="password" name="password" id="password" class="form-control" value="">
     </div>
     <div class="form-group">
       <label for="remember_me">Remember me <input type="checkbox" id="remember_me" name="remember_me" value="on"></label>

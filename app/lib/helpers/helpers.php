@@ -5,11 +5,11 @@ function dnd($data) //debug function
  echo '<pre>';
  var_dump($data);
  echo '</pre>';
-  die;
+  die();
 
 }
 
-function saitize($dirty)
+function sanitize($dirty)
 {
    return htmlentities($dirty, ENT_QUOTES , 'UTF-8');
 }
