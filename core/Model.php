@@ -2,13 +2,13 @@
 
 class Model{
 
-protected $_db, $_table, $_modelName, $_softDelete = false , $_columnNames=[];
+protected $_db, $_table, $_modelName, $_softDelete = false , $_columnNames=[] ;
 public $id;
 
 
     public function __construct($table)
       {
-        $this->_db - DB::getInstance();
+        $this->_db = DB::getInstance();
         $this->_table = $table;
         $this->_setTableColumns();
         $this->_modelName = str_replace(' ','',ucwords(str_replace('_',' ',$this->_table)));
@@ -18,10 +18,11 @@ public $id;
    protected function _setTableColumns()
      {
        $columns = $this->get_columns();
-       foreach ($columnns as $column)
+       foreach ($columns as $column)
        {
-         $this->_columnNames[] = $column->Filed;
-         $this->{$columnName}=null;
+         $columnName = $column->Field;
+         $this->_columnNames[] = $column->Field;
+         $this->{$columnName} = null;
        }
      }
 
@@ -48,7 +49,7 @@ public $id;
 
     public function findFirst($params = [])
     {
-      $resultsQuery = $thi->_db->query($this->_table, $params);
+      $resultsQuery = $this->_db->query($this->_table, $params);
       $result = new $this->_modelName($this->_table);
       $result->populateObjData($resultsQuery);
       return $result;
@@ -82,7 +83,7 @@ public $id;
 
   public function insert($fields)
      {
-       if(empty($fields))return falsel
+       if(empty($fields))return false;
        return $this->_db->insert($this->_table, $fields);
      }
 
@@ -97,7 +98,7 @@ public $id;
   public function delete($id='')
      {
         if($id == '' && $this->id=='') return false;
-        $id = (id= '')? $this->id : $id;
+        $id = ($id= '')? $this->id : $id;
       if($this->_softDelete)
       {
         $this->update($id, ['deleted'=> 1]);

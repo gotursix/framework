@@ -19,7 +19,7 @@ class Users extends Model
        }
        else
        {
-         $u = $this->_db->findFrist('users',['conditions'=>'username = ?','bind'=>[$user]]);
+         $u = $this->_db->findFirst('users',['conditions'=>'username = ?','bind'=>[$user]]);
        }
        if($u)
        {
@@ -34,7 +34,7 @@ class Users extends Model
 
    public function findByUsername($username)
    {
-     return $this->findFrist('conditions'=>"username = ?",'bind'=>[$username]);
+     return $this->findFirst(['conditions'=>'username = ?','bind'=>[$username]]);
    }
 
    public function login($rememberMe=false)
@@ -52,5 +52,5 @@ class Users extends Model
    }
 
 
-   
+
 }
