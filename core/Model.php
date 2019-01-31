@@ -112,7 +112,7 @@ class Model {
             }
 
 
-            public function delete($id='')
+      public function delete($id='')
             {
               if($id == '' && $this->id=='') return false;
               $id = ($id= '')? $this->id : $id;
