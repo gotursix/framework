@@ -23,25 +23,18 @@
                             <form method="#" action="#">
                                 <div class="card card-login">
                                     <div class="card-header text-center" data-background-color="rose">
-                                        <h3 class="card-title">Login</h3>
+                                        <h3 class="card-title">Înreagistrează-te</h3>
                                     </div>
                                     <p class="category text-center">
-                                        DIEEEEE
+                                        Rufus Framework
                                     </p>
                                     <div class="card-content">
+                                     
                                         <div class="input-group">
                                             <span class="input-group-addon">
                                             </span>
                                             <div class="form-group label-floating">
-                                                <label class="control-label">Nickname</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                            </span>
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">Email address</label>
+                                                <label class="control-label">Adresa de e-mail</label>
                                                 <input type="email" class="form-control">
                                             </div>
                                         </div>
@@ -49,13 +42,13 @@
                                             <span class="input-group-addon">
                                             </span>
                                             <div class="form-group label-floating">
-                                                <label class="control-label">Password</label>
+                                                <label class="control-label">Parola</label>
                                                 <input type="password" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="footer text-center">
-                                        <button type="submit" class="btn btn-rose btn-simple btn-wd btn-lg">Let's go</button>
+                                        <button type="submit" class="btn btn-rose btn-simple btn-wd btn-lg">Conectează-te</button>
                                     </div>
                                 </div>
                             </form>
