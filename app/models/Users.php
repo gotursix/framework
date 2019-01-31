@@ -34,7 +34,6 @@ class Users extends Model
 
    public function findByUsername($username)
    {
-     echo $username;
      return $this->findFirst(['conditions'=>'username = ?','bind'=>[$username]]);
    }
 

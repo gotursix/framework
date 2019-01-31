@@ -18,7 +18,7 @@ class Register extends Controller
       if($validation === true )
       {
         $user = $this->UsersModel->findByUsername($_POST['username']);
-        dnd($user);
+         dnd($user);
       }
     }
     $this->view->render('register/login');
