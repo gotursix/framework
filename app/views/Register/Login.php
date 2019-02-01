@@ -5,7 +5,7 @@
 
   <div class="header"><h2>Login</h2></div>
   <form class="form" action="<?=PROOT?>register/login" method="post">
-    <div class="bg-danger"><?=$this->displayErrors ?></div>
+    <div class="isa_error"><?=$this->displayErrors ?></div>
     <div class="form-group">
        <label for="username">Username</label>
        <input type="text" name="username" id="username" class="form-control" value="">
