@@ -1,6 +1,6 @@
 <?php
 
-class Cookie()
+class Cookie
 {
   public static function set($name, $value , $expiry)
   {
