@@ -125,15 +125,18 @@ class Validate
    }
 
 
-   public function displayErrors() {
+   public function displayErrors()
+   {
      $hasErrors = (!empty($this->_errors))? ' has-errors' : '';
-     $html = '<ul class="bg-danger'.$hasErrors.'">';
-     foreach($this->_errors as $error) {
-       if(is_array($error)) {
-         $html .= '<li class="isa_error">'.$error[0].'</li>';
+     $html = '<ul class="isa_error'.$hasErrors.'">';
+     foreach($this->_errors as $error)
+     {
+       if(is_array($error))
+       {
+         $html .= '<li class="bg-danger">'.$error[0].'</li>';
          $html .= '<script>jQuery("document").ready(function(){jQuery("#'.$error[1].'").parent().closest("div").addClass("has-error");});</script>';
        } else {
-         $html .= '<li class="is_error">'.$error.'</li>';
+         $html .= '<li class="bg-danger">'.$error.'</li>';
        }
      }
      $html .= '</ul>';
