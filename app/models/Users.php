@@ -57,8 +57,12 @@ class Users extends Model
       $hash = md5(uniqid()+ rand(0,100));
       $user_agent = Session::uagent_no_version();
       Cookie::set($this->_cookieName,$hash,REMEMBER_COOKIE_EXPIRY);
-      $fields = ['session' =>$hash,'user_agent'=>$user_agent,'user_id'=>$this->id];
-      $this->_db->query("DELETE FROM user_sessions WHERE user_id = ? AND user_agent = ?",[$this->id,$user_agent]);
+     $fields = [
+            'user_id'=>$this->id,
+           'session' =>$hash,
+           'user_agent'=>$user_agent
+         ];
+     $this->_db->query("DELETE FROM user_sessions WHERE user_id = ? AND user_agent = ?",[$this->id,$user_agent]);
       $this->_db->insert('user_sessions',$fields);
     }
    }
