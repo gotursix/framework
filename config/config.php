@@ -12,6 +12,6 @@ define('DEFAULT_LAYOUT','default'); //if no layout is set in the controller use 
 define('PROOT','/framework/'); //set this to '/' for a live server
 define('SITE_TITLE','Rufus Framework'); //This will be used if no site title is set
 
-define('CURRENT_USER_SESSION_NAME','GJdsadaHsdahgFGDasdaS'); // sesion name for loogged in use
+define('CURRENT_USER_SESSION_NAME','GJdsadaHsdahgFGDasdaS'); // session name for loogged in use
 define('REMEMBER_ME_COOKIE_NAME','nfbfbfafusibfsau548a484f'); // cookie name for logged in user remember me
 define('REMEMBER_COOKIE_EXPIRY','604800'); // time in seconds for remember me cookie to live (30 days)
