@@ -67,7 +67,7 @@ class Register extends Controller
          'display' => 'Username',
          'required' => true,
          'unique' => 'users',
-         'min' => 6,
+         'min' => 5,
          'max' => 150
        ],
        'email' => [

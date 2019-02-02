@@ -131,7 +131,7 @@ class Model {
         {
           if(in_array($key, $this->_columnNames))
           {
-            $this->key = sanitize($val);
+            $this->$key = sanitize($val);
           }
         }
         return true;
