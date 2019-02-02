@@ -2,6 +2,6 @@ RewriteEngine On
 
 RewriteCond %(REQUEST_FILENAME) !-f
 RewriteCond %(REQUEST_FILENAME) !-d
-RewriteCond $1 !^(index\.php|config|core|css|fonts|js)
+RewriteCond $1 !^(index\.php|config|core|css|fonts|js|img)
 
 RewriteRule ^(.*)$ ./index.php/$1 [L]
