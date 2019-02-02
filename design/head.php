@@ -1,10 +1,10 @@
 <head> 
 <title>Rufus Framework</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+   <link href="../css/custom.css" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/font-awesome.min.css" rel="stylesheet">
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jQuery-3.3.1.js"></script>
 </head>
