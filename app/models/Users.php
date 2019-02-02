@@ -1,7 +1,7 @@
 <?php
 class Users extends Model
 {
-   private $_isLoggedIn, $_sessionName, $_cookieName;
+   private $_isLoggedIn, $_sessionName, $_cookieName, $post_vars;
    public static $currentLoggedInUser = null;
 
    public function __construct($user='')
@@ -77,6 +77,7 @@ class Users extends Model
 
    }
 
+
    public function logout()
    {
      $user_agent = Session::uagent_no_version();
@@ -89,6 +90,8 @@ class Users extends Model
      self::$currentLoggedInUser = null;
      return true;
    }
+
+
 
 
      public function registerNewUser($params)

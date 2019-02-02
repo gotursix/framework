@@ -132,6 +132,12 @@ class Validate
        if(is_array($error))
        {
          $html .= '<li class="bg-danger">'.$error[0].'</li>';
+
+         if ( ! isset($parts[1]))
+         {
+           $error[1] = null;
+          }
+
          $html .= '<script>jQuery("document").ready(function(){jQuery("#'.$error[1].'").parent().closest("div").addClass("has-error");});</script>';
        } else {
          $html .= '<li class="bg-danger">'.$error.'</li>';
