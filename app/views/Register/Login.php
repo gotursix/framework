@@ -36,17 +36,22 @@
                                         </div>
                                     </div>
                                     <div class="footer text-center">
-                                       <label class="control-label"> <h4>Remember me <input type="checkbox" id="remember_me" name="remember_me" value="on"></h4></label>
+                                       <label class="control-label"> <h4 class="reset-button">Remember me <input type="checkbox" id="remember_me" name="remember_me" value="on"></h4></label>
                                     </div>
                                     <div class="bg-danger"><?=$this->displayErrors ?></div>
-
+                                      <br>
                                     <div class="footer text-center">
-                                        <button type="submit" class="btn btn-primary btn-wd btn-lg" >Login</button>
+                                        <button type="submit" class="btn btn-primary btn-wd btn-lg" data-background-color="rose">Login</button>
                                     </div>
 
+                                      <br><br>
                                     <div class="footer text-center">
-                                    <a href="<?=PROOT?>register/register"  class="btn btn-light">Register</a>
+                                    <a href="<?=PROOT?>register/register"  class="btn btn-light" data-background-color="rose">Register</a>
                                 </div>
+
+                                <div class="footer text-center">
+                                   <label class="control-label reset-button"><h4><a href="<?=PROOT?>register/register" class="reset-button">Reset password</a></h4></label>
+                            </div>
                             </form>
                         </div>
                     </div>
