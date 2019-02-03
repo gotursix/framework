@@ -1,15 +1,15 @@
 {
 "Home" : "home",
-"Tools" :
+"Tools":
   {
-    "My Tools" : "tools",
-    "Tool 1" : "tools/first",
-    "Tool 2" : "tools/action",
-    "separator" : "",
-    "Tool 3" : "tools/third"
+    "My Tools" :"tools",
+    "Tool 1" :"tools/first",
+    "Tool 2" :"tools/action",
+    "separator" :"",
+    "Tool 3" :"tools/third"
   },
-  "Google" : "https://www.google.com/",
-  "PHP Docs" : "https://php.net/manual/en",
-  "Login" : "register/login",
-  "Logout" : "register/logout"
+  "Google" :"https://www.google.com/",
+  "PHP Docs" :"https://php.net/manual/en",
+  "Login" :"register/login",
+  "Logout" :"register/logout"
 }

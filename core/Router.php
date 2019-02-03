@@ -86,21 +86,28 @@ class Router
           return $grantAccess;
         }
 
+
   public static function getMenu($menu)
   {
   $menuAry  = [];
   $menuFile = file_get_contents(ROOT . DS . 'app' . DS . $menu . '.json');
   $acl = json_decode($menuFile, true);
-
   foreach($acl as $key => $val)
   {
-    if(is_array($val)) {
+    if(is_array($val))
+    {
+
       $sub = [];
-      foreach($val as $k => $v) {
-        if($k == 'separator' && !empty($sub)) {
+      foreach($val as $k => $v)
+      {
+        if($k == 'separator' && !empty($sub))
+        {
           $sub[$k] = '';
           continue;
-        }else if($finalVal = self::get_link($v)) {
+        }
+        else
+        if($finalVal = self::get_link($v))
+        {
           $sub[$k] = $finalVal;
         }
       }
@@ -120,15 +127,20 @@ class Router
   return $menuAry;
 }
 
-private static function get_link($val) {
+private static function get_link($val)
+{
   //check if external link
-  if(preg_match('/https?:\/\//', $val) == 1) {
+  if(preg_match('/https?:\/\//', $val) == 1)
+  {
     return $val;
-  } else {
-    $uAry = explode(DS, $val);
+  }
+  else
+  {
+    $uAry = explode('/', $val);
     $controller_name = ucwords($uAry[0]);
     $action_name = (isset($uAry[1]))? $uAry[1] : '';
-    if(Self::hasAccess($controller_name, $action_name)) {
+    if(Self::hasAccess($controller_name, $action_name))
+   {
       return PROOT . $val;
     }
     return false;
