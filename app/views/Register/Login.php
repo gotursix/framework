@@ -38,7 +38,11 @@
                                     <div class="footer text-center">
                                        <label class="control-label"> <h4 class="reset-button">Remember me <input type="checkbox" id="remember_me" name="remember_me" value="on"></h4></label>
                                     </div>
-                                    <div class="bg-danger"><?=$this->displayErrors ?></div>
+
+                                    <div class="isa_error_class">
+                                      <?=$this->displayErrors ?>
+                                    </div>
+
                                       <br>
                                     <div class="footer text-center">
                                         <button type="submit" class="btn btn-primary btn-wd btn-lg" data-background-color="rose">Login</button>

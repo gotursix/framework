@@ -1,6 +1,11 @@
 .reset-button  {
   color: #b3b3b3;
 }
+
+.isa_error_class
+{
+  padding-right: 40px;
+}
 .noUi-target,
 .noUi-target * {
     -webkit-touch-callout: none;
