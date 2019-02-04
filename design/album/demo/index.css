@@ -4,8 +4,10 @@ Dropdown - filters
 
 */
 
+/*############# SEARCH BAR - DROP RIGHT #############*/ /*
 .angle-drop {
-  border:1px solid black;
+  border:1px solid transparent;
+  border-right:1px solid #aaa;
   color: black;
   padding: 11.1px;
   font-size: 16px;
@@ -18,26 +20,74 @@ Dropdown - filters
 }
 
 .dropdown {
-  float:right;
-  position: relative;
-  display: inline-block;
-    
+    float:left;
+    margin-top:-10%;
+    position: relative;
+    display: inline-block;
 }
 
+.filtr-search {
+    padding: 0.5rem 1rem 0.5rem 40px;
+    text-transform: uppercase;
+    height: 4rem; 
+    width:25em; 
+    border-radius: 16px; 
+    margin-right: 5rem;
+}
+*/
+
+
+/*############# SEARCH BAR - DROP RIGHT #############*/
+
+/*  */
+.angle-drop {
+  border:1px solid transparent;
+  border-left:1px solid #aaa;
+  color: black;
+  padding: 11px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.dropdown {
+    float:right;
+    margin-top:-11.5%;
+    margin-right:0%;
+    position: relative;
+    display: inline-block;
+}
+
+.filtr-search {
+    padding: 0.5rem 40px 0.5rem 1rem;
+    text-transform: uppercase;
+    height: 4rem; 
+    width:25em; 
+    border-radius: 16px; 
+   
+}
+
+/*############# SEARCH BAR - DROP RIGHT #############*/
+
+
+/* End Search */
+
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 200px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    margin-left: -400%;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 164px; /*200px*/
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 
 }
 .dropdown-content ul{
     
-    margin-top: 20px;
-    margin-bottom:20px;
+    /*margin-top: 20px;*/
+    margin-bottom:0px;
+    
     
 }
 .dropdown-content li{
@@ -49,7 +99,7 @@ Dropdown - filters
     cursor:pointer;
 }
 
-.dropdown ul li:hover {background-color: #ddd;  width:90%;}
+.dropdown ul li:hover {background-color: #ddd;  width:100%;}
 
 .show {display: block;}
 
@@ -85,6 +135,7 @@ img {
 /* Filter controls */
 .simplefilter, .multifilter, .sortandshuffle, .search-row {
   padding-left: 0;
+    float:left;
 }
 .simplefilter li, .multifilter li, .sortandshuffle li {
     color: black; /*white*/
@@ -96,7 +147,7 @@ img {
 
 .simplefilter li.active {
     background-color: #212121;
-    width:90%;
+    width:100%;
     color:white;
 }
 /* Shuffle and sort controls */
@@ -114,11 +165,7 @@ select {
     background-color: #9d0000;
 }
 
-/* Search control */
-.filtr-search {
-    padding: 0.5rem;
-    text-transform: uppercase;
-}
+
 
 /* Colored divs */
 .block {

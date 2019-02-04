@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Filterizr Demo - Without jQuery in Bundle</title>
+    <title>filtre galerie</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
       
-    <link rel="stylesheet" href="demo/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="demo/font-awesome.min.css">-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="demo/index.css">
       
@@ -23,31 +24,32 @@
       <!-- Filter Controls - Multifilter Mode -->
       <div class="row">
 
-        <!-- Search control -->
-        <div class="row search-row" style="float:left">
-            Search control:
-            <input type="text" class="fltr-controls filtr-search" name="filtr-search" data-search style="height: 4rem;" placeholder="Search...">
-        
-            <div class="drop-filter" style="float:right" >
+            <!-- Search control -->
+           <div class="row search-row" style="margin-left:auto; padding-left:30%; ">
 
-                <div class="dropdown" onclick="myFunction()" >
-                    <i class="angle-drop fa fa-angle-down "></i>
-                    <div id="drop" class="dropdown-content">
-                        <ul class="simplefilter">
-                            <li class="fltr-controls active" data-filter="all">All</li><br>
-                            <li class="fltr-controls" data-filter="1">Favorites</li><br>
-                            <li class="fltr-controls" data-filter="2">Images</li><br>
-                            <li class="fltr-controls" data-filter="3">Video</li><br>
-                            <li class="fltr-controls" data-filter="4">Albums</li><br>
-                            <li class="fltr-controls" data-filter="5">Recently added</li>
-                        </ul>
+                <input type="text" class="fltr-controls filtr-search" name="filtr-search" data-search placeholder="Search...">
+
+                <div class="drop-filter" >
+
+                    <div class="dropdown" onclick="myFunction()" >
+                        <i class="angle-drop fa fa-angle-down "></i>
+                        <div id="drop" class="dropdown-content">
+                            <ul class="simplefilter">
+                                <li class="fltr-controls active" data-filter="all">All</li><br>
+                                <li class="fltr-controls" data-filter="1">Favorites</li><br>
+                                <li class="fltr-controls" data-filter="2">Images</li><br>
+                                <li class="fltr-controls" data-filter="3">Video</li><br>
+                                <li class="fltr-controls" data-filter="4">Albums</li><br>
+                                <li class="fltr-controls" data-filter="5">Recently added</li>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
                 
             </div>
-        
-        </div>
-
+          
+          </div>
       <div class="row push-down">
         <!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
         attribute, which starts from the value 1 and goes up from there -->
