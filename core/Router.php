@@ -2,25 +2,26 @@
 
 class Router
 {
-  public static function route($url)
-    {
-      //controllers
-      $controller = (isset($url[0]) && $url[0]!='') ? ucwords($url[0]) : DEFAULT_CONTROLLER;
-      $controller_name = $controller;
+  public static function route($url) {
+
+      //controller
+      $controller = (isset($url[0]) && $url[0] != '') ? ucwords($url[0]).'Controller' : DEFAULT_CONTROLLER.'Controller';
+      $controller_name = str_replace('Controller','',$controller);
       array_shift($url);
 
       //action
-      $action = (isset($url[0]) && $url[0]!='') ? $url[0].'Action' : 'indexAction';
-      $action_name = (isset($url[0]) && $url[0] !='')? $url[0] : 'index';
+      $action = (isset($url[0]) && $url[0] != '') ? $url[0] . 'Action': 'indexAction';
+      $action_name = (isset($url[0]) && $url[0] != '')? $url[0] : 'index';
       array_shift($url);
 
       //acl check
-      $grantAccess = Self::hasAccess($controller_name, $action_name);
-       if(!$grantAccess)
-       {
-         $controller_name = $controller = ACCESS_RESTRICTED;
-         $action = 'indexAction';
-       }
+      $grantAccess = self::hasAccess($controller_name, $action_name);
+
+      if(!$grantAccess) {
+        $controller = ACCESS_RESTRICTED.'Controller';
+        $controller_name = ACCESS_RESTRICTED;
+        $action = 'indexAction';
+      }
 
       //params
       $queryParams=$url;

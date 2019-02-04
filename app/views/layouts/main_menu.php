@@ -32,5 +32,15 @@
             <?php endif; ?>
           <?php endforeach; ?>
         </ul>
+
+
+        <ul class="nav navbar-nav navbar-right">
+        <?php if(Users::currentLoggedInUser()): ?>
+          <li><a class="nav-link">Hello <?=Users::currentLoggedInUser()->fname?></a></li>
+        <?php endif; ?>
+      </ul>
   </div>
+
+
+
 </nav>
