@@ -93,7 +93,7 @@
                                                 <input type="password" id="confirm" name="confirm" class="form-control" value="<?=$this->post['confirm']?>" placeholder="Confirm Password">
                                             </div>
                                         </div>
-                                          <div class="bg-danger"><?= $this->displayErrors ?></div>
+                                          <div ><?= $this->displayErrors ?></div>
                                         <div class="footer text-center">
                                               <input type="submit" class="btn btn-primary btn-round" value="Register">
                                         </div>
