@@ -1,7 +1,9 @@
 {
   "Home" : "home",
-  "Google" :"https://www.google.com/",
-  "PHP Docs" :"https://php.net/manual/en",
+  "Contacts": {
+    "My Contacts" : "contacts",
+    "Add Contact" : "contacts/add"
+  },
   "Login" :"register/login",
   "Logout" :"register/logout"
 }
