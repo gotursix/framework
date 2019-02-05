@@ -61,6 +61,7 @@ class Model {
       $params = $this->_softDeleteParams($params);
       $results = [];
       $resultsQuery = $this->_db->find($this->_table, $params);
+      if(!$resultsQuery) return [];
       foreach ($resultsQuery as $result)
       {
         $obj = new $this->_modelName($this->_table);
