@@ -20,6 +20,11 @@ class Contacts extends Model
       return $this->find($conditions);
     }
 
+    public function displayName()
+    {
+      return $this->fname . ' ' . $this->lname;
+    }
+
 
 
 }
