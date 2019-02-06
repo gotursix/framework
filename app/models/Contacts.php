@@ -2,6 +2,7 @@
 
 class Contacts extends Model
 {
+    public $deleted = 0;
 
     public function __construct()
     {
@@ -9,6 +10,20 @@ class Contacts extends Model
       parent::__construct($table);
       $this->_softDelete = true ;
     }
+
+    public static $addValidation = [
+      'fname' => [
+        'display' => 'First Name',
+        'required' => true,
+        'max' => 100
+      ],
+      'lname' =>
+      [
+        'display' => 'Last Name',
+        'required' => true,
+        'max' => 100
+      ],
+    ];
 
     public function findAllByUserId($user_id,$params=[])
     {
@@ -24,6 +39,8 @@ class Contacts extends Model
     {
       return $this->fname . ' ' . $this->lname;
     }
+
+
 
 
 
