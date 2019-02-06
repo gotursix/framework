@@ -40,8 +40,46 @@ class Contacts extends Model
       return $this->fname . ' ' . $this->lname;
     }
 
+    public function findByIdAndUserId($contact_id,$user_id,$params=[])
+    {
+      $conditions =
+      [
+        'conditions' => 'id = ? AND user_id = ?',
+        'bind' => [$contact_id,$user_id]
+      ];
+
+      $conditions = array_merge($conditions , $params);
+      return $this->findFirst($conditions);
+    }
+
+    public function displayAddress()
+    {
+      $adress = '';
+   if(!empty($this->address))
+   {
+     $adress .= $this->address . '<br>';
+   }
+   if(!empty($this->address2))
+   {
+     $adress .= $this->address2 . '<br>';
+   }
+
+   if(!empty($this->city))
+   {
+     $adress .= $this->city . ', ';
+   }
+
+   $adress .= $this->state . ' ' . $this->zip . '<br>';
+      return $adress ;
+    }
 
 
+    public function displayAddressLabel()
+    {
+      $html = $this->displayName() . '<br />';
+      $html .= $this->displayAddress();
+      return $html;
+    }
 
 
 }

@@ -81,6 +81,10 @@ class Model {
       {
         $result->populateObjData($resultsQuery);
       }
+      else
+      {
+        $result=false;
+      }
       return $result;
     }
 
