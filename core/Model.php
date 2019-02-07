@@ -31,29 +31,30 @@ class Model {
            }
 
 
-    protected function _softDeleteParams($params)
-    {
-      if($this->_softDelete)
-      {
-        if(array_key_exists('conditions',$params))
-        {
-           if(is_array($params['conditions']))
+           protected function _softDeleteParams($params)
            {
-              $params['conditions'][] = "deleted != 1 ";
-           }
-           else
-           {
-             $params['conditions'] .= " AND deleted != 1";
-           }
-        }
-        else
-        {
-          $params['conditions'] = "deleted != 1";
-        }
-      }
+             if($this->_softDelete)
+             {
+               if(array_key_exists('conditions',$params))
+               {
+                  if(is_array($params['conditions']))
+                  {
+                     $params['conditions'][] = "deleted != 1 ";
+                  }
+                  else
+                  {
+                    $params['conditions'] .= " AND deleted != 1";
+                  }
+               }
+               else
+               {
+                 $params['conditions'] = "deleted != 1";
+               }
+             }
 
-      return $params;
-    }
+             return $params;
+           }
+
 
 
     public function find($params = [])
@@ -121,27 +122,22 @@ class Model {
           }
 
 
-        public function update($id, $fields)
+          public function update($id, $fields)
             {
               if(empty($fields) || $id=='')return false;
-              return $this->_db->update($this->_table , $id , fields);
+              return $this->_db->update($this->_table , $id , $fields);
             }
 
 
-      public function delete($id='')
-            {
-              if($id == '' && $this->id=='') return false;
-              $id = ($id= '')? $this->id : $id;
-              if($this->_softDelete)
-              {
-                $this->update($id, ['deleted'=> 1]);
+            public function delete($id = '') {
+              if($id == '' && $this->id == '') return false;
+              $id = ($id == '')? $this->id : $id;
+              if($this->_softDelete) {
+                return $this->update($id, ['deleted' => 1]);
               }
               return $this->_db->delete($this->_table, $id);
             }
-            public function query($sql , $bind=[])
-            {
-              return $this->_db->query($sql, $bind);
-            }
+
 
 
     public function data()
