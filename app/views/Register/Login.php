@@ -19,7 +19,7 @@
                                             <span class="input-group-addon">
                                             </span>
 
-                                            <div class="form-group label-floating">
+                                            <div class="form-group label-floating" style="width:100%;">
                                                 <label class="control-label"><h4>Username</h4></label>
                                                 <br>
                                                 <input type="text" name="username" id="username" class="form-control" value="">
@@ -28,7 +28,7 @@
                                         <div class="input-group">
                                             <span class="input-group-addon">
                                             </span>
-                                            <div class="form-group label-floating">
+                                            <div class="form-group label-floating" style="width:100%;">
                                                 <label class="control-label"><h4>Password</h4></label>
                                                 <br>
                                                 <input type="password" name="password" id="password" class="form-control" value="">
@@ -56,6 +56,7 @@
                                 <div class="footer text-center">
                                    <label class="control-label reset-button"><h4><a href="<?=PROOT?>register/register" class="reset-button">Reset password</a></h4></label>
                             </div>
+                              </div>
                             </form>
                         </div>
                     </div>
