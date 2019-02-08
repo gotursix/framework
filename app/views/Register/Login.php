@@ -44,11 +44,11 @@
                                     </div>
 
                                       <br>
-                                    <div class="footer text-center">
+
+                                      <div class="footer text-center  style=" style="padding-bottom: 30px;">
                                         <button type="submit" class="btn btn-primary btn-wd btn-lg" data-background-color="rose">Login</button>
                                     </div>
 
-                                      <br><br>
                                     <div class="footer text-center">
                                     <a href="<?=PROOT?>register/register"  class="btn btn-light" data-background-color="rose">Register</a>
                                 </div>

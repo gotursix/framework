@@ -1,6 +1,6 @@
 <?php
 
-(strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') ? define('DS', '/') : define('DS', DIRECTORY_SEPARATOR); 
+(strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') ? define('DS', '/') : define('DS', DIRECTORY_SEPARATOR);
 define('ROOT',dirname(__FILE__));
 
 //load configuration and helper functions
@@ -27,8 +27,7 @@ session_start();
 
 $url = isset($_SERVER['PATH_INFO']) ? explode('/',ltrim($_SERVER['PATH_INFO'],'/')) :[] ;
 
-if(!Session::exists(CURRENT_USER_SESSION_NAME) && COOKIE::exists(REMEMBER_ME_COOKIE_NAME))
-{
+if(!Session::exists(CURRENT_USER_SESSION_NAME) && COOKIE::exists(REMEMBER_ME_COOKIE_NAME)) {
   Users::loginUserFromCookie();
 }
 //Route the request

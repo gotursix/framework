@@ -26,7 +26,7 @@
                                       </div>
                                         <div class="info info-horizontal">
                                             <div class="icon icon-rose">
-                                                <i class="material-icons" style="margin-top: -1 %;">C</i>
+                                                <i class="material-icons" style="margin-top: -1   %;">C</i>
                                             </div>
                                             <div class="description">
                                                 <h4 class="info-title">reate albums</h4>
