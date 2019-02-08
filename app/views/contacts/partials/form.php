@@ -10,7 +10,7 @@
 <?= inputBlock('text', 'Cell Phone' , 'cell_phone' , $this->contact->cell_phone , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
 <?= inputBlock('text', 'Home Phone' , 'home_phone' , $this->contact->home_phone , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
 <?= inputBlock('text', 'Work Phone' , 'work_phone' , $this->contact->work_phone , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
-<div class="bg-danger form-errors"><?=$this->displayErrors?></div>
+<div class="isa_error_class"><?=$this->displayErrors?></div>
 
 <div class="col-md2 well text-right">
   <a href="<?=PROOT?>contacts" class="btn btn-default">Cancel</a>

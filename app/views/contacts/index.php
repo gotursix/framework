@@ -1,7 +1,7 @@
 <?php $this->start('body'); ?>
 <h2 class="text-center">My contacts</h2>
 <br>
-<table class="table">
+<table class="table table-striped">
  <thead class="thead-dark">
 
    <th>Name</th>
@@ -25,8 +25,10 @@
      <td><?= $contact->home_phone;?></td>
      <td><?= $contact->work_phone;?></td>
      <td>
+       <a href="<?=PROOT?>contacts/edit/<?=$contact->id?>" class="btn btn-info btn-xs">Edit</a>
+
          <a href="<?=PROOT?>contacts/delete/<?=$contact->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
-         <i class="glyphicon glyphicon-remove>"></i> Delete
+            Delete
          </a>
      </td>
      <?php endforeach; ?>
