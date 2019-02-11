@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    </head>
+    
+    
+<body>
+    
+
+       
+        
+        <section class="intro">
+
+            <row>
+                
+                <div class="col-lg-6 col-sm-12 left">
+                    
+                    <div class="file-upload">
+                   
+                        <label for="upload" class="file-upload__label"><img src="imagini/upload.png" title="Upload files" alt="Upload files"></label>
+                        
+                        <input type="file" name="file-upload" id="upload" class="file-upload__input">
+                    
+                    </div>
+                  
+                  
+                </div>
+                
+                <div class="col-lg-6 col-sm-12 right">
+
+                    
+                    <div class="form">
+
+                        <div class="content-form">
+                            
+                            <form action="upload.php" method="post" enctype="multipart/form-data">
+                                
+                                <div class="insert-area">
+                                    
+                                    <p class="text-form">Name image</p>
+
+                                    <input type="text" name="nameimage" id="nameimage" placeholder="Ex: My dog" class=""><br>
+                                    
+                                </div>
+                                
+                                <div class="file-upload">
+                                    
+                                    
+                                    <label for="submit" class="file-upload__label"><div class="submit-form">SUBMIT</div></label>
+                                        
+                                    <input type="submit" name="submit" value="Submit"  class="file-upload__input">
+                                    
+                                  
+                                    
+                                </div>
+                            
+
+                            </form>
+                            
+                        </div>  
+                        
+                    </div>
+                    
+                    
+                    
+                    
+
+                </div>
+
+            </row>
+
+        </section>
+
+        
+
+</body>
+</html>
