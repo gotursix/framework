@@ -40,3 +40,8 @@ function currentPage()
   }
   return $currentPage ;
 }
+
+function getObjectProperties($obj)
+{
+  return get_object_vars($obj);
+}

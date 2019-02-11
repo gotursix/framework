@@ -31,7 +31,6 @@ class ContactsController extends Controller
       if($validation->passed())
       {
         $contact->user_id = Users::currentLoggedInUser()->id;
-        $contact->deleted = 0;
         $contact->save();
         Router::redirect('contacts');
       }
