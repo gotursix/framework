@@ -32,6 +32,7 @@ class Contacts extends Model
         'condition' => 'user_id = ?',
         'bind' => [$user_id]
       ];
+
       $conditions = array_merge($conditions, $params);
       return $this->find($conditions);
     }
