@@ -1,4 +1,5 @@
 <form class="form-row" action=<?= $this->postAction?> method="post">
+  <?= FH::csrfInput() ?>
 <?= inputBlock('text', 'First Name' , 'fname' , $this->contact->fname , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
 <?= inputBlock('text', 'Last Name' , 'lname' , $this->contact->lname , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
 <?= inputBlock('text', 'Address' , 'address' , $this->contact->address , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>

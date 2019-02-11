@@ -14,7 +14,7 @@
                                 <div class="col-md-5 col-md-offset-1">
                                     <div class="card-content">
                                       <div class="info info-horizontal">
-                                          <div class="icon icon-info"   style="margin-top: -0%;">
+                                          <div class="icon icon-info" style="margin-top: -0%;">
                                               <i class="material-icons">E</i>
                                           </div>
                                           <div class="description">
@@ -55,7 +55,7 @@
                                     </div>
 
                                       <form class="form" action="" method="post">
-
+                                        <?= FH::csrfInput(); ?>
                                         <div class="card-content">
                                             <div class="input-group">
                                                 <span class="input-group-addon">

@@ -18,6 +18,7 @@ function inputBlock($type, $label, $name, $value='', $inputAttrs=[], $divAttrs=[
       return $html;
     }
 
+
     function submitBlock($buttonText, $inputAttrs=[], $divAttrs=[])
     {
         $divString = stringifyAttrs($divAttrs);
