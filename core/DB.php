@@ -83,7 +83,6 @@ class DB {
       $limit = ' LIMIT ' . $params['limit'];
     }
     $sql = "SELECT * FROM {$table}{$conditionString}{$order}{$limit}";
-    dnd($bind);
     if($this->query($sql, $bind,$class)) {
       if(!count($this->_result)) return false;
       return true;

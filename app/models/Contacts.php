@@ -29,7 +29,7 @@ class Contacts extends Model
     public function findAllByUserId($user_id,$params=[])
     {
       $conditions = [
-        'condition' => 'user_id = ?',
+        'conditions' => 'user_id = ?',
         'bind' => [$user_id]
       ];
 
