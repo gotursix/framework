@@ -21,11 +21,11 @@ class Validate
 
       foreach ($items as $item=> $rules)
       {
-        $item = Input::sanitize($item);
+        $item = FH::sanitize($item);
         $display = $rules['display'];
         foreach ($rules as $rule => $rule_value)
         {
-          $value = Input::sanitize(trim($source[$item]));
+          $value = FH::sanitize(trim($source[$item]));
 
           if($rule === 'required' && empty($value))
           {

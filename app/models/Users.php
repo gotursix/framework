@@ -39,7 +39,7 @@ class Users extends Model
    }
 
 
-   public static function currentLoggedInUser()
+   public static function currentUser()
    {
      if(!isset(self::$currentLoggedInUser) && Session::exists(CURRENT_USER_SESSION_NAME))
      {
