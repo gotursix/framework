@@ -3,7 +3,7 @@
 
 <?php $this->start('body'); ?>
 <body class="off-canvas-sidebar">
-    <div class="wrapper wrapper-full-page" style="background-image: url('<?=PROOT?>img/login.jpeg') ">
+    <div class="wrapper wrapper-full-page" style="background-image: url('<?=PROOT?>img/login.jpeg'); background-size: cover; ">
         <div class="full-page login-page" filter-color="black" >
             <div class="content">
                 <div class="container">
