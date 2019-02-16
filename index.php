@@ -18,6 +18,12 @@ function autoload($className)
     elseif (file_exists(ROOT . DS . 'app' . DS . 'models' . DS . $className . '.php'))
     {
     require_once(ROOT . DS . 'app' . DS . 'models' . DS . $className . '.php');
+}elseif (file_exists(ROOT . DS . 'core' . DS . 'validators' . DS . $className . '.php'))
+{
+  require_once(ROOT . DS . 'app' . DS . 'custom_validators' . DS . $className . '.php');
+}elseif (file_exists(ROOT . DS . 'app' . DS . 'custom_validators' . DS . $className . '.php'))
+{
+  require_once(ROOT . DS . 'core' . DS . 'validators' . DS . $className . '.php');
 }
 }
 
