@@ -3,13 +3,14 @@
 
 <?php $this->start('body'); ?>
 <body class="off-canvas-sidebar">
-    <div class="wrapper wrapper-full-page" style="background-image: url('<?=PROOT?>img/login.jpeg') ">
+    <div class="wrapper wrapper-full-page" style="background-image: url('<?=PROOT?>img/login.jpeg'); background-size: cover; ">
         <div class="full-page login-page" filter-color="black" >
             <div class="content">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
                           <form action="<?=PROOT?>register/login" method="post">
+                            <?= FH::csrfInput() ?>
                                 <div class="card card-login">
                                     <div class="card-header text-center" data-background-color="rose">
                                         <h3 class="card-title">Login</h3>

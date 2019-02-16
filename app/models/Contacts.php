@@ -2,7 +2,8 @@
 
 class Contacts extends Model
 {
-    public $deleted = 0;
+    public $id , $user_id , $fname , $lname, $email , $address , $address2 , $city , $state, $zip ;
+    public $home_phone , $cell_phone, $work_phone ,  $deleted = 0;
 
     public function __construct()
     {
@@ -28,9 +29,10 @@ class Contacts extends Model
     public function findAllByUserId($user_id,$params=[])
     {
       $conditions = [
-        'condition' => 'user_id = ?',
+        'conditions' => 'user_id = ?',
         'bind' => [$user_id]
       ];
+
       $conditions = array_merge($conditions, $params);
       return $this->find($conditions);
     }

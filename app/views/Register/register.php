@@ -3,7 +3,7 @@
 <?php $this->start('body'); ?>
 
 <body class="off-canvas-sidebar">
-    <div class="wrapper wrapper-full-page" style="background-image: url('<?=PROOT?>img/register.jpeg') ">
+    <div class="wrapper wrapper-full-page" style="background-image: url('<?=PROOT?>img/register.jpeg');  background-size: cover;">
            <div class="full-page register-page" filter-color="black" >
          <div class="container">
                 <div class="row">
@@ -14,7 +14,7 @@
                                 <div class="col-md-5 col-md-offset-1">
                                     <div class="card-content">
                                       <div class="info info-horizontal">
-                                          <div class="icon icon-info"   style="margin-top: -0%;">
+                                          <div class="icon icon-info" style="margin-top:0%;">
                                               <i class="material-icons">E</i>
                                           </div>
                                           <div class="description">
@@ -25,8 +25,8 @@
                                           </div>
                                       </div>
                                         <div class="info info-horizontal">
-                                            <div class="icon icon-rose">
-                                                <i class="material-icons" style="margin-top: -1   %;">C</i>
+                                            <div class="icon icon-rose" style="margin-top:0%;">
+                                                <i class="material-icons" >C</i>
                                             </div>
                                             <div class="description">
                                                 <h4 class="info-title">reate albums</h4>
@@ -36,8 +36,8 @@
                                             </div>
                                         </div>
                                         <div class="info info-horizontal">
-                                            <div class="icon icon-primary">
-                                                <i class="material-icons" style="margin-top: -1%;">O</i>
+                                            <div class="icon icon-primary" style="margin-top:0%;">
+                                                <i class="material-icons">O</i>
                                             </div>
                                             <div class="description">
                                                 <h4 class="info-title">pen source</h4>
@@ -55,7 +55,7 @@
                                     </div>
 
                                       <form class="form" action="" method="post">
-
+                                        <?= FH::csrfInput(); ?>
                                         <div class="card-content">
                                             <div class="input-group">
                                                 <span class="input-group-addon">
