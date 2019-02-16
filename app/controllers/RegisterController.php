@@ -59,20 +59,7 @@ class RegisterController extends Controller
 
      if($_POST) {
     // $validation->check($_POST, [
-    //   'fname' => [
-    //     'display' => 'First Name',
-    //     'required' => true
-    //   ],
-    //   'lname' => [
-    //      'required' => true
-    //   ],
-    //   'username' => [
-    //     'display' => 'Username',
-    //     'required' => true,
-    //     'unique' => 'users',
-    //     'min' => 5,
-    //     'max' => 150
-    //   ],
+    //
     //   'email' => [
     //     'display' => 'Email',
     //     'required' => true,
@@ -93,7 +80,8 @@ class RegisterController extends Controller
     // ],true);
 
 
-       $newUser -> assign($_POST);
+       $newUser-> assign($_POST);
+       $newUser->setConfirm(Input::get('confirm'));
        if($newUser -> save())
        {
          Router::redirect('register/login');
