@@ -34,7 +34,7 @@ class Users extends Model
 
    public function validator()
    {
-     $this->runValidation(new MinValidator($this, ['field'=>'username','rule'=>'6','msg'=>'Username must be at least 6 characters.']));
+     $this->runValidation(new MinValidator($this,['field'=>'username','rule'=>6,'msg'=>'Username must be at least 6 characters.']));
    }
 
 

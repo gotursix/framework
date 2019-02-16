@@ -54,55 +54,28 @@
                                         <h4>Rufus Framework</h4>
                                     </div>
 
-                                      <form class="form" action="" method="post">
-                                        <?= FH::csrfInput(); ?>
-                                        <div class="card-content">
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                </span>
-                                                  <input type="text" id="fname" name="fname" class="form-control" value="<?=$this->post['fname']?>" placeholder="First name">
-                                            </div>
-
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                </span>
-                                                <input type="text" id="lname" name="lname" class="form-control" value="<?=$this->post['lname']?>" placeholder="Last name">
-                                            </div>
-
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                </span>
-                                                <input type="email" id="email" name="email" class="form-control" value="<?=$this->post['email']?>" placeholder="Email">
-                                            </div>
-
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                </span>
-                                                <input type="text" id="username" name="username" class="form-control" value="<?=$this->post['username']?>" placeholder="Username">
-                                            </div>
-
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                </span>
-                                                <input type="password" id="password" name="password" class="form-control" value="<?=$this->post['password']?>" placeholder="Password">
-                                            </div>
-
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                </span>
-                                                <input type="password" id="confirm" name="confirm" class="form-control" value="<?=$this->post['confirm']?>" placeholder="Confirm Password">
-                                            </div>
-                                                <br><br>    <br><br>    <br><br>    <br><br>        <br><br>
-                                                  <div ><?= $this->displayErrors ?></div>
-                                        </div>
 
 
 
 
-                                        <div class="footer text-center">
-                                              <input type="submit" class="btn btn-primary btn-round" value="Register">
-                                        </div>
-                                    </form>
+  <form class="form" action="" method="post">
+    <?= FH::csrfInput(); ?>
+    <div class="card-content">
+    <?= FH::inputBlock('text','First Name', 'fname' , $this->newUser->fname , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
+    <?= FH::inputBlock('text','Last Name', 'lname' , $this->newUser->lname , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
+    <?= FH::inputBlock('text','Email', 'email' , $this->newUser->email , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
+    <?= FH::inputBlock('text','Username', 'username' , $this->newUser->username , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
+    <?= FH::inputBlock('password','Password', 'password' , $this->newUser->password , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
+    <?= FH::inputBlock('password','Confirm Password', 'confirm' , $this->newUser->password , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
+    <?= FH::submitBlock('Register' , ['class' => 'btn btn-primary btn-round'], ['class'=>'footer text-center'])?>
+    <?= FH::displayErrors($this->displayErrors); ?>
+    </div>
+</form>
+
+
+
+
+
                                 </div>
                             </div>
                         </div>
