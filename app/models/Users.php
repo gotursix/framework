@@ -38,7 +38,6 @@ class Users extends Model
      $this->runValidation(new RequiredValidator($this , ['field'=>'lname' , 'msg'=>'Last name is required']));
      $this->runValidation(new RequiredValidator($this , ['field'=>'email' , 'msg'=>'Email is required']));
      $this->runValidation(new EmailValidator($this , ['field'=>'email' , 'msg'=> 'You must provide a valid email adress.']));
-
      $this->runValidation(new MinValidator($this,['field'=>'username','rule'=>6,'msg'=>'Username must be at least 6 characters.']));
      $this->runValidation(new MaxValidator($this,['field'=>'username','rule'=>150,'msg'=>'Username must be less than 150 characters.']));
      $this->runValidation(new MaxValidator($this,['field'=>'email','rule'=>150,'msg'=>'Email must be less than 150 characters.']));
@@ -47,6 +46,11 @@ class Users extends Model
      $this->runValidation(new MinValidator($this,['field'=>'password','rule'=>6,'msg'=>'Password must be at least 6 characters.']));
 
      $this->runValidation(new MatchesValidator($this , ['field'=>'password' , 'rule' => $this->_confirm , 'msg'=>'Your passwords do not match.']));
+   }
+
+   public function beforeSave()
+   {
+     $this->password = password_hash($this->password , PASSWORD_DEFAULT);
    }
 
 
@@ -108,15 +112,6 @@ class Users extends Model
      self::$currentLoggedInUser = null;
      return true;
    }
-
-
-     public function registerNewUser($params)
-     {
-       $this->assign($params);
-       $this->deleted = 0;
-       $this->password = password_hash($this->password, PASSWORD_DEFAULT);
-       $this->save();
-     }
 
      public function acls()
      {

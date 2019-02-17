@@ -72,6 +72,7 @@ class Model {
         $this->validator();
         if($this->_validates)
         {
+          $this->beforeSave();
           $fields = H::getObjectProperties($this);
           // determine whether to update or insert
           if(property_exists($this, 'id') && $this->id != '') {
@@ -80,7 +81,7 @@ class Model {
             return $save;
           } else {
             $save = $this->insert($fields);
-
+            $this->afterSave();
             return $save;
           }
         }
@@ -172,4 +173,9 @@ class Model {
        $this->_validates = false;
        $this->_validationErrors[$field] = $msg;
      }
+
+     public function beforeSave(){}
+
+     public function afterSave(){}
+
 }

@@ -1,4 +1,4 @@
-<?php $this->start('head'); ?>  
+<?php $this->start('head'); ?>
 <?php $this->end(); ?>
 
 <?php $this->start('body'); ?>
@@ -11,10 +11,15 @@
                         <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
                           <form action="<?=PROOT?>register/login" method="post">
                             <?= FH::csrfInput() ?>
+
                                 <div class="card card-login">
+
+
                                     <div class="card-header text-center" data-background-color="rose">
                                         <h3 class="card-title">Login</h3>
                                     </div>
+
+
                                     <div class="card-content">
                                         <div class="input-group">
                                             <span class="input-group-addon">
@@ -23,12 +28,9 @@
                                             <div class="form-group label-floating">
                                                 <label class="control-label"><h4>Username</h4></label>
                                                 <br>
-                                                <input type="text" name="username" id="username" class="form-control" value="">
+                                                <input type="textd" name="username" id="username" class="form-control" value="">
                                             </div>
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                            </span>
+
                                             <div class="form-group label-floating">
                                                 <label class="control-label"><h4>Password</h4></label>
                                                 <br>
@@ -41,7 +43,7 @@
                                     </div>
 
                                     <div class="isa_error_class">
-                                      <?=$this->displayErrors ?>
+                                      <?= FH::displayErrors($this->displayErrors)?>
                                     </div>
 
                                       <br>
