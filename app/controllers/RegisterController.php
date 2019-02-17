@@ -56,30 +56,7 @@ class RegisterController extends Controller
    public function registerAction()
    {
       $newUser = new Users();
-
      if($_POST) {
-    // $validation->check($_POST, [
-    //
-    //   'email' => [
-    //     'display' => 'Email',
-    //     'required' => true,
-    //     'unique' => 'users',
-    //     'max' => 150,
-    //     'valid_email' => true
-    //   ],
-    //   'password' => [
-    //     'display' => 'Password',
-    //     'required' => true,
-    //     'min' => 6
-    //   ],
-    //   'confirm' => [
-    //     'display' => 'Confirm Password',
-    //     'required' => true,
-    //     'matches' => 'password'
-    //   ]
-    // ],true);
-
-
        $newUser-> assign($_POST);
        $newUser->setConfirm(Input::get('confirm'));
        if($newUser -> save())
