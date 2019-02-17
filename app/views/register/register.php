@@ -14,7 +14,7 @@
                                 <div class="col-md-5 col-md-offset-1">
                                     <div class="card-content">
                                       <div class="info info-horizontal">
-                                          <div class="icon icon-info" style="margin-top:0%;">
+                                          <div class="icon icon-info padding-text">
                                               <i class="material-icons">E</i>
                                           </div>
                                           <div class="description">
@@ -25,7 +25,7 @@
                                           </div>
                                       </div>
                                         <div class="info info-horizontal">
-                                            <div class="icon icon-rose" style="margin-top:0%;">
+                                            <div class="icon icon-rose padding-text2">
                                                 <i class="material-icons" >C</i>
                                             </div>
                                             <div class="description">
@@ -36,7 +36,7 @@
                                             </div>
                                         </div>
                                         <div class="info info-horizontal">
-                                            <div class="icon icon-primary" style="margin-top:0%;">
+                                            <div class="icon icon-primary padding-text3">
                                                 <i class="material-icons">O</i>
                                             </div>
                                             <div class="description">
@@ -67,7 +67,7 @@
     <?= FH::inputBlock('text','Username', 'username' , $this->newUser->username , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
     <?= FH::inputBlock('password','Password', 'password' , $this->newUser->password , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
     <?= FH::inputBlock('password','Confirm Password', 'confirm' , $this->newUser->getConfirm() , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
-    <?= FH::submitBlock('Register' , ['class' => 'btn btn-primary btn-round'], ['class'=>'footer text-center'])?>
+    <?= FH::submitBlock('Register' , ['class' => 'btn btn-wd btn-lg'], ['class'=>'footer text-center'])?>
     <?= FH::displayErrors($this->displayErrors); ?>
     </div>
 </form>

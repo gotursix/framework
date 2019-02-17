@@ -14,6 +14,9 @@
 .form-group {
     margin-bottom: 15px;
 }
+.label-floating{
+    width:100%;
+}
 html * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -360,7 +363,8 @@ body {
 }
 
 .reset-button  {
-  color: #b3b3b3;
+    color: #b3b3b3;
+    text-decoration: none;
 }
 
 .card-calendar table td {
@@ -1329,6 +1333,18 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 
 .register-page .card-signup .info-horizontal .description {
     overflow: hidden;
+}
+.register-page  .card-signup .info-horizontal .padding-text{
+	margin-top:2%;
+	margin-right:0%;
+}
+.register-page  .card-signup .info-horizontal .padding-text2{
+	margin-top:2%;
+	margin-right:0%;
+}
+.register-page  .card-signup .info-horizontal .padding-text3{
+	margin-top:3%;
+	margin-right:0%;
 }
 
 .register-page .card-signup .form-group {

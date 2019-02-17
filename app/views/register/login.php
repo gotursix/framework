@@ -1,4 +1,4 @@
-<?php $this->start('head'); ?>
+<?php $this->start('head'); ?>  
 <?php $this->end(); ?>
 
 <?php $this->start('body'); ?>
@@ -20,7 +20,7 @@
                                             <span class="input-group-addon">
                                             </span>
 
-                                            <div class="form-group label-floating" style="width:100%;">
+                                            <div class="form-group label-floating">
                                                 <label class="control-label"><h4>Username</h4></label>
                                                 <br>
                                                 <input type="text" name="username" id="username" class="form-control" value="">
@@ -29,7 +29,7 @@
                                         <div class="input-group">
                                             <span class="input-group-addon">
                                             </span>
-                                            <div class="form-group label-floating" style="width:100%;">
+                                            <div class="form-group label-floating">
                                                 <label class="control-label"><h4>Password</h4></label>
                                                 <br>
                                                 <input type="password" name="password" id="password" class="form-control" value="">
@@ -46,17 +46,17 @@
 
                                       <br>
 
-                                      <div class="footer text-center  style=" style="padding-bottom: 30px;">
-                                        <button type="submit" class="btn btn-primary btn-wd btn-lg" data-background-color="rose">Login</button>
+                                    <div class="footer text-center">
+                                        <button type="submit" class="btn btn-wd btn-lg" data-background-color="rose">Login</button>
                                     </div>
 
                                     <div class="footer text-center">
-                                    <a href="<?=PROOT?>register/register"  class="btn btn-light" data-background-color="rose">Register</a>
-                                </div>
+                                        <a href="<?=PROOT?>register/register" class="btn-reg" data-background-color="rose">Register</a>
+                                    </div>
 
-                                <div class="footer text-center">
-                                   <label class="control-label reset-button"><h4><a href="<?=PROOT?>register/register" class="reset-button">Reset password</a></h4></label>
-                            </div>
+                                    <div class="footer text-center">
+                                        <label class="control-label reset-button"><h8><a href="<?=PROOT?>register/register" class="reset-button">Reset password</a></h8></label>
+                                    </div>
                               </div>
                             </form>
                         </div>
