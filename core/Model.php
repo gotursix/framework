@@ -80,7 +80,7 @@ class Model {
             return $save;
           } else {
             $save = $this->insert($fields);
-  
+
             return $save;
           }
         }
@@ -132,7 +132,7 @@ class Model {
         {
           if(property_exists($this, $key))
           {
-            $this->$key = FH::sanitize($val);
+            $this->$key = $val;
           }
         }
         return true;
