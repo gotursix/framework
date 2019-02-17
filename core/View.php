@@ -11,15 +11,16 @@ class View
 
   public function render($viewName)
   {
-    $viewAry = explode('/',$viewName);
-    $viewString = implode(DS, $viewAry);
-    if(file_exists(ROOT . DS . 'app' . DS . 'views'. DS . $viewString . '.php'))
-    {
-      include(ROOT . DS . 'app' . DS . 'views'. DS . $viewString . '.php');
-      include(ROOT . DS . 'app' . DS . 'views'. DS .'layouts' . DS . $this->_layout . '.php');
-    }else
-    die('The view\"'.$viewName.'\" does not exist.');
-  }
+       $viewAry = explode('/', $viewName);
+       $viewString = implode(DS, $viewAry);
+
+       if(file_exists(ROOT . DS . 'app' . DS . 'views' . DS . $viewString . '.php')) {
+         include(ROOT . DS . 'app' . DS . 'views' . DS . $viewString . '.php');
+         include(ROOT . DS . 'app' . DS . 'views' . DS . 'layouts' . DS . $this->_layout . '.php');
+       } else {
+         die('The view \"' . $viewName . '\" does not exist.');
+       }
+     }
 
 
 public function content($type)

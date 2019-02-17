@@ -52,11 +52,26 @@ class FH {
     return htmlentities($dirty, ENT_QUOTES, 'UTF-8');
   }
 
-  public static function posted_values($post) {
+  public static function posted_values($post)
+  {
     $clean_ary = [];
     foreach($post as $key => $value) {
       $clean_ary[$key] = self::sanitize($value);
     }
     return $clean_ary;
   }
+
+
+  public static function displayErrors($errors) {
+    $hasErrors = (!empty($errors))? ' has-errors' : '';
+    $html = '<div class="isa_error_class"><ul class="has-errors'.$hasErrors.'">';
+    foreach($errors as $field => $error) {
+      $html .= '<li class="alert alert-danger">'.$error.'</li>';
+      $html .= '<script>jQuery("document").ready(function(){jQuery("#'.$field.'").parent().closest("div").addClass("has-error");});</script>';
+    }
+    $html .= '</ul></div>';
+    return $html;
+  }
+
+
 }
