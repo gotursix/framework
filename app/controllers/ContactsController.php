@@ -21,21 +21,19 @@ class ContactsController extends Controller
   public function addAction()
   {
     $contact = new Contacts();
-    $validation = new Validate();
 
-    if($_POST)
+    if($this->request->isPost())
     {
-      $contact->assign($_POST);
-      $validation->check($_POST, Contacts::$addValidation, true);
-      if($validation->passed())
+      $this->request->csrfCheck();
+      $contact->assign($this->request->get());
+      $contact->user_id = Users::currentUSer()->id;
+      if($contact->save())
       {
-        $contact->user_id = Users::currentLoggedInUser()->id;
-        $contact->save();
         Router::redirect('contacts');
       }
     }
     $this->view->contact = $contact ;
-    $this->view->displayErrors = $validation->displayErrors();
+    $this->view->displayErrors = $contact->getErrorMessages();
     $this->view->postAction = PROOT . 'contacts' . DS . 'add';
     $this->view->render('contacts/add');
   }
@@ -47,18 +45,14 @@ class ContactsController extends Controller
     {
       Router::redirect('contacts');
     }
-    $validation = new Validate();
-    if($_POST)
+
+    if($this->request->isPost())
     {
-      $contact->assign($_POST);
-      $validation->check($_POST,Contacts::$addValidation , true );
-      if($validation->passed())
-      {
-        $contact->save();
-        Router::redirect('contacts');
-      }
+      $this->request->csrfCheck();
+      $contact->assign($this->request->get());
+      if($contact->save())   Router::redirect('contacts');
     }
-    $this->view->displayErrors = $validation->displayErrors() ;
+    $this->view->displayErrors = $contact->getErrorMessages() ;
     $this->view->contact = $contact;
     $this->view->postAction = PROOT . 'contacts' . DS . 'edit' . DS . $contact->id;
     $this->view->render('contacts/edit');

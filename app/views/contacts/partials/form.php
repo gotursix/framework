@@ -1,5 +1,5 @@
 <form class="form-row" action=<?= $this->postAction?> method="post">
-  <?= FH::csrfInput() ?>
+<?= FH::csrfInput() ?>
 <?= FH::inputBlock('text', 'First Name' , 'fname' , $this->contact->fname , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
 <?= FH::inputBlock('text', 'Last Name' , 'lname' , $this->contact->lname , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
 <?= FH::inputBlock('text', 'Address' , 'address' , $this->contact->address , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
@@ -11,7 +11,7 @@
 <?= FH::inputBlock('text', 'Cell Phone' , 'cell_phone' , $this->contact->cell_phone , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
 <?= FH::inputBlock('text', 'Home Phone' , 'home_phone' , $this->contact->home_phone , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
 <?= FH::inputBlock('text', 'Work Phone' , 'work_phone' , $this->contact->work_phone , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
-<div class="isa_error_class"><?=$this->displayErrors?></div>
+<div class="isa_error_class"><?= FH::displayErrors($this->displayErrors) ?></div>
 
 <div class="col-md2 well text-right">
   <a href="<?=PROOT?>contacts" class="btn btn-default">Cancel</a>
