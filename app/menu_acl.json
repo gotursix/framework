@@ -6,5 +6,11 @@
   },
   "Login" :"register/login",
   "Register" :"register/register",
+  "Files": {
+    "My files" : "upload/index",
+    "Upload" : "upload/add"
+  },
+
   "Logout" :"register/logout"
+
 }

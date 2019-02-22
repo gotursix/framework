@@ -1,6 +1,7 @@
 <?php
 namespace App\Models;
 use Core\Model;
+use Core\H;
 use Core\Validators\RequiredValidator;
 use Core\Validators\UniqueValidator;
 use Core\Validators\MaxValidator;
@@ -15,6 +16,7 @@ class Contacts extends Model
       $table = 'contacts';
       parent::__construct($table);
       $this->_softDelete = true ;
+    
     }
 
 
