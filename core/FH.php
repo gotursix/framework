@@ -6,8 +6,7 @@ class FH {
     $divString = self::stringifyAttrs($divAttrs);
     $inputString = self::stringifyAttrs($inputAttrs);
     $html = '<div' . $divString . '>';
-    $html .= '<label for="'.$name.'">'.$label.'</label>';
-    $html .= '<input type="'.$type.'" id="'.$name.'" name="'.$name.'" value="'.$value.'"'.$inputString.' />';
+    $html .= '<input type="'.$type.'" id="'.$name.'" name="'.$name.'" placeholder="'.$label.'" value="'.$value.'"'.$inputString.' />';
     $html .= '</div>';
     return $html;
   }

@@ -70,7 +70,11 @@ use Core\FH;
     <?= FH::inputBlock('text','Username', 'username' , $this->newUser->username , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
     <?= FH::inputBlock('password','Password', 'password' , $this->newUser->password , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
     <?= FH::inputBlock('password','Confirm Password', 'confirm' , $this->newUser->getConfirm() , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
-    <?= FH::submitBlock('Register' , ['class' => 'btn btn-wd btn-lg'], ['class'=>'footer text-center'])?>
+    <?= FH::submitBlock('Register' , ['class' => 'btn btn-wd btn-lg register-top' , 'data-background-color'=>"rose"], ['class'=>'footer text-center'])?>
+
+
+
+
     <?= FH::displayErrors($this->displayErrors); ?>
     </div>
 </form>

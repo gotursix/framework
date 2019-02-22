@@ -55,12 +55,9 @@ use Core\FH;
                                         <button type="submit" class="btn btn-wd btn-lg" data-background-color="rose">Login</button>
                                     </div>
 
-                                    <div class="footer text-center">
-                                        <a href="<?=PROOT?>register/register" class="btn-reg" data-background-color="rose">Register</a>
-                                    </div>
 
                                     <div class="footer text-center">
-                                        <label class="control-label reset-button"><h8><a href="<?=PROOT?>register/register" class="reset-button">Reset password</a></h8></label>
+                                        <label class="control-label reset-button"><h8><a href="#" class="reset-button">Reset password</a></h8></label>
                                     </div>
                               </div>
                             </form>
