@@ -32,6 +32,7 @@ class Users extends Model
      }
    }
 
+
    public function validator()
    {
      $this->runValidation(new RequiredValidator($this , ['field'=>'fname' , 'msg'=>'First name is required']));
@@ -47,6 +48,7 @@ class Users extends Model
 
      $this->runValidation(new MatchesValidator($this , ['field'=>'password' , 'rule' => $this->_confirm , 'msg'=>'Your passwords do not match.']));
    }
+
 
    public function beforeSave()
    {
@@ -88,6 +90,7 @@ class Users extends Model
       $this->_db->insert('user_sessions',$fields);
     }
    }
+
 
    public static function loginUserFromCookie() {
      $userSession = UserSessions::getFromCookie();

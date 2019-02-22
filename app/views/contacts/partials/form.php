@@ -12,7 +12,6 @@
 <?= FH::inputBlock('text', 'Home Phone' , 'home_phone' , $this->contact->home_phone , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
 <?= FH::inputBlock('text', 'Work Phone' , 'work_phone' , $this->contact->work_phone , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
 <div class="isa_error_class"><?= FH::displayErrors($this->displayErrors) ?></div>
-
 <div class="col-md2 well text-right">
   <a href="<?=PROOT?>contacts" class="btn btn-default">Cancel</a>
   <?= FH::submitTag('Save',['class'=>'btn btn-primary']) ; ?>

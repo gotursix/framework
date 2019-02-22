@@ -18,6 +18,7 @@ class ContactsController extends Controller
       $this->view->render('contacts/index');
   }
 
+
   public function addAction()
   {
     $contact = new Contacts();
@@ -37,6 +38,7 @@ class ContactsController extends Controller
     $this->view->postAction = PROOT . 'contacts' . DS . 'add';
     $this->view->render('contacts/add');
   }
+
 
   public function editAction($id)
   {
@@ -58,6 +60,7 @@ class ContactsController extends Controller
     $this->view->render('contacts/edit');
     }
 
+
   public function detailsAction($id)
   {
    $contact= $this->ContactsModel->findByIdAndUserId((int)$id, Users::currentUser()->id);
@@ -69,17 +72,17 @@ class ContactsController extends Controller
      $this->view->render('contacts/details');
   }
 
+
     public function deleteAction($id)
     {
           $contact = $this->ContactsModel->findByIdAndUserId((int)$id,Users::currentUser()->id);
           if($contact)
           {
             $contact->delete();
+            Session::addMsg('success','Contact has been deleted');
           }
           Router::redirect('contacts');
     }
 
-
-
-
-    }
+    
+}

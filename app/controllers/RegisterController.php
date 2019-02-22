@@ -2,10 +2,6 @@
 
 class RegisterController extends Controller
 {
-
-
-
-
    public function __construct($controller,$action)
    {
      parent::__construct($controller,$action);
@@ -40,6 +36,7 @@ class RegisterController extends Controller
      $this->view->render('register/login');
    }
 
+
    public function logoutAction()
    {
      if(Users::currentUser())
@@ -48,6 +45,7 @@ class RegisterController extends Controller
      }
      Router::redirect('register/login');
    }
+
 
    public function registerAction()
    {
@@ -66,8 +64,6 @@ class RegisterController extends Controller
    $this->view->displayErrors = $newUser->getErrorMessages();
    $this->view->render('register/register');
  }
-
-
 
 
 }

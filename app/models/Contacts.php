@@ -21,6 +21,7 @@ class Contacts extends Model
       $this->runValidation(new MaxValidator($this , ['field'=>'lname','msg'=>'Last Name must be less than 150 characters', 'rule'=>'155']));
     }
 
+
     public function findAllByUserId($user_id,$params=[])
     {
       $conditions = [
@@ -32,10 +33,12 @@ class Contacts extends Model
       return $this->find($conditions);
     }
 
+
     public function displayName()
     {
       return $this->fname . ' ' . $this->lname;
     }
+
 
     public function findByIdAndUserId($contact_id,$user_id,$params=[])
     {
@@ -49,7 +52,8 @@ class Contacts extends Model
       return $this->findFirst($conditions);
     }
 
-    public function displayAddress()
+
+  public function displayAddress()
     {
       $adress = '';
    if(!empty($this->address))

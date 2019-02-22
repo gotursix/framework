@@ -9,6 +9,7 @@ class UserSessions extends Model {
     parent::__construct($table);
   }
 
+
   public static function getFromCookie() {
     $userSession = new self();
     if(Cookie::exists(REMEMBER_ME_COOKIE_NAME)) {
@@ -20,4 +21,6 @@ class UserSessions extends Model {
     if(!$userSession) return false;
     return $userSession;
   }
+
+  
 }

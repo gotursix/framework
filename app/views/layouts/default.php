@@ -17,6 +17,7 @@
   </head>
   <body>
     <?php include 'main_menu.php' ?>
+    <?= Session::displaymsg(); ?>
     <?= $this->content('body'); ?>
   </body>
 </html>
