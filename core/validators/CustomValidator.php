@@ -4,9 +4,9 @@ abstract class CustomValidator {
   public $success=true, $msg='', $field, $rule;
   protected $_model;
 
-  public function __construct($model,$params){
+  public function __construct($model,$params)
+  {
     $this->_model = $model;
-
     if(!array_key_exists('field',$params)){
       throw new Exception("You must add a field to the params array.");
     } else {
