@@ -1,3 +1,6 @@
+<?php
+use Core\FH;
+ ?>
 <form class="form-row" action=<?= $this->postAction?> method="post">
 <?= FH::csrfInput() ?>
 <?= FH::inputBlock('text', 'First Name' , 'fname' , $this->contact->fname , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>

@@ -1,5 +1,7 @@
 <?php
-
+namespace Core;
+use Core\Session;
+use App\Models\Users;
 class Router
 {
   public static function route($url) {
@@ -25,6 +27,7 @@ class Router
 
       //params
       $queryParams=$url;
+      $controller = 'App\Controllers\\'.$controller;
       $dispatch = new $controller($controller_name,$action);
 
       if(method_exists($controller,$action))

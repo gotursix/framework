@@ -1,4 +1,9 @@
 <?php
+namespace App\Models;
+use Core\Model;
+use Core\Validators\RequiredValidator;
+use Core\Validators\UniqueValidator;
+use Core\Validators\MaxValidator;
 
 class Contacts extends Model
 {
@@ -19,6 +24,8 @@ class Contacts extends Model
       $this->runValidation(new RequiredValidator($this,['field'=>'lname','msg'=>'Last name is required.']));
       $this->runValidation(new MaxValidator($this , ['field'=>'fname','msg'=>'First Name must be less than 150 characters', 'rule'=>'155']));
       $this->runValidation(new MaxValidator($this , ['field'=>'lname','msg'=>'Last Name must be less than 150 characters', 'rule'=>'155']));
+      $this->runValidation(new UniqueValidator($this, ['field'=>'lname', 'msg'=>'Last name already exists, please chose another one.']));
+      $this->runValidation(new UniqueValidator($this, ['field'=>'fname', 'msg'=>'First name already exists, please chose another one.']));
     }
 
 
