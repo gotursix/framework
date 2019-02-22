@@ -58,14 +58,19 @@ class Users extends Model
      $this->runValidation(new UniqueValidator($this, ['field'=>'username', 'msg'=>'This username already exists, please chose another one.']));
      $this->runValidation(new RequiredValidator($this , ['field'=>'password' , 'msg'=>'Password is required']));
      $this->runValidation(new MinValidator($this,['field'=>'password','rule'=>6,'msg'=>'Password must be at least 6 characters.']));
-
-     $this->runValidation(new MatchesValidator($this , ['field'=>'password' , 'rule' => $this->_confirm , 'msg'=>'Your passwords do not match.']));
+     if($this->isNew())
+     {
+       $this->runValidation(new MatchesValidator($this , ['field'=>'password' , 'rule' => $this->_confirm , 'msg'=>'Your passwords do not match.']));
+     }
    }
 
 
    public function beforeSave()
    {
-     $this->password = password_hash($this->password , PASSWORD_DEFAULT);
+     if($this->isNew())
+     {
+       $this->password = password_hash($this->password , PASSWORD_DEFAULT);
+     }
    }
 
 
