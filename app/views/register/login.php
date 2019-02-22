@@ -18,10 +18,9 @@ use Core\FH;
                                 <div class="card card-login">
 
 
-                                    <div class="card-header text-center" data-background-color="rose">
-                                        <h3 class="card-title">Login</h3>
-                                    </div>
-
+                                  <div class="card-header text-center" data-background-color="rose" style="margin-left: 15px;">
+                                          <h3 class="card-title">Login</h3>
+                                      </div>
 
                                     <div class="card-content">
                                         <div class="input-group">
