@@ -5,5 +5,6 @@
     "Add Contact" : "contacts/add"
   },
   "Login" :"register/login",
+  "Register" :"register/register",
   "Logout" :"register/logout"
 }
