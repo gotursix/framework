@@ -7,6 +7,7 @@ use Core\H;
 use App\Models\Contacts;
 use App\Models\Users;
 use App\Models\Upload;
+use \PATH_INFO;
 
 class UploadController extends Controller
 {
@@ -41,9 +42,22 @@ class UploadController extends Controller
 
       if($upload->save())
       {
-        Router::redirect('upload');
+        $dir = Users::currentUser()->id;
+
+        if(move_uploaded_file($_FILES["file"]["tmp_name"],'files' . DS . $dir . DS . $upload->name ))
+    {
+      echo "The file has been uploaded as ";
+        //Router::redirect('upload');
+    }
+    else
+    {
+      echo "Sorry, there was a problem uploading your file.";
+    }
+
       }
     }
+
+
 
     $this->view->uploas = $upload ;
     $this->view->displayErrors = $upload->getErrorMessages();

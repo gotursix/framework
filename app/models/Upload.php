@@ -17,7 +17,7 @@ class Upload extends Model
       $table = 'files';
       parent::__construct($table);
       $this->_softDelete = true ;
-    
+
     }
 
     public function validator()
@@ -26,7 +26,6 @@ class Upload extends Model
       $this->runValidation(new RequiredValidator($this,['field'=>'format','msg'=>'You upload a photo.']));
       $this->runValidation(new MaxValidator($this , ['field'=>'name','msg'=>'Your name must be less than 150 characters', 'rule'=>'155']));
       $this->runValidation(new MinValidator($this , ['field'=>'name','msg'=>'Your name must be at least 4 characters', 'rule'=>'4']));
-      $this->runValidation(new UniqueValidator($this, ['field'=>'name', 'msg'=>'There is already a file with that name, please chose another one.']));
       $this->runValidation(new FormatValidator($this, ['field'=>'format', 'msg'=>'The file format is not accepted.', 'rule'=>['gif','png' ,'jpg'] ]));
     }
 
