@@ -43,32 +43,19 @@ class UploadController extends Controller
       if($upload->save())
       {
         $dir = Users::currentUser()->id;
-
         if(move_uploaded_file($_FILES["file"]["tmp_name"],'files' . DS . $dir . DS . $upload->name ))
-    {
-      echo "The file has been uploaded as ";
-        //Router::redirect('upload');
-    }
-    else
-    {
-      echo "Sorry, there was a problem uploading your file.";
-    }
-
+        {
+          Router::redirect('upload');
+      }
+      else
+      {
+        $upload->addErrorMessage('file','Sorry, there was a problem uploading your file.');
       }
     }
-
-
-
+   }
     $this->view->uploas = $upload ;
     $this->view->displayErrors = $upload->getErrorMessages();
     $this->view->postAction = PROOT . 'upload' . DS . 'add';
     $this->view->render('upload/add');
   }
-
-
-
-
-
-
-
 }
