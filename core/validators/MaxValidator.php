@@ -9,6 +9,7 @@ class MaxValidator extends CustomValidator
  {
    $value = $this->_model->{$this->field};
    $pass = (strlen($value) <= $this->rule);
+  
    return $pass;
  }
 

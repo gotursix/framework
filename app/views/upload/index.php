@@ -7,6 +7,7 @@
    <th>ID</th>
    <th>USER_ID</th>
    <th>NAME</th>
+   <th>FORMAT</th>
    </thead>
 
    <tbody>
@@ -15,6 +16,7 @@
      <td><?= $upload->id;   ?></td>
      <td><?= $upload->user_id;?></td>
      <td><?= $upload->name;?></td>
+     <td><?= $upload->format;?></td>
 
      <?php endforeach; ?>
    </tr>

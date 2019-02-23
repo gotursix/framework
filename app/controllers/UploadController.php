@@ -36,6 +36,9 @@ class UploadController extends Controller
       $this->request->csrfCheck();
       $upload->assign($this->request->get());
       $upload->user_id = Users::currentUser()->id;
+      $upload->name .= "." . pathinfo($_FILES['file']['name'] , PATHINFO_EXTENSION);
+      $upload->format = pathinfo($_FILES['file']['name'] , PATHINFO_EXTENSION);
+
       if($upload->save())
       {
         Router::redirect('upload');
