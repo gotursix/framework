@@ -16,6 +16,8 @@ class Upload extends Model
     {
       $table = 'files';
       parent::__construct($table);
+      $this->_softDelete = true ;
+    
     }
 
     public function validator()
