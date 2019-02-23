@@ -1,3 +1,6 @@
+<?php
+use App\Models\Users;
+ ?>
 <?php $this->start('body'); ?>
 <h2 class="text-center">My Uploaded files</h2>
 <br>
@@ -8,6 +11,8 @@
    <th>USER_ID</th>
    <th>NAME</th>
    <th>FORMAT</th>
+   <th>IMG</th>
+   <th>BUTTons</th>
    </thead>
 
    <tbody>
@@ -17,16 +22,14 @@
      <td><?= $upload->user_id;?></td>
      <td><?= $upload->name;?></td>
      <td><?= $upload->format;?></td>
+     <?php $dir = Users::currentUser()->id; ?>
+     <td><img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  height="70" width="70"></td>
+     <td> <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+         Delete
+      </a></td>
 
      <?php endforeach; ?>
    </tr>
    </tbody>
 </table>
-
-
-
-
-<div class="footer text-center">
-    <label class="control-label reset-button btn"><h8><a href="<?=PROOT?>upload/add" class="reset-button">Reset password</a></h8></label>
-</div>
 <?php $this->end(); ?>

@@ -39,5 +39,17 @@ class Upload extends Model
       return $this->find($conditions);
     }
 
+    public function findByIdAndUserId($contact_id,$user_id,$params=[])
+    {
+      $conditions =
+      [
+        'conditions' => 'id = ? AND user_id = ?',
+        'bind' => [$contact_id,$user_id]
+      ];
+
+      $conditions = array_merge($conditions , $params);
+      return $this->findFirst($conditions);
+    }
+
 
 }

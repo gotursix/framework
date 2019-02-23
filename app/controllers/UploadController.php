@@ -58,4 +58,19 @@ class UploadController extends Controller
     $this->view->postAction = PROOT . 'upload' . DS . 'add';
     $this->view->render('upload/add');
   }
+
+
+
+  public function deleteAction($id)
+  {
+        $upload = $this->UploadModel->findByIdAndUserId((int)$id,Users::currentUser()->id);
+        if($upload)
+        {
+          $upload->delete();
+          Session::addMsg('success','The image has been deleted');
+        }
+        Router::redirect('upload');
+  }
+
+
 }
