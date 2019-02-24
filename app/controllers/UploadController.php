@@ -40,17 +40,17 @@ class UploadController extends Controller
       $upload->name .= "." . pathinfo($_FILES['file']['name'] , PATHINFO_EXTENSION);
       $upload->format = pathinfo($_FILES['file']['name'] , PATHINFO_EXTENSION);
 
+  $dir = Users::currentUser()->id;
+  if(move_uploaded_file($_FILES["file"]["tmp_name"],'files' . DS . $dir . DS . $upload->name ))
+    {
       if($upload->save())
       {
-        $dir = Users::currentUser()->id;
-        if(move_uploaded_file($_FILES["file"]["tmp_name"],'files' . DS . $dir . DS . $upload->name ))
-        {
           Router::redirect('upload');
       }
-      else
-      {
-        $upload->addErrorMessage('file','Sorry, there was a problem uploading your file.');
-      }
+    }
+    else
+    {
+      $upload->addErrorMessage('file','Sorry, there was a problem uploading your file.');
     }
    }
     $this->view->uploas = $upload ;
