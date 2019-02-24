@@ -10,7 +10,10 @@ class FormatValidator extends CustomValidator
   {
     $value = $this->_model->{$this->field};
 
-    return in_array($value,$this->rule);
+    if(in_array($value,$this->rule))
+     return true;
+
+     return false;
   }
 
 }
