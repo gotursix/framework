@@ -37,7 +37,7 @@ if(!Session::exists(CURRENT_USER_SESSION_NAME) && Cookie::exists(REMEMBER_ME_COO
   Users::loginUserFromCookie();
 }
 
- //create a folder for the user , which is the same as the user id , if it doesn.t already exist
+ //create a folder for the user , which is the same as the user id , if it doesn't already exist
  if(Session::exists(CURRENT_USER_SESSION_NAME))
  {
    $dir = Users::currentUser()->id;
