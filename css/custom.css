@@ -1,3 +1,7 @@
+.card-body{
+    max-width: 260px;
+}
+
 .input-group{display:inline-table;vertical-align:middle}
 .input-group{position:relative;display:table;border-collapse:separate}
 .input-group{margin-left:5px}
@@ -232,7 +236,7 @@ html * {
     display: inline-block;
     position: relative;
     width: 100%;
-    margin: 25px 0;
+    
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
     border-radius: 6px;
     color: rgba(0, 0, 0, 0.87);
@@ -1366,7 +1370,6 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
     display: inline-block;
     position: relative;
     width: 100%;
-    margin: 25px 0;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
     border-radius: 6px;
     color: rgba(0, 0, 0, 0.87);
