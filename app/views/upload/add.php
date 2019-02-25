@@ -31,14 +31,14 @@ use Core\FH;
                         <div class="form-group label-floating">
                             <label class="control-label"><h4>Chose a name for the file</h4></label>
                             <br>
-                            <input type="textd" name="name" id="name" class="form-control" value="">
+                            <input type="textd" name="name" id="name" class="form-control" value="" required>
                         </div>
         											<br><br>
         				     <div class="form-group label-floating">
                               <label class="control-label"><h4>Choose a file</h4></label>
                               <br>
 
-                              <input type="file" id="file" name="file" >
+                              <input type="file" id="file" name="file" required>
                                       </div>
                           </div>
                       </div>

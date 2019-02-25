@@ -7,6 +7,7 @@ use Core\Validators\UniqueValidator;
 use Core\Validators\MaxValidator;
 use Core\Validators\MinValidator;
 use Core\Validators\FormatValidator;
+use Core\Validators\CharsValidator;
 
 class Upload extends Model
 {
@@ -23,10 +24,10 @@ class Upload extends Model
     public function validator()
     {
       $this->runValidation(new RequiredValidator($this,['field'=>'name','msg'=>'You must chose a name for the file.']));
-      $this->runValidation(new RequiredValidator($this,['field'=>'format','msg'=>'You upload a photo.']));
       $this->runValidation(new MaxValidator($this , ['field'=>'name','msg'=>'Your name must be less than 150 characters', 'rule'=>'155']));
       $this->runValidation(new MinValidator($this , ['field'=>'name','msg'=>'Your name must be at least 4 characters', 'rule'=>'4']));
       $this->runValidation(new FormatValidator($this, ['field'=>'format', 'msg'=>'The file format is not accepted.', 'rule'=>[ '1' , '2'  , '3' , '4'] ]));
+      $this->runValidation(new CharsValidator($this, ['field'=>'name', 'msg'=>'The file name can not contain ? | / \ < > : " ', 'rule'=> '0' ]));
     }
 
     public function findAllByUserId($user_id,$params=[])

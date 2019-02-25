@@ -27,4 +27,17 @@ class H
     return get_object_vars($obj);
   }
 
+  public static function stringcheck($search, $string)
+  {
+    $position = strpos($string, $search);
+    if ($position == true)
+    {
+            return true;
+    }
+    else{
+      return false;
+    }
+  }
+
+
 }

@@ -58,12 +58,8 @@ class UploadController extends Controller
       }
       else
       {
-          $upload->addErrorMessage('file','There were a problem Uploading it.');
+          $upload->addErrorMessage('file','There were a problem uploading it.');
       }
-    }
-    else
-    {
-         $upload->addErrorMessage('file','There were a problem saving in the database.');
     }
    }
     $this->view->uploas = $upload ;
