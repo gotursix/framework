@@ -22,9 +22,17 @@ class UploadController extends Controller
 
   public function indexAction()
   {
-      $upload = $this->UploadModel->findAllByUserId(Users::currentUser()->id , ['order'=>'name']);
+      $upload = $this->UploadModel->findAllByUserId((int)Users::currentUser()->id );
       $this->view->upload = $upload;
       $this->view->render('upload/index');
+  }
+
+
+  public function imagesAction()
+  {
+      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id ,   1 );
+      $this->view->upload = $upload;
+      $this->view->render('upload/images');
   }
 
 
@@ -40,22 +48,22 @@ class UploadController extends Controller
       $upload->name .= "." . pathinfo($_FILES['file']['name'] , PATHINFO_EXTENSION);
       $value = pathinfo($_FILES['file']['name'] , PATHINFO_EXTENSION);
       $upload->format = Upload::setFormat($value);
+      $dir = Users::currentUser()->id;
 
-  $dir = Users::currentUser()->id;
-  if(move_uploaded_file($_FILES["file"]["tmp_name"],'files' . DS . $dir . DS . $upload->name ))
+    if($upload->save())
     {
-      if($upload->save())
+        if(move_uploaded_file($_FILES["file"]["tmp_name"],'files' . DS . $dir . DS . $upload->name ))
       {
-          Router::redirect('upload');
+          Router::redirect('upload/images');
       }
       else
       {
-          $upload->addErrorMessage('file','There were a problem saving in the database.');
+          $upload->addErrorMessage('file','There were a problem Uploading it.');
       }
     }
     else
     {
-         $upload->addErrorMessage('file','There were a problem uploading it.');
+         $upload->addErrorMessage('file','There were a problem saving in the database.');
     }
    }
     $this->view->uploas = $upload ;
@@ -74,7 +82,7 @@ class UploadController extends Controller
           $upload->delete();
           Session::addMsg('success','The image has been deleted');
         }
-        Router::redirect('upload');
+        Router::redirect('upload/images');
   }
 
 

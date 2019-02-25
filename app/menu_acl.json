@@ -7,7 +7,7 @@
   "Login" :"register/login",
   "Register" :"register/register",
   "Files": {
-    "My files" : "upload/index",
+    "My files" : "upload/images",
     "Upload" : "upload/add"
   },
 

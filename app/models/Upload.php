@@ -51,6 +51,16 @@ class Upload extends Model
       return $this->findFirst($conditions);
     }
 
+    public function findByAllByUserIdAndFileFormat($user_id , $format ,$params=[])
+    {
+      $conditions = [
+        'conditions' => 'user_id = ? AND format = ?',
+        'bind' => [$user_id , $format]
+      ];
+      $conditions = array_merge($conditions, $params);
+      return $this->find($conditions);
+    }
+
    public static function setFormat($value)
     {
       $img = array('jpg','png','bmp','gif','jpeg');
