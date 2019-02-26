@@ -37,7 +37,7 @@ use App\Models\Upload;
   <span class="close cursor" onclick="closeModal()">&times;</span>
      <div class="modal-content">
 
-    <div class="mySlides">
+    <div class="mySlides img-fluid">
       <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" >
     </div>     
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -47,7 +47,7 @@ use App\Models\Upload;
       <p id="caption"></p>
     </div>
          <div class="column">
-      <img class="demo cursor" src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+      <img class="demo cursor" src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" style="width:100%" onclick="currentSlide(1)">
     </div>
              </div>
          </div>
