@@ -10,51 +10,54 @@ class CharsValidator extends CustomValidator
   {
     $value = (int)0;
     $string = $this->_model->{$this->field};
-    $search = "?";
-    $search2 = "|";
-    $search3 = "/";
-    $search4 = '\\';
+    $search = "?"; //working good
+    $search2 = "|"; //working good
+    $search3 = "/"; //wprking good
+    $search4 = '\\'; //working good
     $search5 = "<";
     $search6 = ">";
-    $search7 = ":";
-    $search8 = '"';
+    $search7 = ":"; //working good
+    $search8 = htmlspecialchars('"');
 
-     if(H::stringcheck($search, $string) === true )
+
+
+
+     if(H::stringcheck($search, $string) === true ||  $string[0] === $search)
      {
        $value++;
      }
 
-     if(H::stringcheck($search2, $string) === true)
+     if(H::stringcheck($search2, $string) === true ||  $string[0] === $search2)
      {
        $value++;
      }
 
-     if(H::stringcheck($search3, $string) === true)
+     if(H::stringcheck($search3, $string) === true ||  $string[0] === $search3)
      {
        $value++;
      }
 
-     if(H::stringcheck($search4, $string) === true)
+     if(H::stringcheck($search4, $string) === true ||  $string[0] === $search4)
      {
        $value++;
      }
 
-     if(H::stringcheck($search5, $string) === true)
+     if(H::stringcheck($search5, $string) === true ||  $string[0] === $search5)
      {
        $value++;
      }
 
-     if(H::stringcheck($search6, $string) === true)
+     if(H::stringcheck($search6, $string) === true ||  $string[0] === $search6)
      {
        $value++;
      }
 
-     if(H::stringcheck($search7, $string) === true)
+     if(H::stringcheck($search7, $string) === true ||  $string[0] === $search7)
      {
        $value++;
      }
 
-     if(H::stringcheck($search8, $string) === true)
+     if(H::stringcheck($search8, $string) === true ||  $string[0] === "&quot;")
      {
        $value++;
      }
