@@ -14,12 +14,10 @@ class CharsValidator extends CustomValidator
     $search2 = "|"; //working good
     $search3 = "/"; //wprking good
     $search4 = '\\'; //working good
-    $search5 = "<";
-    $search6 = ">";
+    $search5 = htmlspecialchars("<"); //working good
+    $search6 = htmlspecialchars(">"); //working good
     $search7 = ":"; //working good
-    $search8 = htmlspecialchars('"');
-
-
+    $search8 = htmlspecialchars('"'); //working good
 
 
      if(H::stringcheck($search, $string) === true ||  $string[0] === $search)
@@ -57,7 +55,7 @@ class CharsValidator extends CustomValidator
        $value++;
      }
 
-     if(H::stringcheck($search8, $string) === true ||  $string[0] === "&quot;")
+     if(H::stringcheck($search8, $string) === true ||  $string[0] === $search8)
      {
        $value++;
      }
