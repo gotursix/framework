@@ -31,14 +31,14 @@ use App\Models\Upload;
          <div class="row">
   <div class="column">
     <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  height="70" width="70" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      
   </div>
          </div>
          <div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
      <div class="modal-content">
-
-    <div class="mySlides img-fluid">
-      <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" >
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="mySlides d-block">
+      <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  style="width:100%">
     </div>     
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -47,7 +47,7 @@ use App\Models\Upload;
       <p id="caption"></p>
     </div>
          <div class="column">
-      <img class="demo cursor" src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" style="width:100%" onclick="currentSlide(1)">
+      <img class="demo cursor mx-auto d-block" src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" style="width:100%" onclick="currentSlide(1)">
     </div>
              </div>
          </div>
