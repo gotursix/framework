@@ -35,10 +35,10 @@ use App\Models\Upload;
   </div>
          </div>
          <div id="myModal" class="modal">
-     <div class="modal-content">
+     <div class="modal-content span3">
   <span class="close cursor" onclick="closeModal()">&times;</span>
     <div class="mySlides d-block">
-      <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  style="width:100%">
+      <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  style="width:30%">
     </div>     
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -47,12 +47,12 @@ use App\Models\Upload;
       <p id="caption"></p>
     </div>
          <div class="column">
-      <img class="demo cursor mx-auto d-block" src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" style="width:100%" onclick="currentSlide(1)">
+      <img class="demo cursor span3 d-block" src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" style="width:30%" onclick="currentSlide(1)">
     </div>
              </div>
          </div>
              </td>
-     <td> <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+     <td> <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs " onclick="if(!confirm('Are you sure ?')){return false;}">
          Delete
       </a></td>
 
