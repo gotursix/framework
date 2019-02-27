@@ -34,8 +34,29 @@ class UploadController extends Controller
       $this->view->upload = $upload;
       $this->view->render('upload/images');
   }
+  
+  
+    public function videoAction()
+  {
+      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id ,   2 );
+      $this->view->upload = $upload;
+      $this->view->render('upload/video');
+  }
 
 
+    public function audioAction()
+  {
+      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id ,   3 );
+      $this->view->upload = $upload;
+      $this->view->render('upload/audio');
+  }
+  
+      public function documentsAction()
+  {
+      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id ,   4 );
+      $this->view->upload = $upload;
+      $this->view->render('upload/documents');
+  }
 
 
   public function addAction()
