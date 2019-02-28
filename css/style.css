@@ -8,6 +8,11 @@ body {
   box-sizing: border-box;
 }
 
+.m-top{
+	
+	margin-top:15%;
+}
+
 .row > .column {
   padding: 0 8px;
 }
@@ -40,7 +45,7 @@ body {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: black;
+  background-color: #fefefe;
   margin: auto;
   padding: 0;
   width: 90%;
