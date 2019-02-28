@@ -19,7 +19,7 @@ use App\Models\Upload;
 
                                     <div class="caption text-center">
                                       <hr>
-                                 <p> <?= $upload->name;?> </p>
+                                 <p><?= $upload->name;?> </p>
                                        <div class="text-center">
                                          <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs " onclick="if(!confirm('Are you sure ?')){return false;} target="_blank" ">
                                            Delete
@@ -31,7 +31,7 @@ use App\Models\Upload;
                          <?php endforeach; ?>
                          </div>
                        </div>
-                     </div>
+
 
                          <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
                          <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
