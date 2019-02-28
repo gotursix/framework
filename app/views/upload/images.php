@@ -18,10 +18,11 @@ use App\Models\Upload;
      <?php $dir = Users::currentUser()->id; ?>
      <div class="col-sm-3">
           <div class="thumbnail">
-            <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  height="190px"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-
-             <div class="caption">
+            <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" style=" width: 100%;	max-width: 250px; height: auto;"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+          </div>
+             <div class="caption text-center">
                <hr>
+
           <p> <?= $upload->name;?> </p>
 
 
@@ -31,7 +32,7 @@ use App\Models\Upload;
                     Delete
                   </a>            </div>
             </div>
-              </div>
+
 
                         </div>
 
