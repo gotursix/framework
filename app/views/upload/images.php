@@ -17,7 +17,7 @@ use App\Models\Upload;
     <?php foreach ($this->upload as $upload): ?>
      <?php $dir = Users::currentUser()->id; ?>
      <div class="col-sm-3">
-          <div class="thumbnail">
+          <div class="thumbnail text-center">
             <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" style=" width: 100%;	max-width: 250px; height: auto;"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
           </div>
              <div class="caption text-center">
