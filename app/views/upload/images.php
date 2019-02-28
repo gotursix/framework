@@ -14,7 +14,7 @@ use App\Models\Upload;
                          <?php $dir = Users::currentUser()->id; ?>
                               <div class="col-sm-3"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
                                    <div class="thumbnail text-center">
-                                      <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" style=" width: 100%;	max-width:250px; height: auto;">
+                                      <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="imgu">
                                     </div>
 
                                     <div class="caption text-center">
