@@ -1,5 +1,6 @@
 .imgu{
 	max-width:250px; height: 150px;
+    z-index: -1;
 }
 body {
   font-family: Verdana, sans-serif;
