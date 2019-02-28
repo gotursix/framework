@@ -14,7 +14,7 @@ use Core\Session;
     <link href="<?=PROOT?>css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?=PROOT?>css/font-awesome.min.css" >
     <link href="<?=PROOT?>css/style.css" rel="stylesheet">
-
+    <link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
     <script src="<?=PROOT?>js/jQuery-3.3.1.js"?></script>
     <script src="<?=PROOT?>js/lbox.js"?></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

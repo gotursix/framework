@@ -4,68 +4,40 @@ use App\Models\Upload;
  ?>
 <?php $this->start('body'); ?>
 <h2 class="text-center">My images</h2>
-<table class="table table-striped" id="table">
-
-
-    <div class="container">
+<div class="container">
    <input type="text" id="search" placeholder="Type to search">
+                <br>
+                <br>
+                  <div class="row"  id="lightgallery">
+                         <?php $x=1; ?>
+                         <?php foreach ($this->upload as $upload): ?>
+                         <?php $dir = Users::currentUser()->id; ?>
+                              <div class="col-sm-3"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                                   <div class="thumbnail text-center">
+                                      <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" style=" width: 100%;	max-width:250px; height: auto;">
+                                    </div>
 
-   <br><br>
-
-        <div class="row">
-
-    <?php foreach ($this->upload as $upload): ?>
-     <?php $dir = Users::currentUser()->id; ?>
-     <div class="col-sm-3">
-          <div class="thumbnail text-center">
-            <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" style=" width: 100%;	max-width: 250px; height: auto;"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-          </div>
-             <div class="caption text-center">
-               <hr>
-
-          <p> <?= $upload->name;?> </p>
-
-
-                <div class="text-center">
-
-                  <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs " onclick="if(!confirm('Are you sure ?')){return false;}">
-                    Delete
-                  </a>            </div>
-            </div>
-
-
-                        </div>
-
-                      <?php endforeach; ?>
-
-
-
-
+                                    <div class="caption text-center">
+                                      <hr>
+                                 <p> <?= $upload->name;?> </p>
+                                       <div class="text-center">
+                                         <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs " onclick="if(!confirm('Are you sure ?')){return false;} target="_blank" ">
+                                           Delete
+                                         </a>
+                                       </div>
+                                   </div>
+                              </div>
+                         <?php $x++; ?>
+                         <?php endforeach; ?>
                          </div>
+                       </div>
+                     </div>
 
-
-              </div>
-                  </div>
-
-
-  </div>
-
-
-            </div>
-
-
-              </div>
-                  </div>
-
-
-
-
- </div>
-</div>
-
-
-
-
+                         <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+                         <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
+                         <script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
+                         <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+                         <script> lightGallery(document.getElementById('lightgallery')); </script>
 
 
 <script>
