@@ -4,33 +4,28 @@
 <br>
 
 <div class="container">
-<table class="table table-striped">
- <thead class="thead-dark">
-
+<table class="table">
+ <thead >
    <th>Name</th>
-   <th>Email</th>
-   <th>Cell Phone</th>
-   <th>Home</th>
-   <th>Work Phone</th>
-   <th>BUTTons</th>
+   <th>Format</th>
+   <th>BUTTon</th>
    </thead>
 
    <tbody>
-    <?php foreach ($this->album as $contact): ?>
+    <?php foreach ($this->album as $album): ?>
      <tr>
      <td>
-       <a href="<?=PROOT?>album/details/<?=$contact->id ?>">
-       <?= $contact->displayName() ;?>
+       <a href="<?=PROOT?>album/details/<?=$album->id ?>">
+       <?= $album->name ;?>
      </a>
      </td>
-     <td><?= $contact->email;   ?></td>
-     <td><?= $contact->cell_phone;?></td>
-     <td><?= $contact->home_phone;?></td>
-     <td><?= $contact->work_phone;?></td>
+      <td>
+           <?= $album->format ;?>
+      </td>
      <td>
-       <a href="<?=PROOT?>album/edit/<?=$contact->id?>" class="btn btn-info btn-xs">Edit</a>
+       <a href="<?=PROOT?>album/edit/<?=$album->id?>" class="btn btn-info btn-xs">Edit</a>
 
-         <a href="<?=PROOT?>album/delete/<?=$contact->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+         <a href="<?=PROOT?>album/delete/<?=$album->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
             Delete
          </a>
      </td>
