@@ -2,14 +2,13 @@
   "Home" : "home",
   "Login" :"register/login",
   "Register" :"register/register",
-
-  "Files": {
-    "Upload" : "upload/add",
+  "My Files": {
     "Images" : "upload/images",
     "Video" : "upload/video",
     "Audio" : "upload/audio",
     "Documents" : "upload/docs"
   },
+    "Upload" : "upload/add",
   "Albums" :"album",
   "Logout" :"register/logout"
 
