@@ -1,6 +1,9 @@
 <?php $this->start('body'); ?>
-<h2 class="text-center">My contacts</h2>
+<br><br><br><br>
+<h2 class="text-center">My albums</h2>
 <br>
+
+<div class="container">
 <table class="table table-striped">
  <thead class="thead-dark">
 
@@ -9,14 +12,14 @@
    <th>Cell Phone</th>
    <th>Home</th>
    <th>Work Phone</th>
-   <th></th>
+   <th>BUTTons</th>
    </thead>
 
    <tbody>
-    <?php foreach ($this->contacts as $contact): ?>
+    <?php foreach ($this->album as $contact): ?>
      <tr>
      <td>
-       <a href="<?=PROOT?>contacts/details/<?=$contact->id ?>">
+       <a href="<?=PROOT?>album/details/<?=$contact->id ?>">
        <?= $contact->displayName() ;?>
      </a>
      </td>
@@ -25,9 +28,9 @@
      <td><?= $contact->home_phone;?></td>
      <td><?= $contact->work_phone;?></td>
      <td>
-       <a href="<?=PROOT?>contacts/edit/<?=$contact->id?>" class="btn btn-info btn-xs">Edit</a>
+       <a href="<?=PROOT?>album/edit/<?=$contact->id?>" class="btn btn-info btn-xs">Edit</a>
 
-         <a href="<?=PROOT?>contacts/delete/<?=$contact->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+         <a href="<?=PROOT?>album/delete/<?=$contact->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
             Delete
          </a>
      </td>
@@ -35,4 +38,5 @@
    </tr>
    </tbody>
 </table>
+</div>
 <?php $this->end(); ?>

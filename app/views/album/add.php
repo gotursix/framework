@@ -5,6 +5,6 @@
   <br>
 <h2 class="text-center">Add A contact</h2>
 <hr>
-<?php $this->partial('contacts','form'); ?>
+<?php $this->partial('album','form'); ?>
 </div>
 <?php $this->end(); ?>

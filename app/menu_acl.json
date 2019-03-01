@@ -10,7 +10,7 @@
     "Audio" : "upload/audio",
     "Documents" : "upload/docs"
   },
-
+  "Albums" :"album",
   "Logout" :"register/logout"
 
 }

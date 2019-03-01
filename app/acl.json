@@ -10,7 +10,7 @@
       "Register" : ["login", "register"]
     },
     "Register" : ["logout"],
-    "Contacts" : ["*"],
+    "Album" : ["*"],
     "Upload" : ["*"]
   }
 }

@@ -6,7 +6,7 @@ use Core\Validators\RequiredValidator;
 use Core\Validators\UniqueValidator;
 use Core\Validators\MaxValidator;
 
-class Contacts extends Model
+class Album extends Model
 {
     public $id , $user_id , $fname , $lname, $email , $address , $address2 , $city , $state, $zip ;
     public $home_phone , $cell_phone, $work_phone ,  $deleted = 0;
@@ -16,7 +16,7 @@ class Contacts extends Model
       $table = 'contacts';
       parent::__construct($table);
       $this->_softDelete = true ;
-    
+
     }
 
 
