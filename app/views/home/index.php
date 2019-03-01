@@ -25,7 +25,7 @@
              <div class="caption">
                  <div class="card-body">
              <h3>Videos</h3>
-            <a href="<?=PROOT?>upload/video"><img src="<?=PROOT?>img/itunes.png"></a>
+            <a href="<?=PROOT?>upload/video"><img src="<?=PROOT?>img/movie.png"></a>
 
 </div>
 </div>
@@ -49,7 +49,7 @@
              <div class="caption">
                  <div class="card-body">
              <h3>Documents</h3>
-    <a href="<?=PROOT?>upload/documents"><img src="<?=PROOT?>img/folder.png"></a>
+    <a href="<?=PROOT?>upload/documents"><img src="<?=PROOT?>img/documents.png"></a>
 </div>
 </div>
 </div>
