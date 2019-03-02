@@ -17,24 +17,30 @@ class ContainController extends Controller
     parent::__construct($controller,$action);
     $this->view->setLayout('default');
     $this->load_model('Contain');
+    $this->load_model('Upload');
+    $this->load_model('Album');
   }
 
   public function editAction($id)
   {
-    $contain = $this->ContainModel->findByIdAndUserId((int)$id, Users::currentUser()->id);
-    if(!$contain)
+    $album = $this->AlbumModel->findByIdAndUserId((int)$id, Users::currentUser()->id);
+    $contain = new Contain();
+      if(!$album)
     {
       Router::redirect('album');
     }
-
     if($this->request->isPost())
     {
       $this->request->csrfCheck();
       $contain->assign($this->request->get());
-      if($contain->save())   Router::redirect('album');
+
+      if($contain->save())
+      Router::redirect('album');
     }
+    $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , 1 );
+    $this->view->upload = $upload;
     $this->view->displayErrors = $contain->getErrorMessages() ;
-    $this->view->contain = $contain;
+    $this->view->album = $album;
     $this->view->postAction = PROOT . 'contain' . DS . 'edit' . DS . $contain->id;
     $this->view->render('contain/edit');
     }
@@ -42,12 +48,15 @@ class ContainController extends Controller
 
   public function detailsAction($id)
   {
-   $contain = $this->ContainModel->findByIdAndUserId((int)$id, Users::currentUser()->id);
-    if(!$contain)
-     {
-       Router::redirect('album');
-     }
+    $album = $this->AlbumModel->findByIdAndUserId((int)$id, Users::currentUser()->id);
+
+    if(!$album)
+    {
+      Router::redirect('album');
+    }
+
      $this->view->contain = $contain ;
+       $this->view->album = $album;
      $this->view->render('contain/details');
   }
 

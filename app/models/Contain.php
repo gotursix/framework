@@ -10,13 +10,13 @@ use Core\Validators\CharsValidator;
 
 class Contain extends Model
 {
-    public $id , $user_id , $name , $format ,  $deleted = 0;
+    public $id , $user_id , $name , $album_id , $language = array('');
 
     public function __construct()
     {
-      $table = 'album';
+      $table = 'content';
       parent::__construct($table);
-      $this->_softDelete = true ;
+      $this->_softDelete = false ;
 
     }
 
