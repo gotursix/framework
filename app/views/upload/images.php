@@ -6,7 +6,14 @@ use App\Models\Upload;
 <h2 class="text-center">My images</h2>
 <div class="container">
     <br>
+    <a href="<?=PROOT?>album/create/1" class="btn btn-info" >
+      Create album
+    </a>
     <h1 class="text-center">My images</h1>
+    <br>
+
+
+
     <br>
     <div class="row" id="lightgallery">
                   <?php $x=1; ?>

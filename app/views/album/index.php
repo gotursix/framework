@@ -2,10 +2,19 @@
 use Core\H; ?>
 <?php $this->start('body'); ?>
 <br><br><br><br>
+
+
 <h1 class="text-center">My albums</h1>
 <br>
 
 <div class="container text-center">
+  <a href="<?=PROOT?>album/add" class="btn btn-info" >
+    Create album
+  </a>
+  <br>
+  <br>
+
+
 <table class="table table-striped">
  <thead class=" table-dark">
    <th>Album name</th>

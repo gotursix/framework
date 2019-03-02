@@ -48,6 +48,28 @@ class AlbumController extends Controller
   }
 
 
+  public function createAction($format)
+  {
+    $album = new Album();
+
+    if($this->request->isPost())
+    {
+      $this->request->csrfCheck();
+      $album->assign($this->request->get());
+      $album->user_id = Users::currentUSer()->id;
+      $album->format = $format;
+      if($album->save())
+      {
+        Router::redirect('album');
+      }
+    }
+    $this->view->album = $album ;
+    $this->view->displayErrors = $album->getErrorMessages();
+    $this->view->postAction = PROOT . 'album' . DS . 'create' . DS . $format;
+    $this->view->render('album/create');
+  }
+
+
   public function editAction($id)
   {
     $album=$this->AlbumModel->findByIdAndUserId((int)$id, Users::currentUser()->id);
