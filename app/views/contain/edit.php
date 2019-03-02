@@ -3,6 +3,7 @@ use Core\H;
 use App\Models\Album ;
 use App\Models\Users ;
 use App\Models\Contain ;
+use Core\FH ;
 ?>
 <?php $this->setSiteTitle('Edit Album'); ?>
 <?php $this->start('body'); ?>
@@ -30,6 +31,11 @@ use App\Models\Contain ;
                  <?php $x++; ?>
               <?php endforeach; ?>
           </div>
+          <div class="col-md2 well text-leftt">
+            <a href="<?=PROOT?>album" class="btn btn-primary">Save </a>
+          </div>
+          <br>
+
 
     <h2 class="text-left">Add to album</h2>
         <div class="row">
@@ -53,6 +59,4 @@ use App\Models\Contain ;
 
 
 </div>
-
-<?php $this->partial('contain','edit') ?>
 <?php $this->end(); ?>

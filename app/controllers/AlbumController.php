@@ -38,7 +38,8 @@ class AlbumController extends Controller
       $album->user_id = Users::currentUSer()->id;
       if($album->save())
       {
-        Router::redirect('album');
+        $album = $this->AlbumModel->findByNameAndUserId($album->name, Users::currentUser()->id);
+        Router::redirect("contain/edit/$album->id");
       }
     }
     $this->view->album = $album ;
@@ -60,7 +61,8 @@ class AlbumController extends Controller
       $album->format = $format;
       if($album->save())
       {
-        Router::redirect('album');
+        $album = $this->AlbumModel->findByNameAndUserId($album->name, Users::currentUser()->id);
+        Router::redirect("contain/edit/$album->id");
       }
     }
     $this->view->album = $album ;

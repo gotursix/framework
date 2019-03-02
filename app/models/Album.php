@@ -55,16 +55,18 @@ class Album extends Model
       return $this->findFirst($conditions);
     }
 
-    public function findTitle($id, $params=[])
+    public function findByNameAndUserId($name,$user_id,$params=[])
     {
       $conditions =
       [
-        'conditions' => 'id = ?',
-        'bind' => [$id]
+        'conditions' => 'name = ? AND user_id = ?',
+        'bind' => [$name,$user_id]
       ];
-      $conditions = array_merge($conditions , $params);
 
+      $conditions = array_merge($conditions , $params);
       return $this->findFirst($conditions);
     }
+
+
 
 }
