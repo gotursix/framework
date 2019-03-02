@@ -1,6 +1,7 @@
 <?php
 namespace Core;
 use Core\FH;
+use Core\H;
 use Core\Router;
 
 class Input
@@ -35,6 +36,7 @@ class Input
       {
         //return entire request array and sanitize it
         $data = [];
+
         foreach ($_REQUEST as $field => $value)
         {
           $data[$field] = FH::sanitize($value);

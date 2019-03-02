@@ -8,7 +8,6 @@ use App\Models\Users ;
 <br><br><br><br><br>
 <div class="container">
 <h1 class="text-center">Add or remove files from the  album <?= $this->album->name ?></h1>
-
     <br>
     <div class="row">
                   <?php $x=1; ?>

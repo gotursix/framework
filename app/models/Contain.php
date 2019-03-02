@@ -10,7 +10,7 @@ use Core\Validators\CharsValidator;
 
 class Contain extends Model
 {
-    public $id , $user_id , $name , $album_id , $language = array('');
+    public $id , $user_id , $name , $album_id ;
 
     public function __construct()
     {
@@ -23,10 +23,7 @@ class Contain extends Model
 
     public function validator()
     {
-      $this->runValidation(new RequiredValidator($this,['field'=>'name','msg'=>'Name is required.']));
-      $this->runValidation(new MaxValidator($this , ['field'=>'name','msg'=>'Name must be less than 150 characters', 'rule'=>'155']));
-      $this->runValidation(new MinValidator($this , ['field'=>'name','msg'=>'Name must be at least 4 characters', 'rule'=>'4']));
-      $this->runValidation(new CharsValidator($this, ['field'=>'name', 'msg'=>'The file name can not contain ? | / \ < > : " ', 'rule'=> '0' ]));
+
 
     }
 
@@ -50,7 +47,6 @@ class Contain extends Model
         'conditions' => 'id = ? AND user_id = ?',
         'bind' => [$contact_id,$user_id]
       ];
-
       $conditions = array_merge($conditions , $params);
       return $this->findFirst($conditions);
     }
