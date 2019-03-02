@@ -47,6 +47,8 @@ class ContainController extends Controller
 
   public function detailsAction($id)
   {
+    $contain = $this->ContainModel->findByAlbumIdAndUserId( $id,(int)Users::currentUser()->id);
+
     $album = $this->AlbumModel->findByIdAndUserId((int)$id, Users::currentUser()->id);
     if(!$album)
     {

@@ -10,7 +10,6 @@ use Core\H; ?>
  <thead class=" table-dark">
    <th>Album name</th>
    <th>Album contains</th>
-   <th>View</th>
    <th>Album actions</th>
    </thead>
 
@@ -18,20 +17,16 @@ use Core\H; ?>
     <?php foreach ($this->album as $album): ?>
      <tr>
      <td>
-        <h5><?= strtoupper( $album->name) ;?></h5>
+       <a href="<?=PROOT?>contain/details/<?=$album->id ?>" >
+           <h5><?= strtoupper( $album->name) ;?></h5>
+       </a>
+
      </a>
      </td>
 
       <td>
            <?= H::format($album->format) ;?>
       </td>
-      <td>
-        <a href="<?=PROOT?>contain/details/<?=$album->id ?>" class="btn btn-info btn-xs">
-          View album
-        </a>
-
-      </td>
-
       <td>
        <div class="btn-group text-center">
   <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
