@@ -55,12 +55,16 @@ class Album extends Model
       return $this->findFirst($conditions);
     }
 
-    public function displayAddressLabel()
+    public function findTitle($id, $params=[])
     {
-      $html = $this->displayName() . '<br />';
-      $html .= $this->displayAddress();
-      return $html;
-    }
+      $conditions =
+      [
+        'conditions' => 'id = ?',
+        'bind' => [$id]
+      ];
+      $conditions = array_merge($conditions , $params);
 
+      return $this->findFirst($conditions);
+    }
 
 }
