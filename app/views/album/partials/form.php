@@ -10,7 +10,7 @@ use Core\FH;
   <option value="1">Images</option>
   <option value="2">Video</option>
   <option value="3">Audio</option>
-  <option value="3">Documents</option>
+  <option value="4">Documents</option>
 </select>
 
 <div class="isa_error_class"><?= FH::displayErrors($this->displayErrors) ?></div>

@@ -10,16 +10,14 @@ use Core\Validators\CharsValidator;
 
 class Contain extends Model
 {
-    public $id , $user_id , $name , $album_id ;
+    public $id , $user_id , $name  , $album_id ;
 
     public function __construct()
     {
       $table = 'content';
       parent::__construct($table);
       $this->_softDelete = false ;
-
     }
-
 
     public function validator()
     {
@@ -52,6 +50,17 @@ class Contain extends Model
     }
 
 
+
+    public function findByAlbumIdAndUserId($album_id,$user_id,$params=[])
+    {
+      $conditions =
+      [
+        'conditions' => 'album_id = ? AND user_id = ?',
+        'bind' => [$album_id,$user_id]
+      ];
+      $conditions = array_merge($conditions , $params);
+      return $this->find($conditions);
+    }
 
 
 }
