@@ -8,9 +8,9 @@ use Core\H; ?>
 <div class="container text-center">
 <table class="table table-striped">
  <thead class=" table-dark">
-   <th>Name</th>
-   <th>Album format</th>
-   <th>View album</th>
+   <th>Album name</th>
+   <th>Album contains</th>
+   <th>View</th>
    <th>Add or remove files</th>
    <th>Album actions</th>
    </thead>
@@ -19,8 +19,7 @@ use Core\H; ?>
     <?php foreach ($this->album as $album): ?>
      <tr>
      <td>
-
-        <?= strtoupper( $album->name) ;?>
+        <h5><?= strtoupper( $album->name) ;?></h5>
      </a>
      </td>
 
