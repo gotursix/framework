@@ -50,7 +50,7 @@ class AlbumController extends Controller
 
   public function editAction($id)
   {
-    $album= $this->AlbumModel->findByIdAndUserId((int)$id, Users::currentUser()->id);
+    $album=$this->AlbumModel->findByIdAndUserId((int)$id, Users::currentUser()->id);
     if(!$album)
     {
       Router::redirect('album');

@@ -27,12 +27,12 @@ use Core\H; ?>
            <?= H::format($album->format) ;?>
       </td>
       <td>
-           <a href="<?=PROOT?>contain/details/<?=$album->id ?>" class="btn btn-info btn-xs">
+           <a href="<?=PROOT?>album/details/<?=$album->id ?>" class="btn btn-info btn-xs">
              View album
            </a>
       </td>
       <td>
-         <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn btn-info btn-xs">Add/Remove</a>
+         <a href="<?=PROOT?>album/edit/<?=$album->id?>" class="btn btn-info btn-xs">Add/Remove</a>
       </td>
       <td>
        <a href="<?=PROOT?>album/edit/<?=$album->id?>" class="btn btn-info btn-xs">
