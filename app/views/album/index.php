@@ -2,12 +2,12 @@
 use Core\H; ?>
 <?php $this->start('body'); ?>
 <br><br><br><br>
-<h2 class="text-center">My albums</h2>
+<h1 class="text-center">My albums</h1>
 <br>
 
 <div class="container text-center">
-<table class="table">
- <thead >
+<table class="table table-striped">
+ <thead class=" table-dark">
    <th>Name</th>
    <th>Album format</th>
    <th>View album</th>
