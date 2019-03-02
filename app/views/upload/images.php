@@ -5,10 +5,9 @@ use App\Models\Upload;
 <?php $this->start('body'); ?>
 <h2 class="text-center">My images</h2>
 <div class="container">
-        <br>
-<h1 class="text-center">My images</h1>
-        <br>
-
+    <br>
+    <h1 class="text-center">My images</h1>
+    <br>
     <div class="row" id="lightgallery">
                   <?php $x=1; ?>
                       <?php foreach ($this->upload as $upload): ?>
@@ -26,12 +25,5 @@ use App\Models\Upload;
         <?php endforeach; ?>
     </div>
 </div>
-
-
-
-
 <script> lightGallery(document.getElementById('lightgallery')); </script>
-
-
-
 <?php $this->end(); ?>

@@ -21,7 +21,7 @@ class AlbumController extends Controller
 
   public function indexAction()
   {
-      $album = $this->AlbumModel->findAllByUserId(Users::currentUser()->id , ['order'=>'name']);
+      $album = $this->AlbumModel->findAllByUserId(Users::currentUser()->id , ['order'=>'format ,  name']);
       $this->view->album = $album;
       $this->view->render('album/index');
   }

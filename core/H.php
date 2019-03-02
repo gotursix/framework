@@ -32,5 +32,25 @@ class H
      return (strpos($string, $search) !== false);
    }
 
+   public static function format($format)
+   {
+     $string = '';
+     if($format == 1)
+       $string .= 'Images';
+
+     if($format == 2)
+         $string .= 'Video';
+
+    if($format == 3)
+       $string .= 'Audio';
+
+    if($format == 4)
+      $string .= 'Documents';
+
+      return $string;
+   }
+
+
+
 
 }

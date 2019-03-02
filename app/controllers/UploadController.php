@@ -30,15 +30,15 @@ class UploadController extends Controller
 
   public function imagesAction()
   {
-      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id ,   1 );
+      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , 1 );
       $this->view->upload = $upload;
       $this->view->render('upload/images');
   }
-  
-  
+
+
     public function videoAction()
   {
-      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id ,   2 );
+      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , 2 );
       $this->view->upload = $upload;
       $this->view->render('upload/video');
   }
@@ -46,14 +46,14 @@ class UploadController extends Controller
 
     public function audioAction()
   {
-      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id ,   3 );
+      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , 3 );
       $this->view->upload = $upload;
       $this->view->render('upload/audio');
   }
-  
+
       public function documentsAction()
   {
-      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id ,   4 );
+      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , 4 );
       $this->view->upload = $upload;
       $this->view->render('upload/documents');
   }
