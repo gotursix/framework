@@ -55,12 +55,7 @@ class Contain extends Model
       return $this->findFirst($conditions);
     }
 
-    public function displayAddressLabel()
-    {
-      $html = $this->displayName() . '<br />';
-      $html .= $this->displayAddress();
-      return $html;
-    }
+
 
 
 }
