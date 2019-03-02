@@ -5,6 +5,8 @@ use Core\H;
 use Core\Validators\RequiredValidator;
 use Core\Validators\UniqueValidator;
 use Core\Validators\MaxValidator;
+use Core\Validators\MinValidator;
+use Core\Validators\CharsValidator;
 
 class Album extends Model
 {
@@ -23,6 +25,9 @@ class Album extends Model
     {
       $this->runValidation(new RequiredValidator($this,['field'=>'name','msg'=>'Name is required.']));
       $this->runValidation(new MaxValidator($this , ['field'=>'name','msg'=>'Name must be less than 150 characters', 'rule'=>'155']));
+      $this->runValidation(new MinValidator($this , ['field'=>'name','msg'=>'Name must be at least 4 characters', 'rule'=>'4']));
+      $this->runValidation(new CharsValidator($this, ['field'=>'name', 'msg'=>'The file name can not contain ? | / \ < > : " ', 'rule'=> '0' ]));
+
     }
 
 
