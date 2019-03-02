@@ -25,23 +25,23 @@ class ContainController extends Controller
   {
     $album = $this->AlbumModel->findByIdAndUserId((int)$id, Users::currentUser()->id);
     $contain = new Contain();
-      if(!$album)
+    if(!$album)
     {
       Router::redirect('album');
     }
     if($this->request->isPost())
     {
       $this->request->csrfCheck();
-      $contain->assign($this->request->get());
-
+      $contain->user_id = Users::currentUser()->id;
+      $contain->album_id = $album->id;
       if($contain->save())
       Router::redirect('album');
     }
-    $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , 1 );
+    $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , $album->format );
     $this->view->upload = $upload;
     $this->view->displayErrors = $contain->getErrorMessages() ;
     $this->view->album = $album;
-    $this->view->postAction = PROOT . 'contain' . DS . 'edit' . DS . $contain->id;
+    $this->view->postAction = PROOT . 'contain' . DS . 'edit' . DS . $album->id;
     $this->view->render('contain/edit');
     }
 
