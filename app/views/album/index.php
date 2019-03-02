@@ -12,7 +12,7 @@ use Core\H; ?>
    <th>Album format</th>
    <th>View album</th>
    <th>Add or remove files</th>
-   <th>Actions</th>
+   <th>Album actions</th>
    </thead>
 
    <tbody>
@@ -37,7 +37,7 @@ use Core\H; ?>
       </td>
       <td>
        <a href="<?=PROOT?>album/edit/<?=$album->id?>" class="btn btn-info btn-xs">
-         Edit
+         Change name
        </a>
        <a href="<?=PROOT?>album/delete/<?=$album->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
          Delete
