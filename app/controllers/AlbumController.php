@@ -68,19 +68,6 @@ class AlbumController extends Controller
     $this->view->render('album/edit');
     }
 
-
-  public function detailsAction($id)
-  {
-   $album = $this->AlbumModel->findByIdAndUserId((int)$id, Users::currentUser()->id);
-    if(!$album)
-     {
-       Router::redirect('album');
-     }
-     $this->view->album = $album ;
-     $this->view->render('album/details');
-  }
-
-
     public function deleteAction($id)
     {
           $album = $this->AlbumModel->findByIdAndUserId((int)$id,Users::currentUser()->id);
