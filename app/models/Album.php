@@ -16,8 +16,7 @@ class Album extends Model
     {
       $table = 'album';
       parent::__construct($table);
-      $this->_softDelete = true ;
-
+      $this->_softDelete = false ;
     }
 
 

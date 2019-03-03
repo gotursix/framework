@@ -66,6 +66,17 @@ use Core\FH;
             </div>
         </div>
     </div>
+
+    <script>
+    file.onchange = function(e) {
+        //Get the file path
+        var fileName = document.getElementById("file").value;
+        //Get the filename
+        var fileName2 = fileName.replace(/^.*[\\\/]/, '');
+        //Remove the extension and set the input text
+        document.getElementById("name").value = fileName2.replace(/\.[^/.]+$/, "");
+    };
+</script>
 </body>
 
 <?php $this->end(); ?>

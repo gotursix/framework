@@ -10,7 +10,6 @@ use Core\FH ;
 
 <br><br><br><br><br>
 
-
 <div class="container">
 <h1 class="text-center">Add or remove files from the  album <?= $this->album->name ?></h1>
     <br>
@@ -37,6 +36,75 @@ use Core\FH ;
               <?php endforeach; ?>
           </div>
       <?php endif; ?>
+
+       <?php if ($this->album->format == 2): ?>
+         <div class="row">
+              <?php $x=1; ?>
+                 <?php foreach ($this->contain as $upload): ?>
+                    <?php $dir = Users::currentUser()->id; ?>
+                      <div class="col-sm-3">
+                          <hr>
+                            <div class="thumbnail text-center">
+                                <img src="<?= PROOT . 'img' . DS . 'video.png' ;?>" alt="Thumb-<?=$x?>" class="imgu">
+                                 </div>
+                                 <div class="caption text-center">
+                               <p><?=$upload->name?></p>
+                               <a href="<?=PROOT?>contain/delete/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-danger btn-xs">Remove from album</a>
+                            <hr>
+                         </div>
+                      </div>
+                   <?php $x++; ?>
+                <?php endforeach; ?>
+            </div>
+
+         <?php endif; ?>
+
+
+         <?php if ($this->album->format == 3): ?>
+           <div class="row">
+                <?php $x=1; ?>
+                   <?php foreach ($this->contain as $upload): ?>
+                      <?php $dir = Users::currentUser()->id; ?>
+                        <div class="col-sm-3">
+                            <hr>
+                              <div class="thumbnail text-center">
+                                  <img src="<?= PROOT . 'img' . DS . 'video.png' ;?>" alt="Thumb-<?=$x?>" class="imgu">
+                                   </div>
+                                   <div class="caption text-center">
+                                 <p><?=$upload->name?></p>
+                                 <a href="<?=PROOT?>contain/delete/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-danger btn-xs">Remove from album</a>
+                              <hr>
+                           </div>
+                        </div>
+                     <?php $x++; ?>
+                  <?php endforeach; ?>
+              </div>
+
+           <?php endif; ?>
+
+
+
+           <?php if ($this->album->format == 4): ?>
+             <div class="row">
+                  <?php $x=1; ?>
+                     <?php foreach ($this->contain as $upload): ?>
+                        <?php $dir = Users::currentUser()->id; ?>
+                          <div class="col-sm-3">
+                              <hr>
+                                <div class="thumbnail text-center">
+                                    <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="imgu">
+                                     </div>
+                                     <div class="caption text-center">
+                                   <p><?=$upload->name?></p>
+                                   <a href="<?=PROOT?>contain/delete/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-danger btn-xs">Remove from album</a>
+                                <hr>
+                             </div>
+                          </div>
+                       <?php $x++; ?>
+                    <?php endforeach; ?>
+                </div>
+
+             <?php endif; ?>
 
 
 
@@ -69,6 +137,79 @@ use Core\FH ;
         <?php endforeach; ?>
     </div>
   <?php endif; ?>
+
+
+  <?php if ($this->album->format == 2): ?>
+      <div class="row">
+                <?php $x=1; ?>
+                    <?php foreach ($this->upload as $upload): ?>
+                       <?php $dir = Users::currentUser()->id; ?>
+                          <div class="col-sm-3">
+                              <hr>
+                              <div class="thumbnail text-center">
+                                <img src="<?= PROOT . 'img' . DS . 'video.png' ;?>" alt="Thumb-<?=$x?>" class="imgu">
+                           </div>
+                        <div class="caption text-center">
+                          <p><?=$upload->name?></p>
+                            <a href="<?=PROOT?>contain/add/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-info btn-xs">Add to album</a>
+                      <hr>
+                  </div>
+                </div>
+          <?php $x++; ?>
+      <?php endforeach; ?>
+  </div>
+<?php endif; ?>
+
+
+
+<?php if ($this->album->format == 3): ?>
+    <div class="row">
+        <?php $x=1; ?>
+            <?php foreach ($this->upload as $upload): ?>
+               <?php $dir = Users::currentUser()->id; ?>
+                  <div class="col-sm-3">
+                     <p>ceva</p>
+                      <hr>
+                      <div class="thumbnail text-center">
+                      <img src="<?= PROOT . 'img' . DS . 'video.png' ;?>" alt="Thumb-<?=$x?>" class="imgu">
+                   </div>
+                <div class="caption text-center">
+                  <p><?=$upload->name ?></p>
+                  <a href="<?=PROOT?>contain/add/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-info btn-xs">Add to album</a>
+
+              <hr>
+          </div>
+        </div>
+  <?php $x++; ?>
+<?php endforeach; ?>
+</div>
+<?php endif; ?>
+
+
+
+
+<?php if ($this->album->format == 4): ?>
+    <div class="row">
+        <?php $x=1; ?>
+            <?php foreach ($this->upload as $upload): ?>
+               <?php $dir = Users::currentUser()->id; ?>
+                  <div class="col-sm-3">
+                     <p>ceva</p>
+                      <hr>
+                      <div class="thumbnail text-center">
+                      <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="imgu">
+                   </div>
+                <div class="caption text-center">
+                  <p><?=$upload->name ?></p>
+                  <a href="<?=PROOT?>contain/add/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-info btn-xs">Add to album</a>
+
+              <hr>
+          </div>
+        </div>
+  <?php $x++; ?>
+<?php endforeach; ?>
+</div>
+<?php endif; ?>
 
 
 
