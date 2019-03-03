@@ -16,10 +16,14 @@ use App\Models\Upload;
                   <?php $x=1; ?>
                       <?php foreach ($this->upload as $upload): ?>
                          <?php $dir = Users::currentUser()->id; ?>
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 <hr>
                                 <div class="thumbnail text-center">
-                                <img src="<?= PROOT . 'img' . DS . 'video.png' ;?>" alt="Thumb-<?=$x?>" class="imgu">
+
+                                  <video width="320" height="190" controls>
+                                    <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
                              </div>
                           <div class="caption text-center">
                             <p><?=$upload->name ?></p>

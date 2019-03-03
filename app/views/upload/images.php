@@ -25,6 +25,7 @@ use App\Models\Upload;
                                 <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="imgu">
                              </div>
                           <div class="caption text-center">
+                                <p><?=$upload->name ?></p>
                         <hr>
                     </div>
                   </div>
