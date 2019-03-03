@@ -7,11 +7,17 @@ use Core\FH ;
 ?>
 <?php $this->setSiteTitle('Edit Album'); ?>
 <?php $this->start('body'); ?>
+
 <br><br><br><br><br>
+
+
 <div class="container">
 <h1 class="text-center">Add or remove files from the  album <?= $this->album->name ?></h1>
     <br>
      <h2 class="text-left">Already in album</h2>
+
+
+     <?php if ($this->album->format == 1): ?>
        <div class="row">
             <?php $x=1; ?>
                <?php foreach ($this->contain as $upload): ?>
@@ -30,6 +36,11 @@ use Core\FH ;
                  <?php $x++; ?>
               <?php endforeach; ?>
           </div>
+      <?php endif; ?>
+
+
+
+
           <div class="col-md2 well text-leftt">
             <a href="<?=PROOT?>album" class="btn btn-primary">Save </a>
           </div>
@@ -37,6 +48,8 @@ use Core\FH ;
 
 
     <h2 class="text-left">Add to album</h2>
+
+    <?php if ($this->album->format == 1): ?>
         <div class="row">
                   <?php $x=1; ?>
                       <?php foreach ($this->upload as $upload): ?>
@@ -55,6 +68,8 @@ use Core\FH ;
             <?php $x++; ?>
         <?php endforeach; ?>
     </div>
+  <?php endif; ?>
+
 
 
 </div>
