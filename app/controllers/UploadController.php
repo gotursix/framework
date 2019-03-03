@@ -75,7 +75,17 @@ class UploadController extends Controller
     {
         if(move_uploaded_file($_FILES["file"]["tmp_name"],'files' . DS . $dir . DS . $upload->name ))
       {
-          Router::redirect('');
+        if($upload->format == 1)
+          Router::redirect('upload/images');
+
+        if($upload->format == 2)
+          Router::redirect('upload/video');
+
+        if($upload->format == 2)
+          Router::redirect('upload/audio');
+
+        if($upload->format == 4)
+          Router::redirect('upload/documents');
       }
       else
       {
