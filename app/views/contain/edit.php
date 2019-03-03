@@ -11,7 +11,6 @@ use Core\FH ;
 <div class="container">
 <h1 class="text-center">Add or remove files from the  album <?= $this->album->name ?></h1>
     <br>
-
      <h2 class="text-left">Already in album</h2>
        <div class="row">
             <?php $x=1; ?>

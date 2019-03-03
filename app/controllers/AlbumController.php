@@ -16,6 +16,7 @@ class AlbumController extends Controller
     parent::__construct($controller,$action);
     $this->view->setLayout('default');
     $this->load_model('Album');
+    $this->load_model('Contain');
   }
 
 
@@ -95,8 +96,11 @@ class AlbumController extends Controller
     public function deleteAction($id)
     {
           $album = $this->AlbumModel->findByIdAndUserId((int)$id,Users::currentUser()->id);
+          $contain = $this->ContainModel->findByAlbumIdAndUserId( $id,(int)Users::currentUser()->id);
           if($album)
           {
+            foreach ($contain as $contain)
+             $contain->delete();
             $album->delete();
             Session::addMsg('success','Album has been deleted');
           }
