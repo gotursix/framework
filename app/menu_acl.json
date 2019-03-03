@@ -7,7 +7,7 @@
     "Images" : "upload/images",
     "Video" : "upload/video",
     "Audio" : "upload/audio",
-    "Documents" : "upload/docs"
+    "Documents" : "upload/documents"
   },
   "Albums" :"album",
   "Logout" :"register/logout"

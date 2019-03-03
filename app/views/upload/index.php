@@ -4,7 +4,10 @@ use App\Models\Users;
 <?php $this->start('body'); ?>
 <h2 class="text-center">My Uploaded files</h2>
 <br>
-<table class="table table-striped">
+
+<input type="text" id="search" placeholder="Type to search">
+
+<table class="table table-striped" id="table">
  <thead class="thead-dark">
 
    <th>ID</th>
@@ -32,4 +35,20 @@ use App\Models\Users;
    </tr>
    </tbody>
 </table>
+
+<script>
+var $rows = $('#table tr');
+$('#search').keyup(function()
+{
+    var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
+        reg = RegExp(val, 'i'),
+        text;
+
+    $rows.show().filter(function()
+    {
+        text = $(this).text().replace(/\s+/g, ' ');
+        return !reg.test(text);
+    }).hide();
+});
+</script>
 <?php $this->end(); ?>

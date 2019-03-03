@@ -16,7 +16,6 @@ class UploadController extends Controller
   {
     parent::__construct($controller,$action);
     $this->view->setLayout('default');
-
       $this->load_model('Upload');
   }
 
@@ -76,7 +75,7 @@ class UploadController extends Controller
     {
         if(move_uploaded_file($_FILES["file"]["tmp_name"],'files' . DS . $dir . DS . $upload->name ))
       {
-          Router::redirect('upload/images');
+          Router::redirect('');
       }
       else
       {

@@ -6,14 +6,11 @@ use App\Models\Upload;
 <h2 class="text-center">My images</h2>
 <div class="container">
     <br>
-    <a href="<?=PROOT?>album/create/3" class="btn btn-info" >
+    <a href="<?=PROOT?>album/create/2" class="btn btn-info" >
       Create album
     </a>
-    <h1 class="text-center">My audio files</h1>
+    <h1 class="text-center">My videos</h1>
     <br>
-
-
-
     <br>
     <div class="row">
                   <?php $x=1; ?>
