@@ -30,7 +30,7 @@ use Core\FH;
                                             <div class="form-group label-floating">
                                                 <label class="control-label"><h4>Username</h4></label>
                                                 <br>
-                                                <input type="textd" name="username" id="username" class="form-control" value="">
+                                                <input type="text" name="username" id="username" class="form-control" value="">
                                             </div>
 
                                             <div class="form-group label-floating">

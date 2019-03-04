@@ -5,7 +5,6 @@ use Core\FH;
 <?php $this->end(); ?>
 
 <?php $this->start('body'); ?>
-<body class="off-canvas-sidebar">
     <div class="wrapper wrapper-full-page" style="background-image: url('<?=PROOT?>img/login.jpeg'); background-size: cover; ">
         <div class="full-page login-page" filter-color="black" >
             <div class="content">
@@ -31,7 +30,7 @@ use Core\FH;
                                             <div class="form-group label-floating">
                                                 <label class="control-label"><h4>Chose a name</h4></label>
                                                 <br>
-                                                <input type="textd" name="name" id="name" class="form-control" value="" required>
+                                                <input type="text" name="name" id="name" class="form-control" value="" placehold="Name" required>
                                             </div>
 
                                             <div class="form-group label-floating">
@@ -78,6 +77,5 @@ use Core\FH;
         document.getElementById("name").value = fileName2.replace(/\.[^/.]+$/, "");
     };
 </script>
-</body>
 
 <?php $this->end(); ?>
