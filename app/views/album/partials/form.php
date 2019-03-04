@@ -1,22 +1,71 @@
 <?php
 use Core\FH;
  ?>
- <div class="container">
-<form class="form-row" action=<?= $this->postAction?> method="post">
-<?= FH::csrfInput() ?>
-<?= FH::inputBlock('text', 'Album Name' , 'name' , $this->album->name , ['class'=>'form-control'],['class'=>'form-group col-md-6']);?>
+<div class="wrapper wrapper-full-page " style="background-image: url('<?=PROOT?>img/login.jpeg'); background-size: cover; ">
+    <div class="full-page login-page" filter-color="black" >
+        <div class="content">
+            <div class="container">
+              <br>
+              <br>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+                      <form method="post" action=<?= $this->postAction?> enctype="multipart/form-data">
+                        <?= FH::csrfInput() ?>
 
-<select name="format">
-  <option value="1">Images</option>
-  <option value="2">Video</option>
-  <option value="3">Audio</option>
-  <option value="4">Documents</option>
-</select>
+                            <div class="card card-login">
 
-<div class="isa_error_class"><?= FH::displayErrors($this->displayErrors) ?></div>
-<div class="col-md2 well text-right">
-  <a href="<?=PROOT?>album" class="btn btn-danger btn-xs">Cancel</a>
-  <?= FH::submitTag('Save',['class'=>'btn btn-primary']) ; ?>
-</div>
-</form>
+
+                              <div class="card-header text-center" data-background-color="rose" style="margin-left: 15px;">
+                                      <h3 class="card-title">Create an album</h3>
+                                  </div>
+
+                                <div class="card-content">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                        </span>
+
+                                        <div class="form-group label-floating">
+                                            <label class="control-label"><h4>Chose the name</h4></label>
+                                            <br>
+                                            <input type="text" name="name" id="name" class="form-control" value="<?=$this->album->name?>" required>
+                                        </div>
+
+                                        <div class="form-group label-floating">
+                                            <label class="control-label"><h4>Chose the format</h4></label>
+
+                                            <br>
+                                        </div>
+                                    </div>
+
+                                    <div class="footer text-center">
+                                    <select name="format">
+                                      <option value="1">Images</option>
+                                      <option value="2">Video</option>
+                                      <option value="3">Audio</option>
+                                      <option value="4">Documents</option>
+                                    </select>
+                                  </div>
+                                </div>
+
+                                <div class="isa_error_class">
+                                  <?= FH::displayErrors($this->displayErrors)?>
+                                </div>
+
+                                  <br>
+
+                                  <div class="footer text-center">
+                                      <button type="submit" class="btn btn-wd btn-lg" data-background-color="rose">Save</button>
+                                  </div>
+
+                              <div class="footer text-center">
+                                <a href="<?=PROOT?>album" class="btn btn-danger btn-xs">Cancel</a>
+                                  </div>
+
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
