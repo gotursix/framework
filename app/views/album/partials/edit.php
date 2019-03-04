@@ -16,7 +16,7 @@ use Core\FH;
 
 
                               <div class="card-header text-center" data-background-color="rose" style="margin-left: 15px;">
-                                      <h3 class="card-title">Create an album</h3>
+                                      <h3 class="card-title">Change the name</h3>
                                   </div>
 
                                 <div class="card-content">
@@ -25,7 +25,7 @@ use Core\FH;
                                         </span>
 
                                         <div class="form-group label-floating">
-                                            <label class="control-label"><h4>Chose a name</h4></label>
+                                            <label class="control-label"><h4>Change the name</h4></label>
                                             <br>
                                             <input type="text" name="name" id="name" class="form-control" value="<?=$this->album->name?>" required>
                                         </div>
