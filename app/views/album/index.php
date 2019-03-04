@@ -1,5 +1,7 @@
 <?php
-use Core\H; ?>
+use Core\H;
+use Core\Session;
+?>
 <?php $this->start('body'); ?>
 <br><br><br><br>
 
@@ -14,6 +16,7 @@ use Core\H; ?>
   <br>
   <br>
 
+  <?= Session::displayMsg() ?>
 
 <table class="table table-striped">
  <thead class=" table-dark">

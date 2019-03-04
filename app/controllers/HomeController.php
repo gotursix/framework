@@ -2,6 +2,7 @@
 namespace App\Controllers;
 use Core\Controller;
 use Core\H;
+use Core\Session;
 use App\Models\Users;
 
 class HomeController extends Controller
