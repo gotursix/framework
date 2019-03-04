@@ -53,6 +53,10 @@ class AlbumController extends Controller
   public function createAction($format)
   {
     $album = new Album();
+    $maxim = 4;
+    $minim =1;
+    if(!(($minim >= $format) && ($format <= $maxim)))
+      Router::redirect("album/index");
 
     if($this->request->isPost())
     {
