@@ -25,7 +25,7 @@ class Upload extends Model
 
     public function validator()
     {
-      $this->runValidation(new FileValidator($this,['field'=>'name','msg'=>'You already have a file named like that, please chose another name.' , 'rule'=> Users::currentUser()->id]));
+      $this->runValidation(new FileValidator($this,['field'=>'name','msg'=>'You already have a file named like that, please choose another name.' , 'rule'=> Users::currentUser()->id]));
       $this->runValidation(new MaxValidator($this , ['field'=>'name','msg'=>'Your name must be less than 150 characters', 'rule'=>'155']));
       $this->runValidation(new MinValidator($this , ['field'=>'name','msg'=>'Your name must be at least 4 characters', 'rule'=>'4']));
       $this->runValidation(new FormatValidator($this, ['field'=>'format', 'msg'=>'The file format is not accepted.', 'rule'=>[ '1' , '2'  , '3' , '4'] ]));

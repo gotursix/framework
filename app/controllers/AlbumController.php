@@ -64,7 +64,6 @@ class AlbumController extends Controller
       $album->assign($this->request->get());
       $album->user_id = Users::currentUSer()->id;
       $album->format = $format;
-      H::dnd($this);
       if($album->save())
       {
         $album = $this->AlbumModel->findByNameAndUserId($album->name, Users::currentUser()->id);
