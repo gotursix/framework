@@ -6,10 +6,11 @@ use Core\FH;
 
 <?php $this->start('body'); ?>
 <body class="off-canvas-sidebar">
-    <div class="wrapper wrapper-full-page" style="background-image: url('<?=PROOT?>img/upload.jpg'); background-size: cover; ">
+    <div class="wrapper wrapper-full-page" style="background-image: url('<?=PROOT?>img/login.jpeg'); background-size: cover; ">
         <div class="full-page login-page" filter-color="black" >
             <div class="content">
                 <div class="container">
+                  <br>
                     <div class="row">
                         <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
                           <form method="post" enctype="multipart/form-data">
