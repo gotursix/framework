@@ -9,11 +9,9 @@ use Core\Session;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?=$this->siteTitle(); ?></title>
 
-    <link href="<?=PROOT?>css/custom.css" rel="stylesheet">
     <link href="<?=PROOT?>css/custom2.css" rel="stylesheet">
     <link href="<?=PROOT?>css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?=PROOT?>css/font-awesome.min.css" >
-    <link href="<?=PROOT?>css/style.css" rel="stylesheet">
     <link href="<?=PROOT?>css/lightgallery.css" rel="stylesheet">
     <script src="<?=PROOT?>js/jQuery-3.3.1.js"?></script>
     <script src="<?=PROOT?>js/jquery.min.js"></script>
