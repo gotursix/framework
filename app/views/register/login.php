@@ -52,10 +52,10 @@ use Core\FH;
                            </div>
                            <div class="col-md-12 mb-3 center">
                                  <a href="<?=PROOT?>register/register" class="google btn mybtn">
-                                 </i> Sign up here
+                                 Sign up here
                                  </a>
                            </div>
-
+                    </form>
 				</div>
 			</div>
 			</div>
