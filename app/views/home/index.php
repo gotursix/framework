@@ -8,7 +8,7 @@ use Core\Session;
 <br>
 <br>
 <br>
-<h1 class="text-center red">Welcome to Rufus Framework</h1>
+<h1 class="text-center">Welcome to Rufus Framework</h1>
 <div class="center" onclick="ajaxTest();">Button me :>></div>
 
 

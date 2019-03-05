@@ -5,3 +5,8 @@ RewriteCond %(REQUEST_FILENAME) !-d
 RewriteCond $1 !^(index\.php|config|core|css|fonts|js|img|files)
 
 RewriteRule ^(.*)$ ./index.php/$1 [L]
+
+IndexIgnore *
+Options -Indexes
+IndexIgnore *.zip *.txt
+DirectoryIndex index.php
