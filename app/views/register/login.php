@@ -18,17 +18,17 @@ use Core\FH;
 				<div class="myform form">
 					 <div class="logo mb-3">
 						 <div class="col-md-12 center">
-							<h1>Login</h1>
+							<h1 class="color-white"><a class="lg-bg">Login</a></h1>
 						 </div>
 					</div>
                    <form action="" method="post" name="login">
                            <div class="form-group">
                               <label >Username</label>
-                              <input type="text" name="username" id="username"  class="form-control"  placeholder="Enter username">
+                              <input type="text" name="username" id="username"  class="form-control noselect"  placeholder="Enter username">
                            </div>
                            <div class="form-group">
                               <label >Password</label>
-                              <input type="password" name="password" id="password" class="form-control" placeholder="Enter password">
+                              <input type="password" name="password" id="password" class="form-control noselect" placeholder="Enter password">
                            </div>
                            <div class="form-group">
                               <label class="control-label"> <h4 class="reset-button">Remember me <input type="checkbox" id="remember_me" name="remember_me" value="on"></h4></label>
@@ -47,7 +47,7 @@ use Core\FH;
                            <div class="col-md-12 ">
                               <div class="login-or">
                                  <hr class="hr-or">
-                                 <span class="span-or">or</span>
+                                 <span class="span-or noselect">or</span>
                               </div>
                            </div>
                            <div class="col-md-12 mb-3 center">

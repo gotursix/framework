@@ -1,3 +1,26 @@
+.reset-button{
+    cursor:pointer;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.color-white{
+    color: white;
+}
+.lg-bg{
+    background-color: #007bff;
+    border-radius:7px;
+    padding:0px 25px 5px 25px;
+}
+
 .background {
   background-image: url("../img/login.jpeg");
   min-height: -webkit-fill-available; 
@@ -13,6 +36,14 @@
     margin-top: 10%;
     margin-bottom: 5%;
 }
+@media only screen and (max-width: 750px) {
+    .formerfix{
+    margin-top: 22%;
+    margin-bottom: 5%;
+    }
+}
+
+
 .myform{
 		position: relative;
 		display: -ms-flexbox;
@@ -29,48 +60,49 @@
 		outline: 0;
 		max-width: 500px;
 		 }
-         .tx-tfm{
-         text-transform:uppercase;
-         }
-         .mybtn{
-         border-radius:50px;
-         }
+.tx-tfm{
+    text-transform:uppercase;
+}
+.mybtn{
+    border-radius:50px;
+}
         
-         .login-or {
-         position: relative;
-         color: #aaa;
-         margin-top: 10px;
-         margin-bottom: 10px;
-         padding-top: 10px;
-         padding-bottom: 10px;
-         }
-         .span-or {
-         display: block;
-         position: absolute;
-         left: 50%;
-         top: -2px;
-         margin-left: -25px;
-         background-color: #fff;
-         width: 50px;
-         text-align: center;
-         }
-         .hr-or {
-         height: 1px;
-         margin-top: 0px !important;
-         margin-bottom: 0px !important;
-         }
-         .google {
-         color:#666;
-         width:100%;
-         height:40px;
-         text-align:center;
-         outline:none;
-         border: 1px solid lightgrey;
-         }
-          form .error {
-         color: #ff0000;
-         }
-         #second{display:none;}
+.login-or {
+    position: relative;
+    color: #aaa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+}
+.hr-or {
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+.google {
+    color:#666;
+    width:100%;
+    height:40px;
+    text-align:center;
+    outline:none;
+    border: 1px solid lightgrey;
+}
+form .error {
+    color: #ff0000;
+}
+#second{display:none;}
+
 .round {
   position: relative;
     z-index: 1000;
