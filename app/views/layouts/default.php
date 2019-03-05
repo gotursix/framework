@@ -15,6 +15,7 @@ use Core\Session;
     <link rel="stylesheet" href="<?=PROOT?>css/font-awesome.min.css" >
     <link href="<?=PROOT?>css/lightgallery.css" rel="stylesheet">
     <script src="<?=PROOT?>js/jQuery-3.3.1.js"?></script>
+    <script src="<?=PROOT?>js\jquery.min.js"?></script>
     <script src="<?=PROOT?>js/open-sans_n3_default.js"?></script>
     <script src="<?=PROOT?>js/popper.min.js"></script>
     <script src="<?=PROOT?>js/bootstrap.min.js"></script>
