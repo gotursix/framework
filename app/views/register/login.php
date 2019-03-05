@@ -7,34 +7,34 @@ use Core\FH;
  <div class="background">
     <form action="<?=PROOT?>register/login" method="post">
       <?= FH::csrfInput() ?>
-   
+
                 <div class="content">
     <div class="container">
         <div class="row">
 
 
 			<div class="col-md-5 mx-auto formerfix">
-				<div class="myform form center">
+				<div class="myform form">
 					 <div class="logo mb-3">
-						 <div class="col-md-12 text-center">
+						 <div class="col-md-12 center">
 							<h1>Login</h1>
 						 </div>
 					</div>
                    <form action="" method="post" name="login">
                            <div class="form-group">
-                              <label for="exampleInputEmail1">Username</label>
+                              <label >Username</label>
                               <input type="text" name="username" id="username"  class="form-control"  placeholder="Enter username">
                            </div>
                            <div class="form-group">
-                              <label for="exampleInputEmail1">Password</label>
-                              <input type="password" name="password" id="password" class="form-control" value="">
+                              <label >Password</label>
+                              <input type="password" name="password" id="password" class="form-control" placeholder="Enter password">
                            </div>
                            <div class="form-group">
                               <label class="control-label"> <h4 class="reset-button">Remember me <input type="checkbox" id="remember_me" name="remember_me" value="on"></h4></label>
                            </div>
 
 
-                           <div class="isa_error_class">
+                           <div >
                              <?= FH::displayErrors($this->displayErrors)?>
                            </div>
 

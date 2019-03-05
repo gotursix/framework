@@ -4,6 +4,7 @@ use Core\Session;
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      <?= $this->content('head'); ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,8 +22,6 @@ use Core\Session;
     <script src="<?=PROOT?>js/lg-autoplay.js"></script>
     <script src="<?=PROOT?>js/lg-fullscreen.js"></script>
     <script src="<?=PROOT?>js/lg-zoom.js"></script>
-
-      <?= $this->content('head'); ?>
   </head>
   <body>
     <?php include 'main_menu.php' ?>
