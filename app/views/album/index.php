@@ -32,8 +32,6 @@ use Core\Session;
        <a href="<?=PROOT?>contain/details/<?=$album->id ?>" >
            <h5><?= strtoupper( $album->name) ;?></h5>
        </a>
-
-     </a>
      </td>
 
       <td>
