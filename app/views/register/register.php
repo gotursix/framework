@@ -6,6 +6,10 @@ use Core\FH;
 <?php $this->start('body'); ?>
 
     <div class="background">
+
+      <div class="container">
+          <div class="content">
+              <div class="row">
         <div class="col-md-5 mx-auto formerfix">
 	            <div class="myform form ">
                         <div class="logo mb-3">
@@ -47,6 +51,9 @@ use Core\FH;
                                     </a>
                                 </div>
                              </form>
+                            </div>
+                            </div>
+                            </div>
                             </div>
                             </div>
                             </div>
