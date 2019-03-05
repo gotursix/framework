@@ -4,29 +4,20 @@ use Core\FH;
 <?php $this->start('head'); ?>
 <?php $this->end(); ?>
 <?php $this->start('body'); ?>
-
+ <div class="background">
     <form action="<?=PROOT?>register/login" method="post">
       <?= FH::csrfInput() ?>
-    <div class="wrapper wrapper-full-page" style="background-image: url('<?=PROOT?>img/login.jpeg'); background-size: cover; ">
+   
                 <div class="content">
     <div class="container">
         <div class="row">
 
 
-			<div class="col-md-5 mx-auto">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-                <div class="card card-login">
-
-				<div class="myform form text-center">
+			<div class="col-md-5 mx-auto formerfix">
+				<div class="myform form center">
 					 <div class="logo mb-3">
 						 <div class="col-md-12 text-center">
-               <br>
 							<h1>Login</h1>
-            <br>
 						 </div>
 					</div>
                    <form action="" method="post" name="login">
@@ -58,12 +49,10 @@ use Core\FH;
                                  <span class="span-or">or</span>
                               </div>
                            </div>
-                           <div class="col-md-12 mb-3">
-                              <p class="text-center">
+                           <div class="col-md-12 mb-3 center">
                                  <a href="register/register" class="google btn mybtn"><i class="fa fa-google-plus">
                                  </i> Sign up here
                                  </a>
-                              </p>
                            </div>
 
 				</div>
@@ -71,8 +60,7 @@ use Core\FH;
 			</div>
 		</div>
         </div>
-        </div>
-        </div>
       </form>
+      </div>
 
 <?php $this->end(); ?>

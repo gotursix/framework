@@ -6,7 +6,6 @@ use Core\FH;
 <?php $this->start('body'); ?>
 
     <div class="wrapper wrapper-full-page" style="background-image: url('<?=PROOT?>img/register.jpeg');  background-size: cover;">
-           <div class="full-page register-page" filter-color="black" >
          <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
@@ -166,5 +165,4 @@ use Core\FH;
                      </div>
 			</div>
 		</div>
-      </div>   
 <?php $this->end(); ?>
