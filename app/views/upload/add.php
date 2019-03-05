@@ -16,32 +16,21 @@ use Core\FH;
 				<div class="myform form">
 					 <div class="logo mb-3">
 						 <div class="col-md-12 center">
-							<h1 class="color-white"><a class="lg-bg">Upload file</a></h1>
+							<h1>Upload file</h1>
 						 </div>
 					</div>
-
-
-                                            <span class="input-group-addon">
-                                            </span>
-
-                                            <div class="form-group">
-                                                <label class="control-label"><h4>Chose a name</h4></label>
-                                                <input type="text" name="name" id="name" class="form-control" value="" placehold="Name" required>
-                                            </div>
-
-                                            <div class="form-group">
-                                                     <label class="control-label"><h4>Choose a file</h4></label>
-                                                     <br>
+                <span class="input-group-addon">
+                </span>
+                <div class="form-group">
+                          <label class="control-label"><h4>Chose a name</h4></label>
+                          <input type="text" name="name" id="name" class="form-control" value="" placehold="Name" required>
+                  </div>
+                  <div class="form-group">
+                                                                            <br>
 
                                                      <input type="file" id="file" name="file" required>
                                                              </div>
-
-
-                                  
-
-                                    <div class="isa_error_class">
                                       <?= FH::displayErrors($this->displayErrors)?>
-                                    </div>
 
                                     <div class="footer center">
                                       	<button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Submit</button>
