@@ -19,7 +19,8 @@ class CharsValidator extends CustomValidator
     $search7 = ":"; //working good
     $search8 = htmlspecialchars('"'); //working good
 
-
+  if(!empty($string))
+  {
      if(H::stringcheck($search, $string) === true ||  $string[0] === $search)
      {
        $value++;
@@ -59,6 +60,7 @@ class CharsValidator extends CustomValidator
      {
        $value++;
      }
+   }
 
      return $value ==  $this->rule;
   }
