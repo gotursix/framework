@@ -27,8 +27,6 @@ class Album extends Model
       $this->runValidation(new MinValidator($this , ['field'=>'name','msg'=>'Name must be at least 4 characters', 'rule'=>'4']));
       $this->runValidation(new CharsValidator($this, ['field'=>'name', 'msg'=>'The file name can not contain ? | / \ < > : " ', 'rule'=> '0' ]));
       $this->runValidation(new UniqueValidator($this, ['field'=>'name', 'msg'=>'You already have an album with that name. Please choose another one.']));
-
-
     }
 
 

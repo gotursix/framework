@@ -55,7 +55,7 @@ class AlbumController extends Controller
     $album = new Album();
     $maxim = 4;
     $minim =1;
-    if(!(($minim >= $format) && ($format <= $maxim)))
+    if(!(($format <= $maxim) && ($minim <= $format)))
       Router::redirect("album/index");
 
     if($this->request->isPost())
