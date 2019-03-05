@@ -19,14 +19,13 @@ use Core\FH;
 							<h1 class="color-white"><a class="lg-bg">Upload file</a></h1>
 						 </div>
 					</div>
-                    
-                                        <div class="input-group">
+
+
                                             <span class="input-group-addon">
                                             </span>
 
                                             <div class="form-group">
                                                 <label class="control-label"><h4>Chose a name</h4></label>
-                                                <br>
                                                 <input type="text" name="name" id="name" class="form-control" value="" placehold="Name" required>
                                             </div>
 
@@ -38,7 +37,7 @@ use Core\FH;
                                                              </div>
 
 
-                                        </div>
+                                  
 
                                     <div class="isa_error_class">
                                       <?= FH::displayErrors($this->displayErrors)?>
