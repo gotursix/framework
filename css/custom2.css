@@ -20,11 +20,17 @@
     border-radius:7px;
     padding:0px 25px 5px 25px;
 }
-
+ @media (min-height: 700px)
+  {
+      .background {
+          min-height: 1024px;
+      }
+    }
 .background {
   background-image: url("../img/login.jpeg");
-  min-height: -webkit-fill-available; 
-  background-position: center;
+    min-height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+ 
+    background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
