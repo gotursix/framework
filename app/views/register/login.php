@@ -8,8 +8,9 @@ use Core\FH;
     <form action="<?=PROOT?>register/login" method="post">
       <?= FH::csrfInput() ?>
 
-                <div class="content">
+
     <div class="container">
+        <div class="content">
         <div class="row">
 
 
@@ -34,9 +35,9 @@ use Core\FH;
                            </div>
 
 
-                           <div >
+
                              <?= FH::displayErrors($this->displayErrors)?>
-                           </div>
+
 
                            <div class="col-md-12 text-center">
                               <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
@@ -50,7 +51,7 @@ use Core\FH;
                               </div>
                            </div>
                            <div class="col-md-12 mb-3 center">
-                                 <a href="register/register" class="google btn mybtn"><i class="fa fa-google-plus">
+                                 <a href="<?=PROOT?>register/register" class="google btn mybtn">
                                  </i> Sign up here
                                  </a>
                            </div>
