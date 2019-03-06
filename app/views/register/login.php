@@ -39,9 +39,9 @@ use Core\FH;
                              <?= FH::displayErrors($this->displayErrors)?>
 
 
-                           <div class="col-md-12 text-center">
-                              <but  ton type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
-                           </div>
+                             <div class="col-md-12 text-center mb-3">
+                                <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
+                             </div>
 
 
                            <div class="col-md-12 ">

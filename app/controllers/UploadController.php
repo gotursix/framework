@@ -69,6 +69,7 @@ class UploadController extends Controller
       $upload->name .= "." . pathinfo($_FILES['file']['name'] , PATHINFO_EXTENSION);
       $value = pathinfo($_FILES['file']['name'] , PATHINFO_EXTENSION);
       $upload->format = Upload::setFormat($value);
+      
       $dir = Users::currentUser()->id;
 
     if($upload->save())
