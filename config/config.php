@@ -16,5 +16,10 @@ define('MENU_BRAND' ,'RUFUS'); // This is the brand text in menu
 define('CURRENT_USER_SESSION_NAME','GJdsadaHsdahgFGDasdaS'); // session name for loogged in use
 define('REMEMBER_ME_COOKIE_NAME','nfbfbfafusibfsau548a484f'); // cookie name for logged in user remember me
 define('REMEMBER_COOKIE_EXPIRY','604800'); // time in seconds for remember me cookie to live (30 days)
-
 define('ACCESS_RESTRICTED','Restricted'); //controller name for the restriceted redirect
+
+//other  t r a s h  variables
+define('KB', 1024);
+define('MB', 1048576);
+define('GB', 1073741824);
+define('TB', 1099511627776);

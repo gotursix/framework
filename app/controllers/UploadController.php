@@ -69,9 +69,9 @@ class UploadController extends Controller
       $upload->name .= "." . pathinfo($_FILES['file']['name'] , PATHINFO_EXTENSION);
       $value = pathinfo($_FILES['file']['name'] , PATHINFO_EXTENSION);
       $upload->format = Upload::setFormat($value);
-      
+      if($_FILES['file']['size'] > 50*MB)
+        $upload->addErrorMessage('name','The file maximum size is 50MB.');
       $dir = Users::currentUser()->id;
-
     if($upload->save())
     {
         if(move_uploaded_file($_FILES["file"]["tmp_name"],'files' . DS . $dir . DS . $upload->name ))
