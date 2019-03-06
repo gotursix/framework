@@ -11,7 +11,7 @@ use Core\FH;
            <div class="col-md-5 mx-auto formerfix">
              <div class="myform form">
               <div class="logo mb-3">
-                <div class="col-md-12 center">
+                <div class="col-md-12 center head-form">
                  <h1>Create an album</h1>
                  </div>
               </div>
@@ -21,16 +21,28 @@ use Core\FH;
                                             </span>
 
                                             <div class="form-group">
-                                                <label class="control-label"><h4>Chose a name</h4></label>
-                                                <input type="text" name="name" id="name" class="form-control" value="" placehold="Name" required>
+                                                <label class="control-label"><h4>Choose a name</h4></label>
+                                                <input type="text" name="name" id="name" class="form-control" value="" placeholder="Name" required>
                                             </div>
 
-                                
+
                                       <?= FH::displayErrors($this->displayErrors)?>
 
 
                                     <div class="footer center">
                                         <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Submit</button>
+                                    </div>
+
+                                    <div class="col-md-12 ">
+                                       <div class="login-or">
+                                          <hr class="hr-or">
+                                          <span class="span-or noselect">or</span>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-12 mb-3 center">
+                                          <a href="<?=PROOT?>" class="google btn mybtn">
+                                          Cancel
+                                          </a>
                                     </div>
                               </div>
             </div>

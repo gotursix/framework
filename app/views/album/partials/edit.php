@@ -10,7 +10,7 @@ use Core\FH;
            <div class="col-md-5 mx-auto formerfix">
              <div class="myform form">
               <div class="logo mb-3">
-                <div class="col-md-12 center">
+                <div class="col-md-12 center head-form">
                  <h1>Change the name</h1>
                  </div>
               </div>
@@ -22,6 +22,18 @@ use Core\FH;
             <?= FH::displayErrors($this->displayErrors)?>
               <div class="footer center">
                   <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Submit</button>
+            </div>
+
+            <div class="col-md-12 ">
+               <div class="login-or">
+                  <hr class="hr-or">
+                  <span class="span-or noselect">or</span>
+               </div>
+            </div>
+            <div class="col-md-12 mb-3 center">
+                  <a href="<?=PROOT?>album" class="google btn mybtn">
+                  Cancel
+                  </a>
             </div>
           </div>
         </div>

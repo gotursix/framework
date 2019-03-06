@@ -21,17 +21,17 @@ use Core\FH;
                 <div class="form-group">
                            <?= FH::csrfInput(); ?>
 
-                           <?= FH::inputBlock('text','First Name', 'fname' , $this->newUser->fname , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
+                           <?= FH::inputBlock('text','First Name', 'fname' , $this->newUser->fname , ['class'=>'noselect form-control input-sm'], ['class'=>'input-group']); ?>
                            <br>
-                           <?= FH::inputBlock('text','Last Name', 'lname' , $this->newUser->lname , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
+                           <?= FH::inputBlock('text','Last Name', 'lname' , $this->newUser->lname , ['class'=>'noselect form-control input-sm'], ['class'=>'input-group']); ?>
                            <br>
-                           <?= FH::inputBlock('text','Email', 'email' , $this->newUser->email , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
+                           <?= FH::inputBlock('text','Email', 'email' , $this->newUser->email , ['class'=>'noselect form-control input-sm'], ['class'=>'input-group']); ?>
                            <br>
-                           <?= FH::inputBlock('text','Username', 'username' , $this->newUser->username , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
+                           <?= FH::inputBlock('text','Username', 'username' , $this->newUser->username , ['class'=>'noselect form-control input-sm'], ['class'=>'input-group']); ?>
                            <br>
-                           <?= FH::inputBlock('password','Password', 'password' , $this->newUser->password , ['class'=>'form-control input-sm'], ['class'=>'input-group']); ?>
+                           <?= FH::inputBlock('password','Password', 'password' , $this->newUser->password , ['class'=>'noselect form-control input-sm'], ['class'=>'input-group']); ?>
                            <br>
-                           <?= FH::inputBlock('password','Confirm Password', 'confirm' , $this->newUser->getConfirm() , ['class'=>'form-control input-sm '], ['class'=>'input-group ']); ?>
+                           <?= FH::inputBlock('password','Confirm Password', 'confirm' , $this->newUser->getConfirm() , ['class'=>'noselect form-control input-sm '], ['class'=>'input-group ']); ?>
                           <br>
                            <?= FH::displayErrors($this->displayErrors); ?>
                        </div>
@@ -42,7 +42,7 @@ use Core\FH;
                                 <div class="col-md-12 ">
                                          <div class="login-or">
                                             <hr class="hr-or">
-                                    <span class="span-or">or</span>
+                                    <span class="span-or noselect">or</span>
                                  </div>
                               </div>
                                       <div class="col-md-12 mb-3 center">

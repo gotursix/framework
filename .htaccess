@@ -8,5 +8,5 @@ RewriteRule ^(.*)$ ./index.php/$1 [L]
 
 IndexIgnore *
 Options -Indexes
-IndexIgnore *.zip *.txt
+IndexIgnore *.zip *.txt *.tar *.rar 
 DirectoryIndex index.php
