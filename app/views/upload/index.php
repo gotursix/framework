@@ -3,8 +3,10 @@ use App\Models\Users;
 use Core\Session;
  ?>
 <?php $this->start('body'); ?>
-<div class="container m-top">
-<h1 class="text-center ">Delete files</h1>
+<div class="background">
+<div class="container">
+    <div class="row">
+<h1 class="center head-form col-md-5 mx-auto formerfix">Delete files</h1>
 <div class="input-group mb-3">
 
 <div class="input-group-prepend">
@@ -16,9 +18,9 @@ use Core\Session;
 </div>
 
 <?= Session::displayMsg() ?>
-
-<table class="table table-striped center" id="table">
- <thead class="thead-dark c">
+        <div class="whitebg center">
+<table class="table table-striped" id="table">
+ <thead class="thead-dark">
 
    <th>Name</th>
    <th>File</th>
@@ -70,8 +72,9 @@ use Core\Session;
    </tr>
    </tbody>
 </table>
+    </div>
 </div>
-
+</div></div>
 <script>
 var $rows = $('#table tr');
 $('#search').keyup(function()
@@ -87,4 +90,5 @@ $('#search').keyup(function()
     }).hide();
 });
 </script>
+    
 <?php $this->end(); ?>

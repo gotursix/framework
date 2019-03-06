@@ -3,35 +3,37 @@ use App\Models\Users;
 use App\Models\Upload;
  ?>
 <?php $this->start('body'); ?>
-<h2 class="text-center">My images</h2>
-<div class="container">
-    <br>
+<div class="background">
+    <div class="container">
+        <div class="row">
+<h2 class="center">My images</h2>
+
+   
+    <h1 class="center head-form col-md-5 mx-auto formerfix">My images</h1>
+        </div>
+        <div class="row">
     <a href="<?=PROOT?>album/create/1" class="btn btn-info" >
       Create album
     </a>
-    <h1 class="text-center">My images</h1>
-    <br>
-
-
-
-    <br>
+    <div id="image-grid" class="container-fluid whitebg">
     <div class="row" id="lightgallery">
                   <?php $x=1; ?>
                       <?php foreach ($this->upload as $upload): ?>
                          <?php $dir = Users::currentUser()->id; ?>
-                            <div class="col-sm-3"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
-                                <hr>
-                                <div class="thumbnail text-center">
-                                <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="imgu">
-                             </div>
-                          <div class="caption text-center">
+                            <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                                                      <a href="#" data-toggle="modal" data-target="#modal-preso" class="img-button">
+                                <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
+                             <div class="caption text-center">
                                 <p><?=$upload->name ?></p>
-                        <hr>
                     </div>
+                                    </a>
                   </div>
             <?php $x++; ?>
         <?php endforeach; ?>
     </div>
 </div>
+</div>
 <script> lightGallery(document.getElementById('lightgallery')); </script>
+    </div>
+    </div>
 <?php $this->end(); ?>

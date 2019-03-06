@@ -3,13 +3,16 @@ use Core\H;
 use Core\Session;
 ?>
 <?php $this->start('body'); ?>
-<br><br><br><br>
 
 
-<h1 class="text-center">My albums</h1>
-<br>
+<div class="background">
+    <div class="container">
+    <div class="row">
+        
+   
+<h1 class="center head-form col-md-5 mx-auto formerfix">My albums</h1>
 
-<div class="container text-center">
+<div class="container">
   <a href="<?=PROOT?>album/add" class="btn btn-info" >
     Create album
   </a>
@@ -17,7 +20,7 @@ use Core\Session;
   <br>
 
   <?= Session::displayMsg() ?>
-
+<div class="whitebg center">
 <table class="table table-striped">
  <thead class=" table-dark">
    <th>Album name</th>
@@ -63,4 +66,8 @@ use Core\Session;
    </tbody>
 </table>
 </div>
+    </div>
+             </div>
+    </div>
+    </div>
 <?php $this->end(); ?>

@@ -3,16 +3,16 @@ use App\Models\Users;
 use App\Models\Upload;
  ?>
 <?php $this->start('body'); ?>
-<h2 class="text-center">My images</h2>
-<div class="container">
-    <br>
-    <a href="<?=PROOT?>album/create/2" class="btn btn-info" >
+<div class="background">
+    <div class="container">
+<div class="row">
+    <h1 class="center head-form col-md-5 mx-auto formerfix">My videos</h1>
+        </div>
+        <div class="row">
+      <a href="<?=PROOT?>album/create/2" class="btn btn-info" >
       Create album
     </a>
-    <h1 class="text-center">My videos</h1>
-    <br>
-    <br>
-    <div class="row">
+    <div class="row whitebg">
                   <?php $x=1; ?>
                       <?php foreach ($this->upload as $upload): ?>
                          <?php $dir = Users::currentUser()->id; ?>
@@ -34,4 +34,6 @@ use App\Models\Upload;
         <?php endforeach; ?>
     </div>
 </div>
+    </div>
+    </div>
 <?php $this->end(); ?>
