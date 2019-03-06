@@ -19,7 +19,7 @@ class UploadController extends Controller
       $this->load_model('Upload');
   }
 
-  public function indexAction()
+  public function restoreAction()
   {
       $upload = $this->UploadModel->findAllByUserId((int)Users::currentUser()->id );
       $this->view->upload = $upload;

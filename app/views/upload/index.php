@@ -2,18 +2,23 @@
 use App\Models\Users;
  ?>
 <?php $this->start('body'); ?>
+<div class="container">
 <h2 class="text-center">My Uploaded files</h2>
 <br>
+<div class="input-group mb-3">
 
-<input type="text" id="search" placeholder="Type to search">
+<div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">@</span>
+  </div>
 
+<input type="text" id="search" placeholder="Search for the file" class="form-control">
+<br>
+</div>
 <table class="table table-striped" id="table">
  <thead class="thead-dark">
 
    <th>ID</th>
-   <th>USER_ID</th>
    <th>NAME</th>
-   <th>FORMAT</th>
    <th>IMG</th>
    <th>BUTTons</th>
    </thead>
@@ -22,9 +27,7 @@ use App\Models\Users;
     <?php foreach ($this->upload as $upload): ?>
      <tr>
      <td><?= $upload->id;   ?></td>
-     <td><?= $upload->user_id;?></td>
      <td><?= $upload->name;?></td>
-     <td><?= $upload->format;?></td>
      <?php $dir = Users::currentUser()->id; ?>
      <td><img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  height="70" width="70"></td>
      <td> <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
@@ -35,6 +38,7 @@ use App\Models\Users;
    </tr>
    </tbody>
 </table>
+</div>
 
 <script>
 var $rows = $('#table tr');
