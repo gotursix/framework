@@ -22,7 +22,10 @@ use App\Models\Upload;
                             <div class="col-sm-3">
                                 <hr>
                                 <div class="thumbnail text-center">
-                                <img src="<?= PROOT . 'img' . DS . 'video.png' ;?>" alt="Thumb-<?=$x?>" style="max-height: 200px; max-width:200px;">
+                                <audio controls>
+                                     <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
+                                      Your browser does not support the audio element.
+                                    </audio>
                              </div>
                           <div class="caption text-center">
                             <p><?=$upload->name ?></p>
