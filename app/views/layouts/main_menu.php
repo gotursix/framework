@@ -43,7 +43,8 @@ use App\Models\Users;
             <a id="navbarDropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings</a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="<?=PROOT?>register/logout">Logout</a>
-              <a class="dropdown-item" href="<?=PROOT?>upload/restore">Restore files</a>
+              <a class="dropdown-item" href="<?=PROOT?>upload/modify">Delete files</a>
+              <a class="dropdown-item" href="#">Recycle Bin</a>
             </div>
           </div>
           <li><a class="nav-link">Hello <?=Users::currentUser()->fname?></a></li>

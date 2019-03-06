@@ -19,9 +19,9 @@ class UploadController extends Controller
       $this->load_model('Upload');
   }
 
-  public function restoreAction()
+  public function modifyAction()
   {
-      $upload = $this->UploadModel->findAllByUserId((int)Users::currentUser()->id );
+      $upload = $this->UploadModel->findAllByUserId((int)Users::currentUser()->id , ['order' => 'format , name']);
       $this->view->upload = $upload;
       $this->view->render('upload/index');
   }
@@ -108,9 +108,9 @@ class UploadController extends Controller
         if($upload)
         {
           $upload->delete();
-          Session::addMsg('success','The image has been deleted');
+          Session::addMsg('success','The file has been deleted. You can restore it if you wish in the Settings -> Restore files section.');
         }
-        Router::redirect('upload/images');
+        Router::redirect('upload/modify');
   }
 
 

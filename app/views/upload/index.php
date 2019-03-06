@@ -1,10 +1,10 @@
 <?php
 use App\Models\Users;
+use Core\Session;
  ?>
 <?php $this->start('body'); ?>
-<div class="container">
-<h2 class="text-center">My Uploaded files</h2>
-<br>
+<div class="container m-top">
+<h1 class="text-center ">Delete files</h1>
 <div class="input-group mb-3">
 
 <div class="input-group-prepend">
@@ -14,22 +14,54 @@ use App\Models\Users;
 <input type="text" id="search" placeholder="Search for the file" class="form-control">
 <br>
 </div>
-<table class="table table-striped" id="table">
- <thead class="thead-dark">
 
-   <th>ID</th>
-   <th>NAME</th>
-   <th>IMG</th>
-   <th>BUTTons</th>
+<?= Session::displayMsg() ?>
+
+<table class="table table-striped center" id="table">
+ <thead class="thead-dark c">
+
+   <th>Name</th>
+   <th>File</th>
+   <th>Delete</th>
    </thead>
 
    <tbody>
     <?php foreach ($this->upload as $upload): ?>
      <tr>
-     <td><?= $upload->id;   ?></td>
-     <td><?= $upload->name;?></td>
+     <td class="center"><?= $upload->name;?></td>
      <?php $dir = Users::currentUser()->id; ?>
-     <td><img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  height="70" width="70"></td>
+
+     <?php if($upload->format == 1): ?>
+
+     <td><img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  style="max-height: 350px; max-width:350px;"></td>
+   <?php endif; ?>
+
+
+   <?php if($upload->format == 2): ?>
+   <td><video  style="max-height: 350px; max-width:350px;" controls>
+     <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4">
+       Your browser does not support the video tag.
+     </video></td>
+      <?php endif; ?>
+
+
+
+         <?php if($upload->format == 3): ?>
+         <td><audio controls>
+              <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
+               Your browser does not support the audio element.
+             </audio></td>
+            <?php endif; ?>
+
+
+
+            <?php if($upload->format == 4): ?>
+            <td><a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" target="_blank">View the pdf</a></td>
+               <?php endif; ?>
+
+
+
+
      <td> <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
          Delete
       </a></td>
