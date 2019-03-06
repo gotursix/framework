@@ -20,7 +20,9 @@ use App\Models\Upload;
                             <div class="col-sm-3" >
                                 <hr>
                                 <div class="thumbnail text-center">
-                                <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="imgu">
+                                  <a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" target="_blank">
+                                <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" style="max-height: 200px; max-width:200px;">
+                              </a>
                              </div>
                           <div class="caption text-center">
                             <p><?=$upload->name ?></p>
