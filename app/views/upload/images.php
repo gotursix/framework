@@ -5,22 +5,23 @@ use App\Models\Upload;
 <?php $this->start('body'); ?>
 <div class="background">
     <div class="container">
+
         <div class="row">
-<h2 class="center">My images</h2>
+          <h1 class="center head-form col-md-5 mx-auto formerfix">My videos</h1>
 
 
-    <h1 class="center head-form col-md-5 mx-auto formerfix">My images</h1>
-        </div>
-        <div class="row">
-    <a href="<?=PROOT?>album/create/1" class="btn btn-info" >
-      Create album
-    </a>
-
-    <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
-      Delete files
-    </a>
     <div id="image-grid" class="container-fluid ">
-      <div class="whitebg">
+
+      <div class="whitebg center">
+          <hr>
+          <a href="<?=PROOT?>album/create/1" class="btn btn-info" >
+          Create album
+        </a>
+        <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
+          Delete files
+        </a>
+
+          <hr>
     <div class="row" id="lightgallery">
                   <?php $x=1; ?>
                       <?php foreach ($this->upload as $upload): ?>
