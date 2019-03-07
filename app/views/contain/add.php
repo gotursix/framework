@@ -3,7 +3,7 @@
 
 <div >
   <br>
-<h2 class="text-center">Add A contact</h2>
+<h2 class="center">Add A contact</h2>
 <hr>
 <?php $this->partial('album','form'); ?>
 </div>

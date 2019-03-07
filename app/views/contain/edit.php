@@ -8,9 +8,9 @@ use Core\FH ;
 <?php $this->setSiteTitle('Edit Album'); ?>
 <?php $this->start('body'); ?>
 
-<br><br><br><br><br>
-
+<div class="background">
 <div class="container">
+    <div class="row">
 <h1 class="text-center">Add or remove files from the  album <?= $this->album->name ?></h1>
     <br>
      <h2 class="text-left">Already in album</h2>
@@ -211,7 +211,7 @@ use Core\FH ;
 </div>
 <?php endif; ?>
 
-
-
+</div>
+</div>
 </div>
 <?php $this->end(); ?>
