@@ -13,15 +13,17 @@ use App\Models\Upload;
     <div id="image-grid" class="container-fluid ">
 
       <div class="whitebg center">
-          <hr>
-          <a href="<?=PROOT?>album/create/1" class="btn btn-info" >
-          Create album
-        </a>
-        <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
-          Delete files
-        </a>
-
-          <hr>
+        <hr>
+        <a href="<?=PROOT?>upload/add" class="btn btn-info" >
+        Upload files
+      </a>
+      <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
+        Delete files
+      </a>
+      <a href="<?=PROOT?>album/create/3" class="btn btn-info" >
+      Create album
+    </a>
+        <hr>
     <div class="row" id="lightgallery">
                   <?php $x=1; ?>
                       <?php foreach ($this->upload as $upload): ?>

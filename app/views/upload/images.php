@@ -14,13 +14,15 @@ use App\Models\Upload;
 
       <div class="whitebg center">
           <hr>
-          <a href="<?=PROOT?>album/create/1" class="btn btn-info" >
-          Create album
+          <a href="<?=PROOT?>upload/add" class="btn btn-info" >
+          Upload files
         </a>
         <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
           Delete files
         </a>
-
+        <a href="<?=PROOT?>album/create/1" class="btn btn-info" >
+        Create album
+      </a>
           <hr>
     <div class="row" id="lightgallery">
                   <?php $x=1; ?>
