@@ -13,27 +13,27 @@ use App\Models\Upload;
     <div id="image-grid" class="container-fluid ">
 
       <div class="whitebg center">
-          <hr>
-          <a href="<?=PROOT?>album/create/2" class="btn btn-info" >
-          Create album
-        </a>
-        <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
-          Delete files
-        </a>
-
-          <hr>
-    <div class="row" id="lightgallery">
+        <hr>
+        <a href="<?=PROOT?>upload/add" class="btn btn-info" >
+        Upload files
+      </a>
+      <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
+        Delete files
+      </a>
+      <a href="<?=PROOT?>album/create/2" class="btn btn-info" >
+      Create album
+    </a>
+        <hr>
+    <div class="row" >
                   <?php $x=1; ?>
                       <?php foreach ($this->upload as $upload): ?>
                          <?php $dir = Users::currentUser()->id; ?>
                             <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
-                      <a href="#" data-toggle="modal" data-target="#modal-preso" class="img-button">
                         <video class="embed-responsive embed-responsive-16by9" controls>
           <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4" alt="Thumb-<?=$x?>" class="img-responsive" />
             Your browser does not support the video tag.
             </video>
 
-                                    </a>
                                     <div class="caption center">
                                        <p><?=$upload->name ?></p>
                            </div>
@@ -41,6 +41,9 @@ use App\Models\Upload;
             <?php $x++; ?>
         <?php endforeach; ?>
     </div>
+    <?php if(!$this->upload): ?>
+      <h1 class="center">There are no videos added.</h2>
+    <?php endif;?>
 </div>
     </div>
     </div>

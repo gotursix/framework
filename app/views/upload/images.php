@@ -7,20 +7,22 @@ use App\Models\Upload;
     <div class="container">
 
         <div class="row">
-          <h1 class="center head-form col-md-5 mx-auto formerfix">My videos</h1>
+          <h1 class="center head-form col-md-5 mx-auto formerfix">My images</h1>
 
 
     <div id="image-grid" class="container-fluid ">
 
       <div class="whitebg center">
           <hr>
-          <a href="<?=PROOT?>album/create/1" class="btn btn-info" >
-          Create album
+          <a href="<?=PROOT?>upload/add" class="btn btn-info" >
+          Upload files
         </a>
         <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
           Delete files
         </a>
-
+        <a href="<?=PROOT?>album/create/1" class="btn btn-info" >
+        Create album
+      </a>
           <hr>
     <div class="row" id="lightgallery">
                   <?php $x=1; ?>
@@ -37,6 +39,9 @@ use App\Models\Upload;
             <?php $x++; ?>
         <?php endforeach; ?>
     </div>
+    <?php if(!$this->upload): ?>
+      <h1 class="center">There are no images added.</h2>
+    <?php endif;?>
   </div>
 </div>
 </div>

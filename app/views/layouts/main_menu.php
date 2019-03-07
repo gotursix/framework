@@ -40,7 +40,7 @@ use App\Models\Users;
         <ul class="nav navbar-nav navbar-right">
         <?php if(Users::currentUser()): ?>
           <div class="dropdown">
-            <a id="navbarDropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings</a>
+            <a  href="" id="navbarDropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings</a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="<?=PROOT?>register/logout">Logout</a>
               <a class="dropdown-item" href="<?=PROOT?>upload/modify">Delete files</a>

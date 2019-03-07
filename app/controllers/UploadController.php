@@ -61,6 +61,7 @@ class UploadController extends Controller
   public function addAction()
   {
     $upload = new Upload();
+
     if($this->request->isPost())
     {
       $this->request->csrfCheck();
