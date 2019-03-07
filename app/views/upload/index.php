@@ -18,7 +18,7 @@ use Core\Session;
 </div>
 
 <?= Session::displayMsg() ?>
-        <div class="whitebg center">
+        <div class="whitetable center">
 <table class="table table-striped" id="table">
  <thead class="thead-dark">
 
@@ -90,5 +90,5 @@ $('#search').keyup(function()
     }).hide();
 });
 </script>
-    
+
 <?php $this->end(); ?>

@@ -1,5 +1,10 @@
 .whitebg {
     background-color: #fff;
+    padding: 3%;
+}
+
+.whitetable {
+    background-color: #fff;
 }
 img {
   vertical-align: middle;
