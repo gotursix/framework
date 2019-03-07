@@ -29,7 +29,7 @@ use App\Models\Upload;
                             <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
                                                       <a href="#" data-toggle="modal" data-target="#modal-preso" class="img-button">
                                 <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
-                             <div class="caption text-center">
+                             <div class="caption center">
                                 <p><?=$upload->name ?></p>
                     </div>
                                     </a>
