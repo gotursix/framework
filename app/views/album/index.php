@@ -8,8 +8,8 @@ use Core\Session;
 <div class="background">
     <div class="container">
     <div class="row">
-        
-   
+
+
 <h1 class="center head-form col-md-5 mx-auto formerfix">My albums</h1>
 
 <div class="container">
@@ -20,8 +20,8 @@ use Core\Session;
   <br>
 
   <?= Session::displayMsg() ?>
-<div class="whitebg center">
-<table class="table table-striped">
+<div class="center whitetable">
+<table class="table table-striped ">
  <thead class=" table-dark">
    <th>Album name</th>
    <th>Album contains</th>

@@ -18,8 +18,8 @@ use Core\Session;
 </div>
 
 <?= Session::displayMsg() ?>
-        <div class="whitetable center">
-<table class="table table-striped" id="table">
+<div class="center whitetable">
+<table class="table table-striped ">
  <thead class="thead-dark">
 
    <th>Name</th>
@@ -74,7 +74,10 @@ use Core\Session;
 </table>
     </div>
 </div>
-</div></div>
+</div>
+<br>
+</div>
+
 <script>
 var $rows = $('#table tr');
 $('#search').keyup(function()
