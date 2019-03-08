@@ -19,7 +19,8 @@ public function indexAction()
    $this->view->render('home/index');
   }
 
-  public function testAjaxAction(){
+  public function testAjaxAction()
+  {
        $resp = ['success'=>true,'data'=>['id'=>23,'name'=>'Te-ai spariet ??','favorite_food'=>'bread']];
        $this->jsonResponse($resp);
      }
