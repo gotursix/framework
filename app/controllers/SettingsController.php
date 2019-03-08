@@ -41,4 +41,18 @@ class SettingsController extends Controller
   }
 
 
+  public function recoverAction($id)
+  {
+        $settings = $this->SettingsModel->findByIdAndUserId((int)$id,Users::currentUser()->id);
+        if($settings)
+        {
+          $dir = Users::currentUser()->id;
+          $settings->deleted = 0 ;
+          $settings->save();
+          Session::addMsg('success' , 'The file have been restored.');
+        }
+        Router::redirect('settings/restore');
+  }
+
+
 }

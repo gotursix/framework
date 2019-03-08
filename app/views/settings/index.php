@@ -22,7 +22,7 @@ use Core\Session;
 
 
   <?= Session::displayMsg() ?>
-<div class=" whitetable"?>
+<div class=" whitetable" >
 <table class="table table-striped" id="table">
  <thead class="thead-dark">
 
@@ -70,7 +70,12 @@ use Core\Session;
 
      <td> <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
         Delete
-      </a></td>
+      </a>
+
+      <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn btn-primary btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+         Restore
+       </a>
+    </td>
 
      <?php endforeach; ?>
    </tr>
