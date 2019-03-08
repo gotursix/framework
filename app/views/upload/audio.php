@@ -29,12 +29,15 @@ use App\Models\Upload;
                       <?php foreach ($this->upload as $upload): ?>
                          <?php $dir = Users::currentUser()->id; ?>
                             <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
-                                                      <a href="#" data-toggle="modal" data-target="#modal-preso" class="img-button">
-                                <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
+
+                              <audio controls>
+                                   <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                  </audio>
                              <div class="caption text-center">
                                 <p><?=$upload->name ?></p>
                     </div>
-                                    </a>
+
                   </div>
             <?php $x++; ?>
         <?php endforeach; ?>
