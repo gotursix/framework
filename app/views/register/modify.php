@@ -14,11 +14,11 @@ use Core\H;
               <div class="row">
         <div class="col-md-5 mx-auto formerfix">
 	            <div class="myform form ">
-                        <div class="logo mb-3">
-                           <div class="col-md-12 text-center">
-                              <h1>Change your name</h1>
-                           </div>
-                        </div>
+                <div class="logo mb-3">
+                  <div class="col-md-12 center head-form">
+                   <h1>Change name</h1>
+                  </div>
+               </div>
               <form action="" method="post">
                 <div class="form-group">
                            <?= FH::csrfInput(); ?>
@@ -29,7 +29,7 @@ use Core\H;
                            </div>
                            <div class="form-group">
                               <label >Last name</label>
-                              <input type="text" name="lname" id="lname" class="form-control noselect" placeholder="Enter last name" value="<?=$this->name->lname?>" required>  
+                              <input type="text" name="lname" id="lname" class="form-control noselect" placeholder="Enter last name" value="<?=$this->name->lname?>" required>
                            </div>
 
                            <?= FH::displayErrors($this->displayErrors); ?>
@@ -47,7 +47,7 @@ use Core\H;
                                  </div>
                               </div>
                                       <div class="col-md-12 mb-3 center">
-                                        <a href="" class="google btn mybtn">
+                                        <a href="<?=PROOT?>" class="google btn mybtn">
                                         Cancel
                                     </a>
                                 </div>

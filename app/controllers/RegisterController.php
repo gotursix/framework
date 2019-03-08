@@ -72,4 +72,28 @@ class RegisterController extends Controller
  }
 
 
+ public function modifyAction()
+ {
+     $name = $this->UsersModel->currentUser();
+     if(!$name)
+     {
+       Router::redirect('');
+     }
+
+     if($this->request->isPost())
+     {
+       $this->request->csrfCheck();
+       $name->assign($this->request->get());
+       if($name->save())
+        Router::redirect('');
+     }
+
+     $this->view->displayErrors = $name->getErrorMessages();
+     $this->view->name = $name;
+     $this->view->postAction = PROOT . 'register' . DS . 'modify';
+     $this->view->render('register/modify');
+ }
+
+
+
 }
