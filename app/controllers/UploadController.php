@@ -109,7 +109,7 @@ class UploadController extends Controller
         if($upload)
         {
           $upload->delete();
-          Session::addMsg('success','The file has been deleted. You can restore it if you wish in the Settings -> Restore files section.');
+          Session::addMsg('success','The file has been deleted. You can restore it if you wish in the Settings -> Recycle bin.');
         }
         Router::redirect('upload/modify');
   }
