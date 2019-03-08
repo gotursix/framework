@@ -23,7 +23,7 @@ use Core\Session;
 
   <?= Session::displayMsg() ?>
 <div class=" whitetable"?>
-<table class="table table-striped">
+<table class="table table-striped" id="table">
  <thead class="thead-dark">
 
    <th>Name</th>
