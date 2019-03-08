@@ -47,7 +47,7 @@ use App\Models\Users;
               <a class="dropdown-item" href="<?=PROOT?>register/logout">Logout</a>
             </div>
           </div>
-          <li><a class="nav-link">Hello <?=Users::currentUser()->fname?></a></li>
+          <li><a class="nav-link">Hello <?=Users::currentUser()->fname?> <?=Users::currentUser()->lname?></a></li>
         <?php  elseif(!Users::currentUser()): ?>
           <li><a href="<?=PROOT?>register/login" class="nav-link">Login</a></li>
           <li><a href="<?=PROOT?>register/register" class="nav-link">Register</a></li>
