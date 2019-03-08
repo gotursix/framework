@@ -18,9 +18,10 @@ use Core\Session;
 </div>
 
 <?= Session::displayMsg() ?>
-<div class="center whitetable">
-<table class="table table-striped ">
- <thead class="thead-dark">
+<div class=" whitetable"?>
+<table class="table table-striped">
+<thead class="thead-dark">
+
 
    <th>Name</th>
    <th>File</th>
@@ -74,8 +75,8 @@ use Core\Session;
 </table>
     </div>
 </div>
-</div>
 <br>
+</div>
 </div>
 
 <script>

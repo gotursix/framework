@@ -6,7 +6,7 @@ use Core\Session;
 <div class="background">
 <div class="container">
     <div class="row">
-<h1 class="center head-form col-md-5 mx-auto formerfix">Delete files</h1>
+<h1 class="center head-form col-md-5 mx-auto formerfix">Deleted files</h1>
 <div class="input-group mb-3">
 
 <div class="input-group-prepend">

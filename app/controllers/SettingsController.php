@@ -32,8 +32,9 @@ class SettingsController extends Controller
         if($settings)
         {
           $dir = Users::currentUser()->id;
-          unlink('framework/files/4/peep(2).jpg');
-         //$settings->delete();
+          $delete= $_SERVER['DOCUMENT_ROOT']. PROOT  . 'files' . DS . $dir  . DS . $settings->name ;
+          unlink($delete);
+          $settings->delete();
           Session::addMsg('success' , 'The file have been permanently deleted.');
         }
         Router::redirect('settings/restore');
