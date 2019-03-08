@@ -20,10 +20,7 @@ class Contain extends Model
     }
 
     public function validator()
-    {
-
-
-    }
+    { }
 
 
     public function findAllByUserId($user_id,$params=[])

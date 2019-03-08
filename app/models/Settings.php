@@ -20,10 +20,10 @@ class Settings extends Model
       $table = 'files';
       parent::__construct($table);
       $this->_softDelete = false ;
-
     }
 
-    public function validator(){}
+    public function validator()
+    { }
 
     public function findAllByUserId($user_id,$params=[])
     {
