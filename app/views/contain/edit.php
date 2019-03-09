@@ -15,7 +15,7 @@ use Core\FH ;
 
 			<div class="row center">
 				
-				<h1 class=" head-form col-md-5 mx-auto formerfix">Album: <font class="album-name" color="red"><i><?= $this->album->name ?></i></font></h1>
+				<h1 class=" head-form col-md-5 mx-auto formerfix">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h1>
 			
 			</div>
 			<div class="row center">
