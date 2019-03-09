@@ -4,6 +4,7 @@
     padding-bottom: 3%;
     padding-right: 4%;
     padding-left: 4%;
+    border-radius: 1.1rem;
 }
 
 .whitetable {
@@ -29,6 +30,33 @@ img {
     cursor:pointer;
 }
 
+.myform{
+		position: relative;
+		display: -ms-flexbox;
+		display: flex;
+		padding: 1rem;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		width: 100%;
+		pointer-events: auto;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid rgba(0,0,0,.2);
+		border-radius: 1.1rem;
+		outline: 0;
+		max-width: 500px;
+}
+
+.myform form{
+	margin-top: 25px;
+}
+
+.bg-files{
+		padding: 1rem;
+		background-color: #fff;
+		border: 1px solid rgba(0,0,0,.2);
+		border-radius: 1.1rem;
+}
 .head-form{
     color:white;
     background-color: #007bff;
@@ -37,38 +65,19 @@ img {
     border-radius: 11px;
 }
 
-@media (max-height:200px){
-
+@media (max-height:270px){
   .head-form{
       color:white;
       background-color: #007bff;
       padding:5px 25px;
-      margin-top:-12.5%;
+      margin-top:-19%;
       border-radius: 11px;
   }
-
   .head-form h1{
-    font-size:15px;
+    font-size:18px;
   }
 
 }
-
-@media (max-height:250px; min-height:200px){
-
-  .head-form{
-      color:white;
-      background-color: #007bff;
-      padding:5px 25px;
-      margin-top:-11%;
-      border-radius: 11px;
-  }
-
-  .head-form h1{
-    font-size:12px;
-  }
-
-}
-
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -94,12 +103,11 @@ img {
       }
     }
 .background {
-  background-image: url("../img/login.jpeg");
+	background-image: url("../img/login.jpeg");
     min-height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-
     background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .center {
@@ -116,23 +124,6 @@ img {
     }
 }
 
-
-.myform{
-		position: relative;
-		display: -ms-flexbox;
-		display: flex;
-		padding: 1rem;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		width: 100%;
-		pointer-events: auto;
-		background-color: #fff;
-		background-clip: padding-box;
-		border: 1px solid rgba(0,0,0,.2);
-		border-radius: 1.1rem;
-		outline: 0;
-		max-width: 500px;
-		 }
 .tx-tfm{
     text-transform:uppercase;
 }
