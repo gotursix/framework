@@ -115,13 +115,23 @@ img {
 }
 .formerfix{
     margin-top: 10%;
-    margin-bottom: 5%;
+	margin-bottom:3%;
 }
+
 @media only screen and (max-width: 750px) {
     .formerfix{
-    margin-top: 22%;
-    margin-bottom: 5%;
+    margin-top: 12%;
     }
+	.row h1{
+		font-size:17px;
+	}
+	.row h2{
+		font-size:12px;
+	}
+}
+
+.top{
+	margin-top:7%;
 }
 
 .tx-tfm{
