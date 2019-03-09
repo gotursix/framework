@@ -9,6 +9,15 @@
 
 .whitetable {
     background-color: #fff;
+    border-radius: 1.1rem;
+}
+
+.buttondiv{
+  padding-top: 0.1px;
+  padding-bottom: 0.1px;
+  padding-right: 3%;
+  padding-left: 3%;
+  margin-bottom: 10px;
 }
 img {
   vertical-align: middle;
@@ -114,7 +123,7 @@ img {
     text-align: center;
 }
 .formerfix{
-    margin-top: 10%;
+    margin-top: 15%;
 	margin-bottom:3%;
 }
 

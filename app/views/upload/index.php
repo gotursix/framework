@@ -15,13 +15,13 @@ use Core\Session;
 <div class="container">
 
   <div class="input-group mb-3">
-
-  <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon1">@</span>
-    </div>
-
-  <input type="text" id="search" placeholder="Search for the file" class="form-control">
-  <br>
+    <?php if($this->upload): ?>
+      <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+      <input type="text" id="search" placeholder="Search for the file" class="form-control">
+      <br>
+       <?php endif; ?>
   </div>
 
 
@@ -31,9 +31,9 @@ use Core\Session;
 <thead class="thead-dark">
 
 
-   <th>Name</th>
-   <th>File</th>
-   <th>Delete</th>
+   <th scope="col">Name</th>
+   <th scope="col">File</th>
+   <th scope="col">Delete</th>
    </thead>
 
    <tbody>
@@ -78,6 +78,16 @@ use Core\Session;
       </a></td>
 
      <?php endforeach; ?>
+
+
+
+        <?php if(!$this->upload): ?>
+             <td colspan="3" class="center">
+               <h1>
+                 You don't have any file.
+               </h1>
+             </td>
+           <?php endif; ?>
    </tr>
    </tbody>
 </table>

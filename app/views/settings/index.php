@@ -8,30 +8,30 @@ use Core\Session;
     <div class="row">
 
 
-<h1 class="center head-form col-md-5 mx-auto formerfix">Delete files</h1>
+<h1 class="center head-form col-md-5 mx-auto formerfix">Deleted files</h1>
 
 
 
 <div class="container">
-
   <div class="input-group mb-3">
-
-  <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon1">@</span>
-    </div>
-
-  <input type="text" id="search" placeholder="Search for the file" class="form-control">
-  <br>
+    <?php if($this->settings): ?>
+      <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+      <input type="text" id="search" placeholder="Search for the file" class="form-control">
+      <br>
+       <?php endif; ?>
   </div>
 
   <?= Session::displayMsg() ?>
 <div class=" whitetable" >
 <table class="table table-striped" id="table">
+
  <thead class="thead-dark">
 
-   <th>Name</th>
-   <th>File</th>
-   <th>Delete</th>
+   <th scope="col">Name</th>
+   <th scope="col">File</th>
+   <th scope="col">Delete</th>
    </thead>
 
    <tbody>
@@ -79,9 +79,22 @@ use Core\Session;
          Restore
        </a>
     </td>
-
      <?php endforeach; ?>
+
+   <?php if(!$this->settings): ?>
+        <td colspan="3" class="center">
+          <h1>
+            There are no files to be restored.
+          </h1>
+        </td>
+      <?php endif; ?>
+
    </tr>
+
+
+
+
+
    </tbody>
 </table>
     </div>

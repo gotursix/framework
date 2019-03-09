@@ -9,23 +9,28 @@ use Core\Session;
     <div class="container ceter">
     <div class="row">
 
+      <h1 class="center head-form col-md-5 mx-auto formerfix">My albums</h1>
+</div>
 
-<h1 class="center head-form col-md-5 mx-auto formerfix">My albums</h1>
 
+        <div class="whitetable center buttondiv">
+
+            <hr>
+            <a href="<?=PROOT?>album/add" class="btn btn-info" >
+              Create album
+            </a>
+            <hr>
+          </div>
+<br>
+<div class="row">
 <div class="container">
-  <a href="<?=PROOT?>album/add" class="btn btn-info" >
-    Create album
-  </a>
-  <br>
-  <br>
-
   <?= Session::displayMsg() ?>
 <div class="center whitetable">
 <table class="table table-striped ">
  <thead class=" table-dark">
-   <th>Album name</th>
-   <th>Album contains</th>
-   <th>Album actions</th>
+   <th scope="col">Album name</th>
+   <th scope="col">Album contains</th>
+   <th scope="col">Album actions</th>
    </thead>
 
    <tbody>
@@ -61,8 +66,19 @@ use Core\Session;
   </div>
 </div>
      </td>
+
      <?php endforeach; ?>
-   </tr>
+
+
+   <?php if(!$this->album): ?>
+        <td colspan="3" class="center">
+          <h1>
+             You have no albums.
+          </h1>
+        </td>
+      <?php endif; ?>
+ </tr>
+
    </tbody>
 </table>
 </div>
