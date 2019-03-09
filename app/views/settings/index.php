@@ -4,22 +4,25 @@ use Core\Session;
  ?>
 <?php $this->start('body'); ?>
 <div class="background">
-<div class="container">
+    <div class="container center">
     <div class="row">
-<h1 class="center head-form col-md-5 mx-auto formerfix">Deleted files</h1>
-<div class="input-group mb-3">
 
-<div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">@</span>
+
+<h1 class="center head-form col-md-5 mx-auto formerfix">Delete files</h1>
+
+
+
+<div class="container">
+
+  <div class="input-group mb-3">
+
+  <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">@</span>
+    </div>
+
+  <input type="text" id="search" placeholder="Search for the file" class="form-control">
+  <br>
   </div>
-
-<input type="text" id="search" placeholder="Search for the file" class="form-control">
-<br>
-
-</div>
-
-<div class="center">
-
 
   <?= Session::displayMsg() ?>
 <div class=" whitetable" >

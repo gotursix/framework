@@ -6,7 +6,7 @@ use Core\Session;
 
 
 <div class="background">
-    <div class="container">
+    <div class="container ceter">
     <div class="row">
 
 
