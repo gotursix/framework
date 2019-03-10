@@ -151,7 +151,6 @@ use Core\FH ;
 
                <br>
                   <a href="<?=PROOT?>contain/add/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-info btn-xs">Add to album</a>
-          </a>
         </div>
   <?php $x++; ?>
 <?php endforeach; ?>
@@ -171,7 +170,6 @@ use Core\FH ;
 
                <br>
                   <a href="<?=PROOT?>contain/add/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-info btn-xs">Add to album</a>
-    </a>
         </div>
   <?php $x++; ?>
 <?php endforeach; ?>
