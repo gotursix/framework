@@ -15,12 +15,13 @@ use Core\FH ;
 
 			<div class="row center">
 				
-				<h1 class=" head-form col-md-5 mx-auto formerfix noselect">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h1>
+				<h1 class="head-form col-md-5 mx-auto top formerfix noselect">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h1>
 			
 			</div>
-			<div class="row center">
-			<h2 class="head-form col-md-5 mx-auto top center noselect">Images in album</h2>
-			</div>
+			
+			<h4 class="head-form col-md-5 mx-auto top center noselect">Images in album</h4>
+			
+		
 			<div id="image-grid" class="container-fluid ">
 			
 			
@@ -39,7 +40,7 @@ use Core\FH ;
 									<?php foreach ($this->contain as $upload): ?>
 										<?php $dir = Users::currentUser()->id; ?>
 											
-											<div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+											<div class="col-lg-3 col-xs-6 custom-col noselect"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 												
 												<img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
 												<br>
@@ -59,7 +60,7 @@ use Core\FH ;
 									<?php foreach ($this->contain as $upload): ?>
 										<?php $dir = Users::currentUser()->id; ?>
 											
-											<div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'img' . DS . 'video.png' ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+											<div class="col-lg-3 col-xs-6 custom-col noselect"  data-src="<?= PROOT . 'img' . DS . 'video.png' ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 												
 												<img src="<?= PROOT . 'img' . DS . 'video.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
 													<br>
@@ -75,7 +76,7 @@ use Core\FH ;
                 <?php $x=1; ?>
                    <?php foreach ($this->contain as $upload): ?>
                       <?php $dir = Users::currentUser()->id; ?>
-                         <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'img' . DS . 'video.png' ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                         <div class="col-lg-3 col-xs-6 custom-col noselect"  data-src="<?= PROOT . 'img' . DS . 'video.png' ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
               <img src="<?= PROOT . 'img' . DS . 'video.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
                                   <br>
                                  <a href="<?=PROOT?>contain/delete/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-danger btn-xs">Remove from album</a>
@@ -91,7 +92,7 @@ use Core\FH ;
                   <?php $x=1; ?>
                      <?php foreach ($this->contain as $upload): ?>
                         <?php $dir = Users::currentUser()->id; ?>
-                           <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'img' . DS . 'document.png' ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                           <div class="col-lg-3 col-xs-6 custom-col noselect"  data-src="<?= PROOT . 'img' . DS . 'document.png' ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
         <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
                                   <br>
                                    <a href="<?=PROOT?>contain/delete/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-danger btn-xs">Remove from album</a>
@@ -106,7 +107,7 @@ use Core\FH ;
               </div>
 
 
-              <h2 class="head-form col-md-5 mx-auto top center">Select your images</h2>
+              <h4 class="head-form col-md-5 mx-auto top center noselect">Select your images</h4>
   <div class="whitebg center">
 
 <div class="row" >
@@ -114,7 +115,7 @@ use Core\FH ;
                   <?php $x=1; ?>
                       <?php foreach ($this->upload as $upload): ?>
                          <?php $dir = Users::currentUser()->id; ?>
-                             <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                             <div class="col-lg-3 col-xs-6 custom-col noselect"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
                           <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
                           <br>
                               <a href="<?=PROOT?>contain/add/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-info btn-xs">Add to album</a>
@@ -129,7 +130,7 @@ use Core\FH ;
                 <?php $x=1; ?>
                     <?php foreach ($this->upload as $upload): ?>
                        <?php $dir = Users::currentUser()->id; ?>
-                           <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'img' . DS . 'video.png' ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                           <div class="col-lg-3 col-xs-6 custom-col noselect"  data-src="<?= PROOT . 'img' . DS . 'video.png' ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
                      <img src="<?= PROOT . 'img' . DS . 'video.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
                         <br>
                             <a href="<?=PROOT?>contain/add/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-info btn-xs">Add to album</a>
@@ -145,7 +146,7 @@ use Core\FH ;
         <?php $x=1; ?>
             <?php foreach ($this->upload as $upload): ?>
                <?php $dir = Users::currentUser()->id; ?>
-                   <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'img' . DS . 'video.png' ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                   <div class="col-lg-3 col-xs-6 custom-col noselect"  data-src="<?= PROOT . 'img' . DS . 'video.png' ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
                      <p>ceva</p>
              <img src="<?= PROOT . 'img' . DS . 'video.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
 
@@ -163,7 +164,7 @@ use Core\FH ;
         <?php $x=1; ?>
             <?php foreach ($this->upload as $upload): ?>
                <?php $dir = Users::currentUser()->id; ?>
-                   <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'img' . DS . 'document.png' ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                   <div class="col-lg-3 col-xs-6 custom-col noselect"  data-src="<?= PROOT . 'img' . DS . 'document.png' ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
                      <p>ceva</p>s
 
     <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />

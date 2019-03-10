@@ -4,7 +4,7 @@ use App\Models\Upload;
  ?>
 <?php $this->start('body'); ?>
 	
-	<div class="background">
+	<div class="background noselect">
 	
 		<div class="container">
 			
