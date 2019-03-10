@@ -32,8 +32,9 @@ use App\Models\Upload;
                               <a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" target="_blank">
                                 <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
                                 <p><?=$upload->name ?></p>
+                              </a>
                   </div>
-                </a>
+
             <?php $x++; ?>
         <?php endforeach; ?>
     </div>
