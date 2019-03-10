@@ -16,7 +16,7 @@ class Users extends Model
 {
    private $_isLoggedIn, $_sessionName, $_cookieName, $post_vars, $_confirm;
    public static $currentLoggedInUser = null;
-   public $id, $username , $email , $password , $fname , $lname , $acl , $token ,  $deleted=0;
+   public $id, $username , $email , $password , $fname , $lname , $acl , $token = null ,  $deleted=0;
 
    public function __construct($user='')
    {
