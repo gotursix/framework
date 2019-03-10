@@ -1,3 +1,14 @@
+/*<<<<<<< Updated upstream*/
+img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-responsive{
+    height:150px;
+}
+/*=======
+>>>>>>> Stashed changes*/
 .whitebg {
     background-color: #fff;
     padding-top: 2%;
@@ -54,6 +65,7 @@ img {
 		border-radius: 1.1rem;
 		outline: 0;
 		max-width: 500px;
+		margin-top:13%;
 }
 
 .myform form{
@@ -101,8 +113,9 @@ img {
     color: white;
 }
 .lg-bg{
+	color:white;
     background-color: #007bff;
-    border-radius:7px;
+    border-radius:11px;
     padding:0px 25px 5px 25px;
 }
  @media (min-height: 700px)
@@ -124,7 +137,7 @@ img {
 }
 .formerfix{
     margin-top: 15%;
-	margin-bottom:3%;
+	margin-bottom:1%;
 }
 
 @media only screen and (max-width: 750px) {
@@ -137,6 +150,13 @@ img {
 	.row h2{
 		font-size:12px;
 	}
+	
+	
+	.whitebg a {
+		margin-top:5%;
+	}
+	
+	
 }
 
 .top{

@@ -3,15 +3,36 @@ use App\Models\Users;
  ?>
 <?php $this->start('body'); ?>
     <div class="background">
-<div class="container">
+<div class="container center">
     <div class="row">
-        
-<h2 class="center col-md-5 mx-auto head-form formerfix">Album: <?= $this->album->name ?></h2>
+
+<h2 class="center col-md-5 mx-auto head-form formerfix">Album: <font class="album-name"><i><?= $this->album->name ?></font></i></h2>
     </div>
+    <div class="whitetable center buttondiv">
+        <hr>
+        <a href="<?=PROOT?>album" class="btn btn-info">Go back</a>
+
+        <hr>
+      </div>
+      <br>
+
+      <?php if (!$this->contain): ?>
+        <div class="container-fluid whitebg">
+        <h1>There are no files in the album</h1>
+      </div>
+      <?php endif; ?>
+
+      <?php if($this->contain):   ?>
+
     <div class="row">
-<a href="<?=PROOT?>album" class="btn btn-info">Go back</a>
+
+
 <div id="image-grid" class="container-fluid">
    	  <div class="row whitebg" id="lightgallery">
+
+
+
+
 <?php if ($this->album->format == 1): ?>
 
    	    <?php $x=1; ?>
@@ -20,11 +41,11 @@ use App\Models\Users;
     	  <div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
                   <a href="#" data-toggle="modal" data-target="#modal-preso" class="img-button">
                        <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" class="img-responsive"/>
-    
+
               <div class="caption text-center">
-                <p><?=$upload->name?></p> 
+                <p><?=$upload->name?></p>
                    </div>
-                  </a>               
+                  </a>
            </div>
           <?php $x++; ?>
        <?php endforeach; ?>
@@ -39,7 +60,7 @@ use App\Models\Users;
               <div class="col-sm-3">
                     <div class="thumbnail text-center">
                       <img src="<?= PROOT . 'img' . DS . 'video.png' ;?>" alt="Thumb-<?=$x?>" class="imgu">
-                         
+
                          <div class="caption text-center">
                               <p><?=$upload->name?></p>
 
@@ -62,7 +83,7 @@ use App\Models\Users;
 
                   </div>
                           </div>
-                         
+
                </div>
             <?php $x++; ?>
          <?php endforeach; ?>
@@ -81,18 +102,19 @@ use App\Models\Users;
                            <p><?=$upload->name?></p>
                                </div>
                            </div>
-                        
+
                    </div>
                 </div>
              <?php $x++; ?>
           <?php endforeach; ?>
     <?php endif; ?>
     </div>
-    
+
     <script>var __adobewebfontsappname__="dreamweaver"</script>
    <script> lightGallery(document.getElementById('lightgallery')); </script>
 
 </div>
 </div>
         </div>
+        <?php endif; ?>
 <?php $this->end(); ?>
