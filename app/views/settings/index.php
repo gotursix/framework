@@ -74,7 +74,7 @@ use Core\Session;
      <td> <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
         Delete
       </a>
-
+      <br><br>
       <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn btn-primary btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
          Restore
        </a>
