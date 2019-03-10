@@ -83,7 +83,7 @@ class UploadController extends Controller
         if($upload->format == 2)
           Router::redirect('upload/video');
 
-        if($upload->format == 2)
+        if($upload->format == 3)
           Router::redirect('upload/audio');
 
         if($upload->format == 4)
