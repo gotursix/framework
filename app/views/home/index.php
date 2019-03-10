@@ -4,13 +4,18 @@ use Core\Session;
 <?php //$this->setSiteTitle('Home'); //set every spage title ?>
 
 <?php $this->start('body'); ?>
-    <div class="background">
+    <div class="background ">
         <div class="container">
-        <div class="row">
-         <h1 class="center head-form col-md-5 mx-auto formerfix">Welcome to Rufus Framework</h1>
-<div class="center head-form col-md-5 mx-auto formerfix" onclick="ajaxTest();">Button me :>></div>   
-            </div>
+          <br>
+          <br>
+          <br>
+          <div class="whitebg m-top">
+         <h1 class="center ">Welcome to Rufus Framework</h1>
+         <div class="center" onclick="ajaxTest();">Button me :>></div>
+          </div>
         </div>
+    </div>
+  </div>
 
 
 
