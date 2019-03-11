@@ -31,9 +31,9 @@ use Core\Session;
 <thead class="thead-dark">
 
 
-   <th scope="col">Name</th>
-   <th scope="col">File</th>
-   <th scope="col">Delete</th>
+   <th scope="col" class="table-content"><h5>Name</h5></th>
+   <th scope="col" class="table-content"><h5>File</h5></th>
+   <th scope="col" class="table-content"><h5>Delete</h5></th>
    </thead>
 
    <tbody>
@@ -44,12 +44,12 @@ use Core\Session;
 
      <?php if($upload->format == 1): ?>
 
-     <td><img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  style="max-height: 350px; max-width:350px;"></td>
+     <td ><br><img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  class="img-responsive"><br></td>
    <?php endif; ?>
 
 
    <?php if($upload->format == 2): ?>
-   <td><video  style="max-height: 350px; max-width:350px;" controls>
+   <td><video  class="img-responsive" controls>
      <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4">
        Your browser does not support the video tag.
      </video></td>
@@ -58,7 +58,7 @@ use Core\Session;
 
 
          <?php if($upload->format == 3): ?>
-         <td><audio controls>
+         <td class="center-h"><audio controls>
               <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
                Your browser does not support the audio element.
              </audio></td>
@@ -67,7 +67,7 @@ use Core\Session;
 
 
             <?php if($upload->format == 4): ?>
-            <td><a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" target="_blank">View the pdf</a></td>
+            <td class="center-h"><a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  target="_blank">View the pdf</a></td>
                <?php endif; ?>
 
 
@@ -82,7 +82,7 @@ use Core\Session;
 
 
         <?php if(!$this->upload): ?>
-             <td colspan="3" class="center">
+             <td colspan="3" class="center" class="center-h">
                <h1>
                  You don't have any file.
                </h1>

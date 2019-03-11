@@ -27,14 +27,14 @@ use Core\Session;
 <div class=" whitetable" >
 <table class="table table-striped" id="table">
 
- <thead class="thead-dark">
+ <thead class="thead-dark center">
 
-   <th scope="col">Name</th>
-   <th scope="col">File</th>
-   <th scope="col">Delete</th>
+   <th scope="col" class="table-content"><h5>Name</h5></th>
+   <th scope="col" class="table-content"><h5>File</h5></th>
+   <th scope="col" class="table-content"><h5>Delete</h5></th>
    </thead>
 
-   <tbody>
+   <tbody >
     <?php foreach ($this->settings as $settings): ?>
      <tr>
      <td class="center center-h"><?= $settings->name;?></td>
@@ -42,12 +42,12 @@ use Core\Session;
 
      <?php if($settings->format == 1): ?>
 
-     <td><img src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>"  style="max-height: 350px; max-width:350px;"></td>
+     <td><img src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>"  class="img-responsive"></td>
    <?php endif; ?>
 
 
    <?php if($settings->format == 2): ?>
-   <td><video  style="max-height: 350px; max-width:350px;" controls>
+   <td><video  class="img-responsive" controls>
      <source src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" type="video/mp4">
        Your browser does not support the video tag.
      </video></td>
@@ -71,11 +71,11 @@ use Core\Session;
 
 
 
-     <td class="center-h"> <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ?')){return false;}">
+     <td class="center-h"> <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}">
         Delete
       </a>
     <br>
-      <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn btn-primary btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+      <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn btn-primary btn-xs" >
          Restore
        </a>
     </td>

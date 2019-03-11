@@ -13,7 +13,7 @@ use Core\Session;
 </div>
 
 
-        <div class="whitetable center buttondiv">
+        <div class="whitediv center buttondiv">
 
             <hr>
             <a href="<?=PROOT?>album/add" class="btn btn-info" >
@@ -28,9 +28,10 @@ use Core\Session;
 <div class="center whitetable">
 <table class="table table-striped ">
  <thead class=" table-dark">
-   <th scope="col">Album name</th>
-   <th scope="col">Album contains</th>
-   <th scope="col">Album actions</th>
+
+   <th scope="col" class="table-content"><h4>Album name<h4></th>
+   <th scope="col" class="table-content"><h4>Album contains<h4></th>
+   <th scope="col" class="table-content"><h4>Album actions<h4></th>
    </thead>
 
    <tbody>
@@ -60,7 +61,7 @@ use Core\Session;
 
     <div class="dropdown-divider"></div>
 
-    <a href="<?=PROOT?>album/delete/<?=$album->id?>" class="dropdown-item" onclick="if(!confirm('Are you sure ?')){return false;}">
+    <a href="<?=PROOT?>album/delete/<?=$album->id?>" class="dropdown-item text-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}">
       Delete
     </a>
   </div>
