@@ -18,7 +18,7 @@ use App\Models\Users;
 
       <?php if (!$this->contain): ?>
         <div class="container-fluid whitebg">
-        <h1>There are no files in the album</h1>
+        <h1 class="noselect">There are no files in the album</h1>
       </div>
       <?php endif; ?>
 

@@ -33,8 +33,10 @@ use Core\FH ;
 						<a href="<?=PROOT?>album" class="btn btn-primary ">Save </a>
 						<hr>
 
+						<?php if (!$this->contain): ?>
+							<h1 class="center noselect">There are no files in the album.</h1>
+						<?php endif; ?>
 						<div class="row">
-
 							<?php if ($this->album->format == 1): ?>
 								<?php $x=1; ?>
 									<?php foreach ($this->contain as $upload): ?>
@@ -119,9 +121,12 @@ use Core\FH ;
               </div>
 
 
-              <h4 class="head-form col-md-5 mx-auto top center noselect">Select your images</h4>
+              <h4 class="head-form col-md-5 mx-auto top center noselect">Select your files</h4>
   <div class="whitebg center">
-
+		<?php if (!$this->contain): ?>
+			<br>
+			<h1 class="center noselect">There are no files to be added in the album.</h1>
+		<?php endif; ?>
 <div class="row" >
     <?php if ($this->album->format == 1): ?>
                   <?php $x=1; ?>
