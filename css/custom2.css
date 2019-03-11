@@ -9,6 +9,16 @@ img {
 }
 /*=======
 >>>>>>> Stashed changes*/
+.center-h{
+   padding-top: 7%;
+   padding-bottom: 5%;
+}
+.restore-btn{
+  margin-bottom: 10px;
+}
+.table-fix{
+  padding-top: 2%;
+}
 .whitebg {
     background-color: #fff;
     padding-top: 2%;
@@ -20,7 +30,8 @@ img {
 
 .whitetable {
     background-color: #fff;
-    border-radius: 1.1rem;
+    border-bottom-right-radius: 1.1rem;
+    border-bottom-left-radius: 1.1rem;
 }
 
 .buttondiv{
@@ -132,13 +143,13 @@ img {
     text-align: center;
 }
 .formerfix{
-    margin-top: 15%;
+    margin-top: 10%;
 	margin-bottom:1%;
 }
 
 @media only screen and (max-width: 800px) {
     .formerfix{
-    margin-top: 12%;
+    margin-top: 10%;
     }
 	.whitebg a {
 		margin-top:15%;

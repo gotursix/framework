@@ -37,7 +37,7 @@ use Core\Session;
    <tbody>
     <?php foreach ($this->settings as $settings): ?>
      <tr>
-     <td class="center"><?= $settings->name;?></td>
+     <td class="center center-h"><?= $settings->name;?></td>
      <?php $dir = Users::currentUser()->id; ?>
 
      <?php if($settings->format == 1): ?>
@@ -56,7 +56,7 @@ use Core\Session;
 
 
          <?php if($settings->format == 3): ?>
-         <td><audio controls>
+         <td class="center-h"><audio controls>
               <source src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" type="audio/mpeg">
                Your browser does not support the audio element.
              </audio></td>
@@ -65,16 +65,16 @@ use Core\Session;
 
 
             <?php if($settings->format == 4): ?>
-            <td><a href="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" target="_blank">View the pdf</a></td>
+            <td class="center-h"><a href="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" target="_blank">View the pdf</a></td>
                <?php endif; ?>
 
 
 
 
-     <td> <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+     <td class="center-h"> <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ?')){return false;}">
         Delete
       </a>
-      <br><br>
+    <br>
       <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn btn-primary btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
          Restore
        </a>

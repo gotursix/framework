@@ -36,16 +36,16 @@ use Core\Session;
    <tbody>
     <?php foreach ($this->album as $album): ?>
      <tr>
-     <td>
+     <td class="table-fix">
        <a href="<?=PROOT?>contain/details/<?=$album->id ?>" >
            <h5><font class="album-name"><i><?= strtoupper( $album->name) ;?></font></i></h5>
        </a>
      </td>
 
-      <td>
+      <td class="table-fix">
            <?= H::format($album->format) ;?>
       </td>
-      <td>
+      <td class="table-fix">
        <div class="btn-group text-center">
   <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Actions

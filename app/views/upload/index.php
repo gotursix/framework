@@ -39,7 +39,7 @@ use Core\Session;
    <tbody>
     <?php foreach ($this->upload as $upload): ?>
      <tr>
-     <td class="center"><?= $upload->name;?></td>
+     <td class="center center-h"><?= $upload->name;?></td>
      <?php $dir = Users::currentUser()->id; ?>
 
      <?php if($upload->format == 1): ?>
@@ -73,7 +73,7 @@ use Core\Session;
 
 
 
-     <td> <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+     <td class="center-h"> <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
          Delete
       </a></td>
 
