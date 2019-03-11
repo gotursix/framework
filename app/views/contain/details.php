@@ -74,7 +74,7 @@ use App\Models\Users;
        <?php $x=1; ?>
           <?php foreach ($this->contain as $upload): ?>
              <?php $dir = Users::currentUser()->id; ?>
-             <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+             <div class="col-lg-4 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 
                <audio controls>
                     <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
