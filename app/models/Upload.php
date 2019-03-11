@@ -29,7 +29,7 @@ class Upload extends Model
       $this->runValidation(new MaxValidator($this , ['field'=>'name','msg'=>'Your name must be less than 150 characters', 'rule'=>'155']));
       $this->runValidation(new MinValidator($this , ['field'=>'name','msg'=>'Your name must be at least 4 characters', 'rule'=>'4']));
       $this->runValidation(new FormatValidator($this, ['field'=>'format', 'msg'=>'The file format is not accepted.', 'rule'=>[ '1' , '2'  , '3' , '4'] ]));
-      $this->runValidation(new CharsValidator($this, ['field'=>'name', 'msg'=>'The file name can not contain ? | / \ < > : " ', 'rule'=> '0' ]));
+      $this->runValidation(new CharsValidator($this, ['field'=>'name', 'msg'=>'The file name can not contain the following characters :  ?  |  /  \  <  >  :  " &#039;', 'rule'=> '0' ]));
     }
 
     public function findAllByUserId($user_id,$params=[])
