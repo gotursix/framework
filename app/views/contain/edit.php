@@ -30,7 +30,7 @@ use Core\FH ;
 
 					<hr>
 
-						<a href="<?=PROOT?>album" class="btn btn-primary ">Save </a>
+						<a href="<?=PROOT?>album" class="btn btn-primary ">Go back</a>
 						<hr>
 
 						<?php if (!$this->contain): ?>
@@ -123,7 +123,7 @@ use Core\FH ;
 
               <h4 class="head-form col-md-5 mx-auto top center noselect">Select your files</h4>
   <div class="whitebg center">
-		<?php if (!$this->contain): ?>
+		<?php if (!$this->upload): ?>
 			<br>
 			<h1 class="center noselect">There are no files to be added in the album.</h1>
 		<?php endif; ?>
