@@ -26,6 +26,7 @@ require_once(ROOT . DS . 'config' . DS . 'config.php');
 		 require_once($path);
 	 }
  }
+ 
 
 spl_autoload_register('autoload');
 session_start();
