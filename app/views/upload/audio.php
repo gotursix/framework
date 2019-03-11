@@ -24,11 +24,11 @@ use App\Models\Upload;
       Create album
     </a>
         <hr>
-    <div class="row" id="lightgallery">
+    <div class="row">
                   <?php $x=1; ?>
                       <?php foreach ($this->upload as $upload): ?>
                          <?php $dir = Users::currentUser()->id; ?>
-                            <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                            <div class="col-lg-4 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 
                               <audio controls>
                                    <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
