@@ -23,7 +23,7 @@ use Core\FH;
 								
 								<div class="logo mb-3">
 									
-									<div class="col-md-12 center head-form">
+									<div class="col-md-12 center head-form noselect">
 										
 										<h1>Upload file</h1>
 					
@@ -36,18 +36,22 @@ use Core\FH;
 								<div class="form-group">
 								
 									<label class="control-label"><h4>Choose a name</h4></label>
-									<input type="text" name="name" id="name" class="form-control" value="" placeholder="Name" required>
+									<input type="text" name="name" id="name" class="form-control noselect" value="" placeholder="Name" required>
 								
 								</div>
 								
-								<div class="form-group">
+								<div class="form-group noselect">
 									<br>
 
                                     <input type="file" id="file" name="file" required>
                                 
 								</div>
                                 
-								<?= FH::displayErrors($this->displayErrors)?>
+								<div class="noselect">
+								
+									<?= FH::displayErrors($this->displayErrors)?>
+								
+								</div>
 
                                 <div class="footer center">
                                       	
