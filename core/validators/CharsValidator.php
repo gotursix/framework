@@ -60,6 +60,11 @@ class CharsValidator extends CustomValidator
      {
        $value++;
      }
+
+     if(H::stringcheck("&#039;", $string) === true ||  $string[0] === "&#039;")
+     {
+       $value++;
+     }
    }
 
      return $value ==  $this->rule;
