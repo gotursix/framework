@@ -11,20 +11,17 @@ define('ROOT',dirname(__FILE__));
 //load configuration and helper functions
 require_once(ROOT . DS . 'config' . DS . 'config.php');
 
-// load configuration and helper functions
- require_once(ROOT . DS . 'config' . DS . 'config.php');
-
 //autoload classes
  function autoload($className)
  {
-	 $classAry = explode('\\',$className);
-	 $class = array_pop($classAry);
-	 $subPath = strtolower(implode(DS,$classAry));
-	 $path = ROOT . DS . $subPath . DS . $class . '.php';
-	 if(file_exists($path))
-	 {
-		 require_once($path);
-	 }
+   $classAry = explode('\\',$className);
+   $class = array_pop($classAry);
+   $subPath = strtolower(implode(DS,$classAry));
+   $path = ROOT . DS . $subPath . DS . $class . '.php';
+   if(file_exists($path))
+   {
+     require_once($path);
+   }
  }
 
 spl_autoload_register('autoload');
@@ -34,19 +31,19 @@ $url = isset($_SERVER['PATH_INFO']) ? explode('/',ltrim($_SERVER['PATH_INFO'],'/
 
 if(!Session::exists(CURRENT_USER_SESSION_NAME) && Cookie::exists(REMEMBER_ME_COOKIE_NAME))
 {
-	Users::loginUserFromCookie();
+  Users::loginUserFromCookie();
 }
 
  //create a folder for the user , which is the same as the user id , if it doesn't already exist
  if(Session::exists(CURRENT_USER_SESSION_NAME))
  {
-	 $dir = Users::currentUser()->id;
-	 $filepath="";
-	 $filepath .= ROOT . DS . 'files' . DS . $dir;
-	 if (!file_exists($filepath))
-	 {
-			 mkdir($filepath , 0777 , true);
-	 }
+   $dir = Users::currentUser()->id;
+   $filepath="";
+   $filepath .= ROOT . DS . 'files' . DS . $dir;
+   if (!file_exists($filepath))
+   {
+       mkdir($filepath , 0777 , true);
+   }
  }
 
 //Route the request
