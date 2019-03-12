@@ -34,7 +34,7 @@ use App\Models\Upload;
             <?php endforeach; ?>
           </div>
           <?php if(!$this->upload): ?>
-          <h1 class="center">There are no documents added.</h2>
+          <h1 class="center">There are no documents added.</h1>
           <?php endif;?>
         </div>
       </div>

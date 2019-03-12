@@ -54,7 +54,7 @@ use App\Models\Upload;
 									
 									<div class="caption center">
 										
-										<p><?=$upload->name ?></p>
+										<p>nume de 25 caractere aici</p>
 										
 									</div>
 									
@@ -70,7 +70,7 @@ use App\Models\Upload;
 						
 						<?php if(!$this->upload): ?>
 						
-						<h1 class="center">There are no images added.</h2>
+						<h1 class="center">There are no images added.</h1>
 						
 						<?php endif;?>
 						
