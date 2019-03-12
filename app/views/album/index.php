@@ -30,29 +30,22 @@ use Core\Session;
               <?php foreach ($this->album as $album): ?>
               <tr>
                 <td class="table-fix">
+                  <br>
                   <a href="<?=PROOT?>contain/details/<?=$album->id ?>" >
                     <h5><font class="album-name"><i><?= strtoupper( $album->name) ;?></font></i></h5>
                   </a>
                 </td>
                 <td class="table-fix">
+                  <br>
                   <?= H::format($album->format) ;?>
                 </td>
                 <td class="table-fix">
-                  <div class="btn-group text-center">
-                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Actions
-                    </button>
-                    <div class="dropdown-menu">
-                      <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="dropdown-item">Add/Remove files</a>
-                      <a href="<?=PROOT?>album/edit/<?=$album->id?>" class="dropdown-item">
-                        Change name
-                      </a>
-                      <div class="dropdown-divider"></div>
-                      <a href="<?=PROOT?>album/delete/<?=$album->id?>" class="dropdown-item text-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}">
-                        Delete
-                      </a>
-                    </div>
-                  </div>
+                    <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn btn-primary">Add/Remove files</a>
+                    <br><br>
+                    <a href="<?=PROOT?>album/edit/<?=$album->id?>" class="btn btn-primary">
+                      Change name
+                    </a>
+                    <br><br>
                 </td>
                 <?php endforeach; ?>
                 <?php if(!$this->album): ?>

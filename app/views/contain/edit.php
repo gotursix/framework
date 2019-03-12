@@ -16,7 +16,9 @@ use Core\FH ;
 		<div id="image-grid" class="container-fluid ">
 			<div class="whitebg center">
 				<hr>
-				<a href="<?=PROOT?>album" class="btn btn-primary ">Go back</a>
+				<a href="<?=PROOT?>album" class="btn btn-primary">Go back</a>
+				<a href="<?=PROOT?>album/delete/<?=$this->album->id?>" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}">Delete album
+				</a>
 				<hr>
 				<?php if (!$this->contain): ?>
 				<h1 class="center noselect">There are no files in the album.</h1>
