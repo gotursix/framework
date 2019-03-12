@@ -40,7 +40,7 @@ select.form-control:focus::-ms-value{color:#495057;background-color:#fff}
     text-align: center;
 }
 /*======================================================
-    AICI MODIFICI BUTON REGISTER DIN LOGIN
+              REGISTER BUTTon
 ========================================================*/
 .btn-reg {
 	\.btn\ \{\ display: inline-block;
@@ -68,7 +68,7 @@ select.form-control:focus::-ms-value{color:#495057;background-color:#fff}
     background: linear-gradient(220deg, #0000004d, #fff);
 }
 /*======================================================
-               AICI MODIFICI BUTON LOGIN
+               LOGIN BUTTon
 ========================================================*/
 .btn{
 	display:inline-block;

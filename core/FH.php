@@ -1,8 +1,10 @@
 <?php
   namespace Core;
   use Core\Session;
+
 class FH {
-  public static function inputBlock($type, $label, $name, $value='', $inputAttrs=[], $divAttrs=[]){
+  public static function inputBlock($type, $label, $name, $value='', $inputAttrs=[], $divAttrs=[])
+  {
     $divString = self::stringifyAttrs($divAttrs);
     $inputString = self::stringifyAttrs($inputAttrs);
     $html = '<div' . $divString . '>';
@@ -11,13 +13,22 @@ class FH {
     return $html;
   }
 
-  public static function submitTag($buttonText, $inputAttrs=[]){
+  public static function submitTag($buttonText, $inputAttrs=[])
+  {
     $inputString = self::stringifyAttrs($inputAttrs);
     $html = '<input type="submit" value="'.$buttonText.'"'.$inputString.' />';
     return $html;
   }
 
-  public static function submitBlock($buttonText, $inputAttrs=[], $divAttrs=[]){
+    public static function hoverTag($text, $hover)
+  {
+    $inputString = self::sanitize($text);
+    $html = '<p data-toggle="tooltip" data-placement="bottom" title="'.$text.'"/>'.$hover.'</p>';
+    return $html;
+  }
+
+  public static function submitBlock($buttonText, $inputAttrs=[], $divAttrs=[])
+  {
     $divString = self::stringifyAttrs($divAttrs);
     $inputString = self::stringifyAttrs($inputAttrs);
     $html = '<div'.$divString.'>';
@@ -26,7 +37,8 @@ class FH {
     return $html;
   }
 
-  public static function stringifyAttrs($attrs){
+  public static function stringifyAttrs($attrs)
+  {
     $string = '';
     foreach($attrs as $key => $val){
       $string .= ' ' . $key . '="' . $val . '"';
@@ -34,13 +46,15 @@ class FH {
     return $string;
   }
 
-  public static function generateToken(){
+  public static function generateToken()
+  {
     $token = base64_encode(openssl_random_pseudo_bytes(32));
     Session::set('csrf_token',$token);
     return $token;
   }
 
-  public static function checkToken($token){
+  public static function checkToken($token)
+  {
     return (Session::exists('csrf_token') && Session::get('csrf_token') == $token);
   }
 
@@ -48,7 +62,8 @@ class FH {
     return '<input type="hidden" name="csrf_token" id="csrf_token" value="'.self::generateToken().'" />';
   }
 
-  public static function sanitize($dirty) {
+  public static function sanitize($dirty) 
+  {
     return htmlentities($dirty, ENT_QUOTES, 'UTF-8');
   }
 
@@ -73,7 +88,8 @@ class FH {
   }
 
 
-  public static function displayErrors($errors) {
+  public static function displayErrors($errors) 
+  {
     $hasErrors = (!empty($errors))? ' has-errors' : '';
     $html = '<div class="isa_error_class"><ul class="has-errors'.$hasErrors.'">';
     foreach($errors as $field => $error) {

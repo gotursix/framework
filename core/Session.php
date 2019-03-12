@@ -27,7 +27,6 @@ class Session
       unset($_SESSION[$name]);
    }
 
-
    public static function uagent_no_version()
    {
      $uagent = $_SERVER['HTTP_USER_AGENT'];

@@ -1,6 +1,8 @@
 <?php
 use Core\Session;
+use Core\FH;
 ?>
+
 <?php //$this->setSiteTitle('Home'); //set every spage title ?>
 <?php $this->start('body'); ?>
 <div class="background ">
@@ -9,6 +11,7 @@ use Core\Session;
     <br>
     <br>
     <div class="whitebg m-top">
+    	<?= FH::hoverTag('Function test','test');?>
       <h1 class="center ">Welcome to Rufus Framework</h1>
       <div class="center" onclick="ajaxTest();">Button me :>></div>
     </div>
