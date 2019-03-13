@@ -9,12 +9,16 @@ use Core\FH ;
 <?php $this->start('body'); ?>
 <div class="background">
 	<div class="container">
-		<div class="row center">
-			<h1 class=" head-form col-md-5 mx-auto formerfix noselect">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h1>
-		</div>
+
+		<div class="content">
+			<div class="row">
+
+				<div id="image-grid" class="container-fluid ">
+
+					<div class="whitebg center formerfix">
+			<h1 class=" center lg-bg col-md-5 mx-auto noselect">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h1>
 		<h4 class="head-form col-md-5 mx-auto top center noselect">Files in album</h4>
 		<div id="image-grid" class="container-fluid ">
-			<div class="whitebg center">
 				<hr>
 				<a href="<?=PROOT?>album" class="btn btn-primary">Save</a>
 				<a href="<?=PROOT?>album/delete/<?=$this->album->id?>" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}">Delete album
@@ -160,6 +164,8 @@ use Core\FH ;
 			</div>
 		</div>
 	</div>
-	<br>
 </div>
+            </div>
+</div>
+
 <?php $this->end(); ?>

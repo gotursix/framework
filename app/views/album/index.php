@@ -4,11 +4,15 @@ use Core\Session;
 ?>
 <?php $this->start('body'); ?>
 <div class="background">
-  <div class="container ceter">
-    <div class="row">
-      <h1 class="center head-form col-md-5 mx-auto formerfix noselect">My albums</h1>
-    </div>
-    <div class="whitediv center buttondiv">
+  <div class="container">
+
+		<div class="content">
+			<div class="row">
+
+				<div id="image-grid" class="container-fluid ">
+
+					<div class="whitebg center formerfix">
+      <h1 class="center lg-bg col-md-5 mx-auto noselect">My albums</h1>
       <hr>
       <a href="<?=PROOT?>album/add" class="btn btn-info" >
         Create album
@@ -22,9 +26,9 @@ use Core\Session;
         <div class="center whitetable">
           <table class="table table-striped ">
             <thead class=" table-dark">
-              <th scope="col" class="table-content"><h4>Album name<h4></th>
-              <th scope="col" class="table-content"><h4>Album contains<h4></th>
-              <th scope="col" class="table-content"><h4>Album actions<h4></th>
+                <th scope="col" class="table-content"><h4>Album name</h4></th>
+                <th scope="col" class="table-content"><h4>Album contains</h4></th>
+                <th scope="col" class="table-content"><h4>Album actions</h4></th>
             </thead>
             <tbody>
               <?php foreach ($this->album as $album): ?>
@@ -32,7 +36,7 @@ use Core\Session;
                 <td >
                   <br>
                   <a href="<?=PROOT?>contain/details/<?=$album->id ?>" >
-                    <h5><font class="album-name"><i><?= strtoupper( $album->name) ;?></font></i></h5>
+                    <h5><font class="album-name"><i><?= strtoupper( $album->name) ;?></i></font></h5>
                   </a>
                 </td>
                 <td>
@@ -59,4 +63,7 @@ use Core\Session;
     </div>
   </div>
 </div>
+            </div>
+      </div>
+    </div>
 <?php $this->end(); ?>

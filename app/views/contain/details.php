@@ -3,15 +3,19 @@ use App\Models\Users;
 ?>
 <?php $this->start('body'); ?>
 <div class="background">
-  <div class="container center">
-    <div class="row">
-      <h2 class="center col-md-5 mx-auto head-form formerfix noselect">Album: <font class="album-name"><i><?= $this->album->name ?></font></i></h2>
+<div class="container">
+
+		<div class="content">
+			<div class="row">
+
+				<div id="image-grid" class="container-fluid ">
+
+					<div class="whitebg center formerfix">
+      <h2 class="center lg-bg col-md-5 mx-auto noselect">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h2>
     </div>
-    <div class="whitebg center buttondiv">
       <hr>
       <a href="<?=PROOT?>album" class="btn btn-info">Go back</a>
       <hr>
-    </div>
     <br>
     <?php if (!$this->contain): ?>
     <div class="container-fluid whitebg">
@@ -88,5 +92,9 @@ use App\Models\Users;
       </div>
     </div>
   </div>
+                </div>
+            </div>
+    </div>
+    </div>
   <?php endif; ?>
   <?php $this->end(); ?>
