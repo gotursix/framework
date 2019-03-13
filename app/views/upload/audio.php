@@ -33,7 +33,7 @@ use App\Models\Upload;
                     <?php echo substr($upload->name, 0 , 25); ?>
 
                     <div class="collapse" id="collapseExample<?=$x ?>">
-                    <?php echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name)-25);  ?>
+                    <?php echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name));  ?>
                   </div>
               </div>
 
