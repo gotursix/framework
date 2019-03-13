@@ -1,68 +1,108 @@
 <?php
 use App\Models\Users;
 use Core\Session;
+use Core\FH;
 ?>
 <?php $this->start('body'); ?>
-<div class="background">
-  <div class="container center">
-    <div class="row">
-      <h1 class="center head-form col-md-5 mx-auto formerfix">Delete files</h1>
-      <div class="container">
-        <div class="input-group mb-3">
-          <?php if($this->upload): ?>
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">@</span>
-          </div>
-          <input type="text" id="search" placeholder="Search for the file" class="form-control">
-          <br>
-          <?php endif; ?>
-        </div>
-        <?= Session::displayMsg() ?>
-        <div class=" whitetable"?>
-          <table class="table table-striped" id="table">
-            <thead class="thead-dark">
-              <th scope="col" class="table-content"><h5>Name</h5></th>
-              <th scope="col" class="table-content"><h5>File</h5></th>
-              <th scope="col" class="table-content"><h5>Delete</h5></th>
-            </thead>
-            <tbody>
-              <?php foreach ($this->upload as $upload): ?>
-              <tr>
-                <td class="center center-h"><?= $upload->name;?></td>
-                <?php $dir = Users::currentUser()->id; ?>
+<div class="background noselect">
+
+	<div class="container">
+
+		<div class="content">
+			<div class="row">
+
+				<div id="image-grid" class="container-fluid ">
+
+					<div class="whitebg center formerfix">
+<h1 class="center lg-bg col-md-5 mx-auto">My images</h1>
+						<hr>
+						<a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
+							Delete all images
+						</a>
+						<hr>
+						<div class="row" id="lightgallery">
+
+							<?php $x=1; ?>
+
+							<?php foreach ($this->upload as $upload): ?>
                 <?php if($upload->format == 1): ?>
-                <td ><br><img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  class="img-responsive"><br></td>
+							<?php $dir = Users::currentUser()->id; ?>
+
+							<div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+									<img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
+									<div class="caption center">
+										<p><?php echo substr($upload->name, 0 , 25); ?></p>
+
+                    <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+                       Delete
+                     </a>
+									</div>
+							</div>
+
+							<?php $x++; ?>
+            <?php endif; ?>
+
+							<?php endforeach; ?>
+
+						</div>
+
+						<?php if(!$this->upload): ?>
+
+						<h1 class="center">There are no images added.</h1>
+
+						<?php endif;?>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+</div>
+
+
+
+              <?php foreach ($this->upload as $upload): ?>
+
+                <?= $upload->name;?>
+
+                <?php $dir = Users::currentUser()->id; ?>
+
+                <?php if($upload->format == 1): ?>
+                <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  class="img-responsive">
                 <?php endif; ?>
+
                 <?php if($upload->format == 2): ?>
-                <td><video  class="img-responsive" controls>
+                  <video  class="img-responsive" controls>
                   <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4">
                   Your browser does not support the video tag.
-                </video></td>
+                </video>
                 <?php endif; ?>
+
                 <?php if($upload->format == 3): ?>
-                <td class="center-h"><audio controls>
+                <audio controls>
                   <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
                   Your browser does not support the audio element.
-                </audio></td>
+                </audio>
                 <?php endif; ?>
+
                 <?php if($upload->format == 4): ?>
-                <td class="center-h"><a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  target="_blank">View the pdf</a></td>
+                  <a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>"  target="_blank">View the pdf</a>
                 <?php endif; ?>
-                <td class="center-h"> <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+               <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
                   Delete
-                </a></td>
+                </a>
                 <?php endforeach; ?>
+
                 <?php if(!$this->upload): ?>
-                <td colspan="3" class="center" class="center-h">
                   <h1>
                   You don't have any file.
                   </h1>
-                </td>
                 <?php endif; ?>
-              </tr>
-            </tbody>
-          </table>
-        </div>
       </div>
       <br>
     </div>
