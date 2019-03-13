@@ -160,6 +160,9 @@ use Core\FH;
 									<img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
 									<?= FH::hoverTag($upload->name , substr($upload->name, 0 , 25));?>
 								</a>
+								<a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+									Delete
+								</a>
 							</div>
 							<?php endif;?>
 							<?php $x++; ?>
@@ -173,6 +176,7 @@ use Core\FH;
 			</div>
 		</div>
 	</div>
+	<br>
 	<br>
 </div>
 <?php $this->end(); ?>
