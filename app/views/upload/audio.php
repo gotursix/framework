@@ -29,10 +29,10 @@ use App\Models\Upload;
                 <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
                 Your browser does not support the audio element.
               </audio>
-              <div class="caption center" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <?php echo substr($upload->name, 0 , 25); ?>
 
-                    <div class="collapse" id="collapseExample<?=$x ?>">
+                    <div class="collapse  word-break margin-file" id="collapseExample<?=$x ?>">
                     <?php echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name));  ?>
                   </div>
               </div>

@@ -9,6 +9,16 @@ img {
 }
 /*=======
 >>>>>>> Stashed changes*/
+
+.word-break{
+	word-break: break-all;
+}
+
+.margin-file{
+	margin-left:30px;
+	margin-right:30px;
+}
+
 .center-h{
    padding-top: 7%;
    padding-bottom: 5%;
