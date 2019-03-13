@@ -29,13 +29,13 @@ use App\Models\Upload;
                 <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
                 Your browser does not support the audio element.
               </audio>
-              <div class="caption center" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <div class="caption center" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
                     nume de 25 caractere aici
-                  <div class="collapse" id="collapseExample">
-    rest nume
-</div>
+                  <div class="collapse" id="collapseExample<?=$x ?>">
+                    rest nume
+                  </div>
               </div>
-                
+
             </div>
             <?php $x++; ?>
             <?php endforeach; ?>

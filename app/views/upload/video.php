@@ -29,9 +29,9 @@ use App\Models\Upload;
                 <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4" alt="Thumb-<?=$x?>" class="img-responsive" />
                 Your browser does not support the video tag.
               </video>
-                <div class="caption center" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <div class="caption center" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
                     nume de 25 caractere aici
-                  <div class="collapse" id="collapseExample">
+                  <div class="collapse" id="collapseExample<?=$x ?>">
     rest nume
 </div>
               </div>

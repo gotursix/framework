@@ -27,7 +27,12 @@ use App\Models\Upload;
             <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
               <a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" target="_blank">
                 <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
-                <p><?=$upload->name ?></p>
+                <div class="caption center" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
+                      nume de 25 caractere aici
+                    <div class="collapse" id="collapseExample<?=$x ?>">
+                      rest nume
+                    </div>
+                </div>
               </a>
             </div>
             <?php $x++; ?>
