@@ -145,7 +145,10 @@ img {
 	color:white;
     background-color: #007bff;
     border-radius:11px;
-    padding:0px 25px 5px 25px;
+    padding-top: 0.5%;
+    padding-bottom: 0.9%;
+    padding-right: 4%;
+    padding-left: 4%;
 }
  @media (min-height: 700px){
     .background {min-height: 1024px;}

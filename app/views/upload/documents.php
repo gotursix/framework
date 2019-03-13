@@ -11,7 +11,7 @@ use Core\FH;
       <div id="image-grid" class="container-fluid ">
 
         <div class="whitebg center formerfix">
-<h1 class="center lg-bg col-md-5 mx-auto">My documents</h1>
+<h1 class="center lg-bg col-md-5 mx-auto noselect">My documents</h1>
           <hr>
           <a href="<?=PROOT?>upload/add" class="btn btn-info" >
             Upload files
