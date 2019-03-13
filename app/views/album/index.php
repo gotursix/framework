@@ -6,7 +6,7 @@ use Core\Session;
 <div class="background">
   <div class="container ceter">
     <div class="row">
-      <h1 class="center head-form col-md-5 mx-auto formerfix">My albums</h1>
+      <h1 class="center head-form col-md-5 mx-auto formerfix noselect">My albums</h1>
     </div>
     <div class="whitediv center buttondiv">
       <hr>
@@ -29,23 +29,19 @@ use Core\Session;
             <tbody>
               <?php foreach ($this->album as $album): ?>
               <tr>
-                <td class="table-fix">
+                <td >
                   <br>
                   <a href="<?=PROOT?>contain/details/<?=$album->id ?>" >
                     <h5><font class="album-name"><i><?= strtoupper( $album->name) ;?></font></i></h5>
                   </a>
                 </td>
-                <td class="table-fix">
+                <td>
                   <br>
                   <?= H::format($album->format) ;?>
                 </td>
                 <td class="table-fix">
-                    <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn btn-primary">Add/Remove files</a>
-                    <br><br>
-                    <a href="<?=PROOT?>album/edit/<?=$album->id?>" class="btn btn-primary">
-                      Change name
-                    </a>
-                    <br><br>
+                  <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn btn-primary">Edit album</a>
+                  <br><br>
                 </td>
                 <?php endforeach; ?>
                 <?php if(!$this->album): ?>
