@@ -24,12 +24,11 @@ use Core\FH;
 							<?php $dir = Users::currentUser()->id; ?>
 							<div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 								<img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
-								
 								<div class="caption center">
 									<div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
 										<?php echo substr($upload->name, 0 , 25); ?>
 										<div class="collapse  word-break margin-file" id="collapseExample<?=$x ?>">
-											<?php echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name));  ?>
+											<?php if(strlen($upload->name)>25) echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name)); ?>
 										</div>
 									</div>
 									<br>
@@ -67,15 +66,15 @@ use Core\FH;
 							<?php foreach ($this->upload as $upload): ?>
 							<?php if($upload->format == 2): ?>
 							<?php $dir = Users::currentUser()->id; ?>
-							<div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+							<div class="col-lg-4 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 								<video class="embed-responsive embed-responsive-16by9" controls>
 									<source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4" alt="Thumb-<?=$x?>" class="img-responsive" />
 									Your browser does not support the video tag.
 								</video>
 								<div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
 									<?php echo substr($upload->name, 0 , 25); ?>
-									<div class="collapse word-break margin-file" id="collapseExample<?=$x ?>">
-										<?php echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name)-25);  ?>
+									<div class="collapse  word-break margin-file" id="collapseExample<?=$x ?>">
+										<?php if(strlen($upload->name)>25) echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name)); ?>
 									</div>
 								</div>
 								<br>
@@ -119,7 +118,7 @@ use Core\FH;
 								<div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
 									<?php echo substr($upload->name, 0 , 25); ?>
 									<div class="collapse  word-break margin-file" id="collapseExample<?=$x ?>">
-										<?php echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name));  ?>
+										<?php if(strlen($upload->name)>25) echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name)); ?>
 									</div>
 								</div>
 								<br>
