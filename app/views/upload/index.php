@@ -10,9 +10,7 @@ use Core\FH;
 
 		<div class="content">
 			<div class="row">
-
 				<div id="image-grid" class="container-fluid ">
-
 					<div class="whitebg center formerfix">
 						<h1 class="center lg-bg col-md-5 mx-auto">My images</h1>
 						<hr>
@@ -21,57 +19,38 @@ use Core\FH;
 						</a>
 						<hr>
 						<div class="row" id="lightgallery">
-
 							<?php $x=1; ?>
-
 							<?php foreach ($this->upload as $upload): ?>
 							<?php if($upload->format == 1): ?>
 							<?php $dir = Users::currentUser()->id; ?>
-
 							<div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 								<img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
 								<div class="caption center">
 									<p><?php echo substr($upload->name, 0 , 25); ?></p>
-
 									<a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
 										Delete
 									</a>
 								</div>
 							</div>
-
 							<?php $x++; ?>
 							<?php endif; ?>
-
 							<?php endforeach; ?>
-
 						</div>
-
 						<?php if(!$this->upload): ?>
-
 						<h1 class="center">There are no images added.</h1>
-
 						<?php endif;?>
-
 					</div>
-
 				</div>
-
 			</div>
-
 		</div>
-
-
 	</div>
 </div>
 
 
 
 <?php foreach ($this->upload as $upload): ?>
-
 <?= $upload->name;?>
-
 <?php $dir = Users::currentUser()->id; ?>
-
 <?php if($upload->format == 1): ?>
 <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" class="img-responsive">
 <?php endif; ?>

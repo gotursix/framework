@@ -5,12 +5,9 @@ use App\Models\Upload;
 <?php $this->start('body'); ?>
 <div class="background">
   <div class="container">
-
     <div class="content">
       <div class="row">
-
         <div id="image-grid" class="container-fluid ">
-
           <div class="whitebg center formerfix">
             <h1 class="center lg-bg col-md-5 mx-auto noselect">My videos</h1>
             <hr>
@@ -35,7 +32,6 @@ use App\Models\Upload;
                 </video>
                 <div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
                   <?php echo substr($upload->name, 0 , 25); ?>
-
                   <div class="collapse word-break margin-file" id="collapseExample<?=$x ?>">
                     <?php echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name)-25);  ?>
                   </div>
@@ -50,4 +46,7 @@ use App\Models\Upload;
           </div>
         </div>
       </div>
-      <?php $this->end(); ?>
+    </div>
+  </div>
+</div>
+<?php $this->end(); ?>
