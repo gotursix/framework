@@ -91,6 +91,7 @@ class UploadController extends Controller
       }
       else
       {
+          $upload->delete();
           $upload->addErrorMessage('file','There were a problem uploading it.');
       }
     }
