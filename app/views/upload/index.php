@@ -5,9 +5,8 @@ use Core\FH;
 ?>
 <?php $this->start('body'); ?>
 <div class="background noselect">
-
+	
 	<div class="container">
-
 		<div class="content">
 			<div class="row">
 				<div id="image-grid" class="container-fluid ">
@@ -44,31 +43,120 @@ use Core\FH;
 			</div>
 		</div>
 	</div>
+	
+	<div class="container">
+		<div class="content">
+			<div class="row">
+				<div id="image-grid" class="container-fluid ">
+					<div class="whitebg center formerfix">
+						<h1 class="center lg-bg col-md-5 mx-auto noselect">My videos</h1>
+						<hr>
+						<a href="<?=PROOT?>upload/modify" class="btn btn-danger">
+							Delete all videos
+						</a>
+						<hr>
+						<div class="row">
+							<?php $x=1; ?>
+							<?php foreach ($this->upload as $upload): ?>
+							<?php if($upload->format == 2): ?>
+							<?php $dir = Users::currentUser()->id; ?>
+							<div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+								<video class="embed-responsive embed-responsive-16by9" controls>
+									<source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4" alt="Thumb-<?=$x?>" class="img-responsive" />
+									Your browser does not support the video tag.
+								</video>
+								<div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
+									<?php echo substr($upload->name, 0 , 25); ?>
+									<div class="collapse word-break margin-file" id="collapseExample<?=$x ?>">
+										<?php echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name)-25);  ?>
+									</div>
+								</div>
+								<br>
+								<a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+										Delete
+									</a>
+							</div>
+							<?php endif;?>
+							<?php $x++; ?>
+							<?php endforeach; ?>
+						</div>
+						<?php if(!$this->upload): ?>
+						<h1 class="center">There are no videos added.</h1>
+						<?php endif;?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="content">
+			<div class="row">
+				<div id="image-grid" class="container-fluid ">
+					<div class="whitebg center formerfix">
+						<h1 class="center lg-bg col-md-5 mx-auto noselect">My audios</h1>
+						<hr>
+						<a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
+							Delete all audio files
+						</a>
+						<hr>
+						<div class="row">
+							<?php $x=1; ?>
+							<?php foreach ($this->upload as $upload): ?>
+							<?php if($upload->format == 3): ?>
+							<?php $dir = Users::currentUser()->id; ?>
+							<div class="col-lg-4 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+								<audio controls>
+									<source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
+									Your browser does not support the audio element.
+								</audio>
+								<div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
+									<?php echo substr($upload->name, 0 , 25); ?>
+									<div class="collapse  word-break margin-file" id="collapseExample<?=$x ?>">
+										<?php echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name));  ?>
+									</div>
+								</div>
+								<br>
+								<a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}">
+										Delete
+									</a>
+									<br>
+							</div>
+							<?php $x++; ?>
+							<?php endif;?>
+							<?php endforeach; ?>
+						</div>
+						<?php if(!$this->upload): ?>
+						<h1 class="center">There are no audio files added.</h1>
+						<?php endif;?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	
 </div>
-
-
-
 <?php foreach ($this->upload as $upload): ?>
 <?= $upload->name;?>
 <?php $dir = Users::currentUser()->id; ?>
 <?php if($upload->format == 1): ?>
 <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" class="img-responsive">
 <?php endif; ?>
-
 <?php if($upload->format == 2): ?>
 <video class="img-responsive" controls>
 	<source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4">
 	Your browser does not support the video tag.
 </video>
 <?php endif; ?>
-
 <?php if($upload->format == 3): ?>
 <audio controls>
 	<source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
 	Your browser does not support the audio element.
 </audio>
 <?php endif; ?>
-
 <?php if($upload->format == 4): ?>
 <a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" target="_blank">View the pdf</a>
 <?php endif; ?>
@@ -76,10 +164,9 @@ use Core\FH;
 	Delete
 </a>
 <?php endforeach; ?>
-
 <?php if(!$this->upload): ?>
 <h1>
-	You don't have any file.
+You don't have any file.
 </h1>
 <?php endif; ?>
 </div>
@@ -87,16 +174,4 @@ use Core\FH;
 </div>
 </div>
 </div>
-<script>
-	var $rows = $('#table tr');
-	$('#search').keyup(function() {
-		var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
-			reg = RegExp(val, 'i'),
-			text;
-		$rows.show().filter(function() {
-			text = $(this).text().replace(/\s+/g, ' ');
-			return !reg.test(text);
-		}).hide();
-	});
-</script>
 <?php $this->end(); ?>
