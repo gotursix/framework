@@ -30,9 +30,10 @@ use App\Models\Upload;
                 Your browser does not support the audio element.
               </audio>
               <div class="caption center" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    nume de 25 caractere aici
-                  <div class="collapse" id="collapseExample<?=$x ?>">
-                    rest nume
+                    <?php echo substr($upload->name, 0 , 25); ?>
+
+                    <div class="collapse" id="collapseExample<?=$x ?>">
+                    <?php echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name)-25);  ?>
                   </div>
               </div>
 
