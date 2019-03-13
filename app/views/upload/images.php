@@ -11,11 +11,10 @@ use App\Models\Upload;
 		<div class="content">
 			<div class="row">
 
-				<h1 class="center lg-bg col-md-5 mx-auto formerfix">My images</h1>
 				<div id="image-grid" class="container-fluid ">
 
-					<div class="whitebg center">
-
+					<div class="whitebg center formerfix">
+<h1 class="center lg-bg col-md-5 mx-auto">My images</h1>
 						<hr>
 
 						<a href="<?=PROOT?>upload/add" class="btn btn-info" >
