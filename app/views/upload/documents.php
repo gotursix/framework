@@ -30,19 +30,18 @@ use Core\FH;
                 <a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" target="_blank">
                   <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
                   <?= FH::hoverTag($upload->name , substr($upload->name, 0 , 25));?>
-                </a>
+                </div>
+                <?php $x++; ?>
+                <?php endforeach; ?>
               </div>
-              <?php $x++; ?>
-              <?php endforeach; ?>
+              <?php if(!$this->upload): ?>
+              <h1 class="center">There are no documents added.</h1>
+              <?php endif;?>
             </div>
-            <?php if(!$this->upload): ?>
-            <h1 class="center">There are no documents added.</h1>
-            <?php endif;?>
           </div>
         </div>
+        <script> lightGallery(document.getElementById('lightgallery')); </script>
       </div>
-      <script> lightGallery(document.getElementById('lightgallery')); </script>
     </div>
   </div>
-</div>
-<?php $this->end(); ?>
+  <?php $this->end(); ?>

@@ -5,89 +5,50 @@ use Core\FH;
 <?php $this->end(); ?>
 <?php $this->start('body'); ?>
 <div class="background">
-	
 	<form method="post" enctype="multipart/form-data">
-		
 		<?= FH::csrfInput() ?>
-		
 		<div class="container">
-			
 			<div class="content">
-				
 				<div class="row">
-					
 					<div class="col-md-5 mx-auto formerfix">
-						
 						<div class="myform form">
-							
 							<div class="logo mb-3">
-								
 								<div class="col-md-12 center head-form noselect">
-									
 									<h1>Upload file</h1>
-									
 								</div>
-								
 							</div>
-							
 							<span class="input-group-addon"></span>
-							
 							<div class="form-group">
-								
 								<label class="control-label"><h4>Choose a name</h4></label>
 								<input type="text" name="name" id="name" class="form-control noselect" value="" placeholder="Name" required>
-								
 							</div>
-							
 							<div class="form-group noselect">
 								<br>
 								<input type="file" id="file" name="file" required>
-								
 							</div>
-							
 							<div class="noselect">
-								
 								<?= FH::displayErrors($this->displayErrors)?>
-								
 							</div>
 							<div class="footer center">
-								
 								<button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Submit</button>
-								
 							</div>
 							<div class="col-md-12 ">
-								
 								<div class="login-or">
-									
 									<hr class="hr-or">
-									
 									<span class="span-or noselect">or</span>
-									
 								</div>
-								
 							</div>
-							
 							<div class="col-md-12 mb-3 center">
-								
 								<a href="<?=PROOT?>" class="google btn mybtn">
-									
 									Cancel
-									
 								</a>
 							</div>
-							
 						</div>
-						
 					</div>
-					
 				</div>
-				
 			</div>
-			
 		</div>
-		
 	</form>
-	
 </div>
 <script>
 file.onchange = function(e) {
