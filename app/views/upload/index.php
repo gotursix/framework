@@ -5,12 +5,18 @@ use Core\FH;
 ?>
 <?php $this->start('body'); ?>
 <div class="background noselect">
-	
+	<br><br>
+	<br><br>
+	<div class="container center">
+		<div class="content alert-fix">
+			<?= Session::displayMsg() ?>
+		</div>
+	</div>
 	<div class="container">
 		<div class="content">
 			<div class="row">
 				<div id="image-grid" class="container-fluid ">
-					<div class="whitebg center formerfix">
+					<div class="whitebg center ">
 						<h1 class="center lg-bg col-md-5 mx-auto">Delete  images</h1>
 						<hr>
 						<a href="<?=PROOT?>upload/modify" class="btn btn-danger">
