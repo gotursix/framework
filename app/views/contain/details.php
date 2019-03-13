@@ -5,7 +5,7 @@ use App\Models\Users;
 <div class="background">
   <div class="container center">
     <div class="row">
-      <h2 class="center col-md-5 mx-auto head-form formerfix">Album: <font class="album-name"><i><?= $this->album->name ?></font></i></h2>
+      <h2 class="center col-md-5 mx-auto head-form formerfix noselect">Album: <font class="album-name"><i><?= $this->album->name ?></font></i></h2>
     </div>
     <div class="whitebg center buttondiv">
       <hr>

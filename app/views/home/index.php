@@ -11,7 +11,6 @@ use Core\FH;
     <br>
     <br>
     <div class="whitebg m-top">
-    	<?= FH::hoverTag('Function test','test');?>
       <h1 class="center ">Welcome to Rufus Framework</h1>
       <div class="center" onclick="ajaxTest();">Button me :>></div>
     </div>
