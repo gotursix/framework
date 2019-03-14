@@ -18,6 +18,7 @@ class SettingsController extends Controller
     $this->view->setLayout('default');
       $this->load_model('Settings');
       $this->load_model('Album');
+      $this->load_model('Contain');
   }
 
   public function restoreAction()
@@ -32,6 +33,11 @@ class SettingsController extends Controller
         $settings = $this->SettingsModel->findByIdAndUserId((int)$id,Users::currentUser()->id);
         if($settings)
         {
+          $album = $this->ContainModel->findByUserIdAndName((int)Users::currentUser()->id , $settings->name);
+          foreach ($album as $album) 
+          {
+            $album->delete();
+          }
           $dir = Users::currentUser()->id;
           $delete= $_SERVER['DOCUMENT_ROOT']. PROOT  . 'files' . DS . $dir  . DS . $settings->name ;
           unlink($delete);
@@ -70,17 +76,18 @@ class SettingsController extends Controller
         Router::redirect('settings/restore');
   }
 
-    public function deleteallAction($id)
+  public function deleteallAction($id)
   {
-         $upload = $this->SettingsModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , $id , ['order' => 'format , name']);
-
-         $album = $this->AlbumModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , $id , ['order' => 'format , name']);
-
-         H::dnd($album);
+        $upload = $this->SettingsModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , $id , ['order' => 'format , name']);
         if($upload)
         {
           foreach ($upload as $upload)
           {
+            $album = $this->ContainModel->findByUserIdAndName((int)Users::currentUser()->id , $upload->name);
+            foreach ($album as $album) 
+            {
+              $album->delete();
+            }
             $dir = Users::currentUser()->id;
             $delete= $_SERVER['DOCUMENT_ROOT']. PROOT  . 'files' . DS . $dir  . DS . $upload->name ;
             unlink($delete);
