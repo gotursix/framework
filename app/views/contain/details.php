@@ -92,7 +92,7 @@ use Core\FH;
                 <?php endforeach; ?>
                 <?php endif; ?>
               </div>
-              <script>var __adobewebfontsappname__="dreamweaver"</script>
+              <script type="text/javascript"></script>pt>var __adobewebfontsappname__="dreamweaver"</script>
               <script> lightGallery(document.getElementById('lightgallery')); </script>
             </div>
           </div>
