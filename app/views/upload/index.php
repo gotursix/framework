@@ -12,6 +12,7 @@ use Core\FH;
 			<?= Session::displayMsg() ?>
 		</div>
 	</div>
+	<?php if(FH::number($this->upload , 1)>0):  ?>
 	<div class="container">
 		<div class="content">
 			<div class="row">
@@ -55,7 +56,8 @@ use Core\FH;
 			</div>
 		</div>
 	</div>
-	
+	<?php endif;?>
+	<?php if(FH::number($this->upload , 2)>0):  ?>
 	<div class="container">
 		<div class="content">
 			<div class="row">
@@ -69,6 +71,7 @@ use Core\FH;
 						<hr>
 						<div class="row">
 							<?php $x=1; ?>
+							
 							<?php foreach ($this->upload as $upload): ?>
 							<?php if($upload->format == 2): ?>
 							<?php $dir = Users::currentUser()->id; ?>
@@ -91,6 +94,7 @@ use Core\FH;
 							<?php endif;?>
 							<?php $x++; ?>
 							<?php endforeach; ?>
+							
 						</div>
 						<?php if(!$this->upload): ?>
 						<h1 class="center">There are no videos added.</h1>
@@ -100,6 +104,8 @@ use Core\FH;
 			</div>
 		</div>
 	</div>
+	<?php endif;?>
+	<?php if(FH::number($this->upload , 3)>0):  ?>
 	<div class="container">
 		<div class="content">
 			<div class="row">
@@ -145,6 +151,8 @@ use Core\FH;
 			</div>
 		</div>
 	</div>
+	<?php endif;?>
+	<?php if(FH::number($this->upload , 4)>0):  ?>
 	<div class="container">
 		<div class="content">
 			<div class="row">
@@ -182,6 +190,26 @@ use Core\FH;
 			</div>
 		</div>
 	</div>
+	<?php endif;?>
+	<?php if(FH::number($this->upload , 1)+FH::number($this->upload , 2)+FH::number($this->upload , 3)+FH::number($this->upload , 4)==0):  ?>
+	<div class="container">
+		<div class="content">
+			<div class="row">
+				<div id="image-grid" class="container-fluid ">
+					<div class="whitebg center formerfix">
+						<h1 class="center lg-bg col-md-5 mx-auto ">Delete  files</h1>
+						<hr>
+						<a href="<?=PROOT?>settings/restore" class="btn btn-primary">
+							Restore files
+						</a>
+						<hr><br>
+						<h1 class="center">You have no uploaded files.</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php endif;?>
 	<br>
 	<br>
 </div>

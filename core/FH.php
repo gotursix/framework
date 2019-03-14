@@ -88,6 +88,18 @@ class FH {
   }
 
 
+  public static function number($thing  , $id)
+  {
+    $x = 0;
+    foreach ($thing as $thing) 
+    {
+      if($thing->format == $id)
+        $x++;
+    }
+    return $x;
+  }
+
+
   public static function displayErrors($errors) 
   {
     $hasErrors = (!empty($errors))? ' has-errors' : '';
