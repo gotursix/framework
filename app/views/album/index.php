@@ -28,7 +28,6 @@ use Core\Session;
             <thead class=" table-dark">
                 <th scope="col" class="table-content"><h4>Album name</h4></th>
                 <th scope="col" class="table-content"><h4>Album contains</h4></th>
-                <th scope="col" class="table-content"><h4>Album actions</h4></th>
             </thead>
             <tbody>
               <?php foreach ($this->album as $album): ?>
@@ -43,10 +42,7 @@ use Core\Session;
                   <br>
                   <?= H::format($album->format) ;?>
                 </td>
-                <td class="table-fix">
-                  <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn btn-primary">Edit album</a>
-                  <br><br>
-                </td>
+     
                 <?php endforeach; ?>
                 <?php if(!$this->album): ?>
                 <td colspan="3" class="center">
