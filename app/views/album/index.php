@@ -16,48 +16,56 @@ use Core\Session;
             </a>
             <hr>
           </div>
-<br>
-<div class="row">
-<div class="container center">
-  <?= Session::displayMsg() ?>
-<div class="center whitetable">
-<table class="table table-striped ">
- <thead class=" table-dark">
-   <th scope="col">Album name</th>
-   <th scope="col">Album contains</th>
-   <th scope="col">Album actions</th>
-   </thead>
-
-   <tbody>
-    <?php foreach ($this->album as $album): ?>
-     <tr>
-     <td>
-       <a href="<?=PROOT?>contain/details/<?=$album->id ?>" >
-           <h5><font class="album-name"><i><?= strtoupper( $album->name) ;?></font></i></h5>
-       </a>
-     </td>
-
-      <td>
-           <?= H::format($album->format) ;?>
-      </td>
-      <td>
-       <div class="btn-group text-center">
-  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Actions
-  </button>
-  <div class="dropdown-menu">
-    <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="dropdown-item">Add/Remove files</a>
-
-
-    <a href="<?=PROOT?>album/edit/<?=$album->id?>" class="dropdown-item">
-      Change name
-    </a>
-
-    <div class="dropdown-divider"></div>
-
-    <a href="<?=PROOT?>album/delete/<?=$album->id?>" class="dropdown-item" onclick="if(!confirm('Are you sure ?')){return false;}">
-      Delete
-    </a>
+<<<<<<< Updated upstream
+          <br>
+          <div class="row">
+            <div class="container center">
+              <?= Session::displayMsg() ?>
+              <div class="center whitetable">
+                <table class="table table-striped ">
+                  <thead class=" table-dark">
+                    <th scope="col" class="table-content"><h4>Album name</h4></th>
+                    <th scope="col" class="table-content"><h4>Album contains</h4></th>
+                    <th scope="col" class="table-content"><h4>Edit</h4></th>
+                  </thead>
+                  <tbody>
+                    <?php foreach ($this->album as $album): ?>
+                    <tr>
+                      <td >
+                        <br>
+                        <a href="<?=PROOT?>contain/details/<?=$album->id ?>" >
+                          <h5><font class="album-name"><i><?= strtoupper( $album->name) ;?></i></font></h5>
+                        </a>
+                        <br>
+                      </td>
+                      <td>
+                        <br>
+                        <?= H::format($album->format) ;?>
+                        <br>
+                      </td>
+                      <td>
+                        <br>
+                           <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn btn-primary">Edit album</a>
+                        <br>
+                      </td>
+                      
+                      <?php endforeach; ?>
+                      <?php if(!$this->album): ?>
+                      <td colspan="3" class="center">
+                        <h1>
+                        You have no albums.
+                        </h1>
+                      </td>
+                      <?php endif; ?>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <?php $this->end(); ?>
