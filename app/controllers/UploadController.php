@@ -115,5 +115,18 @@ class UploadController extends Controller
         Router::redirect('upload/modify');
   }
 
+  public function deleteallAction($id)
+  {
+      $upload = $this->UploadModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , $id , ['order' => 'format , name']);
+        
+        if($upload)
+        {
+          foreach ($upload as $upload)
+          $upload->delete();  
+          Session::addMsg('success','The files have been deleted. You can restore them if you wish in the Settings -> Recycle bin.');
+        }
+        Router::redirect('upload/modify');
+  }
+
 
 }
