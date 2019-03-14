@@ -114,6 +114,7 @@ use Core\FH ;
 								<?php $x=1; ?>
 >>>>>>> Stashed changes
 									<?php foreach ($this->contain as $upload): ?>
+<<<<<<< Updated upstream
 									<?php $dir = Users::currentUser()->id; ?>
 									<div class="col-lg-4 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 										<audio controls>
@@ -189,6 +190,8 @@ use Core\FH ;
 										<?php if ($this->album->format == 3): ?>
 										<?php $x=1; ?>
 										<?php foreach ($this->upload as $upload): ?>
+=======
+>>>>>>> Stashed changes
 										<?php $dir = Users::currentUser()->id; ?>
 											<div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 					              <video class="embed-responsive embed-responsive-16by9" controls>
