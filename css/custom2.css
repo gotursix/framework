@@ -1,17 +1,23 @@
 /*<<<<<<< Updated upstream*/
+body{
+	  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 img {
   margin-left: auto;
   margin-right: auto;
 }
-
 .alert-fix
 {
     margin-right: 7px;
     margin-left: 7px;
 }
-
-
-
 .img-responsive{
     height:150px;
 }
@@ -136,16 +142,25 @@ img {
   }
 
 }
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+ @media (min-height: 700px){
+    .background {min-height: 1024px;}
+ }
+ @media only screen and (max-width: 950px) {
+    .formerfix{
+    margin-top: 10%;
+    }
+	.whitebg a {
+		font-weight:350;
+		padding:.175rem .55rem;
+		width:175px;
+		margin-top:1%;
+	}
+	.lg-bg{
+		font-size:20px;
+		padding-bottom:1.175%;
+		
+	}
 }
-
 .color-white{
     color: white;
 }
@@ -158,9 +173,7 @@ img {
     padding-right: 4%;
     padding-left: 4%;
 }
- @media (min-height: 700px){
-    .background {min-height: 1024px;}
- }
+
 .background {
 	background-image: url("../img/login.jpeg");
     min-height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
@@ -177,14 +190,7 @@ img {
 	margin-bottom:1%;
 }
 
-@media only screen and (max-width: 800px) {
-    .formerfix{
-    margin-top: 10%;
-    }
-	.whitebg a {
-		margin-top:15%;
-	}
-}
+
 
 .top{
 	margin-top:7%;

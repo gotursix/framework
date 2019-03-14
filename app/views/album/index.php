@@ -44,7 +44,7 @@ use Core\Session;
                   <?= H::format($album->format) ;?>
                 </td>
                 <td class="table-fix">
-                  <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn btn-primary">Edit album</a>
+                  <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn2 btn-primary">Edit album</a>
                   <br><br>
                 </td>
                 <?php endforeach; ?>

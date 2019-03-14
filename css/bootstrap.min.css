@@ -89,18 +89,21 @@ select.form-control:focus::-ms-value{color:#495057;background-color:#fff}
 	border-radius:.25rem;
 	transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
 @media screen and (prefers-reduced-motion:reduce){
 	.btn{
 		transition:none;
 	}
+
 }
+
 .btn:hover{
-	color: #db2164;
+	color:#007bff;
 	text-decoration: none;
-	border-color: #db2164;
 	border-width: 1px;
 	background: linear-gradient(60deg, transparent, transparent);
-}/*
+}
+/*
 .btn.focus,.btn:focus{
 	outline:0;
 	box-shadow:0 0 0 .2rem rgba(0,123,255,.25)
@@ -113,6 +116,7 @@ select.form-control:focus::-ms-value{color:#495057;background-color:#fff}
 .btn:not(:disabled):not(.disabled){cursor:pointer}
 
 a.btn.disabled,fieldset:disabled a.btn{pointer-events:none}
+
 
 .btn-primary{
 	color:#fff;
