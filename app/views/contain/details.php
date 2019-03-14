@@ -12,6 +12,8 @@ use Core\FH;
             <h2 class="center lg-bg col-md-5 mx-auto ">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h2>
           <hr>
           <a href="<?=PROOT?>album" class="btn btn-info">Go back</a>
+          <a href="<?=PROOT?>contain/edit/<?=$this->album->id?>" class="btn btn-primary">Edit album</a>
+
           <hr>
           <br>
           <?php if (!$this->contain): ?>
