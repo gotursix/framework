@@ -12,6 +12,8 @@ use Core\FH;
       <?= Session::displayMsg() ?>
     </div>
   </div>
+  
+  <?php if(FH::number($this->settings , 1)>0):  ?>
   <div class="container">
     <div class="content">
       <div class="row">
@@ -61,7 +63,9 @@ use Core\FH;
       </div>
     </div>
   </div>
+  <?php endif; ?>
   
+  <?php if(FH::number($this->settings , 2)>0):  ?>
   <div class="container">
     <div class="content">
       <div class="row">
@@ -112,6 +116,8 @@ use Core\FH;
       </div>
     </div>
   </div>
+  <?php endif; ?>
+  <?php if(FH::number($this->settings , 3)>0):  ?>
   <div class="container">
     <div class="content">
       <div class="row">
@@ -162,6 +168,8 @@ use Core\FH;
       </div>
     </div>
   </div>
+  <?php endif; ?>
+  <?php if(FH::number($this->settings , 4)>0):  ?>
   <div class="container">
     <div class="content">
       <div class="row">
@@ -205,6 +213,26 @@ use Core\FH;
       </div>
     </div>
   </div>
+  <?php endif;?>
+  <?php if(FH::number($this->settings , 1)+FH::number($this->settings , 2)+FH::number($this->settings , 3)+FH::number($this->settings , 4)==0):  ?>
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <div id="image-grid" class="container-fluid ">
+          <div class="whitebg center formerfix">
+            <h1 class="center lg-bg col-md-5 mx-auto ">Deleted files</h1>
+            <hr>
+            <a href="<?=PROOT?>upload/modify" class="btn btn-danger">
+              Delete files
+            </a>
+            <hr><br>
+            <h1 class="center">You have no files in the recycle bin.</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php endif;?>
   <br>
   <br>
 </div>
