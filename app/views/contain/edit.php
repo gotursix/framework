@@ -190,43 +190,6 @@ use Core\FH ;
 										<?php $x=1; ?>
 										<?php foreach ($this->upload as $upload): ?>
 										<?php $dir = Users::currentUser()->id; ?>
-<<<<<<< Updated upstream
-										<div class="col-lg-4 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
-											<audio controls>
-												<source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
-												Your browser does not support the audio element.
-											</audio>
-											<div class="caption text-center">
-												<p><?=$upload->name ?></p>
-												<a href="<?=PROOT?>contain/add/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-info btn-xs">Add to album</a>
-											</div>
-										</div>
-										<?php $x++; ?>
-										<?php endforeach; ?>
-										<?php endif; ?>
-										<?php if ($this->album->format == 4): ?>
-										<?php $x=1; ?>
-										<?php foreach ($this->upload as $upload): ?>
-										<?php $dir = Users::currentUser()->id; ?>
-										<div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
-											<a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" target="_blank">
-												<img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
-												<p><?=$upload->name ?></p>
-											</a>
-											<a href="<?=PROOT?>contain/add/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-info btn-xs">Add to album</a>
-										</div>
-										<?php $x++; ?>
-										<?php endforeach; ?>
-										<?php endif; ?>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<?php $this->end(); ?>
-=======
 											<div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 					              <video class="embed-responsive embed-responsive-16by9" controls>
 					                <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4" alt="Thumb-<?=$x?>" class="img-responsive" />
