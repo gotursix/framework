@@ -1,6 +1,7 @@
 <?php
 use App\Models\Users;
 use App\Models\Upload;
+use Core\FH;
 ?>
 <?php $this->start('body'); ?>
 <div class="background ">
@@ -25,7 +26,22 @@ use App\Models\Upload;
 							<?php $x=1; ?>
 							<?php foreach ($this->upload as $upload): ?>
 							<?php $dir = Users::currentUser()->id; ?>
-							<div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+							
+
+										<?php if(FH::number($this->upload , 1) >=4):  ?>
+										<div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+										<?php endif;?>
+										<?php if(FH::number($this->upload , 1) == 3):  ?>
+										<div class="col-lg-4 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+										<?php endif;?>
+										<?php if(FH::number($this->upload , 1) == 2):  ?>
+										<div class="col-lg-5 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+										<?php endif;?>
+										<?php if(FH::number($this->upload , 1) == 1):  ?>
+										<div class="col-lg-5 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+										<?php endif;?>
+
+
 								<a href="#" data-toggle="modal" data-target="#modal-preso" class="img-button">
 									<img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
 									<div class="caption center">
