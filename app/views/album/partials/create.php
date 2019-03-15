@@ -12,7 +12,7 @@ use Core\FH;
 						
 						<div class="myform form">
 							
-							<div class="logo mb-3 noselect">
+							<div class="logo mb-3 ">
 								<div class="col-md-12 center head-form">
 									<h1>Create an album</h1>
 								</div>
@@ -21,10 +21,10 @@ use Core\FH;
 							<div class="form-group">
 								
 								<label class="control-label"><h4>Choose a name</h4></label>
-								<input type="text" name="name" id="name" class="form-control noselect" value="" placeholder="Name" required>
+								<input type="text" name="name" id="name" class="form-control " value="" placeholder="Name" required>
 								
 							</div>
-							<div class="noselect">
+							<div class="">
 								
 								<?= FH::displayErrors($this->displayErrors)?>
 								
@@ -37,7 +37,7 @@ use Core\FH;
 							<div class="col-md-12 ">
 								<div class="login-or">
 									<hr class="hr-or">
-									<span class="span-or noselect">or</span>
+									<span class="span-or ">or</span>
 								</div>
 							</div>
 							

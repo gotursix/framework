@@ -12,7 +12,7 @@ use Core\Session;
 				<div id="image-grid" class="container-fluid ">
 
 					<div class="whitebg center formerfix">
-      <h1 class="center lg-bg col-md-5 mx-auto noselect">My albums</h1>
+      <h1 class="center lg-bg col-md-5 mx-auto ">My albums</h1>
       <hr>
       <a href="<?=PROOT?>album/add" class="btn btn-info" >
         Create album
@@ -44,7 +44,7 @@ use Core\Session;
                   <?= H::format($album->format) ;?>
                 </td>
                 <td class="table-fix">
-                  <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn2 btn-primary">Edit album</a>
+                  <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn btn-primary">Edit album</a>
                   <br><br>
                 </td>
                 <?php endforeach; ?>

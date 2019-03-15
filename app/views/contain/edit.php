@@ -16,8 +16,8 @@ use Core\FH ;
 				<div id="image-grid" class="container-fluid ">
 
 					<div class="whitebg center formerfix">
-			<h1 class=" center lg-bg col-md-5 mx-auto noselect">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h1>
-		<h4 class="head-form col-md-5 mx-auto top center noselect">Files in album</h4>
+			<h1 class=" center lg-bg col-md-5 mx-auto ">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h1>
+		<h4 class="head-form col-md-5 mx-auto top center ">Files in album</h4>
 		<div id="image-grid" class="container-fluid ">
 				<hr>
 				<a href="<?=PROOT?>album" class="btn btn-primary">Save</a>
@@ -28,7 +28,7 @@ use Core\FH ;
 				</a>
 				<hr>
 				<?php if (!$this->contain): ?>
-				<h1 class="center noselect">There are no files in the album.</h1>
+				<h1 class="center ">There are no files in the album.</h1>
 				<?php endif; ?>
 				<div class="row">
 					<?php if ($this->album->format == 1): ?>
@@ -93,18 +93,18 @@ use Core\FH ;
 					<?php endif; ?>
 				</div>
 			</div>
-			<h4 class="head-form col-md-5 mx-auto top center noselect">Select your files</h4>
+			<h4 class="head-form col-md-5 mx-auto top center ">Select your files</h4>
 			<div class="whitebg center">
 				<?php if (!$this->upload): ?>
 				<br>
-				<h1 class="center noselect">There are no files to be added in the album.</h1>
+				<h1 class="center ">There are no files to be added in the album.</h1>
 				<?php endif; ?>
 				<div class="row" >
 					<?php if ($this->album->format == 1): ?>
 					<?php $x=1; ?>
 					<?php foreach ($this->upload as $upload): ?>
 					<?php $dir = Users::currentUser()->id; ?>
-					<div class="col-lg-3 col-xs-6 custom-col noselect"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+					<div class="col-lg-3 col-xs-6 custom-col "  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 						<img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
 						<br>
 						<a href="<?=PROOT?>contain/add/<?=$upload->id?>/<?= $this->album->id ?>" class="btn btn-info btn-xs">Add to album</a>

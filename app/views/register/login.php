@@ -15,7 +15,7 @@ use Core\FH;
 							
 							<div class="logo mb-3">
 								
-								<div class="col-md-12 center head-form noselect">
+								<div class="col-md-12 center head-form ">
 									
 									<h1>Login</h1>
 									
@@ -28,14 +28,14 @@ use Core\FH;
 								<div class="form-group">
 									
 									<label >Username</label>
-									<input type="text" name="username" id="username"  class="form-control noselect"  placeholder="Enter username">
+									<input type="text" name="username" id="username"  class="form-control "  placeholder="Enter username">
 									
 								</div>
 								
 								<div class="form-group">
 									
 									<label >Password</label>
-									<input type="password" name="password" id="password" class="form-control noselect" placeholder="Enter password">
+									<input type="password" name="password" id="password" class="form-control " placeholder="Enter password">
 									
 								</div>
 								
@@ -55,7 +55,7 @@ use Core\FH;
 									<div class="login-or">
 										
 										<hr class="hr-or">
-										<span class="span-or noselect">or</span>
+										<span class="span-or ">or</span>
 										
 									</div>
 									

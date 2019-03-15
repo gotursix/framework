@@ -12,7 +12,7 @@ use Core\H;
       <div class="container">
           <div class="content">
               <div class="row">
-        <div class="col-md-5 mx-auto formerfix noselect">
+        <div class="col-md-5 mx-auto formerfix ">
 	            <div class="myform form ">
                 <div class="logo mb-3">
                   <div class="col-md-12 center head-form">
@@ -25,11 +25,11 @@ use Core\H;
 
                            <div class="form-group">
                               <label><h4>First name</h4></label>
-                              <input type="text" name="fname" id="fname"  class="form-control noselect"  placeholder="Enter first name" value="<?=$this->name->fname?>" required>
+                              <input type="text" name="fname" id="fname"  class="form-control "  placeholder="Enter first name" value="<?=$this->name->fname?>" required>
                            </div>
                            <div class="form-group">
                               <label><h4>Last name</h4></label>
-                              <input type="text" name="lname" id="lname" class="form-control noselect" placeholder="Enter last name" value="<?=$this->name->lname?>" required>
+                              <input type="text" name="lname" id="lname" class="form-control " placeholder="Enter last name" value="<?=$this->name->lname?>" required>
                            </div>
 
                            <?= FH::displayErrors($this->displayErrors); ?>
@@ -43,7 +43,7 @@ use Core\H;
                                 <div class="col-md-12 ">
                                          <div class="login-or">
                                             <hr class="hr-or">
-                                    <span class="span-or noselect">or</span>
+                                    <span class="span-or ">or</span>
                                  </div>
                               </div>
                                       <div class="col-md-12 mb-3 center">

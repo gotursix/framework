@@ -9,7 +9,7 @@ use Core\FH;
       <div class="row center">
         <div id="image-grid" class="container-fluid ">
           <div class="whitebg center formerfix">
-            <h2 class="center lg-bg col-md-5 mx-auto noselect">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h2>
+            <h2 class="center lg-bg col-md-5 mx-auto ">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h2>
           </div>
           <hr>
           <a href="<?=PROOT?>album" class="btn btn-info">Go back</a>
@@ -17,7 +17,7 @@ use Core\FH;
           <br>
           <?php if (!$this->contain): ?>
           <div class="container-fluid whitebg">
-            <h1 class="noselect center">There are no files in the album</h1>
+            <h1 class=" center">There are no files in the album</h1>
           </div>
           <?php endif; ?>
           <?php if($this->contain):   ?>

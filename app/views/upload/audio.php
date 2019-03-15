@@ -9,7 +9,7 @@ use App\Models\Upload;
       <div class="row">
         <div id="image-grid" class="container-fluid ">
           <div class="whitebg center formerfix">
-            <h1 class="center lg-bg col-md-5 mx-auto noselect">My audios</h1>
+            <h1 class="center lg-bg col-md-5 mx-auto ">My audios</h1>
             <hr>
             <a href="<?=PROOT?>upload/add" class="btn btn-info" >
               Upload files

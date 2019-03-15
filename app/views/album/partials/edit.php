@@ -25,7 +25,7 @@ use Core\FH;
               <div class="col-md-12 ">
                 <div class="login-or">
                   <hr class="hr-or">
-                  <span class="span-or noselect">or</span>
+                  <span class="span-or ">or</span>
                 </div>
               </div>
               <div class="col-md-12 mb-3 center">

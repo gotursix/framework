@@ -13,20 +13,20 @@ use Core\FH;
 					<div class="col-md-5 mx-auto formerfix">
 						<div class="myform form">
 							<div class="logo mb-3">
-								<div class="col-md-12 center head-form noselect">
+								<div class="col-md-12 center head-form ">
 									<h1>Upload file</h1>
 								</div>
 							</div>
 							<span class="input-group-addon"></span>
 							<div class="form-group">
 								<label class="control-label"><h4>Choose a name</h4></label>
-								<input type="text" name="name" id="name" class="form-control noselect" value="" placeholder="Name" required>
+								<input type="text" name="name" id="name" class="form-control " value="" placeholder="Name" required>
 							</div>
-							<div class="form-group noselect">
+							<div class="form-group ">
 								<br>
 								<input type="file" id="file" name="file" required>
 							</div>
-							<div class="noselect">
+							<div class="">
 								<?= FH::displayErrors($this->displayErrors)?>
 							</div>
 							<div class="footer center">
@@ -35,7 +35,7 @@ use Core\FH;
 							<div class="col-md-12 ">
 								<div class="login-or">
 									<hr class="hr-or">
-									<span class="span-or noselect">or</span>
+									<span class="span-or ">or</span>
 								</div>
 							</div>
 							<div class="col-md-12 mb-3 center">

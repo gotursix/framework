@@ -4,7 +4,7 @@ use Core\Session;
 use Core\FH;
 ?>
 <?php $this->start('body'); ?>
-<div class="background noselect">
+<div class="background ">
 	<br><br>
 	<br><br>
 	<div class="container center">
@@ -61,7 +61,7 @@ use Core\FH;
 			<div class="row">
 				<div id="image-grid" class="container-fluid ">
 					<div class="whitebg center formerfix">
-						<h1 class="center lg-bg col-md-5 mx-auto noselect">Delete  videos</h1>
+						<h1 class="center lg-bg col-md-5 mx-auto ">Delete  videos</h1>
 						<hr>
 						<a href="<?=PROOT?>upload/deleteall/2" class="btn btn-danger">
 							Delete all videos
@@ -105,7 +105,7 @@ use Core\FH;
 			<div class="row">
 				<div id="image-grid" class="container-fluid ">
 					<div class="whitebg center formerfix">
-						<h1 class="center lg-bg col-md-5 mx-auto noselect">Delete  audios</h1>
+						<h1 class="center lg-bg col-md-5 mx-auto ">Delete  audios</h1>
 						<hr>
 						<a href="<?=PROOT?>upload/deleteall/3" class="btn btn-danger" >
 							Delete all audio files
@@ -150,7 +150,7 @@ use Core\FH;
 			<div class="row">
 				<div id="image-grid" class="container-fluid ">
 					<div class="whitebg center formerfix">
-						<h1 class="center lg-bg col-md-5 mx-auto noselect">Delete  documents</h1>
+						<h1 class="center lg-bg col-md-5 mx-auto ">Delete  documents</h1>
 						<hr>
 						<a href="<?=PROOT?>upload/deleteall/4" class="btn btn-danger" >
 							Delete all documents
