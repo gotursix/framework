@@ -21,7 +21,7 @@ use Core\FH;
           <div class="whitebg center">
             <h1 class="center lg-bg col-md-5 mx-auto">Deleted  images</h1>
             <hr>
-            <a href="<?=PROOT?>settings/restoreall/1" class="btn btn-primary">
+            <a href="<?=PROOT?>settings/restoreall/1" class="btn-reg btn-primary">
               Restore all images
             </a>
             <a href="<?=PROOT?>settings/deleteall/1" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}">
@@ -59,7 +59,7 @@ use Core\FH;
                         <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}">
                           Delete
                         </a>
-                        <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn btn-primary btn-xs table-fix" >
+                        <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn-reg btn-primary btn-xs table-fix" >
                           Restore
                         </a>
                       </div>
