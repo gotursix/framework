@@ -22,11 +22,11 @@ use Core\FH;
             <a href="<?=PROOT?>settings/restoreall/1" class="btn btn-primary">
               Restore all images
             </a>
-            <a href="<?=PROOT?>upload/modify" class="btn btn-danger">
+            <a href="<?=PROOT?>upload/modify" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}">
               Delete all images
             </a>
             <hr>
-            <div class="row" id="lightgallery">
+            <div class="row" id="lightgallerym">
               <?php $x=1; ?>
               <?php foreach ($this->settings as $settings): ?>
               <?php if($settings->format == 1): ?>
@@ -72,7 +72,7 @@ use Core\FH;
             <a href="<?=PROOT?>settings/restoreall/2" class="btn btn-primary">
               Restore all videos
             </a>
-            <a href="<?=PROOT?>upload/modify" class="btn btn-danger">
+            <a href="<?=PROOT?>upload/modify" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}">
               Delete all videos
             </a>
             <hr>
@@ -122,7 +122,7 @@ use Core\FH;
             <a href="<?=PROOT?>settings/restoreall/3" class="btn btn-primary">
               Restore all audios
             </a>
-            <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
+            <a href="<?=PROOT?>upload/modify" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}">
               Delete all audio files
             </a>
             <hr>
@@ -172,7 +172,7 @@ use Core\FH;
             <a href="<?=PROOT?>settings/restoreall/4" class="btn btn-primary">
               Restore all documents
             </a>
-            <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
+            <a href="<?=PROOT?>upload/modify" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}">
               Delete all documents
             </a>
             <hr>
