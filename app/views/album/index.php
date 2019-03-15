@@ -16,7 +16,6 @@ use Core\Session;
             </a>
             <hr>
           </div>
-<<<<<<< Updated upstream
           <br>
           <div class="row">
             <div class="container center">
