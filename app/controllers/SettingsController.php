@@ -17,6 +17,7 @@ class SettingsController extends Controller
     parent::__construct($controller,$action);
     $this->view->setLayout('default');
       $this->load_model('Settings');
+      $this->load_model('Album');
   }
 
   public function restoreAction()
@@ -72,6 +73,10 @@ class SettingsController extends Controller
     public function deleteallAction($id)
   {
          $upload = $this->SettingsModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , $id , ['order' => 'format , name']);
+
+         $album = $this->AlbumModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , $id , ['order' => 'format , name']);
+
+         H::dnd($album);
         if($upload)
         {
           foreach ($upload as $upload)
