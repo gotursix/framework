@@ -1,4 +1,4 @@
-<?php
+	<?php
 use App\Models\Users;
 use App\Models\Upload;
 ?>

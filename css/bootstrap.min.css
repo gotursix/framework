@@ -89,6 +89,26 @@ select.form-control:focus::-ms-value{color:#495057;background-color:#fff}
 	border-radius:.25rem;
 	transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+.btn-reg{
+	cursor:pointer;
+	display:inline-block;
+	font-weight:400;
+	color:#212529;
+	text-align:center;
+	vertical-align:middle;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	background-color:transparent;
+	border:1px solid transparent;
+	padding:.375rem .75rem;
+	width:220px;
+	font-size:1rem;
+	line-height:1.5;
+	border-radius:.25rem;
+	transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 
 @media screen and (prefers-reduced-motion:reduce){
 	.btn{
@@ -96,10 +116,17 @@ select.form-control:focus::-ms-value{color:#495057;background-color:#fff}
 	}
 
 }
-
-.btn:hover{
+.btn-reg:hover{
 	color:#007bff;
 	text-decoration: none;
+	border-color:#007bff;
+	border-width: 1px;
+	background: linear-gradient(60deg, transparent, transparent);
+}
+.btn:hover{
+	color:#db2164;
+	text-decoration: none;
+	border-color:#db2164;
 	border-width: 1px;
 	background: linear-gradient(60deg, transparent, transparent);
 }

@@ -26,7 +26,20 @@ use Core\FH;
               <?php $x=1; ?>
               <?php foreach ($this->upload as $upload): ?>
               <?php $dir = Users::currentUser()->id; ?>
-              <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+
+                    <?php if(FH::number($this->upload , 4) >=4):  ?>
+                    <div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                    <?php endif;?>
+                    <?php if(FH::number($this->upload , 4) == 3):  ?>
+                    <div class="col-lg-4 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                    <?php endif;?>
+                    <?php if(FH::number($this->upload , 4) == 2):  ?>
+                    <div class="col-lg-5 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                    <?php endif;?>
+                    <?php if(FH::number($this->upload , 4) == 1):  ?>
+                    <div class="col-lg-5 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                    <?php endif;?>
+
                 <a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" target="_blank">
                   <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
                   <?= FH::hoverTag($upload->name , substr($upload->name, 0 , 25));?>

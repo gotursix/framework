@@ -30,7 +30,7 @@ use Core\FH;
 								<?= FH::displayErrors($this->displayErrors)?>
 							</div>
 							<div class="footer center">
-								<button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Submit</button>
+								<button type="submit" class=" btn-reg btn-block mybtn btn-primary tx-tfm">Submit</button>
 							</div>
 							<div class="col-md-12 ">
 								<div class="login-or">
@@ -39,7 +39,7 @@ use Core\FH;
 								</div>
 							</div>
 							<div class="col-md-12 mb-3 center">
-								<a href="<?=PROOT?>" class="google btn mybtn">
+								<a href="<?=PROOT?>" class="google btn-block btn mybtn">
 									Cancel
 								</a>
 							</div>

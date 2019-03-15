@@ -35,6 +35,19 @@ class Contain extends Model
     }
 
 
+    public function findByUserIdAndName($user_id,$name,$params=[])
+    {
+      $conditions =
+      [
+        'conditions' => 'user_id = ? AND name= ?',
+        'bind' => [$user_id,$name]
+      ];
+
+      $conditions = array_merge($conditions , $params);
+      return $this->find($conditions);
+    }
+
+
     public function findByIdAndUserId($contact_id,$user_id,$params=[])
     {
       $conditions =

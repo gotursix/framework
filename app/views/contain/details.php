@@ -3,6 +3,7 @@ use App\Models\Users;
 use Core\FH;
 ?>
 <?php $this->start('body'); ?>
+<<<<<<< Updated upstream
 <div class="background">
   <div class="container">
     <div class="content">
@@ -30,12 +31,52 @@ use Core\FH;
                 <?php foreach ($this->contain as $upload): ?>
                 <?php $dir = Users::currentUser()->id; ?>
                 <div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+=======
+    <div class="background">
+<div class="container center">
+    <div class="row">
+
+<h2 class="center col-md-5 mx-auto head-form formerfix">Album: <font class="album-name"><i><?= $this->album->name ?></font></i></h2>
+    </div>
+    <div class="whitebg center buttondiv">
+        <hr>
+        <a href="<?=PROOT?>album" class="btn btn-info">Go back</a>
+
+        <hr>
+      </div>
+      <br>
+
+      <?php if (!$this->contain): ?>
+        <div class="container-fluid whitebg">
+        <h1>There are no files in the album</h1>
+      </div>
+      <?php endif; ?>
+
+      <?php if($this->contain):   ?>
+
+    <div class="row">
+
+
+<div id="<?php if($this->album->format == 1): ?>image-grid<?php endif; ?> " class="container-fluid">
+   	  <div class="row whitebg" id="<?php if($this->album->format == 1): ?>lightgallery<?php endif; ?>">
+
+
+
+
+<?php if ($this->album->format == 1): ?>
+
+   	    <?php $x=1; ?>
+        <?php foreach ($this->contain as $upload): ?>
+           <?php $dir = Users::currentUser()->id; ?>
+    	  <div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+>>>>>>> Stashed changes
                   <a href="#" data-toggle="modal" data-target="#modal-preso" class="img-button">
                     <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
                     <div class="caption center">
                       <p><?php echo substr($upload->name, 0 , 25); ?></p>
                     </div>
                   </a>
+<<<<<<< Updated upstream
                 </div>
                 <?php $x++; ?>
                 <?php endforeach; ?>
@@ -73,6 +114,42 @@ use Core\FH;
                     <div class="collapse  word-break margin-file" id="collapseExample<?=$x ?>">
                       <?php if(strlen($upload->name)>25) echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name)); ?>
                     </div>
+=======
+           </div>
+          <?php $x++; ?>
+       <?php endforeach; ?>
+ <?php endif; ?>
+
+
+
+ <?php if ($this->album->format == 2): ?>
+      <?php $x=1; ?>
+         <?php foreach ($this->contain as $upload): ?>
+            <?php $dir = Users::currentUser()->id; ?>
+            <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+              <video class="embed-responsive embed-responsive-16by9" controls>
+                <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4" alt="Thumb-<?=$x?>" class="img-responsive" />
+                  Your browser does not support the video tag.
+                </video>
+                    <div class="caption center">
+                       <p><?=$upload->name ?></p>
+           </div>
+  </div>
+           <?php $x++; ?>
+        <?php endforeach; ?>
+  <?php endif; ?>
+
+  <?php if ($this->album->format == 3): ?>
+       <?php $x=1; ?>
+          <?php foreach ($this->contain as $upload): ?>
+             <?php $dir = Users::currentUser()->id; ?>
+               <div class="col-sm-3">
+                     <div class="thumbnail text-center">
+                       <img src="<?= PROOT . 'img' . DS . 'video.png' ;?>" alt="Thumb-<?=$x?>" class="imgu">
+                          <div class="caption text-center">
+                            <p><?=$upload->name?></p>
+
+>>>>>>> Stashed changes
                   </div>
                 </div>
                 <?php $x++; ?>
@@ -92,7 +169,7 @@ use Core\FH;
                 <?php endforeach; ?>
                 <?php endif; ?>
               </div>
-              <script type="text/javascript"></script>pt>var __adobewebfontsappname__="dreamweaver"</script>
+              <script type="text/javascript">__adobewebfontsappname__="dreamweaver"</script>
               <script> lightGallery(document.getElementById('lightgallery')); </script>
             </div>
           </div>
