@@ -93,6 +93,8 @@ use Core\FH ;
 					<?php endif; ?>
 				</div>
 			</div>
+		</div>
+		<div class="whitebg center formerfix">
 			<h4 class="head-form col-md-5 mx-auto top center ">Select your files</h4>
 			<div class="whitebg center">
 				<?php if (!$this->upload): ?>
