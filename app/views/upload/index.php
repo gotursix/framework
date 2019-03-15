@@ -19,7 +19,7 @@ use Core\FH;
 					<div class="whitebg center ">
 						<h1 class="center lg-bg col-md-5 mx-auto">Delete  images</h1>
 						<hr>
-						<a href="<?=PROOT?>upload/deleteall/1" class="btn btn-danger">
+						<a href="<?=PROOT?>upload/deleteall/1" class="btn btn-danger" onclick="if(!confirm('Are you sure ?')){return false;}">
 							Delete all images
 						</a>
 						<hr>
@@ -63,7 +63,7 @@ use Core\FH;
 					<div class="whitebg center formerfix">
 						<h1 class="center lg-bg col-md-5 mx-auto ">Delete  videos</h1>
 						<hr>
-						<a href="<?=PROOT?>upload/deleteall/2" class="btn btn-danger">
+						<a href="<?=PROOT?>upload/deleteall/2" class="btn btn-danger" onclick="if(!confirm('Are you sure ?')){return false;}">
 							Delete all videos
 						</a>
 						<hr>
@@ -107,7 +107,7 @@ use Core\FH;
 					<div class="whitebg center formerfix">
 						<h1 class="center lg-bg col-md-5 mx-auto ">Delete  audios</h1>
 						<hr>
-						<a href="<?=PROOT?>upload/deleteall/3" class="btn btn-danger" >
+						<a href="<?=PROOT?>upload/deleteall/3" class="btn btn-danger"  onclick="if(!confirm('Are you sure ?')){return false;}">
 							Delete all audio files
 						</a>
 						<hr>
@@ -152,7 +152,7 @@ use Core\FH;
 					<div class="whitebg center formerfix">
 						<h1 class="center lg-bg col-md-5 mx-auto ">Delete  documents</h1>
 						<hr>
-						<a href="<?=PROOT?>upload/deleteall/4" class="btn btn-danger" >
+						<a href="<?=PROOT?>upload/deleteall/4" class="btn btn-danger" onclick="if(!confirm('Are you sure ?')){return false;}"	 >
 							Delete all documents
 						</a>
 						<hr>
