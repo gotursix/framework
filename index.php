@@ -11,6 +11,7 @@ define('ROOT',dirname(__FILE__));
 //load configuration and helper functions
 require_once(ROOT . DS . 'config' . DS . 'config.php');
 
+
 //autoload classes
  function autoload($className)
  {
