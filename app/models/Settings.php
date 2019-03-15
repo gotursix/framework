@@ -50,7 +50,7 @@ class Settings extends Model
     public function findByAllByUserIdAndFileFormat($user_id , $format ,$params=[])
     {
       $conditions = [
-        'conditions' => 'user_id = ? AND format = ?',
+        'conditions' => 'user_id = ? AND format = ? AND deleted = 1',
         'bind' => [$user_id , $format]
       ];
       $conditions = array_merge($conditions, $params);

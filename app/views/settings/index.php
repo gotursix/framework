@@ -5,7 +5,6 @@ use Core\FH;
 ?>
 <?php $this->start('body'); ?>
 <div class="background ">
-
   <br><br>
   <br><br>
   <div class="container center">
@@ -13,7 +12,6 @@ use Core\FH;
       <?= Session::displayMsg() ?>
     </div>
   </div>
-
   <div class="container">
     <div class="content">
       <div class="row">
@@ -21,6 +19,9 @@ use Core\FH;
           <div class="whitebg center ">
             <h1 class="center lg-bg col-md-5 mx-auto">Deleted  images</h1>
             <hr>
+            <a href="<?=PROOT?>settings/restoreall/1" class="btn btn-primary">
+              Restore all images
+            </a>
             <a href="<?=PROOT?>upload/modify" class="btn btn-danger">
               Delete all images
             </a>
@@ -68,6 +69,9 @@ use Core\FH;
           <div class="whitebg center formerfix">
             <h1 class="center lg-bg col-md-5 mx-auto ">Deleted  videos</h1>
             <hr>
+            <a href="<?=PROOT?>settings/restoreall/2" class="btn btn-primary">
+              Restore all videos
+            </a>
             <a href="<?=PROOT?>upload/modify" class="btn btn-danger">
               Delete all videos
             </a>
@@ -115,6 +119,9 @@ use Core\FH;
           <div class="whitebg center formerfix">
             <h1 class="center lg-bg col-md-5 mx-auto ">Deleted  audios</h1>
             <hr>
+            <a href="<?=PROOT?>settings/restoreall/3" class="btn btn-primary">
+              Restore all audios
+            </a>
             <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
               Delete all audio files
             </a>
@@ -162,6 +169,9 @@ use Core\FH;
           <div class="whitebg center formerfix">
             <h1 class="center lg-bg col-md-5 mx-auto ">Deleted  documents</h1>
             <hr>
+            <a href="<?=PROOT?>settings/restoreall/4" class="btn btn-primary">
+              Restore all documents
+            </a>
             <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
               Delete all documents
             </a>
