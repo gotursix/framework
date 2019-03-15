@@ -8,7 +8,7 @@
                       <div class="whitebg center formerfix">
                         <h1 class="center lg-bg col-md-5 mx-auto ">Corrupted token</h1>
                         <hr><br>
-                        <h1 class="center">This could be caused by an csrf attack or by reloading a page with errors. If this is the case , please go back to the page.</h1>
+                        <h2 class="center">This could be caused by an csrf attack or by reloading a page with errors. If this is the case , please go back to the page.</h2>
                       </div>
                     </div>
                   </div>
