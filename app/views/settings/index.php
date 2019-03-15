@@ -83,7 +83,7 @@ use Core\FH;
           <div class="content">
             <div class="row">
               <div id="image-grid" class="container-fluid ">
-                <div class="whitebg center formerfix">
+                <div class="whitebg center <?php if(FH::number($this->settings , 1)>0):  ?>formerfix<?php endif;?>">
                   <h1 class="center lg-bg col-md-5 mx-auto ">Deleted  videos</h1>
                   <hr>
                   <a href="<?=PROOT?>settings/restoreall/2" class="btn btn-primary">
@@ -135,7 +135,7 @@ use Core\FH;
           <div class="content">
             <div class="row">
               <div id="image-grid" class="container-fluid ">
-                <div class="whitebg center formerfix">
+                <div class="whitebg center <?php if(FH::number($this->settings , 2)>0):  ?>formerfix<?php endif;?>">
                   <h1 class="center lg-bg col-md-5 mx-auto ">Deleted  audios</h1>
                   <hr>
                   <a href="<?=PROOT?>settings/restoreall/3" class="btn btn-primary">
@@ -187,7 +187,7 @@ use Core\FH;
           <div class="content">
             <div class="row">
               <div id="image-grid" class="container-fluid ">
-                <div class="whitebg center formerfix">
+                <div class="whitebg center <?php if(FH::number($this->settings , 3)>0):  ?>formerfix<?php endif;?>">
                   <h1 class="center lg-bg col-md-5 mx-auto ">Deleted  documents</h1>
                   <hr>
                   <a href="<?=PROOT?>settings/restoreall/4" class="btn btn-primary">
@@ -204,21 +204,22 @@ use Core\FH;
                     <?php $dir = Users::currentUser()->id; ?>
                     
                     <?php if(FH::number($this->settings , 4) >=4):  ?>
-                    <div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" data-sub-html="<h4><?=$settings->name ?></h4>">
+                    <div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" data-sub-html="<h4><?=$settings->name ?></h4>" title="<?=$settings->name ?>">
                     <?php endif;?>
                     <?php if(FH::number($this->settings , 4) == 3):  ?>
-                    <div class="col-lg-4 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" data-sub-html="<h4><?=$settings->name ?></h4>">
+                    <div class="col-lg-4 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" data-sub-html="<h4><?=$settings->name ?></h4>" title="<?=$settings->name ?>">
                     <?php endif;?>
                     <?php if(FH::number($this->settings , 4) == 2):  ?>
-                    <div class="col-lg-5 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" data-sub-html="<h4><?=$settings->name ?></h4>">
+                    <div class="col-lg-5 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" data-sub-html="<h4><?=$settings->name ?></h4>" title="<?=$settings->name ?>">
                     <?php endif;?>
                     <?php if(FH::number($this->settings , 4) == 1):  ?>
-                    <div class="col-lg-5 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" data-sub-html="<h4><?=$settings->name ?></h4>">
+                    <div class="col-lg-5 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" data-sub-html="<h4><?=$settings->name ?></h4>" title="<?=$settings->name ?>">
                     <?php endif;?>
 
                             <a href="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" target="_blank">
                               <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
-                              <?= FH::hoverTag($settings->name , substr($settings->name, 0 , 25));?>
+                              <?=substr($settings->name, 0 , 25);?>
+                              <br>
                             </a>
                             <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}">
                               Delete
@@ -245,7 +246,7 @@ use Core\FH;
                 <div class="content">
                   <div class="row">
                     <div id="image-grid" class="container-fluid ">
-                      <div class="whitebg center formerfix">
+                      <div class="whitebg center <?php if(FH::number($this->settings , 4)>0):  ?>formerfix<?php endif;?>">
                         <h1 class="center lg-bg col-md-5 mx-auto ">Deleted files</h1>
                         <hr>
                         <a href="<?=PROOT?>upload/modify" class="btn btn-danger">
