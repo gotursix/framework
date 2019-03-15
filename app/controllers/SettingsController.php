@@ -81,8 +81,8 @@ class SettingsController extends Controller
             unlink($delete);
             $upload->delete();
           }
+          Session::addMsg('success','The files have been deleted.');
         }
-        Session::addMsg('success','The files have been deleted.');
         Router::redirect('settings/restore');
   }
 
