@@ -37,7 +37,7 @@ use Core\FH;
 							
 							<div class="col-md-12 text-center mb-3">
 								
-								<button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Register</button>
+								<button type="submit" class=" btn-reg btn-block mybtn btn-primary tx-tfm">Register</button>
 								
 							</div>
 							<div class="col-md-12 ">
@@ -51,7 +51,7 @@ use Core\FH;
 							
 							<div class="col-md-12 mb-3 center">
 								
-								<a href="<?=PROOT?>register/login" class="google btn mybtn">
+								<a href="<?=PROOT?>register/login" class="google btn-block btn-reg mybtn">
 									Login here
 								</a>
 								

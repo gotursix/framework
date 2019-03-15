@@ -37,7 +37,7 @@ use Core\H;
 
                        </div>
                            <div class="col-md-12 text-center mb-3">
-                              <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Save</button>
+                              <button type="submit" class=" btn-reg btn-block mybtn btn-primary tx-tfm">Save</button>
                            </div>
 
                                 <div class="col-md-12 ">
@@ -47,7 +47,7 @@ use Core\H;
                                  </div>
                               </div>
                                       <div class="col-md-12 mb-3 center">
-                                        <a href="<?=PROOT?>" class="google btn mybtn">
+                                        <a href="<?=PROOT?>" class="google btn btn-block mybtn">
                                         Cancel
                                     </a>
                                 </div>
