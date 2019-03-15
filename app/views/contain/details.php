@@ -1,6 +1,8 @@
 <?php
 use App\Models\Users;
+use App\Models\Upload;
 use Core\FH;
+use Core\H;
 ?>
 <?php $this->start('body'); ?>
 <div class="background">
@@ -26,8 +28,22 @@ use Core\FH;
                 <?php if ($this->album->format == 1): ?>
                 <?php $x=1; ?>
                 <?php foreach ($this->contain as $upload): ?>
-                <?php $dir = Users::currentUser()->id; ?>
+                <?php $dir = Users::currentUser()->id; ?>               
+
+
+                <?php if(FH::count($this->contain) >=4):  ?>
                 <div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                <?php endif;?>
+                <?php if(FH::count($this->contain) == 3):  ?>
+                <div class="col-lg-4 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                <?php endif;?>
+                <?php if(FH::count($this->contain) == 2):  ?>
+                <div class="col-lg-5 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                <?php endif;?>
+                <?php if(FH::count($this->contain) == 1):  ?>
+                <div class="col-lg-5 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                <?php endif;?>
+
                   <a href="#" data-toggle="modal" data-target="#modal-preso" class="img-button">
                     <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
                     <div class="caption center">
@@ -80,12 +96,28 @@ use Core\FH;
                 <?php $x=1; ?>
                 <?php foreach ($this->contain as $upload): ?>
                 <?php $dir = Users::currentUser()->id; ?>
-                <div class="col-lg-3 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+
+
+                <?php if(FH::count($this->contain) >=4):  ?>
+                <div class="col-lg-3 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>" title= "<?= $upload->name;?>">
+                <?php endif;?>
+                <?php if(FH::count($this->contain) == 3):  ?>
+                <div class="col-lg-4 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>" title= "<?= $upload->name;?>">
+                <?php endif;?>
+                <?php if(FH::count($this->contain ) == 2):  ?>
+                <div class="col-lg-5 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>" title= "<?= $upload->name;?>">
+                <?php endif;?>
+                <?php if(FH::count($this->contain) == 1):  ?>
+                <div class="col-lg-5 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>" title= "<?= $upload->name;?>">
+                <?php endif;?>
+
+
                   <a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" target="_blank">
                     <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
-                    <?= FH::hoverTag($upload->name , substr($upload->name, 0 , 25));?>
+                    <?= substr($upload->name, 0 , 25);?>
                   </a>
                 </div>
+             
                 <?php $x++; ?>
                 <?php endforeach; ?>
                 <?php endif; ?>
