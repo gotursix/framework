@@ -54,5 +54,21 @@ class SettingsController extends Controller
         Router::redirect('settings/restore');
   }
 
+    public function restoreallAction($id)
+  {
+         $upload = $this->SettingsModel->findByAllByUserIdAndFileFormat((int)Users::currentUser()->id , $id , ['order' => 'format , name']);
+                  if($upload)
+        {
+          foreach ($upload as $upload)
+          {
+            $upload->deleted = 0;  
+            $upload->save();
+          }
+          
+        }
+        Session::addMsg('success','The files have been restored.');
+        Router::redirect('settings/restore');
+  }
+
 
 }
