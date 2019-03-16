@@ -22,7 +22,7 @@ use Core\H;
           </div>
           <?php endif; ?>
           <?php if($this->contain):   ?>
-          <div class="row">
+          <div>
             <div id="<?php if($this->album->format == 1): ?>image-grid<?php endif; ?> " class="container-fluid">
               <div class="row whitebg" id="<?php if($this->album->format == 1): ?>lightgallery<?php endif; ?>">
                 <?php if ($this->album->format == 1): ?>
