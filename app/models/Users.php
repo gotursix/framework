@@ -80,6 +80,11 @@ class Users extends Model
      return $this->findFirst(['conditions'=>'username = ?','bind'=>[$username]]);
    }
 
+    public function findByEmail($email)
+   {
+     return $this->findFirst(['conditions'=>'email = ?','bind'=>[$email]]);
+   }
+
 
    public static function currentUser()
    {

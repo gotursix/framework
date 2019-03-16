@@ -95,5 +95,35 @@ class RegisterController extends Controller
  }
 
 
+  public function recoverAction()
+   {
+     $user = new Users;
+
+
+     if($this->request->isPost())
+     {
+           $this->request->csrfCheck();
+      
+          $user = $this->UsersModel->findByEmail($_POST['email']);
+          $user->assign($this->request->get());
+          if($user)
+          {
+            H::dnd($user);
+          }
+          else
+         {
+
+           $user->addErrorMessage('email','Your email does not belong to an account');
+         }
+     }
+     
+
+     $this->view->displayErrors = $user->getErrorMessages();
+     $this->view->user = $user;
+     $this->view->postAction = PROOT . 'register' . DS . 'recover';
+     $this->view->render('register/recover');
+   }
+
+
 
 }
