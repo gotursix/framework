@@ -2,6 +2,7 @@
 use App\Models\Users;
 use Core\Session;
 use Core\FH;
+use Core\H;
 ?>
 <?php $this->start('body'); ?>
 <div class="background ">

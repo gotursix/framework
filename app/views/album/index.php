@@ -12,12 +12,12 @@ use Core\Session;
             <h1 class="center lg-bg col-md-5 mx-auto ">My albums</h1>
             <hr>
             <a href="<?=PROOT?>album/add" class="btn btn-info" >
-				Create album
+              Create album
             </a>
             <hr>
           </div>
           <br>
-        <div class="row">
+          <div class="row">
             <div class="container center">
               <?= Session::displayMsg() ?>
               <div class="center whitetable">
