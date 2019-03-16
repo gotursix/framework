@@ -22,6 +22,7 @@ use Core\Session;
     <script src="<?=PROOT?>js/lg-autoplay.js"></script>
     <script src="<?=PROOT?>js/lg-fullscreen.js"></script>
     <script src="<?=PROOT?>js/lg-zoom.js"></script>
+    <script src="<?=PROOT?>js/artyom.min.js"></script>
   </head>
   <body>
     <?php include 'main_menu.php' ?>

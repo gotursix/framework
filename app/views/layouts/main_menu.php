@@ -53,3 +53,72 @@ $currentPage= H::currentPage();
     </ul>
   </div>
 </nav>
+
+<span class="snatch-button" data-text="">
+        <a class="lwc-chat-button bubble bot" type="button" onclick="startArtyom()" value="Start voice commands"></a>
+    </span>
+
+    <span id="output" style="font-size:20px;color:red;"></span>
+
+ <script>
+        artyom.addCommands([{
+                description: "Artyom can talk too, lets say something if we say hello",
+                indexes: ["hello", "hey"],
+                action: function(i) {
+                    // i = the index of the array of indexes option
+
+                    if (i == 0) {
+                        //You say : "hello"
+                        document.getElementById('time').innerHTML = "Hello ! How are you? I don't want to talk today";
+                    }
+                }
+            },
+            {
+                description: "Say goodbye",
+                indexes: ["goodbye"],
+                action: function() {
+                    alert("Now all is over.");
+                }
+            },
+            {
+                description: "Say next",
+                indexes: ["next"],
+                action: function next() {
+                    document.getElementById("next").click();
+                }
+            },
+            {
+                description: "Say back",
+                indexes: ["back"],
+                action: function back() {
+                    document.getElementById("back").click();
+                }
+            }
+        ]);
+
+
+        // Redirect the recognized text
+        artyom.redirectRecognizedTextOutput(function(text, isFinal) {
+            var span = document.getElementById('output');
+
+            if (isFinal) {
+                span.innerHTML = '';
+            } else {
+                span.innerHTML = '';
+            }
+        });
+
+        function startArtyom() {
+            artyom.initialize({
+                lang: "en-GB", // More languages are documented in the library
+                continuous: false, //if you have https connection, you can activate continuous mode
+                debug: true, //Show everything in the console
+                listen: true // Start listening when this function is triggered
+            });
+        }
+
+        function stopArtyom() {
+            artyom.fatality();
+        }
+
+    </script>
