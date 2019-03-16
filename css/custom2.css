@@ -123,7 +123,8 @@
    }
 
    .restore-btn {
-       margin-bottom: 10px;
+	   margin-top:1.75%;
+       margin-bottom: 2%;
    }
 
    .table-fix {
@@ -243,30 +244,28 @@
    }
 
    @media only screen and (max-width: 950px) {
-
        .formerfix {
            margin-top: 11%;
        }
-
        .whitebg a {
            font-weight: 350;
            padding: .175rem .55rem;
            width: 175px;
            margin-top: 1%;
        }
-
        .lg-bg {
            font-size: 20px;
            padding-top: 1.175%;
-
        }
-
+	   .restore-btn{
+		   margin-bottom:0%;
+		   margin-top:0%;
+	   }
    }
-
+   
    .color-white {
        color: white;
    }
-
    .lg-bg {
        color: white;
        background-color: #007bff;
