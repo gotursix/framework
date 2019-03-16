@@ -17,13 +17,19 @@ img {
 {
     margin-right: 7px;
     margin-left: 7px;
+	margin-bottom:auto;
 }
 .img-responsive{
-    height:150px;
+    height:139px;
 }
-/*=======
->>>>>>> Stashed changes*/
+/*=======>>>>>>> Stashed changes*/
 
+
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
 .word-break{
 	word-break: break-all;
 }
@@ -146,8 +152,9 @@ img {
     .background {min-height: 1024px;}
  }
  @media only screen and (max-width: 950px) {
+	 
     .formerfix{
-    margin-top: 10%;
+		margin-top: 10%;
     }
 	.whitebg a {
 		font-weight:350;
@@ -157,9 +164,10 @@ img {
 	}
 	.lg-bg{
 		font-size:20px;
-		padding-bottom:1.175%;
+		padding-top:1.175%;
 		
 	}
+
 }
 .color-white{
     color: white;
