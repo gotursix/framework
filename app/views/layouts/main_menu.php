@@ -144,13 +144,6 @@ $currentPage= H::currentPage();
             }
         },
         {
-            description: "Say go to musics",
-            indexes: ["go to musics"],
-            action: function musics() {
-                document.getElementById("musics").click();
-            }
-        },
-        {
             description: "Say change my name",
             indexes: ["change my name"],
             action: function my_name() {
@@ -204,6 +197,13 @@ $currentPage= H::currentPage();
             indexes: ["edit album"],
             action: function edit_album() {
                 document.getElementById("edit-album").click();
+            }
+        },
+        {
+            description: "Say album",
+            indexes: ["album"],
+            action: function album() {
+                document.getElementById("albums").click();
             }
         },
         {
