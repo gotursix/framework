@@ -12,6 +12,7 @@ use Core\H;
         <div id="image-grid" class="container-fluid ">
           <div class="whitebg center formerfix">
             <h2 class="center lg-bg col-md-5 mx-auto ">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h2>
+            <br>
           <hr>
           <a href="<?=PROOT?>album" class="btn btn-info">Go back</a>
           <hr>
@@ -58,7 +59,7 @@ use Core\H;
                 <?php $x=1; ?>
                 <?php foreach ($this->contain as $upload): ?>
                 <?php $dir = Users::currentUser()->id; ?>
-                <div class="col-lg-4 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                <div class="col-lg-4 mx-auto col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
                   <video class="embed-responsive embed-responsive-16by9" controls>
                     <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4" alt="Thumb-<?=$x?>" class="img-responsive" />
                     Your browser does not support the video tag.
@@ -77,7 +78,7 @@ use Core\H;
                 <?php $x=1; ?>
                 <?php foreach ($this->contain as $upload): ?>
                 <?php $dir = Users::currentUser()->id; ?>
-                <div class="col-lg-4 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+                <div class="col-lg-4 mx-auto col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
                   <audio controls>
                     <source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
                     Your browser does not support the audio element.
