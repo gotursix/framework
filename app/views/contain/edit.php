@@ -134,7 +134,7 @@ use Core\FH ;
 							<div id="image-grid" class="container-fluid ">
 								<?php if (!$this->upload): ?>
 								<br>
-								<h1 class="center ">There are no files to be added in the album.</h1>
+								<h2 class="center ">There are no files left to be added in the album.</h2>
 								<?php endif; ?>
 								<div class="row" >
 									<?php if ($this->album->format == 1): ?>
