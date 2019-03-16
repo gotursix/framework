@@ -40,10 +40,10 @@ $currentPage= H::currentPage();
             <div class="dropdown">
                 <a href="" id="navbarDropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item <?php if ($currentPage == PROOT."register/modify"):?> active <?php endif;?>" href="<?=PROOT?>register/modify">Change name</a></li>
-                    <li><a class="dropdown-item <?php if ($currentPage == PROOT."upload/modify"):?> active <?php endif;?>" href="<?=PROOT?>upload/modify">Delete files</a></li>
-                    <li><a class="dropdown-item <?php if ($currentPage == PROOT."settings/restore"):?> active <?php endif;?>" href="<?=PROOT?>settings/restore">Recycle Bin</a></li>
-                    <li><a class="dropdown-item <?php if ($currentPage == PROOT."register/logout"):?> active <?php endif;?>" href="<?=PROOT?>register/logout">Logout</a></li>
+                    <li><a class="dropdown-item <?php if ($currentPage == PROOT."register/modify"):?> active <?php endif;?>" href="<?=PROOT?>register/modify" id="name">Change name</a></li>
+                    <li><a class="dropdown-item <?php if ($currentPage == PROOT."upload/modify"):?> active <?php endif;?>" href="<?=PROOT?>upload/modify" id="delete">Delete files</a></li>
+                    <li><a class="dropdown-item <?php if ($currentPage == PROOT."settings/restore"):?> active <?php endif;?>" href="<?=PROOT?>settings/restore" id="recycle">Recycle Bin</a></li>
+                    <li><a class="dropdown-item <?php if ($currentPage == PROOT."register/logout"):?> active <?php endif;?>" href="<?=PROOT?>register/logout" id="logout">Logout</a></li>
                 </ul>
             </div>
             <li><a class="nav-link">Hello <?=Users::currentUser()->fname?> <?=Users::currentUser()->lname?></a></li>
@@ -65,24 +65,31 @@ $currentPage= H::currentPage();
 
 <script>
     artyom.addCommands([{
-            description: "Say login",
-            indexes: ["login"],
-            action: function login() {
-                document.getElementById("login").click();
-        }
-        },
-        {
             description: "Say logout",
-            indexes: ["logout"],
+            indexes: ["log out"],
             action: function logout() {
                 document.getElementById("logout").click();
-        }
+            }
         },
         {
             description: "Say next",
             indexes: ["next"],
             action: function next() {
                 document.getElementById("next").click();
+            }
+        },
+        {
+            description: "Say remove from album",
+            indexes: ["remove from album"],
+            action: function remove() {
+                document.getElementById("remove-from-album").click();
+            }
+        },
+        {
+            description: "Say add to album",
+            indexes: ["add to album"],
+            action: function add() {
+                document.getElementById("add-to-album").click();
             }
         },
         {
@@ -93,6 +100,20 @@ $currentPage= H::currentPage();
             }
         },
         {
+            description: "Say create album",
+            indexes: ["create album"],
+            action: function create() {
+                document.getElementById("create").click();
+            }
+        },
+        {
+            description: "Say edit album",
+            indexes: ["edit album"],
+            action: function edit() {
+                document.getElementById("edit").click();
+            }
+        },
+        {
             description: "Say go to images",
             indexes: ["go to images"],
             action: function images() {
@@ -100,94 +121,126 @@ $currentPage= H::currentPage();
             }
         },
         {
-             description: "Say go to videos",
+            description: "Say go to videos",
             indexes: ["go to videos"],
             action: function videos() {
                 document.getElementById("videos").click();
             }
         },
         {
-             description: "Say go to documents",
+            description: "Say go to audios",
+            indexes: ["go to audios"],
+            action: function audios() {
+                document.getElementById("audios").click();
+            }
+        },
+        {
+            description: "Say go to documents",
             indexes: ["go to documents"],
             action: function documents() {
                 document.getElementById("documents").click();
             }
         },
         {
-             description: "Say go to musics",
+            description: "Say go to musics",
             indexes: ["go to musics"],
             action: function musics() {
                 document.getElementById("musics").click();
             }
         },
         {
-             description: "Say change my name",
+            description: "Say change my name",
             indexes: ["change my name"],
             action: function my_name() {
                 document.getElementById("my-name").click();
             }
         },
         {
-             description: "Say change name",
+            description: "Say change name",
             indexes: ["change name"],
             action: function name() {
                 document.getElementById("name").click();
             }
         },
         {
-             description: "Say delete files",
-            indexes: ["delete files"],
+            description: "Say delete files",
+            indexes: ["delete"],
             action: function deletes() {
                 document.getElementById("delete").click();
             }
         },
         {
-             description: "Say delete all files",
-            indexes: ["delete all files"],
+            description: "Say delete all files",
+            indexes: ["delete all"],
             action: function delete_all() {
                 document.getElementById("delete-all").click();
             }
         },
         {
-             description: "Say restore files",
-            indexes: ["restore files"],
+            description: "Say restore files",
+            indexes: ["restore"],
             action: function restore() {
                 document.getElementById("restore").click();
             }
         },
         {
-             description: "Say restore all files",
-            indexes: ["restore all files"],
+            description: "Say restore all files",
+            indexes: ["restore all"],
             action: function restore_all() {
                 document.getElementById("restore-all").click();
             }
         },
         {
-             description: "Say upload",
+            description: "Say upload",
             indexes: ["upload"],
             action: function upload() {
                 document.getElementById("upload").click();
             }
         },
         {
-             description: "Say edit album",
+            description: "Say edit album",
             indexes: ["edit album"],
             action: function edit_album() {
                 document.getElementById("edit-album").click();
             }
         },
         {
-             description: "Say go to recycle bin",
+            description: "Say go to recycle bin",
             indexes: ["recycle bin"],
             action: function recycle() {
                 document.getElementById("recycle").click();
             }
         },
         {
-             description: "Say home",
+            description: "Say home",
             indexes: ["home"],
-            action: function home() {
+            action: function homes() {
                 document.getElementById("home").click();
+            }
+        },
+        {
+            description: "Say submit, save",
+            indexes: ["submit", "save"],
+            action: function save() {
+                document.getElementById("save").click();
+            }
+        },
+        {
+            description: "Say cancel",
+            indexes: ["cancel"],
+            action: function cancel() {
+                document.getElementById("cancel").click();
+            }
+        },
+        {
+            description: "Say cyka blyat",
+            indexes: ["Suka blyat"],
+            action: function cyka_blyat() {
+                var win = window.open('https://www.youtube.com/watch?v=vNXgknozyhw&t=49s', '_blank');
+                if (win) {
+                    //Browser has allowed it to be opened
+                    win.focus();
+                }
             }
         }
     ]);
@@ -218,4 +271,4 @@ $currentPage= H::currentPage();
     }
 
 </script>
- <?php endif;?>
+<?php endif;?>

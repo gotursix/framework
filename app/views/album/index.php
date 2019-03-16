@@ -11,7 +11,7 @@ use Core\Session;
           <div class="whitebg center formerfix">
             <h1 class="center lg-bg col-md-5 mx-auto ">My albums</h1>
             <hr>
-            <a href="<?=PROOT?>album/add" class="btn btn-info" >
+            <a href="<?=PROOT?>album/add" class="btn btn-info" id="create">
               Create album
             </a>
             <hr>
@@ -52,7 +52,7 @@ use Core\Session;
                       </td>
                       <td>
                         <br>
-                        <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn-edit">Edit album</a>
+                        <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn-edit" id="edit">Edit album</a>
                         <br>
                       </td>
                       <?php endforeach; ?>
