@@ -59,7 +59,7 @@
    }
 
    .bot {
-      background-image: url("../img/voice.jpg");
+       background-image: url("../img/voice.jpg");
        background-position: center;
        background-size: cover;
        background-color: #FFF;

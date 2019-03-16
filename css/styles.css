@@ -1,114 +1,128 @@
 @charset "utf-8";
 /* CSS Document */
 
-#image-grid{
-	margin:6px;
+#image-grid {
+    margin: 6px;
 }
-.custom-col{
-	padding:6px;	
-	overflow:hidden;
+
+.custom-col {
+    padding: 6px;
+    overflow: hidden;
 }
-.img-button{
-	cursor:pointer;
+
+.img-button {
+    cursor: pointer;
 }
-.img-button > .caption{
-	-webkit-transition: all 0.4s ease;
-  	-moz-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease; 
-	position: absolute; 
-	bottom:-30%;
-	opacity:0;
-	width: 100%;
-	height: 100%;
-	text-align:center;
-	background-image: -webkit-linear-gradient(270deg,rgba(59,59,59,0.00) 0%,rgba(0,0,0,0.50) 72.02%);
-	background-image: -moz-linear-gradient(270deg,rgba(59,59,59,0.00) 0%,rgba(0,0,0,0.50) 72.02%);
-	background-image: -o-linear-gradient(270deg,rgba(59,59,59,0.00) 0%,rgba(0,0,0,0.50) 72.02%);
-	background-image: linear-gradient(180deg,rgba(59,59,59,0.00) 0%,rgba(0,0,0,0.50) 72.02%);
+
+.img-button > .caption {
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: -30%;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-image: -webkit-linear-gradient(270deg, rgba(59, 59, 59, 0.00) 0%, rgba(0, 0, 0, 0.50) 72.02%);
+    background-image: -moz-linear-gradient(270deg, rgba(59, 59, 59, 0.00) 0%, rgba(0, 0, 0, 0.50) 72.02%);
+    background-image: -o-linear-gradient(270deg, rgba(59, 59, 59, 0.00) 0%, rgba(0, 0, 0, 0.50) 72.02%);
+    background-image: linear-gradient(180deg, rgba(59, 59, 59, 0.00) 0%, rgba(0, 0, 0, 0.50) 72.02%);
 }
-.img-button:hover > .caption{
-	-webkit-transform: translate(0em,-30%);
-   -moz-transform: translate(0em,-30%);
-   -o-transform: translate(0em,-30%);
-	transform: translate(0em,-30%);
-	opacity:100;
+
+.img-button:hover > .caption {
+    -webkit-transform: translate(0em, -30%);
+    -moz-transform: translate(0em, -30%);
+    -o-transform: translate(0em, -30%);
+    transform: translate(0em, -30%);
+    opacity: 100;
 }
-.img-button > .caption p{
-	position: absolute;
-	bottom: 0;
-	width: 85%;
-	margin: 20px;
-	font-weight: 300;
-	font-size: 1em;
-	color: white;
-	font-style: normal;
-	font-family: 'Open Sans', sans-serif;
+
+.img-button > .caption p {
+    position: absolute;
+    bottom: 0;
+    width: 85%;
+    margin: 20px;
+    font-weight: 300;
+    font-size: 1em;
+    color: white;
+    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
 }
+
 .modal {
-  text-align: center;
-  padding: 0!important;
+    text-align: center;
+    padding: 0 !important;
 }
+
 .modal:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -4px;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
 }
+
 .modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-  margin:4px;
-}
-.modal-body{
-	padding:12px;
-	background-color:black;
-}
-.modal-body img{
-	width:100%;
-}
-#close-wrapper{
-	position:absolute;
-	top:0;
-	right:0;
-	width:55px;
-	height:55px;
-	background-color:rgba(0,0,0,0.5);
-	border-bottom-left-radius:6px;
-}
-#close-btn{
-	position:absolute;
-	top:20px;
-	right:25px;
-	color:white;
-	opacity:1;
-}
-.popup-caption{
-	width:100%;
-	padding-top:6px;	
-	background-color:black;
-}
-.popup-caption p{
-	text-align:center;
-	font-weight: 300;
-	font-size: 1em;
-	color: white;
-	font-style: normal;
-	font-family: 'Open Sans', sans-serif;
-	color:white;
-	margin-bottom:-4px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    margin: 4px;
 }
 
-@media (min-width:763px){
-	.modal-dialog{
-		width:80%;	
-	}
+.modal-body {
+    padding: 12px;
+    background-color: black;
 }
 
-@media (min-width:1250px){
-	.modal-dialog{
-		width:70%;	
-	}
+.modal-body img {
+    width: 100%;
+}
+
+#close-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 6px;
+}
+
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: white;
+    opacity: 1;
+}
+
+.popup-caption {
+    width: 100%;
+    padding-top: 6px;
+    background-color: black;
+}
+
+.popup-caption p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1em;
+    color: white;
+    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin-bottom: -4px;
+}
+
+@media (min-width:763px) {
+    .modal-dialog {
+        width: 80%;
+    }
+}
+
+@media (min-width:1250px) {
+    .modal-dialog {
+        width: 70%;
+    }
 }
