@@ -38,12 +38,12 @@ $currentPage= H::currentPage();
       <?php if(Users::currentUser()): ?>
       <div class="dropdown">
         <a  href="" id="navbarDropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings</a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="<?=PROOT?>register/modify">Change name</a>
-          <a class="dropdown-item" href="<?=PROOT?>upload/modify">Delete files</a>
-          <a class="dropdown-item" href="<?=PROOT?>settings/restore">Recycle Bin</a>
-          <a class="dropdown-item" href="<?=PROOT?>register/logout">Logout</a>
-        </div>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item <?php if ($currentPage == PROOT."register/modify"):?> active <?php endif;?>" href="<?=PROOT?>register/modify">Change name</a></li>
+          <li><a class="dropdown-item <?php if ($currentPage == PROOT."upload/modify"):?> active <?php endif;?>" href="<?=PROOT?>upload/modify">Delete files</a></li>
+          <li><a class="dropdown-item <?php if ($currentPage == PROOT."settings/restore"):?> active <?php endif;?>" href="<?=PROOT?>settings/restore">Recycle Bin</a></li>
+          <li><a class="dropdown-item <?php if ($currentPage == PROOT."register/logout"):?> active <?php endif;?>" href="<?=PROOT?>register/logout">Logout</a></li>
+        </ul>
       </div>
       <li><a class="nav-link">Hello <?=Users::currentUser()->fname?> <?=Users::currentUser()->lname?></a></li>
       <?php  elseif(!Users::currentUser()): ?>
