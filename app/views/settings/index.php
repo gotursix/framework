@@ -17,7 +17,7 @@ use Core\FH;
   <div class="container">
     <div class="content">
       <div class="row">
-        <div id="image-grid" class="container-fluid ">
+              <div id="image-grid" class="container-fluid ">
           <div class="whitebg center">
             <h1 class="center lg-bg col-md-5 mx-auto">Deleted  images</h1>
             <hr>
@@ -44,7 +44,7 @@ use Core\FH;
               <div class="col-lg-5 mx-auto col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" data-sub-html="<h4><?=$settings->name ?></h4>">
               <?php endif;?>
               <?php if(FH::number($this->settings , 1) == 1):  ?>
-              <div class="col-lg-6 mx-auto col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" data-sub-html="<h4><?=$settings->name ?></h4>">
+              <div class="col-lg-5 mx-auto col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" data-sub-html="<h4><?=$settings->name ?></h4>">
               <?php endif;?>
               
                       <img src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
@@ -55,13 +55,26 @@ use Core\FH;
                             <?php if(strlen($settings->name)>25) echo substr($settings->name, -strlen($settings->name)+25 , strlen($settings->name)); ?>
                           </div>
                         </div>
+                        
+                        <?php if(FH::number($this->settings , 1) == 1):  ?>
+                          <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}">
+                          Delete
+                        </a>
                         <br>
+                        <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn-reg btn-primary btn-xs table-fix" >
+                          Restore
+                        </a>
+                        <?php endif;?>
+
+
+                         <?php if(FH::number($this->settings , 1) > 1):  ?>
                         <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}">
                           Delete
                         </a>
                         <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn-reg btn-primary btn-xs table-fix" >
                           Restore
                         </a>
+                        <?php endif;?>
                       </div>
                     </div>
                     <?php $x++; ?>

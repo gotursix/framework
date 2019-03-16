@@ -38,10 +38,10 @@ use Core\Session;
                   <tbody>
                     <?php foreach ($this->album as $album): ?>
                     <tr>
-                      <td >
+                      <td>
                         <br>
-                        <a href="<?=PROOT?>contain/details/<?=$album->id ?>" >
-                          <h5><font class="album-name"><i><?= strtoupper( $album->name) ;?></i></font></h5>
+                        <a href="<?=PROOT?>contain/details/<?=$album->id ?>">
+                          <h5  title="<?=$album->name?>"><font class="album-name"><i><?= strtoupper( $album->name) ;?></i></font></h5>
                         </a>
                         <br>
                       </td>
