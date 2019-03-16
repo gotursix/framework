@@ -14,6 +14,7 @@ use Core\FH ;
 				<div id="image-grid" class="container-fluid ">
 					<div class="whitebg center formerfix">
 						<h1 class=" center lg-bg col-md-5 mx-auto ">Album: <font class="album-name"><i><?= $this->album->name ?></i></font></h1>
+						<br>
 						<h4 class="head-form col-md-5 mx-auto top center ">Files in album</h4>
 						<div id="image-grid" class="container-fluid ">
 							<hr>
@@ -62,7 +63,7 @@ use Core\FH ;
 								<?php $x=1; ?>
 								<?php foreach ($this->contain as $upload): ?>
 								<?php $dir = Users::currentUser()->id; ?>
-								<div class="col-lg-4 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+								<div class="col-lg-4 mx-auto col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 									<video class="embed-responsive embed-responsive-16by9" controls>
 										<source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4" alt="Thumb-<?=$x?>" class="img-responsive" />
 										Your browser does not support the video tag.
@@ -83,7 +84,7 @@ use Core\FH ;
 									<?php $x=1; ?>
 									<?php foreach ($this->contain as $upload): ?>
 									<?php $dir = Users::currentUser()->id; ?>
-									<div class="col-lg-4 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+									<div class="col-lg-4 mx-auto col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 										<audio controls>
 											<source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
 											Your browser does not support the audio element.
@@ -166,7 +167,7 @@ use Core\FH ;
 									<?php $x=1; ?>
 									<?php foreach ($this->upload as $upload): ?>
 									<?php $dir = Users::currentUser()->id; ?>
-									<div class="col-lg-4 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+									<div class="col-lg-4 mx-auto col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 										<video class="embed-responsive embed-responsive-16by9" controls>
 											<source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4" alt="Thumb-<?=$x?>" class="img-responsive" />
 											Your browser does not support the video tag.
@@ -187,7 +188,7 @@ use Core\FH ;
 										<?php $x=1; ?>
 										<?php foreach ($this->upload as $upload): ?>
 										<?php $dir = Users::currentUser()->id; ?>
-										<div class="col-lg-4 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+										<div class="col-lg-4 col-xs-6 mx-auto custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 											<video class="embed-responsive embed-responsive-16by9" controls>
 												<source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4" alt="Thumb-<?=$x?>" class="img-responsive" />
 												Your browser does not support the video tag.
@@ -211,7 +212,7 @@ use Core\FH ;
 											<?php $dir = Users::currentUser()->id; ?>
 											
 											<?php if(FH::count($this->upload) >=4):  ?>
-           				       			    <div class="col-lg-3 mx-auto col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>" title="<?=$upload->name?>">
+           				       			    <div class="col-lg-3  mx-auto col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>" title="<?=$upload->name?>">
          				       		        <?php endif;?>
          			                       <?php if(FH::count($this->upload) == 3):  ?>
           			                       <div class="col-lg-4 mx-auto col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>" title="<?=$upload->name?>">
