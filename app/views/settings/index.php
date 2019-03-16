@@ -59,7 +59,6 @@ use Core\FH;
                         <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}">
                           Delete
                         </a>
-                        <br>
                         <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn-reg btn-primary btn-xs table-fix" >
                           Restore
                         </a>
