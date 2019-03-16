@@ -103,6 +103,24 @@ class FH {
     return $x;
   }
 
+  /**
+   * Check if the parameter is in object
+   * @param  [object] $thing [make sure it's the object with the record]
+   * @param  [string] $in    [make sure it's the name you are searching for]
+   * @return [int]        [returns how many times we founded it in the object]
+   */
+  public static function alreadyin($thing , $in)
+  {
+    $x=0;
+      foreach ($thing as $thing) 
+      {
+        if($thing->name == $in)
+          $x++;
+       }
+       return $x;
+    }
+  
+
 
   public static function displayErrors($errors) 
   {
