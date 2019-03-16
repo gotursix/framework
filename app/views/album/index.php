@@ -15,11 +15,19 @@ use Core\Session;
               Create album
             </a>
             <hr>
+            <?php if(!$this->album): ?>
+            <br>
+            <h1 class="center">
+            You have no albums.
+            </h1>
+            <br>
+            <?php endif; ?>
           </div>
           <br>
           <div class="row">
             <div class="container center">
               <?= Session::displayMsg() ?>
+              <?php if($this->album): ?>
               <div class="center whitetable">
                 <table class="table table-striped ">
                   <thead class=" table-dark">
@@ -44,10 +52,9 @@ use Core\Session;
                       </td>
                       <td>
                         <br>
-                           <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn-edit">Edit album</a>
+                        <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn-edit">Edit album</a>
                         <br>
                       </td>
-                      
                       <?php endforeach; ?>
                       <?php if(!$this->album): ?>
                       <td colspan="3" class="center">
@@ -60,6 +67,7 @@ use Core\Session;
                   </tbody>
                 </table>
               </div>
+              <?php endif; ?>
             </div>
           </div>
         </div>
