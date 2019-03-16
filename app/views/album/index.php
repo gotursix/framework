@@ -16,7 +16,6 @@ use Core\Session;
             </a>
             <hr>
           </div>
-<<<<<<< Updated upstream
           <br>
           <div class="row">
             <div class="container center">
@@ -45,7 +44,7 @@ use Core\Session;
                       </td>
                       <td>
                         <br>
-                           <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn btn-primary">Edit album</a>
+                           <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn-reg btn-primary">Edit album</a>
                         <br>
                       </td>
                       

@@ -1,6 +1,7 @@
 <?php
   namespace Core;
   use Core\Session;
+  use Core\H;
 
 class FH {
   public static function inputBlock($type, $label, $name, $value='', $inputAttrs=[], $divAttrs=[])
@@ -17,13 +18,6 @@ class FH {
   {
     $inputString = self::stringifyAttrs($inputAttrs);
     $html = '<input type="submit" value="'.$buttonText.'"'.$inputString.' />';
-    return $html;
-  }
-
-    public static function hoverTag($text, $hover)
-  {
-    $inputString = self::sanitize($text);
-    $html = '<p data-toggle="tooltip" data-placement="bottom" title="'.$text.'"/>'.$hover.'</p>';
     return $html;
   }
 
@@ -94,6 +88,16 @@ class FH {
     foreach ($thing as $thing) 
     {
       if($thing->format == $id)
+        $x++;
+    }
+    return $x;
+  }
+
+  public static function count($thing)
+  {
+    $x = 0;
+    foreach ($thing as $thing) 
+    {
         $x++;
     }
     return $x;
