@@ -33,7 +33,7 @@ use Core\Session;
                       <td >
                         <br>
                         <a href="<?=PROOT?>contain/details/<?=$album->id ?>" >
-                          <h6><font class="album-name"><i><?= strtoupper( $album->name) ;?></i></font></h6>
+                          <h5><font class="album-name"><i><?= strtoupper( $album->name) ;?></i></font></h5>
                         </a>
                         <br>
                       </td>
