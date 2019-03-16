@@ -42,31 +42,7 @@ select.form-control:focus::-ms-value{color:#495057;background-color:#fff}
 /*======================================================
               REGISTER BUTTon
 ========================================================*/
-.btn-reg {
-	\.btn\ \{\ display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-.btn-reg:hover {
-    color: #dc2265;
-    text-decoration: none;
-    border-color: #eb3d78;
-    border-width: 1px;
-    background: linear-gradient(220deg, #0000004d, #fff);
-}
+
 /*======================================================
                LOGIN BUTTon
 ========================================================*/
@@ -130,12 +106,33 @@ select.form-control:focus::-ms-value{color:#495057;background-color:#fff}
 	border-width: 1px;
 	background: linear-gradient(60deg, transparent, transparent);
 }
-/*
-.btn.focus,.btn:focus{
-	outline:0;
-	box-shadow:0 0 0 .2rem rgba(0,123,255,.25)
-}*/
-
+.btn-edit{
+	cursor:pointer;
+	display:inline-block;
+	font-weight:400;
+	color:white;
+	text-align:center;
+	vertical-align:middle;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	background-color:#007bff;
+	border:1px solid transparent;
+	padding:.375rem .75rem;
+	width:130px;
+	font-size:1rem;
+	line-height:1.5;
+	border-radius:.25rem;
+	transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-edit:hover{
+	color:#007bff;
+	text-decoration: none;
+	border-color:#007bff;
+	border-width: 1px;
+	background: linear-gradient(60deg, transparent, transparent);
+}
 .btn.disabled,.btn:disabled{
 	opacity:.65
 	}
@@ -148,19 +145,21 @@ a.btn.disabled,fieldset:disabled a.btn{pointer-events:none}
 .btn-primary{
 	color:#fff;
 	background-color:#007bff;
-	border-color:#007bff
+	border-color:#007bff;
 }
-/* OLD
+
+/* - OLD
 .btn-primary:hover{
 	color:#fff;
 	background-color:#0069d9;
 	border-color:#0062cc
-}*/
-btn-primary:hover {
+}
+- NEW, but btn-reg do aprox same thing
+.btn-primary:hover {
     color: #fff;
     background-color: #145396;
     border-color: #145396;
-}
+}*/
 .btn-primary.disabled,.btn-primary:disabled{
 	color:#fff;
 	background-color:#007bff;
@@ -174,6 +173,21 @@ btn-primary:hover {
 .btn-primary:not(:disabled):not(.disabled).active:focus,.btn-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-primary.dropdown-toggle:focus{
 	box-shadow:0 0 0 .2rem rgba(38,143,255,.5)
 }
+
+.btn-edit.disabled,.btn-edit:disabled{
+	color:#fff;
+	background-color:#007bff;
+	border-color:#007bff;
+}
+.btn-edit:not(:disabled):not(.disabled).active,.btn-edit:not(:disabled):not(.disabled):active,.show>.btn-edit.dropdown-toggle{
+	color:#fff;
+	background-color:#0062cc;
+	border-color:#005cbf
+}
+.btn-edit:not(:disabled):not(.disabled).active:focus,.btn-edit:not(:disabled):not(.disabled):active:focus,.show>.btn-edit.dropdown-toggle:focus{
+	box-shadow:0 0 0 .2rem rgba(38,143,255,.5);
+}
+
 .btn-secondary{
 	color:#fff;
 	background-color:#6c757d;

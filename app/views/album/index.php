@@ -44,7 +44,7 @@ use Core\Session;
                       </td>
                       <td>
                         <br>
-                           <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn-reg btn-primary">Edit album</a>
+                           <a href="<?=PROOT?>contain/edit/<?=$album->id?>" class="btn-edit">Edit album</a>
                         <br>
                       </td>
                       
