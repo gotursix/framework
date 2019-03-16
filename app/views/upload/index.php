@@ -227,7 +227,7 @@ use Core\H;
 											<div class="whitebg center <?php if(FH::number($this->upload , 1)>0):  ?>formerfix<?php endif;?>">
 												<h1 class="center lg-bg col-md-5 mx-auto ">Delete  files</h1>
 												<hr>
-												<a href="<?=PROOT?>settings/restore" class="btn btn-primary">
+												<a href="<?=PROOT?>settings/restore" class="btn-reg btn-primary">
 													Restore files
 												</a>
 												<hr><br>
