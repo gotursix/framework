@@ -3,8 +3,8 @@
   "Upload" : "upload/add",
   "My Files": {
     "Images" : "upload/images",
-    "Video" : "upload/video",
-    "Audio" : "upload/audio",
+    "Videos" : "upload/video",
+    "Audios" : "upload/audio",
     "Documents" : "upload/documents"
   },
   "Albums" :"album"
