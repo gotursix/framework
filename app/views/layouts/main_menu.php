@@ -119,6 +119,76 @@ $currentPage= H::currentPage();
             action: function musics() {
                 document.getElementById("musics").click();
             }
+        },
+        {
+             description: "Say change my name",
+            indexes: ["change my name"],
+            action: function my_name() {
+                document.getElementById("my-name").click();
+            }
+        },
+        {
+             description: "Say change name",
+            indexes: ["change name"],
+            action: function name() {
+                document.getElementById("name").click();
+            }
+        },
+        {
+             description: "Say delete files",
+            indexes: ["delete files"],
+            action: function deletes() {
+                document.getElementById("delete").click();
+            }
+        },
+        {
+             description: "Say delete all files",
+            indexes: ["delete all files"],
+            action: function delete_all() {
+                document.getElementById("delete-all").click();
+            }
+        },
+        {
+             description: "Say restore files",
+            indexes: ["restore files"],
+            action: function restore() {
+                document.getElementById("restore").click();
+            }
+        },
+        {
+             description: "Say restore all files",
+            indexes: ["restore all files"],
+            action: function restore_all() {
+                document.getElementById("restore-all").click();
+            }
+        },
+        {
+             description: "Say upload",
+            indexes: ["upload"],
+            action: function upload() {
+                document.getElementById("upload").click();
+            }
+        },
+        {
+             description: "Say edit album",
+            indexes: ["edit album"],
+            action: function edit_album() {
+                document.getElementById("edit-album").click();
+            }
+        },
+        {
+             description: "Say go to recycle bin",
+            indexes: ["recycle bin"],
+            action: function recycle() {
+                document.getElementById("recycle").click();
+            }
+        },
+        {
+             description: "Say home",
+            indexes: ["home"],
+            action: function home() {
+                document.getElementById("home").click();
+            }
         }
     ]);
 
