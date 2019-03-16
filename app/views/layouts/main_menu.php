@@ -7,14 +7,13 @@ $currentPage= H::currentPage();
 ?>
 
 <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-    <a class="navbar-brand" href="<?=PROOT?>home"><?=MENU_BRAND?></a>
+    <a class="navbar-brand" href="<?=PROOT?>home" id="home"><?=MENU_BRAND?></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <?php foreach($menu as $key => $val):
-      $active = ''; ?>
+            <?php foreach($menu as $key => $val): $active = ''; ?>
             <?php if(is_array($val)): ?>
             <li class="nav-item dropdown">
                 <a href="" id="navbarDropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$key?> <span class="caret"></span></a>
@@ -24,17 +23,20 @@ $currentPage= H::currentPage();
                     <?php if($k == 'separator'): ?>
                     <li role="separator" class="dropdown-divider"></li>
                     <?php else: ?>
-                    <li><a class="dropdown-item <?=$active?>" href="<?=$v?>"><?=$k?></a></li>
+                    <li><a class="dropdown-item <?=$active?>" href="<?=$v?>" id="<?=strtolower($k)?>"><?=$k?></a></li>
                     <?php endif; ?>
                     <?php endforeach; ?>
                 </ul>
             </li>
             <?php else:
-      $active = ($val == $currentPage)? 'active':''; ?>
-            <li><a class=" nav-link <?=$active?>" href="<?=$val?>"><?=$key?></a></li>
+                 $active = ($val == $currentPage)? 'active':''; ?>
+            <li><a class=" nav-link <?=$active?>" href="<?=$val?>" id="<?=strtolower($key)?>"><?=$key?></a></li>
             <?php endif; ?>
             <?php endforeach; ?>
         </ul>
+
+
+
         <ul class="nav navbar-nav navbar-right">
             <?php if(Users::currentUser()): ?>
             <div class="dropdown">
