@@ -17,7 +17,7 @@ use Core\Session;
             <hr>
           </div>
           <br>
-          <div class="row">
+        <div class="row">
             <div class="container center">
               <?= Session::displayMsg() ?>
               <div class="center whitetable">
