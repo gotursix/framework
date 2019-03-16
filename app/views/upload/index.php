@@ -88,7 +88,7 @@ use Core\FH;
 										<?php foreach ($this->upload as $upload): ?>
 										<?php if($upload->format == 2): ?>
 										<?php $dir = Users::currentUser()->id; ?>
-										<div class="col-lg-4 col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+										<div class="col-lg-4 mx-auto col-xs-6 custom-col" data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 											<video class="embed-responsive embed-responsive-16by9" controls>
 												<source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="video/mp4" alt="Thumb-<?=$x?>" class="img-responsive" />
 												Your browser does not support the video tag.
@@ -123,7 +123,7 @@ use Core\FH;
 					<div class="content">
 						<div class="row">
 							<div id="image-grid" class="container-fluid ">
-								<div class="whitebg center <?php if(FH::number($this->upload , 2)>0):  ?>formerfix<?php endif;?>">
+								<div class="whitebg center <?php if(FH::number($this->upload , 1) + FH::number($this->upload , 2)>0):  ?>formerfix<?php endif;?>">
 									<h1 class="center lg-bg col-md-5 mx-auto ">Delete  audios</h1>
 									<hr>
 									<a href="<?=PROOT?>upload/deleteall/3" class="btn btn-danger"  onclick="if(!confirm('Are you sure ?')){return false;}">
@@ -135,7 +135,7 @@ use Core\FH;
 										<?php foreach ($this->upload as $upload): ?>
 										<?php if($upload->format == 3): ?>
 										<?php $dir = Users::currentUser()->id; ?>
-										<div class="col-lg-4 col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
+										<div class="col-lg-4 mx-auto col-xs-6 custom-col"  data-src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" data-sub-html="<h4><?=$upload->name ?></h4>">
 											<audio controls>
 												<source src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" type="audio/mpeg">
 												Your browser does not support the audio element.
@@ -170,7 +170,7 @@ use Core\FH;
 					<div class="content">
 						<div class="row">
 							<div id="image-grid" class="container-fluid ">
-								<div class="whitebg center <?php if(FH::number($this->upload , 3)>0):  ?>formerfix<?php endif;?>">
+								<div class="whitebg center <?php if(FH::number($this->upload , 3)+FH::number($this->upload , 1) + FH::number($this->upload , 2)>0):  ?>formerfix<?php endif;?>">
 									<h1 class="center lg-bg col-md-5 mx-auto ">Delete  documents</h1>
 									<hr>
 									<a href="<?=PROOT?>upload/deleteall/4" class="btn btn-danger" onclick="if(!confirm('Are you sure ?')){return false;}"	 >
