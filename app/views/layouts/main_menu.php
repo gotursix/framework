@@ -54,8 +54,9 @@ $currentPage= H::currentPage();
         </ul>
     </div>
 </nav>
-<?php 	if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') !== false
- || strpos($_SERVER['HTTP_USER_AGENT'], 'CriOS') !== false): ?>
+
+
+<?php if(Users::currentUser() &&  preg_match('/(Chrome|CriOS)\//i',$_SERVER['HTTP_USER_AGENT']) && !preg_match('/(Aviator|ChromePlus|coc_|Dragon|Edge|Flock|Iron|Kinza|Maxthon|MxNitro|Nichrome|OPR|Perk|Rockmelt|Seznam|Sleipnir|Spark|UBrowser|Vivaldi|WebExplorer|YaBrowser)/i',$_SERVER['HTTP_USER_AGENT']) )	: ?>
 
 <span class="snatch-button" data-text="">
     <a class="lwc-chat-button bubble bot" onclick="startArtyom()" value="Start voice commands"></a>
