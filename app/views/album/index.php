@@ -23,9 +23,9 @@ use Core\Session;
               <div class="center whitetable">
                 <table class="table table-striped ">
                   <thead class=" table-dark">
-                    <th scope="col" class="table-content"><h4>Album name</h4></th>
-                    <th scope="col" class="table-content"><h4>Album contains</h4></th>
-                    <th scope="col" class="table-content"><h4>Edit</h4></th>
+                    <th scope="col" class="table-content"><h5>Album name</h5></th>
+                    <th scope="col" class="table-content"><h5>Album contains</h5></th>
+                    <th scope="col" class="table-content"><h5>Edit</h5></th>
                   </thead>
                   <tbody>
                     <?php foreach ($this->album as $album): ?>
@@ -33,7 +33,7 @@ use Core\Session;
                       <td >
                         <br>
                         <a href="<?=PROOT?>contain/details/<?=$album->id ?>" >
-                          <h5><font class="album-name"><i><?= strtoupper( $album->name) ;?></i></font></h5>
+                          <h6><font class="album-name"><i><?= strtoupper( $album->name) ;?></i></font></h6>
                         </a>
                         <br>
                       </td>
