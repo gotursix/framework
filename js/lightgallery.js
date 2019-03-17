@@ -494,14 +494,14 @@
 
         // Create controlls
         if (this.s.controls && this.items.length > 1) {
-            controls = '<div class="lg-actions">' + '<div class="lg-prev lg-icon">' + this.s.prevHtml + '</div>' + '<div class="lg-next lg-icon">' + this.s.nextHtml + '</div>' + '</div>';
+            controls = '<div class="lg-actions">' + '<div class="lg-prev lg-icon" id="back">' + this.s.prevHtml + '</div>' + '<div class="lg-next lg-icon" id="next">' + this.s.nextHtml + '</div>' + '</div>';
         }
 
         if (this.s.appendSubHtmlTo === '.lg-sub-html') {
             subHtmlCont = '<div class="lg-sub-html"></div>';
         }
 
-        template = '<div class="lg-outer ' + this.s.addClass + ' ' + this.s.startClass + '">' + '<div class="lg" style="width:' + this.s.width + '; height:' + this.s.height + '">' + '<div class="lg-inner">' + list + '</div>' + '<div class="lg-toolbar group">' + '<span class="lg-close lg-icon"></span>' + '</div>' + controls + subHtmlCont + '</div>' + '</div>';
+        template = '<div class="lg-outer ' + this.s.addClass + ' ' + this.s.startClass + '">' + '<div class="lg" style="width:' + this.s.width + '; height:' + this.s.height + '">' + '<div class="lg-inner">' + list + '</div>' + '<div class="lg-toolbar group">' + '<span id="close" class="lg-close lg-icon"></span>' + '</div>' + controls + subHtmlCont + '</div>' + '</div>';
 
         document.body.insertAdjacentHTML('beforeend', template);
         this.outer = document.querySelector('.lg-outer');

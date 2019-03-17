@@ -74,6 +74,55 @@ $currentPage= H::currentPage();
             }
         },
         {
+            description: "Say close",
+            indexes: ["close"],
+            action: function close() {
+                document.getElementById("close").click();
+            }
+        },
+        {
+            description: "Say download",
+            indexes: ["download"],
+            action: function download() {
+                document.getElementById("lg-download").click();
+            }
+        },
+        {
+            description: "Say autoplay",
+            indexes: ["autoplay"],
+            action: function autoplay() {
+                document.getElementById("autoplay").click();
+            }
+        },
+        {
+            description: "Say fullscreen",
+            indexes: ["full screen"],
+            action: function fullscreen() {
+                document.getElementById("fullscreen").click();
+            }
+        },
+        {
+            description: "Say zoom in",
+            indexes: ["zoom in"],
+            action: function zoomin() {
+                document.getElementById("lg-zoom-in").click();
+            }
+        },
+        {
+            description: "Say zoom out",
+            indexes: ["zoom out"],
+            action: function zoomout() {
+                document.getElementById("lg-zoom-out").click();
+            }
+        },
+        {
+            description: "Say actual size",
+            indexes: ["actual size"],
+            action: function actual_size() {
+                document.getElementById("lg-actual-size").click();
+            }
+        },
+        {
             description: "Say next",
             indexes: ["next"],
             action: function next() {
@@ -95,8 +144,8 @@ $currentPage= H::currentPage();
             }
         },
         {
-            description: "Say back",
-            indexes: ["back"],
+            description: "Say back or previous",
+            indexes: ["back", "previous"],
             action: function back() {
                 document.getElementById("back").click();
             }
