@@ -68,7 +68,7 @@ $currentPage= H::currentPage();
 <script>
     artyom.addCommands([{
             description: "Say logout",
-            indexes: ["log out"],
+            indexes: ["logout"],
             action: function logout() {
                 document.getElementById("logout").click();
             }
