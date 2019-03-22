@@ -3,6 +3,7 @@ namespace App\Controllers;
 use Core\Controller;
 use Core\Router;
 use Core\H;
+use Core\FH;
 use App\Models\Users;
 use App\Models\Login;
 
@@ -119,8 +120,14 @@ class RegisterController extends Controller
         if($pass == true)
          {
            if($this->UsersModel->findByEmail($user->email))
-           {
-                $user->addErrorMessage('email','Yo , nigga , good email.');
+           {  
+               $token = "ceva";
+               $userModel = $this->UsersModel->findByEmail($user->email);
+               $str = "0123456789qwertzuioplkjhgfdsayxcvbnm";
+               $str = str_shuffle($str);
+               $str = substr($str, 0, 20);
+               FH::sendmail($userModel->email , $userModel->username , $str);
+               $user->addErrorMessage('email','The email have been sent. Please check your inbox ( or spam ) .');
             }
             else 
            {

@@ -119,8 +119,15 @@ class FH {
        }
        return $x;
     }
-  
 
+
+  public static function sendmail($to , $username , $str)
+  {
+      $url = "https://rufus-framework.com/register/restore/$str";
+      $msg = "A link to reset the password for the user <b>$username</b> have been requested. If you requested it , you can access it here : " . $url;
+      mail($to, "Reset password", $msg, "From: admin-rufusframework@rufus-framework.com\r\n");
+  }
+  
 
   public static function displayErrors($errors) 
   {
