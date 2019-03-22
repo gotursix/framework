@@ -98,29 +98,47 @@ class RegisterController extends Controller
   public function recoverAction()
    {
      $user = new Users;
-
-
      if($this->request->isPost())
      {
-           $this->request->csrfCheck();
-      
-          $user = $this->UsersModel->findByEmail($_POST['email']);
-          $user->assign($this->request->get());
-          if($user)
-          {
-            H::dnd($user);
-          }
-          else
+      $this->request->csrfCheck();
+      $user->assign($this->request->get());
+      $pass = true;
+      $required = true;
+      if($user->email)
+       {
+       $pass = filter_var($user->email , FILTER_VALIDATE_EMAIL);
+       }
+       else 
+       {
+        $user->addErrorMessage('email','The email is required.');
+        $required = false;
+       }
+    
+      if($required == true)
+      {
+        if($pass == true)
          {
-
-           $user->addErrorMessage('email','Your email does not belong to an account');
-         }
-     }
-     
-
+           if($this->UsersModel->findByEmail($user->email))
+           {
+                $user->addErrorMessage('email','Yo , nigga , good email.');
+            }
+            else 
+           {
+            $user->addErrorMessage('email','This email does not exist.');
+           }
+        }
+        else 
+         {
+          $user->addErrorMessage('email','Please enter a valid email adress.');
+        }
+      } 
+       else
+      {
+        $user->addErrorMessage('email','The email is required.');
+      }
+    }
      $this->view->displayErrors = $user->getErrorMessages();
      $this->view->user = $user;
-     $this->view->postAction = PROOT . 'register' . DS . 'recover';
      $this->view->render('register/recover');
    }
 
