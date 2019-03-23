@@ -124,7 +124,7 @@ class FH {
   public static function sendmail($to , $username , $str)
   {
       $url = "https://rufus-framework.com/reset/reset/$str";
-      $msg = "A link to reset the password for the user <b>$username</b> have been requested. If you requested it , you can access it here : " . $url;
+      $msg = "A link to reset the password for the user $username have been requested. If you requested it , you can access it here : " . $url;
       mail($to, "Reset password", $msg, "From: admin-rufusframework@rufus-framework.com\r\n");
   }
   
