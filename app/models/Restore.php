@@ -44,4 +44,9 @@ class Restore extends Model
    {
      return $this->findFirst(['conditions'=>'email = ?','bind'=>[$email]]);
    }
+
+    public function findByToken($token)
+   {
+     return $this->findFirst(['conditions'=>'token = ?','bind'=>[$token]]);
+   }
 }

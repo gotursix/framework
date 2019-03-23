@@ -33,11 +33,17 @@ class RestoreController extends Controller
            $user = $this->RestoreModel->findByEmail($user->email);
            $str = "W3dzqXfYkCOmL8IEeMqb6u4d8xtLPvYSgvKZNQMrHf7mz9688vl8SlEpGjm0";
            $str = str_shuffle($str);
-           $str = substr($str, 0, 30);
+           
+          $token = $this->RestoreModel->findByToken( $str );
+          while($token != false) 
+          {
+            $str = str_shuffle($str);
+            $token = $this->RestoreModel->findByToken( $str );
+          }
+           $str = substr($str, 0, 30); 
            $user->token = $str;
            $user->save();
            $user->addErrorMessage('username','The token should be '. $str .'   .');
-
            /**
             * FH::sendmail($userModel->email , $userModel->username , $str);
             */
