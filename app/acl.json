@@ -2,6 +2,8 @@
   "Guest" : {
     "denied" : {},
     "Home" : ["*"],
+    "Restore" : ["recover"],
+    "Reset" : ["reset"],
     "Register" : ["login", "register"],
     "Restricted" : ["*"]
   },
@@ -10,7 +12,8 @@
       "Register" : ["login", "register"]
     },
     "Register" : ["logout","modify"],
-    "Restore" : ["recover","restore"],
+    "Reset" : ["reset"],
+    "Restore" : ["recover"],
     "Album" : ["*"],
     "Settings" : ["*"],
     "Contain" : ["*"],

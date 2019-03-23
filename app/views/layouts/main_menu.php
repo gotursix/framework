@@ -52,6 +52,7 @@ $currentPage= H::currentPage();
             <li><a class="nav-link">Hello <?=Users::currentUser()->fname?> <?=Users::currentUser()->lname?></a></li>
             <?php  elseif(!Users::currentUser()): ?>
             <li><a href="<?=PROOT?>register/login" class="nav-link">Login</a></li>
+            <li><a href="<?=PROOT?>restore/recover" class="nav-link">Reset password</a></li>
             <li><a href="<?=PROOT?>register/register" class="nav-link">Register</a></li>
             <?php endif; ?>
         </ul>

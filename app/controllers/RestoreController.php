@@ -33,35 +33,38 @@ class RestoreController extends Controller
            $user = $this->RestoreModel->findByEmail($user->email);
            $str = "W3dzqXfYkCOmL8IEeMqb6u4d8xtLPvYSgvKZNQMrHf7mz9688vl8SlEpGjm0";
            $str = str_shuffle($str);
-           
-          $token = $this->RestoreModel->findByToken( $str );
-          while($token != false) 
+          if($user->token == null)
           {
-            $str = str_shuffle($str);
             $token = $this->RestoreModel->findByToken( $str );
-          }
+            while($token != false) 
+             {
+               $str = str_shuffle($str);
+               $token = $this->RestoreModel->findByToken( $str );
+              }
            $str = substr($str, 0, 30); 
            $user->token = $str;
            $user->save();
-           $user->addErrorMessage('username','The token should be '. $str .'   .');
-           /**
-            * FH::sendmail($userModel->email , $userModel->username , $str);
-            */
+           $user->addErrorMessage('username','An email with the link have been sent. If you do not recive it , please check the spam.');
+           FH::sendmail($userModel->email , $userModel->username , $str);
+          }
+          else 
+          {
+           $user->addErrorMessage('username','An email have been already sent. If you have not recived it, plese check the spam.');
+          }
          }
          else 
          {
             $user->addErrorMessage('username','This email does not belong to any account.');
          }
-         }} 
-       
-
-       
-     
+       }
+     } 
      $this->view->displayErrors = $user->getErrorMessages();
      $this->view->user = $user;
      $this->view->render('register/recover');
    }
 
-
-
 }
+
+
+
+
