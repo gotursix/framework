@@ -5,7 +5,7 @@ use Core\FH;
 <?php $this->end(); ?>
 <?php $this->start('body'); ?>
 <div class="background">
-	<form action="<?=PROOT?>register/recover" method="post">
+	<form action="<?=PROOT?>restore/recover" method="post">
 		<?= FH::csrfInput() ?>
 		<div class="container">
 			<div class="content">
