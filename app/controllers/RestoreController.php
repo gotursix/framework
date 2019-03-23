@@ -45,7 +45,7 @@ class RestoreController extends Controller
            $user->token = $str;
            $user->save();
            $user->addErrorMessage('username','An email with the link have been sent. If you do not recive it , please check the spam.');
-           FH::sendmail($userModel->email , $userModel->username , $str);
+           FH::sendmail($user->email , $user->username , $str);
           }
           else 
           {
