@@ -1,5 +1,6 @@
 <?php
 use Core\FH;
+use App\Models\Users;
 ?>
 <?php $this->start('head'); ?>
 <?php $this->end(); ?>
@@ -35,6 +36,7 @@ use Core\FH;
 									<button type="submit" class=" btn-reg btn-block mybtn btn-primary tx-tfm">Recover</button>
 									
 								</div>
+								<?php if(!(Users::currentUser())): ?>
 								<div class="col-md-12 ">
 									
 									<div class="login-or">
@@ -53,6 +55,7 @@ use Core\FH;
 									</a>
 									
 								</div>
+								<?php endif; ?>
 							</form>
 						</div>
 					</div>
