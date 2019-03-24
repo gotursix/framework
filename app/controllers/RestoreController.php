@@ -44,12 +44,12 @@ class RestoreController extends Controller
            $str = substr($str, 0, 30); 
            $user->token = $str;
            $user->save();
-           $user->addErrorMessage('username','An email with the link have been sent. If you do not recive it , please check the spam.');
+           $user->addErrorMessage('username','An email with the link has been sent. If you do not receive it, please check the spam.');
            FH::sendmail($user->email , $user->username , $str);
           }
           else 
           {
-           $user->addErrorMessage('username','An email have been already sent. If you have not recived it, plese check the spam.');
+           $user->addErrorMessage('username','An email has been already sent. If you have not received it, please check the spam.');
           }
          }
          else 

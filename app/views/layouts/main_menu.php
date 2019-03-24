@@ -77,7 +77,7 @@ $currentPage= H::currentPage();
         },
         {
             description: "Say recover",
-            indexes: ["recover"],
+            indexes: ["recover password"],
             action: function recover() {
                 document.getElementById("recover").click();
             }
