@@ -3,6 +3,7 @@ use App\Models\Users;
 use Core\Session;
 use Core\FH;
 ?>
+<?php $this->setSiteTitle('Recycle bin'); ?>
 <?php $this->start('body'); ?>
 <div class="background ">
     <br><br>
@@ -260,7 +261,7 @@ use Core\FH;
                                     <div class="row">
                                         <div id="image-grid" class="container-fluid ">
                                             <div class="whitebg center <?php if(FH::number($this->settings , 4)>0):  ?>formerfix<?php endif;?>">
-                                                <h1 class="center lg-bg col-md-5 mx-auto ">Deleted files</h1>
+                                                <h1 class="center lg-bg col-md-5 mx-auto ">Recycle bin</h1>
                                                 <hr>
                                                 <a href="<?=PROOT?>upload/modify" class="btn btn-danger" id="delete">
                                                     Delete files
