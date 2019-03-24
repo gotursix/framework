@@ -1,6 +1,7 @@
 <?php
 use Core\FH;
 ?>
+<?php $this->setSiteTitle('Upload a file'); ?>
 <?php $this->start('head'); ?>
 <?php $this->end(); ?>
 <?php $this->start('body'); ?>

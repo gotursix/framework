@@ -4,6 +4,7 @@ use Core\Session;
 use Core\FH;
 use Core\H;
 ?>
+<?php $this->setSiteTitle('Delete files'); ?>
 <?php $this->start('body'); ?>
 <div class="background ">
     <br><br>

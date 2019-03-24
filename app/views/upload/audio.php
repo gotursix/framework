@@ -2,6 +2,7 @@
 use App\Models\Users;
 use App\Models\Upload;
 ?>
+<?php $this->setSiteTitle('My audios'); ?>
 <?php $this->start('body'); ?>
 <div class="background">
     <div class="container">

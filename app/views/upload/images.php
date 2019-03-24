@@ -3,6 +3,7 @@ use App\Models\Users;
 use App\Models\Upload;
 use Core\FH;
 ?>
+<?php $this->setSiteTitle('My images'); ?>
 <?php $this->start('body'); ?>
 <div class="background ">
     <div class="container">
