@@ -3,8 +3,7 @@ use Core\Session;
 use Core\FH;
 use App\Models\Users;
 ?>
-
-<?php //$this->setSiteTitle('Home'); //set every spage title ?>
+<?php $this->setSiteTitle('Home'); ?>
 <?php $this->start('body'); ?>
 <div class="background ">
   <div class="container">
