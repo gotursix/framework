@@ -2,6 +2,7 @@
 use Core\FH;
 use App\Models\Users;
 ?>
+<?php $this->setSiteTitle('Recover password'); ?>
 <?php $this->start('head'); ?>
 <?php $this->end(); ?>
 <?php $this->start('body'); ?>

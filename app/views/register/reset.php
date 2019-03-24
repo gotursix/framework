@@ -1,6 +1,7 @@
 <?php
 use Core\FH;
 ?>
+<?php $this->setSiteTitle('Reset password'); ?>
 <?php $this->start('head'); ?>
 <?php $this->end(); ?>
 <?php $this->start('body'); ?>

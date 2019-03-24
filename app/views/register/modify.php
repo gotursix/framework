@@ -2,7 +2,7 @@
 use Core\FH;
 use Core\H;
  ?>
-<?php //H::dnd($this->user); ?>
+<?php $this->setSiteTitle('Change name'); ?>
 <?php $this->start('head'); ?>
 <?php $this->end(); ?>
 <?php $this->start('body'); ?>
