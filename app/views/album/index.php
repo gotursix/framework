@@ -2,6 +2,8 @@
 use Core\H;
 use Core\Session;
 ?>
+<?php $this->setSiteTitle('My albums'); ?>
+
 <?php $this->start('body'); ?>
 <div class="background">
   <div class="container">
