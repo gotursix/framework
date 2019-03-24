@@ -21,4 +21,9 @@ class RestrictedController extends Controller
       $this->view->render('restricted/badToken');
     }
 
+     public function badLinkAction()
+    {
+      $this->view->render('restricted/badLink');
+    }
+
 }

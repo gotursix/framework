@@ -23,7 +23,7 @@ class ResetController extends Controller
     $user = $this->RestoreModel->findByToken($token);
     if(!($user))
     {
-      Router::redirect('');
+      Router::redirect('restricted/badLink');
     }
 
     if($this->request->isPost())
