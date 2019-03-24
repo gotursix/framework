@@ -248,20 +248,27 @@ img {
     }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1000px) {
     .formerfix {
         margin-top: 11%;
     }
-
+    
+    .head-form h1{
+        font-size:18px;
+    }
+    .whitebg h4{
+        font-size:20px;
+    }
+    
     .whitebg a {
         font-weight: 350;
         padding: .175rem .55rem;
-        width: 175px;
+        width: 200px;
         margin-top: 1%;
     }
 
     .lg-bg {
-        font-size: 20px;
+        font-size: 30px;
         padding-top: 1.175%;
     }
 
