@@ -17,7 +17,7 @@ use Core\FH;
 								
 								<div class="col-md-12 center head-form ">
 									
-									<h1>Reset password</h1>
+									<h1>Set a new password</h1>
 									
 								</div>
 								
@@ -31,7 +31,7 @@ use Core\FH;
 								<?= FH::displayErrors($this->displayErrors)?>
 								<div class="col-md-12 text-center mb-3">
 									
-									<button type="submit" class=" btn-reg btn-block mybtn btn-primary tx-tfm">Recover</button>
+									<button type="submit" class=" btn-reg btn-block mybtn btn-primary tx-tfm">Change password</button>
 									
 								</div>
 								<div class="col-md-12 ">
