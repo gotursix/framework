@@ -29,7 +29,7 @@ class Restore extends Model
    public function validator()
    {
      $this->runValidation(new MinValidator($this,['field'=>'password','rule'=>6,'msg'=>'Password must be at least 6 characters.']));
-     $this->runValidation(new RequiredValidator($this , ['field'=>'password','msg'=>'You must chose a new password.']));
+     $this->runValidation(new RequiredValidator($this , ['field'=>'password','msg'=>'You must choose a new password.']));
    }
 
 
