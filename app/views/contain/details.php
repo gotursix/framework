@@ -4,6 +4,7 @@ use App\Models\Upload;
 use Core\FH;
 use Core\H;
 ?>
+<?php $this->setSiteTitle('Album : ' . $this->album->name); ?>
 <?php $this->start('body'); ?>
 <div class="background">
     <div class="container">

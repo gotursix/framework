@@ -5,7 +5,7 @@ use App\Models\Users ;
 use App\Models\Contain ;
 use Core\FH ;
 ?>
-<?php $this->setSiteTitle('Edit Album'); ?>
+<?php $this->setSiteTitle('Edit Album : ' .  $this->album->name); ?>
 <?php $this->start('body'); ?>
 <div class="background">
     <div class="container">
