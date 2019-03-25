@@ -5,7 +5,8 @@ use App\Models\Users;
 ?>
 <?php $this->setSiteTitle('Home'); ?>
 <?php $this->start('body'); ?>
-<div class="background ">
+<div class="background">
+  <div class="container">
     <div class="content">
         <div class="row">
             <div id="image-grid" class="container-fluid ">
@@ -273,6 +274,7 @@ use App\Models\Users;
             </div>
         </div>
     </div>
+</div>
 </div>
 <script>
     function ajaxTest() {
