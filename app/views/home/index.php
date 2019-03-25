@@ -11,9 +11,9 @@ use App\Models\Users;
             <div class="row">
                 <div id="image-grid" class="container-fluid ">
                     <div class="my-margin">
-                        
-                            <div class="whitebg center formerfix">
-                                <div class="carousel-margin">
+
+                        <div class="whitebg center formerfix">
+                            <div class="carousel-margin">
                                 <h1 class="center ">Welcome to Rufus Framework</h1>
 
                                 <!--<div class="center" onclick="ajaxTest();">Button me :>></div>-->
@@ -64,7 +64,7 @@ use App\Models\Users;
                                                 <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">logout</text>
                                             </svg>
                                         </div>
-                                         <div class="carousel-item">
+                                        <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
                                                 <rect width="100%" height="100%" fill="#666"></rect><text x="20%" y="50%" fill="#fff" dy=".3em" class="display-4">recover password</text>

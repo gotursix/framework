@@ -45,7 +45,7 @@ $currentPage= H::currentPage();
                     <li><a class="dropdown-item <?php if ($currentPage == PROOT."register/modify"):?> active <?php endif;?>" href="<?=PROOT?>register/modify" id="name">Change name</a></li>
                     <li><a class="dropdown-item <?php if ($currentPage == PROOT."upload/modify"):?> active <?php endif;?>" href="<?=PROOT?>upload/modify" id="delete">Delete files</a></li>
                     <li><a class="dropdown-item <?php if ($currentPage == PROOT."settings/restore"):?> active <?php endif;?>" href="<?=PROOT?>settings/restore" id="recycle">Recycle Bin</a></li>
-                     <li><a class="dropdown-item <?php if ($currentPage == PROOT."restore/recover"):?> active <?php endif;?>" href="<?=PROOT?>restore/recover" id="recover">Recover password</a></li>
+                    <li><a class="dropdown-item <?php if ($currentPage == PROOT."restore/recover"):?> active <?php endif;?>" href="<?=PROOT?>restore/recover" id="recover">Recover password</a></li>
                     <li><a class="dropdown-item <?php if ($currentPage == PROOT."register/logout"):?> active <?php endif;?>" href="<?=PROOT?>register/logout" id="logout">Logout</a></li>
                 </ul>
             </div>
