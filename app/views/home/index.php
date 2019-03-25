@@ -12,7 +12,8 @@ use App\Models\Users;
                 <div class="my-margin">
                 <div class="whitebg center formerfix">
                     <h1 class="center ">Welcome to Rufus Framework</h1>
-                    <div class="center" onclick="ajaxTest();">Button me :>></div>
+                    
+					<!--<div class="center" onclick="ajaxTest();">Button me :>></div>-->
 
                     <div id="demo" class="carousel slide" data-ride="carousel">
 
