@@ -61,205 +61,235 @@ use App\Models\Users;
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">logout</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">logout</text>
+                                            </svg>
+                                        </div>
+                                         <div class="carousel-item">
+                                            <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                                                <title>Say</title>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="20%" y="50%" fill="#fff" dy=".3em" class="display-4">recover password</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item active">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">close</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">close</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="43%" y="50%" fill="#fff" dy=".3em" class="display-4">download</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="38%" y="50%" fill="#fff" dy=".3em" class="display-4">download</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="43%" y="50%" fill="#fff" dy=".3em" class="display-4">autoplay</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="38%" y="50%" fill="#fff" dy=".3em" class="display-4">autoplay</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="42%" y="50%" fill="#fff" dy=".3em" class="display-4">full screen</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="36%" y="50%" fill="#fff" dy=".3em" class="display-4">full screen</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="42%" y="50%" fill="#fff" dy=".3em" class="display-4">zoom in</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="36%" y="50%" fill="#fff" dy=".3em" class="display-4">zoom in</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="42%" y="50%" fill="#fff" dy=".3em" class="display-4">zoom out</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="36%" y="50%" fill="#fff" dy=".3em" class="display-4">zoom out</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="42%" y="50%" fill="#fff" dy=".3em" class="display-4">actual size</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="36%" y="50%" fill="#fff" dy=".3em" class="display-4">actual size</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">next</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">next</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="30%" y="50%" fill="#fff" dy=".3em" class="display-4">remove from album</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="17%" y="50%" fill="#fff" dy=".3em" class="display-4">remove from album</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="35%" y="50%" fill="#fff" dy=".3em" class="display-4">add to album</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="31%" y="50%" fill="#fff" dy=".3em" class="display-4">add to album</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">back</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">back</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">previous</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">previous</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="42%" y="50%" fill="#fff" dy=".3em" class="display-4">create album</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="33%" y="50%" fill="#fff" dy=".3em" class="display-4">create album</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="42%" y="50%" fill="#fff" dy=".3em" class="display-4">edit album</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="34%" y="50%" fill="#fff" dy=".3em" class="display-4">edit album</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="35%" y="50%" fill="#fff" dy=".3em" class="display-4">go to images</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="31%" y="50%" fill="#fff" dy=".3em" class="display-4">go to images</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="35%" y="50%" fill="#fff" dy=".3em" class="display-4">go to videos</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="31%" y="50%" fill="#fff" dy=".3em" class="display-4">go to videos</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="35%" y="50%" fill="#fff" dy=".3em" class="display-4">go to audios</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="31%" y="50%" fill="#fff" dy=".3em" class="display-4">go to audios</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="35%" y="50%" fill="#fff" dy=".3em" class="display-4">go to documents</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="24%" y="50%" fill="#fff" dy=".3em" class="display-4">go to documents</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="35%" y="50%" fill="#fff" dy=".3em" class="display-4">change my name</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="26%" y="50%" fill="#fff" dy=".3em" class="display-4">change my name</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="42%" y="50%" fill="#fff" dy=".3em" class="display-4">change name</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="28%" y="50%" fill="#fff" dy=".3em" class="display-4">change name</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">delete</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="18%" y="50%" fill="#fff" dy=".3em" class="display-4">delete all images</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="42%" y="50%" fill="#fff" dy=".3em" class="display-4">delete all</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="13%" y="50%" fill="#fff" dy=".3em" class="display-4">delete all documents</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">restore</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="18%" y="50%" fill="#fff" dy=".3em" class="display-4">delete all audios</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="42%" y="50%" fill="#fff" dy=".3em" class="display-4">restore all</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="18%" y="50%" fill="#fff" dy=".3em" class="display-4">delete all videos</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">upload</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="18%" y="50%" fill="#fff" dy=".3em" class="display-4">restore all images</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="42%" y="50%" fill="#fff" dy=".3em" class="display-4">edit album</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="13%" y="50%" fill="#fff" dy=".3em" class="display-4">restore all documents</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">album</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="18%" y="50%" fill="#fff" dy=".3em" class="display-4">restore all videos</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="42%" y="50%" fill="#fff" dy=".3em" class="display-4">recycle bin</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="18%" y="50%" fill="#fff" dy=".3em" class="display-4">restore all audios</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">home</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">upload</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">submit</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="34%" y="50%" fill="#fff" dy=".3em" class="display-4">edit album</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">save</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">album</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">cancel</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="34%" y="50%" fill="#fff" dy=".3em" class="display-4">recycle bin</text>
                                             </svg>
                                         </div>
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
-                                                <rect width="100%" height="100%" fill="#666"></rect><text x="44%" y="50%" fill="#fff" dy=".3em" class="display-4">recover</text>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">home</text>
+                                            </svg>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                                                <title>Say</title>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">submit</text>
+                                            </svg>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                                                <title>Say</title>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">save</text>
+                                            </svg>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                                                <title>Say</title>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">cancel</text>
+                                            </svg>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                                                <title>Say</title>
+                                                <rect width="100%" height="100%" fill="#666"></rect><text x="37%" y="50%" fill="#fff" dy=".3em" class="display-4">recover</text>
                                             </svg>
                                         </div>
                                     </div>
