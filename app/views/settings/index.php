@@ -51,9 +51,9 @@ use Core\FH;
                                             <img src="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
                                             <div class="caption center">
                                                 <div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                    <?php echo substr($settings->name, 0 , 25); ?>
+                                                    <?php echo substr($settings->name, 0 , 20); ?>
                                                     <div class="collapse  word-break margin-file" id="collapseExample<?=$x ?>">
-                                                        <?php if(strlen($settings->name)>25) echo substr($settings->name, -strlen($settings->name)+25 , strlen($settings->name)); ?>
+                                                        <?php if(strlen($settings->name)>20) echo substr($settings->name, -strlen($settings->name)+20 , strlen($settings->name)); ?>
                                                     </div>
                                                 </div>
 
@@ -118,9 +118,9 @@ use Core\FH;
                                                 Your browser does not support the video tag.
                                             </video>
                                             <div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                <?php echo substr($settings->name, 0 , 25); ?>
+                                                <?php echo substr($settings->name, 0 , 20); ?>
                                                 <div class="collapse  word-break margin-file" id="collapseExample<?=$x ?>">
-                                                    <?php if(strlen($settings->name)>25) echo substr($settings->name, -strlen($settings->name)+25 , strlen($settings->name)); ?>
+                                                    <?php if(strlen($settings->name)>20) echo substr($settings->name, -strlen($settings->name)+20 , strlen($settings->name)); ?>
                                                 </div>
                                             </div>
                                             <br>
@@ -170,9 +170,9 @@ use Core\FH;
                                                 Your browser does not support the audio element.
                                             </audio>
                                             <div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                <?php echo substr($settings->name, 0 , 25); ?>
+                                                <?php echo substr($settings->name, 0 , 20); ?>
                                                 <div class="collapse  word-break margin-file" id="collapseExample<?=$x ?>">
-                                                    <?php if(strlen($settings->name)>25) echo substr($settings->name, -strlen($settings->name)+25 , strlen($settings->name)); ?>
+                                                    <?php if(strlen($settings->name)>20) echo substr($settings->name, -strlen($settings->name)+20 , strlen($settings->name)); ?>
                                                 </div>
                                             </div>
                                             <br>
@@ -232,7 +232,7 @@ use Core\FH;
 
                                                         <a href="<?= PROOT . 'files' . DS . $dir  . DS . $settings->name ;?>" target="_blank">
                                                             <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
-                                                            <?=substr($settings->name, 0 , 25);?>
+                                                            <?=substr($settings->name, 0 , 20);?>
                                                             <br>
                                                         </a>
                                                         <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}" >
