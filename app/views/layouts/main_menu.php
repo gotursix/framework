@@ -42,7 +42,7 @@ $currentPage= H::currentPage();
             <div class="dropdown">
                 <a href="" id="navbarDropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item <?php if ($currentPage == PROOT."register/modify"):?> active <?php endif;?>" href="<?=PROOT?>register/modify" id="name">Change name</a></li>
+                    <li><a class="dropdown-item <?php if ($currentPage == PROOT."register/modify"):?> active <?php endif;?>" href="<?=PROOT?>register/modify" id="namec">Change name</a></li>
                     <li><a class="dropdown-item <?php if ($currentPage == PROOT."upload/modify"):?> active <?php endif;?>" href="<?=PROOT?>upload/modify" id="delete">Delete files</a></li>
                     <li><a class="dropdown-item <?php if ($currentPage == PROOT."settings/restore"):?> active <?php endif;?>" href="<?=PROOT?>settings/restore" id="recycle">Recycle Bin</a></li>
                     <li><a class="dropdown-item <?php if ($currentPage == PROOT."restore/recover"):?> active <?php endif;?>" href="<?=PROOT?>restore/recover" id="recover">Recover password</a></li>
@@ -211,8 +211,8 @@ $currentPage= H::currentPage();
         {
             description: "Say change name",
             indexes: ["change name"],
-            action: function name() {
-                document.getElementById("name").click();
+            action: function namec() {
+                document.getElementById("namec").click();
             }
         },
         {
