@@ -22,10 +22,10 @@ use Core\FH;
                     <div class="whitebg center">
                         <h1 class="center lg-bg col-md-5 mx-auto">Deleted images</h1>
                         <hr>
-                        <a href="<?=PROOT?>settings/restoreall/1" class="btn-reg btn-primary" id="restore-all">
+                        <a href="<?=PROOT?>settings/restoreall/1" class="btn-reg btn-primary" id="restore-all-images">
                             Restore all images
                         </a>
-                        <a href="<?=PROOT?>settings/deleteall/1" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}" id="delete-all">
+                        <a href="<?=PROOT?>settings/deleteall/1" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}" id="delete-all-images">
                             Delete all images
                         </a>
                         <hr>
@@ -58,21 +58,21 @@ use Core\FH;
                                                 </div>
 
                                                 <?php if(FH::number($this->settings , 1) == 1):  ?>
-                                                <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}" id="delete">
+                                                <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}" >
                                                     Delete
                                                 </a>
 
-                                                <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn-reg btn-primary btn-xs table-fix" id="restore">
+                                                <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn-reg btn-primary btn-xs table-fix" >
                                                     Restore
                                                 </a>
                                                 <?php endif;?>
 
 
                                                 <?php if(FH::number($this->settings , 1) > 1):  ?>
-                                                <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}" id="delete">
+                                                <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}" >
                                                     Delete
                                                 </a>
-                                                <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn-reg btn-primary btn-xs table-fix" id="restore">
+                                                <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn-reg btn-primary btn-xs table-fix" >
                                                     Restore
                                                 </a>
                                                 <?php endif;?>
@@ -100,10 +100,10 @@ use Core\FH;
                                 <div class="whitebg center <?php if(FH::number($this->settings , 1)>0):  ?>formerfix<?php endif;?>">
                                     <h1 class="center lg-bg col-md-5 mx-auto ">Deleted videos</h1>
                                     <hr>
-                                    <a href="<?=PROOT?>settings/restoreall/2" class="btn btn-primary" id="restre-all">
+                                    <a href="<?=PROOT?>settings/restoreall/2" class="btn btn-primary" id="restre-all-videos">
                                         Restore all videos
                                     </a>
-                                    <a href="<?=PROOT?>settings/deleteall/2" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}" id="delete-all">
+                                    <a href="<?=PROOT?>settings/deleteall/2" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}" id="delete-all-videos">
                                         Delete all videos
                                     </a>
                                     <hr>
@@ -124,10 +124,10 @@ use Core\FH;
                                                 </div>
                                             </div>
                                             <br>
-                                            <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}" id="delete">
+                                            <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}" >
                                                 Delete
                                             </a>
-                                            <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn btn-primary btn-xs table-fix" id="restore">
+                                            <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn btn-primary btn-xs table-fix" >
                                                 Restore
                                             </a>
                                         </div>
@@ -152,10 +152,10 @@ use Core\FH;
                                 <div class="whitebg center <?php if(FH::number($this->settings , 2)+FH::number($this->settings , 1)>0):  ?>formerfix<?php endif;?>">
                                     <h1 class="center lg-bg col-md-5 mx-auto ">Deleted audios</h1>
                                     <hr>
-                                    <a href="<?=PROOT?>settings/restoreall/3" class="btn btn-primary" id="restore-all">
+                                    <a href="<?=PROOT?>settings/restoreall/3" class="btn btn-primary" id="restore-all-audios">
                                         Restore all audios
                                     </a>
-                                    <a href="<?=PROOT?>settings/deleteall/3" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}" id="delete-all">
+                                    <a href="<?=PROOT?>settings/deleteall/3" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}" id="delete-all-audios">
                                         Delete all audio files
                                     </a>
                                     <hr>
@@ -176,10 +176,10 @@ use Core\FH;
                                                 </div>
                                             </div>
                                             <br>
-                                            <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}" id="delete">
+                                            <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}" >
                                                 Delete
                                             </a>
-                                            <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn btn-primary btn-xs table-fix" id="restore">
+                                            <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn btn-primary btn-xs table-fix" >
                                                 Restore
                                             </a>
                                         </div>
@@ -204,10 +204,10 @@ use Core\FH;
                                 <div class="whitebg center <?php if(FH::number($this->settings , 3)+FH::number($this->settings , 2)+FH::number($this->settings , 1)>0):  ?>formerfix<?php endif;?>">
                                     <h1 class="center lg-bg col-md-5 mx-auto ">Deleted documents</h1>
                                     <hr>
-                                    <a href="<?=PROOT?>settings/restoreall/4" class="btn btn-primary" id="restore-all">
+                                    <a href="<?=PROOT?>settings/restoreall/4" class="btn btn-primary" id="restore-all-documents">
                                         Restore all documents
                                     </a>
-                                    <a href="<?=PROOT?>settings/deleteall/4" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}" id="delete-all">
+                                    <a href="<?=PROOT?>settings/deleteall/4" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover them.')){return false;}" id="delete-all-documents">
                                         Delete all documents
                                     </a>
                                     <hr>
@@ -235,10 +235,10 @@ use Core\FH;
                                                             <?=substr($settings->name, 0 , 25);?>
                                                             <br>
                                                         </a>
-                                                        <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}" id="delete">
+                                                        <a href="<?=PROOT?>settings/delete/<?=$settings->id?>" class="btn btn-danger btn-xs restore-btn" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}" >
                                                             Delete
                                                         </a>
-                                                        <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn btn-primary btn-xs table-fix" id="restore">
+                                                        <a href="<?=PROOT?>settings/recover/<?=$settings->id?>" class="btn btn-primary btn-xs table-fix" >
                                                             Restore
                                                         </a>
                                                     </div>
@@ -263,7 +263,7 @@ use Core\FH;
                                             <div class="whitebg center <?php if(FH::number($this->settings , 4)>0):  ?>formerfix<?php endif;?>">
                                                 <h1 class="center lg-bg col-md-5 mx-auto ">Recycle bin</h1>
                                                 <hr>
-                                                <a href="<?=PROOT?>upload/modify" class="btn btn-danger" id="delete">
+                                                <a href="<?=PROOT?>upload/modify" class="btn btn-danger" >
                                                     Delete files
                                                 </a>
                                                 <hr><br>

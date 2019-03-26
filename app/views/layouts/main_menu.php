@@ -216,31 +216,59 @@ $currentPage= H::currentPage();
             }
         },
         {
-            description: "Say delete files",
-            indexes: ["delete"],
-            action: function deletes() {
-                document.getElementById("delete").click();
+            description: "Say delete all files",
+            indexes: ["delete all images"],
+            action: function delete_all_images() {
+                document.getElementById("delete-all-images").click();
             }
         },
         {
             description: "Say delete all files",
-            indexes: ["delete all"],
-            action: function delete_all() {
-                document.getElementById("delete-all").click();
+            indexes: ["delete all documents"],
+            action: function delete_all_documents() {
+                document.getElementById("delete-all-documents").click();
             }
         },
         {
-            description: "Say restore files",
-            indexes: ["restore"],
-            action: function restore() {
-                document.getElementById("restore").click();
+            description: "Say delete all files",
+            indexes: ["delete all videos"],
+            action: function delete_all_videos() {
+                document.getElementById("delete-all-videos").click();
+            }
+        },
+        {
+            description: "Say delete all files",
+            indexes: ["delete all audios"],
+            action: function delete_all_audios() {
+                document.getElementById("delete-all-audios").click();
             }
         },
         {
             description: "Say restore all files",
-            indexes: ["restore all"],
-            action: function restore_all() {
-                document.getElementById("restore-all").click();
+            indexes: ["restore all images"],
+            action: function restore_all_images() {
+                document.getElementById("restore-all-images").click();
+            }
+        },
+        {
+            description: "Say restore all files",
+            indexes: ["restore all documents"],
+            action: function restore_all_documents() {
+                document.getElementById("restore-all-documents").click();
+            }
+        },
+        {
+            description: "Say restore all files",
+            indexes: ["restore all audios"],
+            action: function restore_all_audios() {
+                document.getElementById("restore-all-audios").click();
+            }
+        },
+        {
+            description: "Say restore all files",
+            indexes: ["restore all videos"],
+            action: function restore_all_videos() {
+                document.getElementById("restore-all-videos").click();
             }
         },
         {
