@@ -48,9 +48,9 @@ use Core\H;
                                             <img src="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
                                             <div class="caption center">
                                                 <div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                    <?php echo substr($upload->name, 0 , 25); ?>
+                                                    <?php echo substr($upload->name, 0 , 20); ?>
                                                     <div class="collapse  word-break margin-file" id="collapseExample<?=$x ?>">
-                                                        <?php if(strlen($upload->name)>25) echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name)); ?>
+                                                        <?php if(strlen($upload->name)>20) echo substr($upload->name, -strlen($upload->name)+20 , strlen($upload->name)); ?>
                                                     </div>
                                                 </div>
                                                 <br>
@@ -96,9 +96,9 @@ use Core\H;
                                                 Your browser does not support the video tag.
                                             </video>
                                             <div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                <?php echo substr($upload->name, 0 , 25); ?>
+                                                <?php echo substr($upload->name, 0 , 20); ?>
                                                 <div class="collapse  word-break margin-file" id="collapseExample<?=$x ?>">
-                                                    <?php if(strlen($upload->name)>25) echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name)); ?>
+                                                    <?php if(strlen($upload->name)>20) echo substr($upload->name, -strlen($upload->name)+20 , strlen($upload->name)); ?>
                                                 </div>
                                             </div>
                                             <br>
@@ -143,9 +143,9 @@ use Core\H;
                                                 Your browser does not support the audio element.
                                             </audio>
                                             <div class="caption center word-break margin-file" data-toggle="collapse" href="#collapseExample<?=$x ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                <?php echo substr($upload->name, 0 , 25); ?>
+                                                <?php echo substr($upload->name, 0 , 20); ?>
                                                 <div class="collapse  word-break margin-file" id="collapseExample<?=$x ?>">
-                                                    <?php if(strlen($upload->name)>25) echo substr($upload->name, -strlen($upload->name)+25 , strlen($upload->name)); ?>
+                                                    <?php if(strlen($upload->name)>20) echo substr($upload->name, -strlen($upload->name)+20 , strlen($upload->name)); ?>
                                                 </div>
                                             </div>
                                             <br>
@@ -200,7 +200,7 @@ use Core\H;
 
                                                         <a href="<?= PROOT . 'files' . DS . $dir  . DS . $upload->name ;?>" target="_blank">
                                                             <img src="<?= PROOT . 'img' . DS . 'document.png' ;?>" alt="Thumb-<?=$x?>" class="img-responsive" />
-                                                            <?=substr($upload->name, 0 , 25);?>
+                                                            <?=substr($upload->name, 0 , 20);?>
                                                             <br>
                                                         </a>
                                                         <a href="<?=PROOT?>upload/delete/<?=$upload->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure ?')){return false;}" id="delete">
