@@ -8,7 +8,7 @@ use App\Models\Users;
 (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') ? define('DS', '/') : define('DS', DIRECTORY_SEPARATOR);
 define('ROOT',dirname(__FILE__));
 
-//load configuration and helper functions
+//load configuration
 require_once(ROOT . DS . 'config' . DS . 'config.php');
 
 
@@ -25,8 +25,8 @@ require_once(ROOT . DS . 'config' . DS . 'config.php');
      require_once($path);
    }
  }
- 
- 
+
+
 spl_autoload_register('autoload');
 session_start();
 

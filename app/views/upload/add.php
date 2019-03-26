@@ -27,9 +27,7 @@ use Core\FH;
 								<br>
 								<input type="file" id="file" name="file" required>
 							</div>
-							<div class="">
 								<?= FH::displayErrors($this->displayErrors)?>
-							</div>
 							<div class="footer center">
 								<button type="submit" class=" btn-reg btn-block mybtn btn-primary tx-tfm" id="save">Submit</button>
 							</div>
