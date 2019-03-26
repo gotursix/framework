@@ -17,6 +17,7 @@ use Core\H;
                         <br>
                         <hr>
                         <a href="<?=PROOT?>album" class="btn btn-info" id="back">Go back</a>
+                        <a href="<?=PROOT?>contain/edit/<?=$this->album->id?>" class="btn btn-info" id="edit">Edit album</a>
                         <hr>
                         <br>
                         <?php if (!$this->contain): ?>
