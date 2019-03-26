@@ -55,7 +55,7 @@ use App\Models\Users;
                                 </div>
                                 <br>
                                 <br>
-                                <h1 class="center ">Aici comenzi vocale.</h1>
+                                <h1 class="center ">Aici comenzi vocale</h1>
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner" data-interval="5000">
                                         <div class="carousel-item">
