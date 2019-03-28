@@ -320,49 +320,53 @@ use App\Models\Users;
                                 </div>-->
 								
 								
-								<div class="row m-top">
+								<div class="row m-top mx-auto center home-list">
 										
 									
 										
 										<div class="col">
-											<p class="btn-block btn-reg mybtn">actual size</p><br>
-											<p class="btn-block btn-reg mybtn">add to album</p><br>
-											<p class="btn-block btn-reg mybtn">album</p><br>
-											<p class="btn-block btn-reg mybtn">autoplay</p><br>
-											<p class="btn-block btn-reg mybtn">back</p><br>
-											<p class="btn-block btn-reg mybtn">cancel</p><br>
-											<p class="btn-block btn-reg mybtn">change name</p><br>
-											<p class="btn-block btn-reg mybtn">close</p><br>
-											<p class="btn-block btn-reg mybtn">create album</p><br>
-											<p class="btn-block btn-reg mybtn">delete all audios</p><br>
-											<p class="btn-block btn-reg mybtn">delete all documents</p><br>
-											<p class="btn-block btn-reg mybtn">delete all images</p><br>
-											<p class="btn-block btn-reg mybtn">delete all videos</p><br>
-											<p class="btn-block btn-reg mybtn">download</p><br>
-											<p class="btn-block btn-reg mybtn">edit album</p><br>
-											<p class="btn-block btn-reg mybtn">full screen</p><br>
-											<p class="btn-block btn-reg mybtn">go to audios</p><br>
-											<p class="btn-block btn-reg mybtn">go to documents</p><br>
+										<ul class="list-group">
+											<li class="list-group-item">actual size</li>
+											<li class="list-group-item">add to album</li>
+											<li class="list-group-item">album</li>
+											<li class="list-group-item">autoplay</li>
+											<li class="list-group-item">back</li>
+											<li class="list-group-item">cancel</li>
+											<li class="list-group-item">change name</li>
+											<li class="list-group-item">close</li>
+											<li class="list-group-item">create album</li>
+											<li class="list-group-item">delete all audios</li>
+											<li class="list-group-item">delete all documents</li>
+											<li class="list-group-item">delete all images</li>
+											<li class="list-group-item">delete all videos</li>
+											<li class="list-group-item">download</li>
+											<li class="list-group-item">edit album</li>
+											<li class="list-group-item">full screen</li>
+											<li class="list-group-item">go to audios</li>
+											<li class="list-group-item">go to documents</li>
+											</ul>
 										</div>
 										<div class="col">
-											<p class="btn-block btn-reg mybtn">go to images</p><br>
-											<p class="btn-block btn-reg mybtn">go to videos</p><br>
-											<p class="btn-block btn-reg mybtn">home</p><br>
-											<p class="btn-block btn-reg mybtn">logout</p><br>
-											<p class="btn-block btn-reg mybtn">next</p><br>
-											<p class="btn-block btn-reg mybtn">previous</p><br>
-											<p class="btn-block btn-reg mybtn">recover password</p><br>
-											<p class="btn-block btn-reg mybtn">recycle bin</p><br>
-											<p class="btn-block btn-reg mybtn">remove from album</p><br>
-											<p class="btn-block btn-reg mybtn">restore all audios</p><br>
-											<p class="btn-block btn-reg mybtn">restore all documents</p><br>
-											<p class="btn-block btn-reg mybtn">restore all images</p><br>
-											<p class="btn-block btn-reg mybtn">restore all videos</p><br>
-											<p class="btn-block btn-reg mybtn">save</p><br>
-											<p class="btn-block btn-reg mybtn">submit</p><br>
-											<p class="btn-block btn-reg mybtn">upload</p><br>
-											<p class="btn-block btn-reg mybtn">zoom in</p><br>
-											<p class="btn-block btn-reg mybtn">zoom out</p>
+										<ul class="list-group">
+											<li class="list-group-item">go to images</li>
+											<li class="list-group-item">go to videos</li>
+											<li class="list-group-item">home</li>
+											<li class="list-group-item">logout</li>
+											<li class="list-group-item">next</li>
+											<li class="list-group-item">previous</li>
+											<li class="list-group-item">recover password</li>
+											<li class="list-group-item">recycle bin</li>
+											<li class="list-group-item">remove from album</li>
+											<li class="list-group-item">restore all audios</li>
+											<li class="list-group-item">restore all documents</li>
+											<li class="list-group-item">restore all images</li>
+											<li class="list-group-item">restore all videos</li>
+											<li class="list-group-item">save</li>
+											<li class="list-group-item">submit</li>
+											<li class="list-group-item">upload</li>
+											<li class="list-group-item">zoom in</li>
+											<li class="list-group-item">zoom out</li>
+											</ul>
 										</div>
 									
 								</div>
