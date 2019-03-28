@@ -14,11 +14,11 @@ use App\Models\Users;
 
                         <div class="whitebg center formerfix">
                             <div class="carousel-margin">
-                                <h1 class="center ">Welcome to Rufus Framework</h1>
+                                <h1 class="center lg-bg mx-auto ">Welcome to Rufus Framework</h1>
 
                                 <!--<div class="center" onclick="ajaxTest();">Button me :>></div>-->
 
-                                <div id="demo" class="carousel slide" data-ride="carousel">
+                                <div id="demo" class="carousel slide m-top" data-ride="carousel">
 
                                     <ul class="carousel-indicators">
                                         <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -30,58 +30,74 @@ use App\Models\Users;
                                     </ul>
 
                                     <div class="carousel-inner" data-interval="5000">
+									
                                         <div class="carousel-item active">
                                             <img class="img-responsive" src="<?=PROOT?>img/1.jpg" alt="thumb">
                                         </div>
+										
                                         <div class="carousel-item">
                                             <img class="img-responsive" src="<?=PROOT?>img/2.jpg" alt="thumb">
                                         </div>
+										
                                         <div class="carousel-item">
                                             <img class="img-responsive" src="<?=PROOT?>img/3.jpg" alt="thumb">
                                         </div>
+										
                                         <div class="carousel-item">
                                             <img class="img-responsive" src="<?=PROOT?>img/4.jpg" alt="thumb">
                                         </div>
+										
                                         <div class="carousel-item">
                                             <img class="img-responsive" src="<?=PROOT?>img/5.jpg" alt="thumb">
                                         </div>
+										
                                         <a class="carousel-control-prev" href="#demo" data-slide="prev" id="back">
                                             <span class="carousel-control-prev-icon" id="back"></span>
                                         </a>
+										
                                         <a class="carousel-control-next" href="#demo" data-slide="next" id="next">
                                             <span class="carousel-control-next-icon" id="next"></span>
                                         </a>
+										
                                     </div>
+									
                                 </div>
                                 <br>
                                 <br>
-                                <h1 class="center ">Voice commands</h1>
+                                	<div class="center mx-auto"><h1 class="center ">Voice commands</h1></div>
+								<!--
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+								
                                     <div class="carousel-inner" data-interval="5000">
+									
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
                                                 <rect width="100%" height="100%" fill="#fff"></rect><text x="37%" y="50%" fill="#000" dy=".3em" class="display-4">logout</text>
                                             </svg>
                                         </div>
+										
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
                                                 <rect width="100%" height="100%" fill="#fff"></rect><text x="20%" y="50%" fill="#000" dy=".3em" class="display-4">recover password</text>
                                             </svg>
                                         </div>
+										
                                         <div class="carousel-item active">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
                                                 <rect width="100%" height="100%" fill="#fff"></rect><text x="37%" y="50%" fill="#000" dy=".3em" class="display-4">close</text>
                                             </svg>
                                         </div>
+										
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
                                                 <rect width="100%" height="100%" fill="#fff"></rect><text x="38%" y="50%" fill="#000" dy=".3em" class="display-4">download</text>
                                             </svg>
                                         </div>
+										
                                         <div class="carousel-item">
                                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="400" height="200" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                                                 <title>Say</title>
@@ -301,7 +317,61 @@ use App\Models\Users;
                                         <span class="carousel-control-next-icon" aria-hidden="true" id="next"></span>
                                         <span class="sr-only">Next</span>
                                     </a>
-                                </div>
+                                </div>-->
+								
+								
+								<div class="row m-top mx-auto center home-list">
+										
+									
+										
+										<div class="col">
+										<ul class="list-group">
+											<li class="list-group-item">actual size</li>
+											<li class="list-group-item">add to album</li>
+											<li class="list-group-item">album</li>
+											<li class="list-group-item">autoplay</li>
+											<li class="list-group-item">back</li>
+											<li class="list-group-item">cancel</li>
+											<li class="list-group-item">change name</li>
+											<li class="list-group-item">close</li>
+											<li class="list-group-item">create album</li>
+											<li class="list-group-item">delete all audios</li>
+											<li class="list-group-item">delete all documents</li>
+											<li class="list-group-item">delete all images</li>
+											<li class="list-group-item">delete all videos</li>
+											<li class="list-group-item">download</li>
+											<li class="list-group-item">edit album</li>
+											<li class="list-group-item">full screen</li>
+											<li class="list-group-item">go to audios</li>
+											<li class="list-group-item">go to documents</li>
+											</ul>
+										</div>
+										<div class="col">
+										<ul class="list-group">
+											<li class="list-group-item">go to images</li>
+											<li class="list-group-item">go to videos</li>
+											<li class="list-group-item">home</li>
+											<li class="list-group-item">logout</li>
+											<li class="list-group-item">next</li>
+											<li class="list-group-item">previous</li>
+											<li class="list-group-item">recover password</li>
+											<li class="list-group-item">recycle bin</li>
+											<li class="list-group-item">remove from album</li>
+											<li class="list-group-item">restore all audios</li>
+											<li class="list-group-item">restore all documents</li>
+											<li class="list-group-item">restore all images</li>
+											<li class="list-group-item">restore all videos</li>
+											<li class="list-group-item">save</li>
+											<li class="list-group-item">submit</li>
+											<li class="list-group-item">upload</li>
+											<li class="list-group-item">zoom in</li>
+											<li class="list-group-item">zoom out</li>
+											</ul>
+										</div>
+									
+								</div>
+								
+								
                             </div>
                         </div>
                     </div>

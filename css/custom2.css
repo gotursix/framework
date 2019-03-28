@@ -117,7 +117,6 @@ img {
 /*=======>>>>>>> Stashed changes*/
 
 
-
 .col-centered {
     float: none;
     margin: 0 auto;
@@ -249,13 +248,13 @@ img {
     .head-form h1 {
         font-size: 18px;
     }
-
 }
 
 @media (min-height: 700px) {
     .background {
         min-height: 1024px;
     }
+	
 }
 
 @media only screen and (max-width: 1000px) {
@@ -269,7 +268,7 @@ img {
     .whitebg h4{
         font-size:20px;
     }
-    
+	
     .whitebg a {
         font-weight: 350;
         padding: .175rem .55rem;
