@@ -22,7 +22,7 @@ use Core\FH ;
                             <a href="<?=PROOT?>album" class="btn-reg btn-primary" id="save">Save</a>
                             <a href="<?=PROOT?>album/delete/<?=$this->album->id?>" class="btn btn-danger" onclick="if(!confirm('Are you sure ? By deleting it you can not recover it.')){return false;}" id="delete">Delete album
                             </a>
-                            <a href="<?=PROOT?>album/edit/<?=$this->album->id?>" class="btn-reg btn-primary" id="name">
+                            <a href="<?=PROOT?>album/edit/<?=$this->album->id?>" class="btn-reg btn-primary" id="namec">
                                 Change name
                             </a>
                             <hr>

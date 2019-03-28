@@ -202,13 +202,6 @@ $currentPage= H::currentPage();
             }
         },
         {
-            description: "Say change my name",
-            indexes: ["change my name"],
-            action: function my_name() {
-                document.getElementById("my-name").click();
-            }
-        },
-        {
             description: "Say change name",
             indexes: ["change name"],
             action: function namec() {
