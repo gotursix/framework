@@ -51,7 +51,7 @@ use App\Models\Users;
 								
 								<div class="col-md-12 mb-3 center">
 									
-									<a href="<?=PROOT?>register/restore" class="google btn-block btn-reg mybtn">
+									<a href="<?=PROOT?>register/login" class="google btn-block btn-reg mybtn">
 										Login here
 									</a>
 									
